@@ -24,6 +24,7 @@ push: ## push ${dir}
 	@git push
 
 publish-sources: ## publish sources
+	@${PROFILE_NAME} bundle
 	-@(which gh-pages >/dev/null && gh-pages -b dist -d sources/dist -t)
 	-@(which gh-pages >/dev/null || npx gh-pages -b dist -d sources/dist -t)
 
