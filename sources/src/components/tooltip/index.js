@@ -1,4 +1,15 @@
+const getIsMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+};
+
+const isMobile = getIsMobile();
+
 export const Tooltip = (state, msg) => {
+  if (isMobile) {
+    return;
+  }
   let tooltip = document.getElementById("tooltip");
   if (!tooltip && msg) {
     const tooltip = document.createElement("div");

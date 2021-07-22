@@ -285,7 +285,7 @@ const tick = (action) => [
 
 const KeySub = Keyboard({
   downs: true,
-  ups: true,
+  ups: false,
   action: (state, keyEvent) => {
     switch (true) {
       case keyEvent.key == "ArrowRight":
