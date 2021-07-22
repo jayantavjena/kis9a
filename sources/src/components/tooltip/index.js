@@ -8,7 +8,7 @@ const isMobile = getIsMobile();
 
 export const Tooltip = (state, msg) => {
   if (isMobile) {
-    return;
+    return { ...state };
   }
   let tooltip = document.getElementById("tooltip");
   if (!tooltip && msg) {
