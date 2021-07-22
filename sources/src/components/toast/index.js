@@ -1,6 +1,7 @@
 import svg_info from "/assets/svgs/information-circle.svg";
 import svg_warn from "/assets/svgs/exclamation.svg";
 import svg_check from "/assets/svgs/check-circle.svg";
+import { fadeIn, fadeOut } from "/modules/js/fadeInOut.js";
 
 export const Toast = (
   msg,
@@ -71,31 +72,3 @@ export const Toast = (
   toast.appendChild(document.createTextNode(msg));
   document.body.appendChild(toast);
 };
-
-function fadeIn(el, time) {
-  el.style.opacity = 0;
-  var last = +new Date();
-  var tick = function () {
-    el.style.opacity = +el.style.opacity + (new Date() - last) / time;
-    last = +new Date();
-    if (+el.style.opacity < 1) {
-      (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
-        setTimeout(tick, 10);
-    }
-  };
-  tick();
-}
-
-function fadeOut(el, time) {
-  el.style.opacity = 1;
-  var last = +new Date();
-  var tick = function () {
-    el.style.opacity = +el.style.opacity - (new Date() - last) / time;
-    last = +new Date();
-    if (+el.style.opacity > 0) {
-      (window.requestAnimationFrame && requestAnimationFrame(tick)) ||
-        setTimeout(tick, 10);
-    }
-  };
-  tick();
-}

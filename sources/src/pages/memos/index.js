@@ -4,6 +4,7 @@ import { Header } from "/components/header";
 import { Http } from "/modules/js/Http.js";
 import { Keyboard } from "/modules/js/subs/Keyboard.js";
 import { Toast } from "/components/toast";
+import { Tooltip, RemoveTooltip } from "/components/Tooltip";
 import "./index.css";
 import "/layouts/index.css";
 import svg_top from "/assets/svgs/arrow-circle-up.svg";
@@ -170,7 +171,10 @@ const toggleShowIndex = (state) => {
 const clearTabs = (state) => {
   const content = state.contents.find((v) => v.name === "memo");
   content.content = "";
-  const contents = [{ ...content }];
+  const contents = [
+    { name: "category", content: "" },
+    { name: "memo", content: "" },
+  ];
   return { ...state, content: content, contents: contents };
 };
 
@@ -289,7 +293,7 @@ const KeySub = Keyboard({
         // console.log("right");
         // return [shiftTab, 1];
         return state;
-      case keyEvent.key == "f" && keyEvent.ctrlKey:
+      case keyEvent.key == "p" && keyEvent.ctrlKey:
         focusIndexSearch();
         return state;
       case keyEvent.key == "t" && keyEvent.ctrlKey:
@@ -346,21 +350,29 @@ app({
               class: "tab",
               onclick: clearTabs,
               innerHTML: svg_clear,
+              onmouseover: () => [Tooltip, "clear ( ctrl - x )"],
+              onmouseout: RemoveTooltip,
             }),
-            h("div", {
+            h("dv", {
               class: "tab",
               onclick: () => copyUrl,
               innerHTML: svg_share,
+              onmouseover: () => [Tooltip, "copy url ( ctrl - y )"],
+              onmouseout: RemoveTooltip,
             }),
             h("div", {
               class: "tab",
               onclick: () => toggleRaw,
               innerHTML: svg_raw,
+              onmouseover: () => [Tooltip, "show raw ( ctrl - r )"],
+              onmouseout: RemoveTooltip,
             }),
             h("div", {
               class: "tab index-toggle-button",
               onclick: toggleShowIndex,
               innerHTML: `${showIndexes ? "&#9660" : "&#9650"}`,
+              onmouseover: () => [Tooltip, "toggle indexes ( ctrl - r )"],
+              onmouseout: RemoveTooltip,
             }),
             h("input", {
               type: "text",
@@ -370,6 +382,8 @@ app({
               id: "index-search",
               class: "index-search",
               ariaLabel: "index-search-input",
+              onmouseover: () => [Tooltip, "input ( ctrl - p )"],
+              onmouseout: RemoveTooltip,
             }),
             ...(contents &&
               contents.map((c) =>
@@ -384,6 +398,17 @@ app({
                         : c.name == "category"
                         ? svg_tag
                         : "",
+                    onmouseover: () => [
+                      Tooltip,
+                      `${
+                        c.name == "memo"
+                          ? "memo ( ctrl - m )"
+                          : c.name == "category"
+                          ? "tags ( ctrl - t )"
+                          : ""
+                      }`,
+                    ],
+                    onmouseout: RemoveTooltip,
                   },
                   [
                     c.name !== "memo" &&
