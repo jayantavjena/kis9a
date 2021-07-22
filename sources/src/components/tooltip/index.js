@@ -16,15 +16,15 @@ export const Tooltip = (state, msg) => {
     tooltip.style.zIndex = "9999";
     document.body.appendChild(tooltip);
   } else {
-    tooltip.innerHTML = msg;
     tooltip.style.display = "visible";
   }
   return { ...state };
 };
 
 export const RemoveTooltip = (state) => {
-  console.log("Hleooo");
   let tooltip = document.getElementById("tooltip");
-  document.body.removeChild(tooltip);
+  if (tooltip) {
+    document.body.removeChild(tooltip);
+  }
   return { ...state };
 };

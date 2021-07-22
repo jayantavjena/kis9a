@@ -1,6 +1,7 @@
 import { Header } from "/components/header";
 import { h, text, app } from "/modules/js/hyperapp.js";
 import { viewLink, viewLinkActive } from "/components/link/unit.js";
+import { viewTooltip } from "/components/tooltip/unit.js";
 import {
   viewToast,
   viewToastError,
@@ -30,6 +31,15 @@ const sides = [
       {
         name: "active",
         view: viewLinkActive,
+      },
+    ],
+  },
+  {
+    name: "Tooltip",
+    views: [
+      {
+        name: "default",
+        view: viewTooltip,
       },
     ],
   },

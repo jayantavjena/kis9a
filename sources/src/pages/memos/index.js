@@ -7,7 +7,7 @@ import { Toast } from "/components/toast";
 import { Tooltip, RemoveTooltip } from "/components/Tooltip";
 import "./index.css";
 import "/layouts/index.css";
-import svg_top from "/assets/svgs/arrow-circle-up.svg";
+import svg_top from "/assets/svgs/chevron-double-up.svg";
 import svg_clear from "/assets/svgs/trash.svg";
 import svg_close from "/assets/svgs/x.svg";
 import svg_share from "/assets/svgs/external-link.svg";
@@ -299,6 +299,8 @@ const KeySub = Keyboard({
         return [onSelect, "memo"];
       case keyEvent.key == "y" && keyEvent.ctrlKey:
         return copyUrl;
+      case keyEvent.key == "i" && keyEvent.ctrlKey:
+        return toggleShowIndex;
       case keyEvent.key == "r" && keyEvent.ctrlKey:
         return toggleRaw;
       case keyEvent.key == "x" && keyEvent.ctrlKey:
@@ -369,7 +371,7 @@ app({
               class: "tab index-toggle-button",
               onclick: toggleShowIndex,
               innerHTML: `${showIndexes ? "&#9660" : "&#9650"}`,
-              onmouseover: () => [Tooltip, "toggle indexes ( ctrl - r )"],
+              onmouseover: () => [Tooltip, "toggle indexes ( ctrl - i )"],
               onmouseout: RemoveTooltip,
             }),
             h("input", {
