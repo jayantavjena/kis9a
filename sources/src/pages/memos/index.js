@@ -290,28 +290,26 @@ const KeySub = Keyboard({
     switch (true) {
       case keyEvent.key == "ArrowRight":
         // TODO
-        // console.log("right");
         // return [shiftTab, 1];
         return state;
       case keyEvent.key == "p" && keyEvent.ctrlKey:
         focusIndexSearch();
         return state;
+      case keyEvent.key == "m" && keyEvent.ctrlKey:
+        return [onSelect, "memo"];
+      case keyEvent.key == "y" && keyEvent.ctrlKey:
+        return copyUrl;
+      case keyEvent.key == "r" && keyEvent.ctrlKey:
+        return toggleRaw;
+      case keyEvent.key == "x" && keyEvent.ctrlKey:
+        return clearTabs;
       case keyEvent.key == "t" && keyEvent.ctrlKey:
-        // showTags();
         return [onSelect, "category"];
-      // return state;
       default:
-        console.log(keyEvent);
         return state;
     }
-    // keyEvent has the props of the KeyboardEvent
-    // action will be called for keydown and keyup
   },
 });
-
-// const showTags = (state) => {
-
-// };
 
 const focusIndexSearch = () => {
   const input = document.getElementById("index-search");
