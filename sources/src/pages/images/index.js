@@ -1,5 +1,5 @@
 import { h, app, text } from "/modules/js/hyperapp.js";
-import { Http } from "/modules/js/Http.js";
+import { Http } from "../../modules/js/http.js";
 import { Header } from "/components/header";
 import "/layouts/index.css";
 import "./index.css";
