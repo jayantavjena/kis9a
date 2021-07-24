@@ -27,7 +27,9 @@ export const Tooltip = (state, msg) => {
     tooltip.style.zIndex = "9999";
     document.body.appendChild(tooltip);
   } else {
-    tooltip.style.display = "visible";
+    if (tooltip) {
+      tooltip.style.display = "visible";
+    }
   }
   return { ...state };
 };

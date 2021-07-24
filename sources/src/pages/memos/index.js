@@ -44,17 +44,25 @@ const getContent = (index) => {
     url: `/data/memos/${index}`,
     response: "text",
     action: (state, content) => {
-      return {
-        ...state,
-        content: { ...state.content, name: index, content: content },
-        contents: [
-          ...state.contents,
-          {
-            name: index,
-            content: content,
-          },
-        ],
-      };
+      const exists = state.contents.find((v) => v.name === index);
+      if (!exists) {
+        return {
+          ...state,
+          content: { ...state.content, name: index, content: content },
+          contents: [
+            ...state.contents,
+            {
+              name: index,
+              content: content,
+            },
+          ],
+        };
+      } else {
+        return {
+          ...state,
+          content: { ...state.content, name: index, content: content },
+        };
+      }
     },
   });
 };
@@ -106,7 +114,7 @@ const setInputContent = (state, event) => {
 };
 
 const removeContent = (state, index) => {
-  if (state.content.name == index) {
+  if (state.content.name == index && index !== "memo" && index !== "category") {
     let id = 0;
     state.contents.forEach((v, i) => {
       if (v.name == index) {
@@ -114,8 +122,8 @@ const removeContent = (state, index) => {
       }
     });
     state.content = state.contents[id - 1];
+    state.contents = state.contents.filter((v) => v.name !== index);
   }
-  state.contents = state.contents.filter((v) => v.name !== index);
   return { ...state };
 };
 
@@ -199,12 +207,7 @@ const Top = (state) => {
   return state;
 };
 
-const tabShift = (state) => {
-  console.log(state);
-  // return state
-};
-
-const pureState = {
+const defaultState = {
   indexes: "",
   content: { name: "memo", content: "" },
   contents: [
@@ -229,7 +232,7 @@ const initContent = [
   (dispatch) => {
     const url = initialUrl;
     const name = baseName(url);
-    let content = pureState.content;
+    let content = defaultState.content;
     if (name && name !== "memo") {
       const action = (state) => {
         content = state.contents.find((v) => v.name === name);
@@ -250,11 +253,11 @@ const initContent = [
 const getUrl = () => window.location.href;
 const initialUrl = getUrl();
 
+// Local storage
 // const storageState = JSON.parse(window.localStorage.getItem("app"));
+// const state = storageState ? storageState : defaultState;
 
-// const state = storageState ? storageState : pureState;
-
-const initialState = [pureState, initIndexes, initContent, initCategories];
+const initialState = [defaultState, initIndexes, initContent, initCategories];
 
 onscroll = () => {
   const top = document.getElementById("top");
@@ -265,15 +268,6 @@ onscroll = () => {
     top.classList.add("hide");
   }
 };
-
-// subscription scheme
-// const tick = (action, { interval }) => [
-//   (dispatch, { action, interval }) => {
-//     const id = setInterval(() => dispatch(action), interval);
-//     return () => clearInterval(id);
-//   },
-//   { action, interval },
-// ];
 
 const tick = (action) => [
   (dispatch) => {
@@ -288,17 +282,16 @@ const KeySub = Keyboard({
   ups: false,
   action: (state, keyEvent) => {
     switch (true) {
-      case keyEvent.key == "ArrowRight":
-        // TODO
-        // return [shiftTab, 1];
-        return state;
-      case keyEvent.key == "p" && keyEvent.ctrlKey:
+      case (keyEvent.key == "p" && keyEvent.ctrlKey) ||
+        (keyEvent.key == "f" && keyEvent.ctrlKey):
         focusIndexSearch();
         return state;
       case keyEvent.key == "m" && keyEvent.ctrlKey:
         return [onSelect, "memo"];
       case keyEvent.key == "y" && keyEvent.ctrlKey:
         return copyUrl;
+      case keyEvent.key == "d" && keyEvent.ctrlKey:
+        return [removeContent, state.content.name];
       case keyEvent.key == "i" && keyEvent.ctrlKey:
         return toggleShowIndex;
       case keyEvent.key == "r" && keyEvent.ctrlKey:
@@ -307,6 +300,16 @@ const KeySub = Keyboard({
         return clearTabs;
       case keyEvent.key == "t" && keyEvent.ctrlKey:
         return [onSelect, "category"];
+      case keyEvent.key == "ArrowRight" ||
+        (keyEvent.key == "l" && keyEvent.ctrlKey):
+        return [shiftTab, 1];
+      case keyEvent.key == "ArrowLeft" ||
+        (keyEvent.key == "h" && keyEvent.ctrlKey):
+        return [shiftTab, -1];
+      case keyEvent.key == "ArrowUp":
+        return { ...state, showIndexes: false };
+      case keyEvent.key == "ArrowDown":
+        return { ...state, showIndexes: true };
       default:
         return state;
     }
@@ -319,14 +322,16 @@ const focusIndexSearch = () => {
 };
 
 const shiftTab = (state, count) => {
-  console.log(count);
   let id = 0;
   state.contents.forEach((v, i) => {
     if (v.name == state.content.name) {
       id = i;
     }
   });
-  state.content = state.contents[id - 1];
+  const next = state.contents[id + count];
+  if (next) {
+    state.content = next;
+  }
   return { ...state };
 };
 
