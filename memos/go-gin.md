@@ -16,3 +16,5 @@
 - [【GO】gin で FormData の POST リクエストを Bind する](https://zenn.dev/someone7140/articles/c0c66e6c9b29dd)
 
 - [gin を最速でマスターしよう - Qiita](https://qiita.com/Syoitu/items/8e7e3215fb7ac9dabc3a)
+
+- [Golang Gin Framework Crash Course 09 | Setting up a JSON Web Token (JWT) Authorization Middleware - YouTube](https://www.youtube.com/watch?v=p3maH9G_DLM)
