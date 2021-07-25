@@ -1,8 +1,8 @@
-- /kis9a /snippets plantuml syntaxs collection to can actually use with scrooloose/vim-slumlord.
+x /kis9a /snippets plantuml syntaxs collection to can actually use with scrooloose/vim-slumlord.
 - /kis9a /snippets rust basic syntax
-- /kis9a /src content search with loading.
-- /kis9a /src manage common meta-tags with js. -> go template load html component.
-- /kis9a /src top page animation <https://github.com/liabru/matter-js>
+x /kis9a /src content search with loading.
+x /kis9a /src manage common meta-tags with js. -> go template load html component.
+x /kis9a /src top page animation <https://github.com/liabru/matter-js>
 - /kis9a /uml usecase and basic syntaxes search.
 - /kis9a 512 > icons generator golang, shellscript.
 - /kis9a add draw/ with javascript. reference dev.to.
@@ -106,11 +106,11 @@
 - untracked file, and keybindings switch terminal color mode.
 - vim plugin one color. background light or dark. when dark front text is color.
 - vim terminalize improvement.
-- wakatime issue each data json
-- wakatime search github actions example
-- wakatime tearm development usage and draw scraping idea.
-- wakatime tracking analytics by go scripting.
-- wakatime tracking analytics update with some actions.
+x wakatime issue each data json
+x wakatime search github actions example
+x wakatime tearm development usage and draw scraping idea.
+x wakatime tracking analytics by go scripting.
+x wakatime tracking analytics update with some actions.
 - zennzennzennse
 - ~~leetcode termplate and snippet algorithms.~~ --> go algorithms
 - 字句解析 golang

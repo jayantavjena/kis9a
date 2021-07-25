@@ -1,3 +1,28 @@
+https://github.com/mixj93/react-gin-starter
+
+https://kis9a.github.io/esbuild-hyperapp-starter/
+
+router function to navigate url
+
+component system and catarog,
+spa mode ssg mode to create website faster.
+relaod issue.
+
+
+  // setTimeout(() => findRoute(), 10000);
+
+
+func remove3(arr []int, i int) []int {
+	arr[i] = arr[len(arr)-1]
+	return arr[:len(arr)-1]
+}
+
+
+
+let NAVIGATE_EVENT = "hyperway-navigate";
+
+              onmouseover: () => [tooltip, "clear: ctrl-x"],
+              onmouseout: removeTooltip,
 HTML
 <body>
   ~
