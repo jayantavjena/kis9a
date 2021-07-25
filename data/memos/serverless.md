@@ -1,0 +1,4 @@
+- serverless framework
+- Auth0
+- Algolia
+- stdlib
