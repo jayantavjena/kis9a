@@ -1,4 +1,3 @@
-
 - [goroutine はなぜ軽量なのか - Carpe Diem](https://christina04.hatenablog.com/entry/why-goroutine-is-good)
 - [Go · GitHub](https://github.com/golang/)
 - [Packages - The Go Programming Language](https://golang.org/pkg/)
@@ -223,3 +222,77 @@ go mod tidy で、使われていない依存モジュールを削除する
 <!--}}}-->
 
 GOOS=linux GOARCH=amd64 go build main.go
+
+## Pros
+
+- C like (statically typed)
+- Productive (easy prototyping)
+- Great community
+- Robust & easy to learn (Fixed, limited feature set)
+- Great STD lib
+- Fast
+- Great concurrent model
+- Garbage collected
+- Great package management
+- Built in testing & profiling
+- Cross platform
+
+## Cons
+
+- No generics
+- Clunky error management
+- Nil interface values (nil pointer dereference)
+- Discourages ORMs
+- No FP
+- No OOP
+- Big binary size
+- Not made for ultra high performance due to GC
+
+## Use cases
+
+- CLI tools
+- System tools: Docker, CockroachDB, InfluxDB
+- Server side services: PUB/SUB server and clients, caching mechanisms, integration layers
+- API(s): REST, gRPC, GraphQL
+- DevOps tools
+- Cloud & networked tools
+- Website building: Hugo (Not my preference)
+
+## Productivity
+
+- C like & statically typed
+- Easy to learn, read & write
+- Capable & powerful STD lib
+
+## Simplicity
+
+- The language philosophy
+- Limited feature set & keywords (no fancy features like generics)
+- Simple & limited data structures (no classes, just funcs and types)
+
+## Reliability
+
+- Blazing fast
+- Garbage collected
+- Cross platform
+
+## Robustness
+
+- Super stable with limited updates
+- 100% compatible & no breaking changes
+- Cross platform ($GOOS $GOARCH)
+
+## Maturity
+
+- Baked & maintained by Google
+- Powerful STD lib
+- Built in pkg manager, testing framework, concurrency model
+- Many good libs & tools
+- Great docs, examples & resources
+- Growing market depending on location (everyone is catching up, from PHP, JS, and even Java and C++)
+- About 2M gophers
+
+## Temp
+
+- Blazing fast specs with magic
+- Cross platform with magic
