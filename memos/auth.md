@@ -13,3 +13,7 @@ authentication step
 authorization step
 desiisions step
 token validation
+
+HTTP Basic と HTTP Digest 認証
+サードパーティ認証：QQ、weibo、doubian、OPENID、google、github、facebook および twitter
+カスタム定義のユーザログイン、サインアップ、ログアウトは一般的に session、cookie 認証にもとづいています。
