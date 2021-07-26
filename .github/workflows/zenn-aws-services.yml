@@ -4,8 +4,12 @@ on:
   push:
     branches:
       - master
-  # schedule:
-  # - cron: "0 13 * * 1"
+    paths:
+      - ".github/workflows/zenn-aws-services.yml"
+      - "zenn/articles/aws-services.md"
+      - "zenn/scripts/aws-services/*"
+  schedule:
+    - cron: "0 13 * * 1"
 
 jobs:
   zenn:
@@ -26,8 +30,6 @@ jobs:
       - name: update zenn article
         run: |
           aws-services jp -t zenn/scripts/aws-services/aws-services.template -o zenn/articles/aws-services.md
-          ls -la
-          ls -la zenn/articles
       - uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
-          commit_message: update by .github/workflows/main.yml
+          commit_message: update by .github/workflows/zenn-aws-services.yml
