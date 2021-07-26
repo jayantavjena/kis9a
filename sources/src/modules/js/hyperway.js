@@ -1,4 +1,5 @@
 export let Hyperway = (props) => [setupRouter, props];
+
 export let routeTo =
   (to = "/", replace = false) =>
   (state, event) =>
@@ -6,7 +7,7 @@ export let routeTo =
 
 let NAVIGATE_EVENT = "hyperway-navigate";
 
-let emitNavigateEvent = (_, { path, replace, event: e }) => {
+const emitNavigateEvent = (_, { path, replace, event: e }) => {
   if (
     e.ctrlKey ||
     e.metaKey ||
@@ -20,12 +21,12 @@ let emitNavigateEvent = (_, { path, replace, event: e }) => {
   emitEvent(NAVIGATE_EVENT, { path, replace });
 };
 
-let emitEvent = (name, detail) => {
+const emitEvent = (name, detail) => {
   let event = new CustomEvent(name, { detail });
   dispatchEvent(event);
 };
 
-let setupRouter = (dispatch, props) => {
+const setupRouter = (dispatch, props) => {
   let routes = props.routes.map((r) => ({ ...r, ...convert(r.path) }));
   let baseUrl = props.baseUrl || "/";
   let re =
