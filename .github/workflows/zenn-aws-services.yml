@@ -1,0 +1,33 @@
+name: zenn-aws-services
+
+on:
+  push:
+    branches:
+      - master
+  # schedule:
+  # - cron: "0 13 * * 1"
+
+jobs:
+  zenn:
+    runs-on: ubuntu-20.04
+    env:
+      REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+    steps:
+      - name: install go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.16
+      - name: version
+        run: go version
+      - name: go get aws-services
+        run: go get github.com/kis9a/aws-services
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: update zenn article
+        run: |
+          aws-services jp -t zenn/scripts/aws-services.template -o zenn/articles/aws-services.md
+          ls -la
+          ls -la zenn/articles
+      - uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        with:
+          commit_message: update by .github/workflows/main.yml
