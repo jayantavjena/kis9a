@@ -2,7 +2,7 @@ import { h, app } from "/modules/js/hyperapp.js";
 import { Header } from "/components/header";
 import "./index.css";
 import "/layouts/index.css";
-const doper = require("../modules/js/doper.js");
+const doper = require("/modules/js/doper.js");
 
 app({
   init: {},
