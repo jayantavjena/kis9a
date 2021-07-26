@@ -5,7 +5,7 @@ html {
 }
 
 :root {
-  --border-radius: 5px;
+  --border-radius: 2px;
   --box-shadow: 2px 2px 10px;
   --color: #118bee;
   --color-accent: #118bee15;
