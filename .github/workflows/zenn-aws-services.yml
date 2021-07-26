@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
       - name: update zenn article
         run: |
-          aws-services jp -t zenn/scripts/aws-services.template -o zenn/articles/aws-services.md
+          aws-services jp -t zenn/scripts/aws-services/aws-services.template -o zenn/articles/aws-services.md
           ls -la
           ls -la zenn/articles
       - uses: stefanzweifel/git-auto-commit-action@v3.0.0
