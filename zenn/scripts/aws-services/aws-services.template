@@ -6,3 +6,5 @@ type: "tech"
 topics: ["aws", "githubactions"]
 published: false
 ---
+
+{{.Content}}
