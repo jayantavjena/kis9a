@@ -36,4 +36,13 @@ You can use these operators in any of the five fields:
 // 毎週月曜日の 15:00 (UTC) に実行する:
 
 0 15 * * 1
+
+// Every Monday at 1PM UTC (9AM EST)
+0 13 * * 1
+
+// At the end of every day
+0 0 * * *
+
+// Every 10 minutes
+*/10 * * * *
 ```

@@ -1,4 +1,4 @@
-- [github actionsでzenn記事の予約投稿を実現する](https://zenn.dev/ryo_kawamata/articles/schedule-publish-on-zenn-article)
+- [github actions で zenn 記事の予約投稿を実現する](https://zenn.dev/ryo_kawamata/articles/schedule-publish-on-zenn-article)
 - [昔作った GitHub の Label を供養する](https://zenn.dev/sh090/articles/8291abdb1be48f5765ec)
 - [github-script は便利です - Qiita](https://qiita.com/bugfire/items/a2fa85fa58dd20322e3f)
 - [GitHub Actions の記事一覧 | Zenn](https://zenn.dev/topics/githubactions)
@@ -83,3 +83,61 @@ Self-hosted Runner の導入により、以下のように課題を解決でき�
 同時実行数の制限がなくなった
 IAM Roles for Service Accounts を利用することで、クレデンシャルを使わずに権限を割り当てられる（セキュリティの改善）
 EC2 Spot Instances を利用することで、インスタンスの時間単価を抑えられる（コストの改善）
+
+```
+name: zenn
+on:
+  schedule:
+    - cron: "* * * * 1"
+  push:
+    branches:
+      - master
+
+jobs:
+  zenn:
+    runs-on: ubuntu-20.04
+    env:
+      REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+    steps:
+      - name: install go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.16
+      - name: version
+        run: go version
+      - name: go get aws-services
+        run: go get github.com/kis9a/aws-services
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          repository: kis9a/kis9a
+          path: kis9a
+      - name: update zenn article
+        run: |
+          cd kis9a/
+          git config user.name "kis9a"
+          git config user.email "kis9ax@gmail.com"
+          aws-services jp -t zenn/articles/aws-services.template -o zenn/articles/aws-services.md
+          ls -la zenn/articles
+          echo $REPO_TOKEN
+          git add zenn/articles/aws-services.md
+          git push https://kis9a:$REPO_TOKEN@github.com/kis9a/kis9a.git
+
+```
+
+```
+name: Test
+
+on: [push]
+
+jobs:
+  skipci:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo "[skip ci] ${{ contains(github.event.head_commit.message, '[skip ci]') }}"
+
+  test:
+    runs-on: ubuntu-18.04
+    if: contains(github.event.head_commit.message, '[skip ci]') == false
+    steps:
+```
