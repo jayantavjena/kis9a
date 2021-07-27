@@ -1,4 +1,54 @@
+name: destroy
 
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    # if: "!contains(github.event.head_commit.message, 'action-destory')"
+    # steps:
+    # - uses: hashicorp/setup-terraform@v1.2.1
+    #   with:
+    #     terraform_version: 0.15.3
+    # if pull request_branch format destroy-{{.env}}
+    # checkout {{env}}
+    # on open pull_request: terraform plan --destroy
+    # on merge pull_request: terraform destroy {{env}}
+    # on merged remove resources workflows/env-{{env}}.yml
+    # client auto - git pull.
+
+
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+
+  backend "s3" {
+    {{- range . }}
+      {{- $is_str := eq .Type "string" }}
+      {{ .Name }} = {{ if $is_str -}}
+        "{{- .Default -}}"
+      {{- else -}}
+        {{- .Default -}}
+      {{- end }}
+    {{- end }}
+  }
+
+
+
+terraform {
+  backend "remote" {
+    organization = "evolany-infra"
+
+    workspaces {
+      name = "workspace"
+    }
+  }
+}
+
+- [Write Blog Every Week](https://write-blog-every-week.netlify.app/)
+- [GitHub - machamp0714/info_app](https://github.com/machamp0714/info_app)
 - [GitHub - laster18/1chan: GoのGinとNext.jsを使った掲示板サンプルアプリ](https://github.com/laster18/1chan)
 - [GitHub - JonSteinn/Web-Paint: Simple web drawing application (to learn javascript...)](https://github.com/JonSteinn/Web-Paint)
 - [GitHub - karrybit/ggc](https://github.com/karrybit/ggc)
