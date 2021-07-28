@@ -24,3 +24,5 @@ ICE
 
 WEBRTC
 LSP
+
+- [GitHub - ish-xyz/go-onion-routing: A Go simulation of the onion routing protocol](https://github.com/ish-xyz/go-onion-routing)
