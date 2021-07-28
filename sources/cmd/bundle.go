@@ -243,6 +243,7 @@ func bundleJS(path string, wp string) error {
 		Incremental:       true,
 		AllowOverwrite:    true,
 		Plugins:           []api.Plugin{httpPlugin},
+		Platform:          api.PlatformNode,
 		Loader: map[string]api.Loader{
 			".png": api.LoaderDataURL,
 			".svg": api.LoaderText,
