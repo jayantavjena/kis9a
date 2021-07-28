@@ -1,3 +1,68 @@
+下記解答例のi % 15 == 0はi % 3 == 0 and i % 5 == 0と書いても良い。
+
+for i in range(1, 101):
+    if i % 15 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+
+まず前提として、GitHubへのpushやpullがパスワードで認証できなくなるということが公式で発表されている(参考)。これは2021年8月13日から実施される。
+
+Usage: gh-pages [options]
+
+Options:
+  -V, --version            output the version number
+  -d, --dist <dist>        Base directory for all source files
+  -s, --src <src>          Pattern used to select which files to publish (default: "**/*")
+  -b, --branch <branch>    Name of the branch you are pushing to (default: "gh-pages")
+  -e, --dest <dest>        Target directory within the destination branch (relative to the root) (default: ".")
+  -a, --add                Only add, and never remove existing files
+  -x, --silent             Do not output the repository url
+  -m, --message <message>  commit message (default: "Updates")
+  -g, --tag <tag>          add tag to commit
+  --git <git>              Path to git executable (default: "git")
+  -t, --dotfiles           Include dotfiles
+  -r, --repo <repo>        URL of the repository you are pushing to
+  -p, --depth <depth>      depth for clone (default: 1)
+  -o, --remote <name>      The name of the remote (default: "origin")
+  -u, --user <address>     The name and email of the user (defaults to the git config).  Format is "Your Name <email@example.com>".
+  -v, --remove <pattern>   Remove files that match the given pattern (ignored if used together with --add). (default: ".")
+  -n, --no-push            Commit only (with no push)
+  -f, --no-history         Push force new commit without parent history
+  --before-add <file>      Execute the function exported by <file> before "git add"
+  -h, --help               output usage information
+
+
+
+
+- [Plugins | Drone](http://plugins.drone.io/)
+
+C++ is the best language for not only competitive but also using to solve the algorithm and data structure problems . C++ use increases the computational level of thinking in memory , time complexity and data flow level. Going with C++ is the most efficient language that teaches you the memory management skills, time complexity of codes and instruction, which will already excel you from the crowd by far and see the real beauty of the language. You will far level above than others if you use this language, it increase you brain capacity to think and solve in terms of memory management level.
+
+// ファイブラリのインポート
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+// ファイルのキャッシュ
+workbox.precaching.precacheAndRoute([
+  {
+    url: '/index.html',
+    revision: '20210714'
+  },
+  {
+    url: '/app.css',
+    revision: '20210714'
+  },
+  {
+  url: '/app.js',
+    revision: '20210714'
+  },
+])
+
 name: destroy
 
 on:
