@@ -14,7 +14,7 @@ export const Toast = (
     right = "10px",
     left = "auto",
     top = "auto",
-    bg = "#f5f5f5",
+    bg = "#f4f4f4",
     status = "info",
   } = {}
 ) => {
@@ -22,11 +22,11 @@ export const Toast = (
   let svg = svg_info;
   switch (status) {
     case "err":
-      toast.style.background = "#e93c00";
+      toast.style.background = "#f0450c";
       svg = svg_warn;
       break;
     case "suc":
-      toast.style.background = "#68c39f";
+      toast.style.background = "#34d058";
       svg = svg_check;
       break;
     default:
@@ -45,9 +45,10 @@ export const Toast = (
   toast.style.position = "fixed";
   toast.style.margin = "10px";
   toast.style.padding = "0.8rem 1.6rem";
+  toast.style.fontWeight = "500";
   toast.style.fontSize = "1.8rem";
   toast.style.color = "inherit";
-  toast.style.borderRadius = "0.5rem 0rem 0rem 0rem";
+  toast.style.borderRadius = "0.5rem";
   toast.style.border = "1px solid #d0c9c3";
   toast.style.boxShadow = "0 0 2px 2px #f2f2f2";
   toast.style.cursor = "pointer";
@@ -56,10 +57,10 @@ export const Toast = (
   };
 
   const svgNode = toast.childNodes[0];
-  svgNode.style.height = "2.5rem";
+  svgNode.style.height = "2.4rem";
   svgNode.style.width = "auto";
   svgNode.style.color = "inherit";
-  svgNode.style.marginRight = "12px";
+  svgNode.style.marginRight = "8px";
 
   fadeIn(toast, 500);
   setTimeout(() => {

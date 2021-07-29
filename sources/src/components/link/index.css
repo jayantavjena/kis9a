@@ -4,8 +4,8 @@
   margin: 0 0.4rem;
   color: #665c54;
   max-height: 3rem;
-  max-width: 4rem;
   word-wrap: break-word;
+  font-size: 1.3rem;
 }
 
 .disable {
