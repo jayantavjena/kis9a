@@ -14,7 +14,7 @@
   flex: 1;
   overflow: auto;
   padding: 1rem 2rem;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-shadow);
   border-radius: var(--border-radius);
 }
 
@@ -23,8 +23,9 @@
   cursor: pointer;
   font-weight: 500;
   padding: 1rem;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-shadow);
   border-radius: var(--border-radius);
+  border: 2px solid var(--color-bg-secondary);
 }
 
 @media (max-width: 800px) {

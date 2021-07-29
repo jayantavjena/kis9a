@@ -1,4 +1,4 @@
-```
+``
 > brew install clang-format
 
 
@@ -16,3 +16,5 @@ let g:coc_global_extensions = [
       \, 'coc-clangd'
       \, ]
 ```
+
+brew install llvm
