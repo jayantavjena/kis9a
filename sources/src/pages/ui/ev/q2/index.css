@@ -1,0 +1,38 @@
+.left {
+  width: 100px;
+  background-color: salmon;
+}
+
+.right {
+  width: 100px;
+  background-color: salmon;
+}
+
+.center {
+  width: calc(100vw - 200px);
+  background-color: steelblue;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+/* main { */
+/* 	width: 100vw; */
+/* 	height: 100vh; */
+/* 	overflow: hidden; */
+/* 	display: flex; */
+
+/* 	.left, .right { */
+/* 		flex: 0 1 200px; */
+/* 		background-color: salmon; */
+/* 	} */
+
+/* 	.center { */
+/* 		flex: 1 0 auto; */
+/* 		background-color: steelblue; */
+/* 	} */
+/* } */
