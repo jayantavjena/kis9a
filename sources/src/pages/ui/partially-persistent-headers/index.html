@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partially Persistent Headers footer</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+      div {
+        padding: 10px;
+      }
+      .header {
+        background: red;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }
+      .fixed-header {
+        background: yellow;
+      }
+      .content {
+        overflow-y: scroll;
+        overflow-x: scroll;
+        background: green;
+        flex-grow: 1;
+      }
+      .fixed-footer {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Non fixed header content</h1>
+    </div>
+    <div class="container">
+      <div class="fixed-header">Fixed Header</div>
+      <div class="content">Content</div>
+      <div class="fixed-footer">Fixed Header</div>
+    </div>
+  </body>
+</html>
