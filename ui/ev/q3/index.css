@@ -1,0 +1,1 @@
+.container{display:grid;grid-template-column:1fr auto 1fr;overflow:hidden;height:100vh}header,footer{padding-left:12px;height:80px;background-color:salmon;display:flex;align-items:center;width:100%}main{flex:1;background-color:#4682b4;height:calc(100vh - 160px);width:100%;overflow:scroll}main>*{padding:12px}

@@ -1,0 +1,1 @@
+.left{width:100px;background-color:salmon}.right{width:100px;background-color:salmon}.center{width:calc(100vw - 200px);background-color:#4682b4}main{height:100vh;width:100vw;display:flex;flex-direction:row}

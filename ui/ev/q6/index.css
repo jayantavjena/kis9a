@@ -1,0 +1,1 @@
+.grid-container{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));grid-gap:8px;margin:8px}.grid-item{display:grid;height:100px;min-width:100px;background:salmon;text-align:center;align-items:center}
