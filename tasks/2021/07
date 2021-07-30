@@ -1,3 +1,138 @@
+package main
+
+import (
+	"fmt"
+	"log"
+
+	"github.com/PuerkitoBio/goquery"
+	"github.com/ktr0731/go-fuzzyfinder"
+)
+
+type Item struct {
+	Title string
+	Link  string
+}
+
+func main() {
+	items, err := getTrends()
+	if err != nil {
+		log.Fatal(err)
+	}
+	getInput(items)
+}
+
+func getInput(items []Item) {
+	idx, err := fuzzyfinder.FindMulti(
+		items,
+		func(i int) string {
+			return items[i].Name
+		},
+		fuzzyfinder.WithPreviewWindow(func(i, w, h int) string {
+			if i == -1 {
+				return ""
+			}
+			return fmt.Sprintf("Track: %s (%s)\nAlbum: %s",
+				tracks[i].Name,
+				tracks[i].Artist,
+				tracks[i].AlbumName)
+		}))
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("selected: %v\n", idx)
+}
+
+func getTrends() ([]Item, error) {
+	res := []Item{}
+	url := "https://qiita.com/"
+	doc, err := goquery.NewDocument(url)
+	if err != nil {
+		return res, err
+	}
+	fmt.Println(doc)
+	items := doc.Find(".p-home_main")
+	fmt.Println(items)
+	items.Each(func(_ int, item *goquery.Selection) {
+		h2 := item.Find("h2")
+		title := h2.Text()
+		link, _ := h2.Attr("href")
+		res = append(res, Item{Title: title, Link: link})
+	})
+	return res, err
+}
+
+// type Track struct {
+// 	Name      string
+// 	AlbumName string
+// 	Artist    string
+// }
+
+// tracks := []Track{
+// 	{"foo", "album1", "artist1"},
+// 	{"bar", "album1", "artist1"},
+// 	{"foo", "album2", "artist1"},
+// 	{"baz", "album2", "artist2"},
+// 	{"baz", "album3", "artist2"},
+// }
+
+// idx, err := fuzzyfinder.FindMulti(
+// 	tracks,
+// 	func(i int) string {
+// 		return tracks[i].Name
+// 	},
+// 	fuzzyfinder.WithPreviewWindow(func(i, w, h int) string {
+// 		if i == -1 {
+// 			return ""
+// 		}
+// 		return fmt.Sprintf("Track: %s (%s)\nAlbum: %s",
+// 			tracks[i].Name,
+// 			tracks[i].Artist,
+// 			tracks[i].AlbumName)
+// 	}))
+// if err != nil {
+// 	log.Fatal(err)
+// }
+// fmt.Printf("selected: %v\n", idx)
+
+
+
+- [Terraformをしばらく書いて覚えた個人的なTipsについて | DevelopersIO](https://dev.classmethod.jp/articles/my-terraform-tips/)
+ [ecs-terraform/modules at main · machamp0714/ecs-terraform · GitHub](https://github.com/machamp0714/ecs-terraform/tree/main/modules)
+
+resource "google_compute_instance" "instance" {
+  name         = "sample-instance"
+  machine_type = "n1-standard-1"
+  zone         = "asia-northeast1-a"
+  tags         = []
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+
+  network_interface {
+    network = "default"
+  }
+
+  metadata = {
+    ssh-keys = "ansible:${file("./ansible/sshkey/id_rsa.pub")}"
+  }
+
+  service_account {
+    scopes = ["cloud-platform"]
+  }
+
+  provisioner "local-exec" {
+    working_dir = "./ansible/"
+    command     = "ansible-playbook -i inventory nginx.yaml"
+  }
+}
+
+Version 管理したい、
+
+勉強会、名刺。
+
 下記解答例のi % 15 == 0はi % 3 == 0 and i % 5 == 0と書いても良い。
 
 for i in range(1, 101):
