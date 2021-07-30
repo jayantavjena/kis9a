@@ -15,7 +15,7 @@ app({
   const el = document.createElement("div");
   el.classList.add("box");
   document.body.appendChild(el);
-  let node = doper("<div>Hello</div>", ".box");
+  let node = doper("<div>RSS</div>", ".box");
   node.parent.style.position = "fixed";
   node.style.position = "absolute";
   node.style.fontSize = "60px";
@@ -38,7 +38,7 @@ app({
   const el = document.createElement("div");
   el.classList.add("box1");
   document.body.appendChild(el);
-  let node = doper("<div>World</div>", ".box1");
+  let node = doper("<div>Here</div>", ".box1");
   node.parent.style.position = "fixed";
   node.style.fontSize = "50px";
   node.style.width = "50px";
