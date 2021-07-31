@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <img data-src="https://via.placeholder.com/100x50.png?text=1" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=2" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=3" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=4" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=5" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=6" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=7" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=8" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=9" />
+    <img data-src="https://via.placeholder.com/100x50.png?text=10" />
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if ("IntersectionObserver" in window) {
+        let io = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.removeAttribute("data-src");
+              io.unobserve(lazyImage);
+            }
+          });
+        });
+        [].forEach.call(
+          document.querySelectorAll("img[data-src]"),
+          function (lazyImage) {
+            io.observe(lazyImage);
+          }
+        );
+      } else {
+        const lazyload = function () {
+          let images = document.querySelectorAll("img[data-src]");
+
+          if (!images.length) {
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationchange", lazyload);
+            return;
+          }
+
+          [].forEach.call(images, function (lazyImage) {
+            if (
+              lazyImage.getBoundingClientRect().top <= window.innerHeight &&
+              lazyImage.getBoundingClientRect().bottom >= 0 &&
+              getComputedStyle(lazyImage).display !== "none"
+            ) {
+              lazyImage.src = lazyImage.getAttribute("data-src");
+              lazyImage.removeAttribute("data-src");
+            }
+          });
+        };
+
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationchange", lazyload);
+        lazyload();
+      }
+    });
+  </script>
+</html>
