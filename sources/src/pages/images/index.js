@@ -6,7 +6,8 @@ import "./index.css";
 // import lazyLoadInit from "./lazyload-init";
 
 // make browser compatibility branch ? check work in modern browsers.
-const format = "webp";
+const image_format = "webp";
+const video_format = "mp4";
 
 const getIndexes = Http({
   url: "/data/images-indexes.json",
@@ -20,8 +21,12 @@ const getIndexes = Http({
   },
 });
 
-const isFormat = (name) => {
-  return format == getExtension(name);
+const isImageFormat = (name) => {
+  return image_format == getExtension(name);
+};
+
+const isVideoFormat = (name) => {
+  return video_format == getExtension(name);
 };
 
 const getExtension = (file) => {
@@ -43,6 +48,30 @@ const shuffle = ([...array]) => {
   return array;
 };
 
+const viewImageItem = (name) => {
+  switch (true) {
+    case isImageFormat(name):
+      return h("div", { class: "imgc" }, [
+        h("img", {
+          alt: name,
+          src: `/data/images/${name}`,
+          loading: "lazy",
+          "data-src": `${name}`,
+        }),
+        h("div", { class: "imgc-label" }, text(name)),
+      ]);
+    case isVideoFormat(name):
+      return h("div", { class: "imgc" }, [
+        h("video", {
+          alt: name,
+          src: `/data/images/${name}`,
+          controls: true,
+        }),
+        h("div", { class: "imgc-label" }, text(name)),
+      ]);
+  }
+};
+
 app({
   init: initialState,
   view: ({ indexes }) =>
@@ -52,20 +81,7 @@ app({
         h(
           "div",
           { class: "content indexes" },
-          indexes &&
-            indexes.map(
-              (s) =>
-                isFormat(s.name) &&
-                h("div", { class: "imgc" }, [
-                  h("img", {
-                    alt: s.name,
-                    src: `/data/images/${s.name}`,
-                    loading: "lazy",
-                    "data-src": `${s.name}`,
-                  }),
-                  h("div", { class: "imgc-label" }, text(s.name)),
-                ])
-            )
+          indexes && indexes.map((s) => viewImageItem(s.name))
         ),
       ]),
     ]),

@@ -74,8 +74,21 @@ why use lambda@Edge ?
 
 ##### - data images to webp
 
+- brew install webp
 - cd $PROFILE/images
 - for file in _; do cwebp "\$file" -o "${file%._}.webp"; done
+
+##### - data images .png to .jpg
+
+- ls -1 \*.png | xargs -n 1 bash -c 'convert "$0" "${0%.png}.jpg"'
+
+##### - data images convert
+
+- ffp='ffprobe -hide\*banner -show_format'
+- ffimg='ls \*(.png|.jpg) | fzf -m --prompt="twimg" | xargs -I {} sips -Z 720 {}'
+- ff2gif='ls \_(.mp4|.mov) | fzf -m --prompt="tw2gif" | xargs -I {} ffmpeg -y -i {} -vf scale="720:trunc(ow/a/2)\_2" -r 10 {}.gif'
+- ffmov2mp4='ls \_.mov | fzf -m --prompt="twmov2mp4" | xargs -I {} ffmpeg -y -i {} -vf scale="720:trunc(ow/a/2)\_2" {}.mp4'
+- ffgif2mp4='ls \_.gif | fzf -m --prompt="gif2mp4" | xargs -I {} ffmpeg -y -i {} -vf scale="720:trunc(ow/a/2)\*2" {}.mp4'
 
 ### Preformance
 
