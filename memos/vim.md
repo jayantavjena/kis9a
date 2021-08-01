@@ -1,3 +1,5 @@
+- [Best of VIM Tips, gVIM's Key Features zzapper](https://www.ele.uri.edu/faculty/vetter/Other-stuff/vi/vimtips.html)
+
 # lua<!--{{{-->
 
 <https://zenn.dev/hituzi_no_sippo/articles/871c06cdbc45b53181e3#package-manager>

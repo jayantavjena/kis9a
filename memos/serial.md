@@ -34,9 +34,6 @@ or
 
 ### for n in {1..900000}; do echo $(php keygen.php); done > serial.csv
 
-this is slow.
-10 倍ぐらい遅い
-
 ```php
 <?php
 function keygen($len, $chars = false)
@@ -84,4 +81,3 @@ func main() {
  }
 }
 ```
-
