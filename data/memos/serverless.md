@@ -2,4 +2,3 @@
 - Auth0
 - Algolia
 - stdlib
-- dynamodb / lambda / s3 / sqs / api gateway / cloud watch / sns / cloudwatch event
