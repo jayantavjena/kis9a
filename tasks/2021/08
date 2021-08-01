@@ -1,0 +1,10 @@
+探した結果、vimのスクリプトでは
+substitute(ソース文字列,置換元パターン,置換文字列,フラグ)
+という関数がこの目的にぴったりであった。
+具体的にはcurfilenameという変数に対象となるパスが入っていれば
+
+let curfilename=substitute(curfilename,"\\","/","g")
+
+https://gihtub.com/kis9a
+
+

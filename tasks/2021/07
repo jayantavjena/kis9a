@@ -1,3 +1,6 @@
+Boreal - Build color schemes!
+partially persistent headers footer
+
 package main
 
 import (
@@ -40,7 +43,6 @@ func getInput(items []Item) {
 		log.Fatal(err)
 	}
 	fmt.Printf("selected: %v\n", idx)
-}
 
 func getTrends() ([]Item, error) {
 	res := []Item{}
