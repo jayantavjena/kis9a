@@ -89,7 +89,7 @@ function! s:replaceToTextLink(fname, remote)
   endif
 endfunction
 
-function s:putTextLink()
+function! s:putTextLink()
   let link = s:getUserInput("link")
   if (link =~ '^https\=:')
     put=s:getTextLink(link)
