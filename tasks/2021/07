@@ -1,3 +1,16 @@
+
+Railsはスモールチームでスケールしないアプリケーションを開発するのに最適
+- [Railsの未来についての一考察 - okuramasafumiのブログ](https://okuramasafumi.hatenablog.jp/entry/2020/12/16/224401)
+
+個人的に、個人レベルでのフロントエンド開発で、Vue.js やReact.js、Next.jsを使う必要はないと考えている。
+ほとんどの場合、要件もそれほど大きくなく、変更可能な場合が多いため、巨大なエコシステムは蛇足でしかない。
+npm module は余計なソースコードもダウンロードしてきて、ローカルのnode_modules/に配置される。余計重くなる。
+結果、アウトプットの速度が落ちる。本質以外の設定項目などに時間が取られる。
+
+プロトタイプの作成　→ hyperapp.js + esbuild (Go API)
+小規模プロジェクトの作成 -> preact + typescript + esbuild or svelte + esbuild
+
+
 Boreal - Build color schemes!
 partially persistent headers footer
 
