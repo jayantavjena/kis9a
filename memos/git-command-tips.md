@@ -70,3 +70,8 @@ git ls-files --others -i --exclude-standard
 - by [Github で一番有名な Git TIPS 集 - Qiita](https://qiita.com/rana_kualu/items/4d5e27244256e9689304)
 
 git gc --aggressive --prune
+
+```
+git shortlog --since="$(date +"%Y-%m-%d") 00:00:00" --no-merges -sn
+git config --global alias.today "log --since=midnight --author='$(git config user.name)' --oneline"
+```

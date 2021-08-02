@@ -1,6 +1,4 @@
 - React hooks を基礎から理解する
-- [たぶんこれが一番分かりやすいと思います React + Redux のフロー図解 - Qiita](https://qiita.com/mpyw/items/a816c6380219b1d5a3bf)
-- [React + Redux で Todo アプリを作ってみよう！『Add Todo 編』 - Qiita](https://qiita.com/micropig3402/items/8e44bc042eda13b98c95)
 - [今から始める React 入門 〜 Mobx 編 - Qiita](https://qiita.com/TsutomuNakamura/items/f10491060f0f1640afd9)
 - [blog.nunusuke/index.md at · sato-hirokazu/blog.nunusuke · GitHub](https://github.com/sato-hirokazu/blog.nunusuke/blob/22c891685686102d8e37b5d393181a250e93ec8a/src/contents/20201013-react-re-render-history/index.md)
 - 再レンダリング =[React の Context の更新による不要な再レンダリングを防ぐ 〜useContext を利用した時に発生する不要な再レンダリングを防ぐ方法に関して〜 - Qiita](https://qiita.com/soarflat/items/b154adc768bb2d71af21)

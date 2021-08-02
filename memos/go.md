@@ -9,6 +9,12 @@
 - [Rust なのか Go なのか](https://python.ms/rust-or-go/#_2-%E7%94%A8%E9%80%94)
 - [Go でオプショナルパラメータをどう扱うか - 1 ミリもわからん](https://raahii.github.io/posts/optional-parameters-in-go/)
 - [AWS CDK×LINE BOT ハンズオン～アプリとインフラをコード管理しよう～](https://zenn.dev/ufoo68/books/3fbd1969bd4b21c5454b)
+- [Go の Type Sets proposal を読む](https://zenn.dev/nobishii/articles/99a2b55e2d3e50#context)
+
+Go2
+
+- [Go1.7 の context パッケージ | Taichi Nakashima](https://deeeet.com/writing/2016/07/22/context/)
+- [Go Concurrency Patterns: Context - The Go Blog](https://blog.golang.org/context)
 
 Go 言語で文字列の連結を行う際には概ね以下の 4 つの方法がある。<!--{{{-->
 
