@@ -14,8 +14,6 @@ on:
 jobs:
   zenn:
     runs-on: ubuntu-20.04
-    env:
-      REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
     steps:
       - name: install go
         uses: actions/setup-go@v2
