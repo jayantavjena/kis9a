@@ -133,7 +133,7 @@ endif
 
 vim の界隈では、`gx` マッピングのカスタマイズは、結構している人も多そうなので、検索して更に深掘りできそうです。 [GitHub - stsewd/gx-extended.vim: Extend gx to use it beyond just URLs!](https://github.com/stsewd/gx-extended.vim) / [Google - vim+customize+gx+mapping](https://google.com/search?q=+vim+customize+gx+mapping)
 
-もしコマンドラインで使用したい場合は、
+コマンドラインで使用したい場合は、
 ~/.zshrc や ~/.bashrc に次のような関数を記述してください。
 
 ```bash:~/.zshrc
@@ -146,7 +146,7 @@ function mi() {
 
 ## 終わりに
 
-ブラウザから、ページタイトルをコピペしてくる必要はないのです。
+ブラウザから、ページタイトルをコピペしてくる必要はないです。
 自分は、簡単な vim script しか書けませんが、
 簡単でシンプルなアイデアが、今回 生産性をあげました。
 これからも Vim にはお世話になりそうなので、  
