@@ -1,0 +1,6 @@
+[[sar]]
+base = "zenn"
+
+[[sar.commands]]
+match = "scripts/aws-services/*.template"
+cmd = "cp -rf ${base}/scripts/aws-services/aws-services.template ${base}/articles/aws-services.md"
