@@ -1,0 +1,10 @@
+---
+title: "AWSサービス一覧（{{.Date}}更新)"
+slug: "aws-services-{{.Date}}"
+emoji: "📆"
+type: "tech"
+topics: ["aws", "githubactions"]
+published: false
+---
+
+{{.Content}}
