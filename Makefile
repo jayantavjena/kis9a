@@ -30,7 +30,7 @@ publish-sources: ## publish sources
 
 publish-zenn: ## publish zenn
 	-@(which gh-pages >/dev/null && gh-pages -b zenn -d zenn -t)
-	-@(which gh-pages >/dev/null || gh-pages -b zenn -d zenn -t)
+	-@(which gh-pages >/dev/null || npx gh-pages -b zenn -d zenn -t)
 
 serve-sources: ## serve sources
 	@${PROFILE_NAME} server -d
