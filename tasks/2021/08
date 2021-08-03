@@ -1,3 +1,9 @@
+
+- [Terraformで楽をしたい | フューチャー技術ブログ](https://future-architect.github.io/articles/20200805/)
+オプション指定when=destroyで削除時の削除直前に動作する
+
+[Ansible Webinars and Training I Ansible](https://www.ansible.com/resources/webinars-training)
+
 探した結果、vimのスクリプトでは
 substitute(ソース文字列,置換元パターン,置換文字列,フラグ)
 という関数がこの目的にぴったりであった。
@@ -5,6 +11,6 @@ substitute(ソース文字列,置換元パターン,置換文字列,フラグ)
 
 let curfilename=substitute(curfilename,"\\","/","g")
 
-https://gihtub.com/kis9a
+https://github.com/kis9a
 
-
+[Terraform AWS modules · GitHub](https://github.com/terraform-aws-modules)
