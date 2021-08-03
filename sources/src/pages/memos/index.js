@@ -4,10 +4,10 @@ import { Header } from "/components/header";
 import { Http } from "/modules/js/Http.js";
 import { Keyboard } from "/modules/js/subs/Keyboard.js";
 import { Toast } from "/components/toast";
+import { Top } from "/components/top";
 import { Tooltip, RemoveTooltip } from "/components/Tooltip";
 import "./index.css";
 import "/layouts/index.css";
-import svg_top from "/assets/svgs/chevron-double-up.svg";
 import svg_clear from "/assets/svgs/trash.svg";
 import svg_close from "/assets/svgs/x.svg";
 import svg_share from "/assets/svgs/external-link.svg";
@@ -201,17 +201,6 @@ const toggleRaw = (state) => {
   return { ...state, rawMode: !state.rawMode };
 };
 
-const Top = (state) => {
-  // document.body.scrollTop = 0;
-  // document.documentElement.scrollTop = 0;
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-  return state;
-};
-
 const defaultState = {
   indexes: "",
   content: { name: "memo", content: "" },
@@ -263,16 +252,6 @@ const initialUrl = getUrl();
 // const state = storageState ? storageState : defaultState;
 
 const initialState = [defaultState, initIndexes, initContent, initCategories];
-
-onscroll = () => {
-  const top = document.getElementById("top");
-  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  if (scrollTop > 500) {
-    top.classList.remove("hide");
-  } else {
-    top.classList.add("hide");
-  }
-};
 
 const tick = (action) => [
   (dispatch) => {
@@ -484,12 +463,7 @@ app({
               class: `tab-content ${content.content ? "" : "no-content"}`,
               innerHTML: rawMode ? content.content : snarkdown(content.content),
             }),
-          h("div", {
-            id: "top",
-            class: "svg-top hide",
-            innerHTML: svg_top,
-            onclick: Top,
-          }),
+          Top(),
         ]),
       ]),
     ]),
