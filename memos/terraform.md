@@ -137,6 +137,7 @@ given subcommand.
 - [10 分で理解する Terraform - Qiita](https://qiita.com/Chanmoro/items/55bf0da3aaf37dc26f73)
 - [Terraform 設計・運用のノウハウ - Qiita](https://qiita.com/naomichi-y/items/4501331d114b4ef9d584)
 - [Terraform をしばらく書いて覚えた個人的な Tips について | DevelopersIO](https://dev.classmethod.jp/articles/my-terraform-tips/)
+- [【Terraform】module のアンチパターンとそれに対するベストプラクティス 5 選 - Qiita](https://qiita.com/bigwheel/items/2b420183639416b5c6bb)
 
 best practice.
 
