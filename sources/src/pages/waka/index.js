@@ -1,4 +1,5 @@
 import { h, text, app } from "/modules/js/hyperapp.js";
+import { Top } from "/components/top";
 import { Http } from "/modules/js/Http.js";
 import { Header } from "/components/header";
 import svg_calendar from "/assets/svgs/calendar.svg";
@@ -81,6 +82,7 @@ app({
             )
         ),
       ]),
+      Top(),
     ]),
   subscriptions: () => {},
   node: document.getElementById("app"),

@@ -1,4 +1,5 @@
 import { h, app, text } from "/modules/js/hyperapp.js";
+import { Top } from "/components/top";
 import { Http } from "../../modules/js/http.js";
 import { Header } from "/components/header";
 import "/layouts/index.css";
@@ -84,6 +85,7 @@ app({
           indexes && indexes.map((s) => viewImageItem(s.name))
         ),
       ]),
+      Top(),
     ]),
   subscriptions: () => {},
   node: document.getElementById("app"),
