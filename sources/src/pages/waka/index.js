@@ -33,8 +33,10 @@ const yymmdd = (dt) => {
 };
 
 const afterDay = (n) => {
-  date.setDate(date.getDate() + n);
-  return yymmdd(date);
+  const newDate = new Date();
+  newDate.getDate();
+  newDate.setDate(date.getDate() + n);
+  return yymmdd(newDate);
 };
 
 const date = new Date();
