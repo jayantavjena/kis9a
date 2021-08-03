@@ -8,6 +8,7 @@ import {
   viewToastSuccess,
 } from "/components/toast/unit.js";
 import { viewHeader } from "/components/header/unit.js";
+import { viewTop } from "/components/top/unit.js";
 import "/layouts/index.css";
 import "./index.css";
 
@@ -57,6 +58,15 @@ const sides = [
       {
         name: "success",
         view: viewToastSuccess,
+      },
+    ],
+  },
+  {
+    name: "Top",
+    views: [
+      {
+        name: "default",
+        view: viewTop,
       },
     ],
   },
