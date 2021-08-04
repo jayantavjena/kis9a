@@ -1,3 +1,20 @@
+Array.prototype.find
+Array.prototype.findIndex
+Array.prototype.flat
+Array.prototype.flatMap
+Array.prototype.includes
+String.prototype.includes
+String.prototype.padStart
+Object.values
+Object.assign
+Object.entries
+Object.fromEntries
+
+[About | ysmtegsr.com](https://ysmtegsr.com/about)
+
+let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
+
+gh-pages-clean
 
 - [Terraformで楽をしたい | フューチャー技術ブログ](https://future-architect.github.io/articles/20200805/)
 オプション指定when=destroyで削除時の削除直前に動作する
