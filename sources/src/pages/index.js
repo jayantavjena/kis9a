@@ -7,7 +7,11 @@ const doper = require("/modules/js/doper.js");
 
 app({
   init: {},
-  view: () => h("div", { class: "container" }, [Header(), h("main", {}, [])]),
+  view: () =>
+    h("div", { class: "container" }, [
+      Header(),
+      h("main", { id: "rss-feeds" }, []),
+    ]),
   subscriptions: () => {},
   node: document.getElementById("app"),
 });
@@ -18,10 +22,11 @@ window.onload = function () {
     "https://zenn.dev/kis9a/feed",
     {
       limit: 20,
+      entryTemplate:
+        '<a class="feed" href="{url}" target="_blank"><img class="feed-thumbnail" src="{enclosureUrl}" alt="{author} {title}" /></a>',
     }
   );
-
-  rss.render().then(() => console.log("cool"));
+  rss.render().then(() => {});
 };
 
 // (function () {

@@ -298,6 +298,7 @@ export const RSS = (function () {
         title: e.title,
         body: e.content,
         shortBody: e.contentSnippet,
+        enclosureUrl: e.enclosure.url,
         bodyPlain: (function (e) {
           for (
             var i = e.content

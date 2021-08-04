@@ -28,3 +28,23 @@
   border-radius: 50%;
   background-color: blue;
 }
+
+.feed {
+  width: auto;
+}
+
+#rss-feeds ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.feed {
+  max-width: 280px;
+  padding: 1.2rem;
+}
+
+.feed-thumbnail {
+  max-width: 280px;
+  box-shadow: 0 0 4px 4px var(--color-bg-secondary);
+}
