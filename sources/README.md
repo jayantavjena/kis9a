@@ -62,6 +62,10 @@ why use lambda@Edge ?
 - don't use npm module  
   use modules/\*.esm.js
 
+##### - components catalog page
+
+- https://me.kis9a.com/components/
+
 ##### - whatch file changes
 
 - use [sar](https://github.com/kis9a/sar) command  

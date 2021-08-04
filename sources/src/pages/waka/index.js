@@ -1,4 +1,5 @@
 import { h, text, app } from "/modules/js/hyperapp.js";
+import { Top } from "/components/top";
 import { Http } from "/modules/js/Http.js";
 import { Header } from "/components/header";
 import svg_calendar from "/assets/svgs/calendar.svg";
@@ -32,8 +33,10 @@ const yymmdd = (dt) => {
 };
 
 const afterDay = (n) => {
-  date.setDate(date.getDate() + n);
-  return yymmdd(date);
+  const newDate = new Date();
+  newDate.getDate();
+  newDate.setDate(date.getDate() + n);
+  return yymmdd(newDate);
 };
 
 const date = new Date();
@@ -81,6 +84,7 @@ app({
             )
         ),
       ]),
+      Top(),
     ]),
   subscriptions: () => {},
   node: document.getElementById("app"),

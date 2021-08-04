@@ -463,9 +463,9 @@ app({
               class: `tab-content ${content.content ? "" : "no-content"}`,
               innerHTML: rawMode ? content.content : snarkdown(content.content),
             }),
-          Top(),
         ]),
       ]),
+      Top(),
     ]),
   subscriptions: (state) => [
     state.content &&
