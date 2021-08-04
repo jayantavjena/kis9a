@@ -82,3 +82,5 @@ JavaScript の組み込み API で、Ajax 通信を実現する XMLHttpRequest (
   forgeries/forgery ってあまり聞かないですよね... 偽造 という意味らしいですよ。(サイトをまたがってリクエストを偽造する :thinking: )
 
 具体的な実装
+
+- [AWS の基礎を学ぼう 特別編 最新サービスをみんなで触ってみる 〜Amazon Route 53 Resolver DNS Firewall〜 ハンズオン手順 #awsbasics | DevelopersIO](https://dev.classmethod.jp/articles/awsbasics_route53_dns_firewall_handson/)
