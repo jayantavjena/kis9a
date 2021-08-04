@@ -4,24 +4,19 @@ import "./index.css";
 import "/layouts/index.css";
 import { RSS } from "/modules/js/rss.js";
 
-const defaultState = {
-  loading: false,
-};
-
-const initialState = [defaultState];
-
 app({
-  init: initialState,
-  view: ({ loading }) =>
+  view: () =>
     h("div", { class: "container" }, [
       Header(),
       h("main", { id: "rss-feeds" }, [
-        loading &&
-          h(
-            "h1",
-            { style: { width: "100%", textAlign: "left", padding: "20px" } },
-            text("Loading...")
-          ),
+        h(
+          "h3",
+          {
+            id: "loading",
+            style: { width: "100%", textAlign: "left", padding: "20px" },
+          },
+          text("Loading...")
+        ),
       ]),
     ]),
   subscriptions: () => {},
@@ -38,5 +33,7 @@ window.onload = function () {
         '<a class="feed" href="{url}" target="_blank"><img class="feed-thumbnail" src="{enclosureUrl}" alt="{author} {title}" /></a>',
     }
   );
-  rss.render().then(() => {});
+  return rss.render().then(() => {
+    document.getElementById("loading").style.display = "none";
+  });
 };
