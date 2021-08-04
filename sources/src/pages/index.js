@@ -2,6 +2,7 @@ import { h, app } from "/modules/js/hyperapp.js";
 import { Header } from "/components/header";
 import "./index.css";
 import "/layouts/index.css";
+import { RSS } from "/modules/js/rss.js";
 const doper = require("/modules/js/doper.js");
 
 app({
@@ -11,50 +12,62 @@ app({
   node: document.getElementById("app"),
 });
 
-(function () {
-  const el = document.createElement("div");
-  el.classList.add("box");
-  document.body.appendChild(el);
-  let node = doper("<div>RSS</div>", ".box");
-  node.parent.style.position = "fixed";
-  node.style.position = "absolute";
-  node.style.fontSize = "60px";
-  node.style.width = "50px";
-  node.style.height = "50px";
-  node.style.letterSpacing = "10px";
-  node.minAnchorX = 0.2;
-  node.maxAnchorX = 0.2;
-  node.minAnchorY = 0.2;
-  node.maxAnchorY = 0.2;
-  function update() {
-    node.rotation++;
-    node.y = Math.sin(node.rotation * 0.05) * 100;
-    requestAnimationFrame(update);
-  }
-  update();
-})();
+window.onload = function () {
+  const rss = new RSS(
+    document.querySelector("#rss-feeds"),
+    "https://zenn.dev/kis9a/feed",
+    {
+      limit: 20,
+    }
+  );
 
-(function () {
-  const el = document.createElement("div");
-  el.classList.add("box1");
-  document.body.appendChild(el);
-  let node = doper("<div>Here</div>", ".box1");
-  node.parent.style.position = "fixed";
-  node.style.fontSize = "50px";
-  node.style.width = "50px";
-  node.style.height = "50px";
-  node.style.letterSpacing = "8px";
-  node.minAnchorX = 0.8;
-  node.maxAnchorX = 0.8;
-  node.minAnchorY = 0.2;
-  node.maxAnchorY = 0.6;
-  function update() {
-    node.rotation++;
-    node.y = Math.cos(node.rotation * 0.02) * 30;
-    requestAnimationFrame(update);
-  }
-  update();
-})();
+  rss.render().then(() => console.log("cool"));
+};
+
+// (function () {
+//   const el = document.createElement("div");
+//   el.classList.add("box");
+//   document.body.appendChild(el);
+//   let node = doper("<div>RSS</div>", ".box");
+//   node.parent.style.position = "fixed";
+//   node.style.position = "absolute";
+//   node.style.fontSize = "60px";
+//   node.style.width = "50px";
+//   node.style.height = "50px";
+//   node.style.letterSpacing = "10px";
+//   node.minAnchorX = 0.2;
+//   node.maxAnchorX = 0.2;
+//   node.minAnchorY = 0.2;
+//   node.maxAnchorY = 0.2;
+//   function update() {
+//     node.rotation++;
+//     node.y = Math.sin(node.rotation * 0.05) * 100;
+//     requestAnimationFrame(update);
+//   }
+//   update();
+// })();
+
+// (function () {
+//   const el = document.createElement("div");
+//   el.classList.add("box1");
+//   document.body.appendChild(el);
+//   let node = doper("<div>Here</div>", ".box1");
+//   node.parent.style.position = "fixed";
+//   node.style.fontSize = "50px";
+//   node.style.width = "50px";
+//   node.style.height = "50px";
+//   node.style.letterSpacing = "8px";
+//   node.minAnchorX = 0.8;
+//   node.maxAnchorX = 0.8;
+//   node.minAnchorY = 0.2;
+//   node.maxAnchorY = 0.6;
+//   function update() {
+//     node.rotation++;
+//     node.y = Math.cos(node.rotation * 0.02) * 30;
+//     requestAnimationFrame(update);
+//   }
+//   update();
+// })();
 
 // function randomMove() {
 //   // var randomElm = document.getElementById(id);
