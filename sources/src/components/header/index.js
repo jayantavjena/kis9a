@@ -37,6 +37,8 @@ export const Header = () => {
             src: LogoImage,
             alt: "kis9a.png",
             onclick: toNavigation,
+            width: "100px",
+            height: "100px",
           }),
         ]),
         h(

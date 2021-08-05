@@ -131,7 +131,6 @@ export const RSS = (function () {
   }
   return class {
     constructor(t, i, n = {}) {
-      console.log(t);
       (this.version = "1.3.0"),
         (this.target = t),
         (this.urls = [].concat(i)),
@@ -142,7 +141,7 @@ export const RSS = (function () {
           support: !0,
           limit: null,
           key: null,
-          layoutTemplate: "<ul>{entries}</ul>",
+          layoutTemplate: "{entries}",
           entryTemplate:
             '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>',
           tokens: {},
