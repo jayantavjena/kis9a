@@ -1,3 +1,0 @@
-- [実際の業務と DDD - スマートロック開発日誌 #2](https://zenn.dev/hsshss/articles/e11efefc7011ab)
-- [DDD リファレンス 定義とパターン概要 (鋭意修正中, CC-BY)](https://zenn.dev/takahashim/books/fb4cdc32f8e95c)
-- [ドメイン駆動設計にまつわる概念](https://zenn.dev/imamura_sh/articles/ddd-summary-f85323ffc1b91d82f795)
