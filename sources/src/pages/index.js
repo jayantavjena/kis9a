@@ -6,13 +6,13 @@ import { RSS } from "/modules/js/rss.js";
 
 app({
   view: () =>
-    h("div", { class: "container" }, [
+    h("div", { class: "home-container" }, [
       Header(),
       h(
         "h3",
         {
           id: "loading",
-          style: { width: "100%", textAlign: "left", padding: "20px" },
+          style: { width: "100%", textAlign: "left", padding: "40px" },
         },
         text("Loading...")
       ),

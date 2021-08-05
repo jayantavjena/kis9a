@@ -50,14 +50,17 @@
   box-shadow: 0 0 4px 4px var(--color-bg-secondary);
 }
 
-.container {
+.home-container {
   min-height: auto !important;
-  margin-bottom: 4rem;
+  margin-bottom: 50px;
   padding-inline-start: 2px !important;
 }
 
 @media (max-width: 600px) {
   #rss-feeds ul {
     justify-content: center;
+  }
+  .feed-thumbnail {
+    max-width: 200px;
   }
 }
