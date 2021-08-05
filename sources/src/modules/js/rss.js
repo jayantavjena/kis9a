@@ -169,7 +169,9 @@ export const RSS = (function () {
           return (this.entries = []), (this.feed = null), e(t);
         }
         const i = this._generateHTMLForEntries();
-        if ((this.target.append(i.layout), 0 !== i.entries.length)) {
+        if (
+          (this.target && this.target.append(i.layout), 0 !== i.entries.length)
+        ) {
           this.events.emit("vanilla-rss/data", {
             rss: this,
             feed: this.feed,

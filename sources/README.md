@@ -107,3 +107,5 @@ why use lambda@Edge ?
 - gh-pages command self made
 - abstract and separation for application and devOps staff
 - incremental bundle -> use esbuild watch function ?
+- stale-while-revalidate: Cache-Control: max-age=600, stale-while-revalidate=30
+- API Gateway + AWS Lambda self hostring RSS parsed JSON API
