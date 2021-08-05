@@ -131,6 +131,7 @@ export const RSS = (function () {
   }
   return class {
     constructor(t, i, n = {}) {
+      console.log(t);
       (this.version = "1.3.0"),
         (this.target = t),
         (this.urls = [].concat(i)),
