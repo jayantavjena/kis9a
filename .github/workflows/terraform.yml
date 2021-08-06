@@ -19,12 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Terraform format
-        id: fmt
-        run: terraform fmt -check -recursive
-        working-directory: "./sources/terraform"
-        continue-on-error: true
-
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -35,12 +29,6 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-        working-directory: "./sources/terraform"
-
-      - name: Terraform Plan
-        id: plan
-        run: terraform plan -no-color
-        continue-on-error: true
         working-directory: "./sources/terraform"
 
       - name: Terraform Apply
