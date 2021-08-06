@@ -2,8 +2,16 @@
 # S3
 ######
 resource "aws_s3_bucket" "static_site" {
-  bucket = var.bucket_name
-  acl    = "private"
+  bucket          = var.bucket_name
+  acl             = "private"
+  max_age_seconds = 3000
+  website {
+    index_document = "index.html"
+    error_document = "error/index.html"
+  }
+  cors_rule {
+    allowed_origins = ["www.feedrapp.info"]
+  }
 }
 
 resource "aws_s3_bucket_policy" "static_site" {
@@ -52,6 +60,7 @@ resource "aws_cloudfront_distribution" "static_site" {
   default_root_object = "index.html"
 
   default_cache_behavior {
+    path_pattern     = "/*"
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = local.s3_origin_id
@@ -67,6 +76,7 @@ resource "aws_cloudfront_distribution" "static_site" {
     min_ttl                = 86400
     default_ttl            = 172800
     max_ttl                = 2592000
+    compress               = true
   }
 
   restrictions {

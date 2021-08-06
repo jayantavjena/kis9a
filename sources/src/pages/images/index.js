@@ -52,15 +52,24 @@ const shuffle = ([...array]) => {
 const viewImageItem = (name) => {
   switch (true) {
     case isImageFormat(name):
-      return h("div", { class: "imgc" }, [
-        h("img", {
-          alt: name,
-          src: `/data/images/${name}`,
-          loading: "lazy",
-          "data-src": `${name}`,
-        }),
-        h("div", { class: "imgc-label" }, text(name)),
-      ]);
+      return h(
+        "div",
+        {
+          class: "imgc",
+          oncreate: (el) => {
+            console.log(el);
+          },
+        },
+        [
+          h("img", {
+            alt: name,
+            src: `/data/images/${name}`,
+            loading: "lazy",
+            "data-src": `${name}`,
+          }),
+          h("div", { class: "imgc-label" }, text(name)),
+        ]
+      );
     case isVideoFormat(name):
       return h("div", { class: "imgc" }, [
         h("video", {

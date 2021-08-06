@@ -36,13 +36,13 @@ window.addEventListener("DOMContentLoaded", function () {
   const rss = new RSS(el, "https://zenn.dev/kis9a/feed", {
     limit: 20,
     entryTemplate:
-      '<a class="feed" style="opacity: 0" href="{url}" target="_blank"><img class="feed-thumbnail" src="{enclosureUrl}" alt="{author} {title}" /></a>',
+      '<a class="feed" style="opacity: 0" href="{url}" target="_blank"><img class="feed-thumbnail" src="{enclosureUrl}" alt="{author} {title}" width="280px" height="auto"/></a>',
   });
   return rss.render().then(() => {
     const el = document.getElementsByClassName("feed");
     if (el) {
       for (var e of el) {
-        fadeIn(e, 500);
+        fadeIn(e, 400);
       }
     }
     document.getElementById("loading").style.display = "none";
