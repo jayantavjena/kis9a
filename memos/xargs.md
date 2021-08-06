@@ -35,3 +35,6 @@ seq 4 8 | nl | xargs -n2 bash -c 'seq $1 | sed "s/^/printf \$(tput setaf 0)\$(tp
 bash gist2localmd.bash | jq | sed -e "s/[//g' -e 's/]//g" | tr -s "\n"
 
 curl -s "https://api.github.com/users/milanboers/repos?per_page=100" | jq -r ".[].git_url" | xargs -L1 git clone
+
+ls | xargs -L 1 bash -c 'echo ${0} ${1}'
+ls | xargs -L 1 bash -c "echo ${0} ${1}"
