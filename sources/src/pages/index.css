@@ -1,6 +1,7 @@
-#rss-feeds {
+.feeds {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
   margin: 0 !important;
   justify-content: left;
 }
@@ -8,6 +9,17 @@
 .feed {
   max-width: 280px;
   padding: 1.2rem;
+}
+
+.feed-header {
+  display: flex;
+  padding: 1rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-bg-secondary);
+}
+
+h2 {
+  margin: 0;
 }
 
 .feed-thumbnail {
@@ -24,7 +36,7 @@
 }
 
 @media (max-width: 600px) {
-  #rss-feeds {
+  .feeds {
     justify-content: center;
   }
   .feed-thumbnail {

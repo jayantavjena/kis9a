@@ -1,23 +1,35 @@
 import { h, app, text } from "/modules/js/hyperapp.js";
+import { Http } from "/modules/js/Http.js";
 import { Header } from "/components/header";
 import { Top } from "/components/top";
-import { fadeIn } from "/modules/js/fadeInOut";
 import "./index.css";
 import "/layouts/index.css";
-import { RSS } from "/modules/js/rss.js";
+
+const initFeeds = Http({
+  url: "https://www.feedrapp.info/?support=true&version=1.3.0&q=https://zenn.dev/kis9a/feed&num=20",
+  response: "json",
+  action: (state, res) => {
+    return {
+      ...state,
+      feeds: res.responseData.feed.entries,
+      loading: false,
+    };
+  },
+});
+
+const initialState = [{ feeds: [], loading: true }, initFeeds];
 
 const viewLoading = () => {
   return h(
-    "main",
+    "div",
     {
       id: "loading",
       style: {
         width: "100%",
         textAlign: "left",
-        padding: "20px 40px",
+        padding: "20px",
         fontSize: "16px",
         fontWeight: "600",
-        opacity: 0,
       },
     },
     text("Loading ...")
@@ -25,33 +37,36 @@ const viewLoading = () => {
 };
 
 app({
-  view: () =>
-    h("div", { class: "home-container" }, [Header(), viewLoading(), Top()]),
-  subscriptions: () => {},
+  init: initialState,
+  view: ({ feeds, loading }) =>
+    h("div", { class: "container" }, [
+      Header(),
+      h("main", { class: "main" }, [
+        h("div", { class: "content", style: { minHeight: "500px" } }, [
+          h("div", { class: "feed-header" }, h("h2", {}, text("Zenn"))),
+          loading && viewLoading(),
+          h(
+            "div",
+            { class: "feeds" },
+            feeds &&
+              feeds.map((f) =>
+                h("a", { class: "feed", rel: "noopener", href: f.link }, [
+                  h(
+                    "img",
+                    {
+                      class: "feed-thumbnail",
+                      src: f.enclosure.url,
+                      alt: f.title,
+                    },
+                    []
+                  ),
+                ])
+              )
+          ),
+        ]),
+      ]),
+      Top(),
+    ]),
+  subscriptions: (state) => {},
   node: document.getElementById("app"),
 });
-
-window.addEventListener("DOMContentLoaded", function () {
-  const el = document.getElementById("rss-feeds");
-  const rss = new RSS(el, "https://zenn.dev/kis9a/feed", {
-    limit: 20,
-    entryTemplate:
-      '<a class="feed" style="opacity: 0" href="{url}" target="_blank"><img class="feed-thumbnail" src="{enclosureUrl}" alt="{author} {title}" width="280px" height="auto"/></a>',
-  });
-  return rss.render().then(() => {
-    const el = document.getElementsByClassName("feed");
-    if (el) {
-      for (var e of el) {
-        fadeIn(e, 400);
-      }
-    }
-    document.getElementById("loading").style.display = "none";
-  });
-});
-
-window.onload = function () {
-  const el = document.getElementById("loading");
-  if (el) {
-    fadeIn(el, 100);
-  }
-};

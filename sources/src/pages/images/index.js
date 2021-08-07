@@ -22,6 +22,18 @@ const getIndexes = Http({
   },
 });
 
+const initContent = [
+  (dispatch) => {
+    const action = (state) => {
+      console.log(state);
+      return {
+        ...state,
+      };
+    };
+    dispatch(action);
+  },
+];
+
 const isImageFormat = (name) => {
   return image_format == getExtension(name);
 };
@@ -39,7 +51,7 @@ const pureState = {
 };
 
 const initIndexes = getIndexes;
-const initialState = [pureState, initIndexes];
+const initialState = [pureState, initIndexes, initContent];
 
 const shuffle = ([...array]) => {
   for (let i = array.length - 1; i >= 0; i--) {
@@ -81,21 +93,32 @@ const viewImageItem = (name) => {
       ]);
   }
 };
-
+// oncreate: fadeIn,
+// onremove: fadeOut,
 app({
   init: initialState,
   view: ({ indexes }) =>
-    h("div", { class: "container" }, [
-      Header(),
-      h("main", {}, [
-        h(
-          "div",
-          { class: "content indexes" },
-          indexes && indexes.map((s) => viewImageItem(s.name))
-        ),
-      ]),
-      Top(),
-    ]),
+    h(
+      "div",
+      {
+        class: "container",
+        oncreate: (state) => {
+          console.log("hello");
+          return { ...state };
+        },
+      },
+      [
+        Header(),
+        h("main", {}, [
+          h(
+            "div",
+            { class: "content indexes" },
+            indexes && indexes.map((s) => viewImageItem(s.name))
+          ),
+        ]),
+        Top(),
+      ]
+    ),
   subscriptions: () => {},
   node: document.getElementById("app"),
 });
