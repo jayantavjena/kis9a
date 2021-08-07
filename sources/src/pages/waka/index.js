@@ -75,7 +75,7 @@ app({
                       text(afterDay(dateRange(s.name)) + " - " + today)
                     ),
                   ]),
-                h("div", { class: "item" }, [
+                h("div", { class: "item", style: { minHeight: "250px" } }, [
                   h("img", { src: s.activity }),
                   h("img", { src: s.percent }),
                   h("img", { src: s.bar }),
