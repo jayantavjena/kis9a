@@ -112,7 +112,7 @@ app({
         h("main", {}, [
           h(
             "div",
-            { class: "content indexes" },
+            { class: "content indexes", style: { minHeight: "500px" } },
             indexes && indexes.map((s) => viewImageItem(s.name))
           ),
         ]),
