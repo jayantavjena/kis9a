@@ -9,7 +9,7 @@ on:
       - ".github/workflows/rss.yml"
 
 jobs:
-  build:
+  upload:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
