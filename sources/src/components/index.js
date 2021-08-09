@@ -80,17 +80,11 @@ const sides = [
   },
 ];
 
-const initialState = [
-  {
-    cview: h("div", {}, text("")),
-  },
-];
-
-const setView = (state, views) => {
-  const view = h(
+const view = (side) =>
+  h(
     "div",
     {},
-    views.map((v) =>
+    side.views.map((v) =>
       h("div", {}, [
         h("h3", {}, text(v.name)),
         h("div", {}, h("div", {}, v.view())),
@@ -98,12 +92,58 @@ const setView = (state, views) => {
       ])
     )
   );
-  return { ...state, cview: view };
+
+const setView = (state, side) => {
+  const cview = view(side);
+  return { ...state, cview: cview, cname: side.name };
 };
+
+const tick = (action) => [
+  (dispatch) => {
+    dispatch(action);
+    return () => {};
+  },
+  { action },
+];
+
+const baseName = (str) => {
+  return new String(str).substring(str.lastIndexOf("/") + 1);
+};
+
+const getUrl = () => window.location.href;
+const initialUrl = getUrl();
+
+const initializeCView = [
+  (dispatch) => {
+    const url = initialUrl;
+    const name = baseName(url);
+    const action = (state) => {
+      const side = state.sides.find((side) => side.name === name);
+      if (!side) {
+        return { ...state };
+      }
+      return {
+        ...state,
+        cname: side.name,
+        cview: view(side),
+      };
+    };
+    dispatch(action);
+  },
+];
+
+const initialState = [
+  {
+    cview: h("div", {}, text("")),
+    cname: "",
+    sides: sides,
+  },
+  initializeCView,
+];
 
 app({
   init: initialState,
-  view: ({ cview }) =>
+  view: ({ cview, cname }) =>
     h("div", { class: "container" }, [
       Header(),
       h("main", { class: "main" }, [
@@ -111,17 +151,26 @@ app({
           "div",
           { class: "sidebar" },
           sides &&
-            sides.map((v) =>
+            sides.map((side) =>
               h(
                 "div",
-                { class: "side", onclick: [setView, v.views] },
-                text(v.name)
+                {
+                  class: `side ${cname === side.name ? "current" : ""} `,
+                  onclick: [setView, side],
+                },
+                text(side.name)
               )
             )
         ),
         h("div", { class: "content" }, h("h1", {}, cview)),
       ]),
     ]),
-  subscriptions: () => {},
+  subscriptions: (state) => [
+    state.cname &&
+      tick((state) => {
+        window.location.href = `#/${state.cname}`;
+        return state;
+      }),
+  ],
   node: document.getElementById("app"),
 });
