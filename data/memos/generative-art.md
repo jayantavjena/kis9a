@@ -5,4 +5,4 @@ Generative art refers to art that in whole or in part has been created with the 
 
 [【Three.js】スクロールでぐにゃぐにゃする画像を実装する](https://zenn.dev/bokoko33/articles/bd6744879af0d5)
 
-image galary view, dianatoloza.
+[Diana Toloza — Photography](https://dianatoloza.co/)
