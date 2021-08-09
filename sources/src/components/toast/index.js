@@ -1,4 +1,4 @@
-import svg_info from "/assets/svgs/information-circle.svg";
+import svg_info from "/assets/svgs/info.svg";
 import svg_warn from "/assets/svgs/exclamation.svg";
 import svg_check from "/assets/svgs/check-circle.svg";
 import { fadeIn, fadeOut } from "/modules/js/fadeInOut.js";
@@ -14,7 +14,7 @@ export const Toast = (
     right = "10px",
     left = "auto",
     top = "auto",
-    bg = "#f4f4f4",
+    bg = "#ffffff",
     status = "info",
   } = {}
 ) => {

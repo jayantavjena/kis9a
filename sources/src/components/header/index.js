@@ -1,5 +1,5 @@
 import { h, text } from "/modules/js/hyperapp.js";
-import { routes } from "/modules/js/router.js";
+import { headerRoutes } from "/modules/js/router.js";
 import { LinkIcon } from "/components/link";
 import LogoImage from "/assets/logo.png";
 import "./index.css";
@@ -22,7 +22,7 @@ export const Header = () => {
     str = path.normalize(str);
     return str.replaceAll("/", "");
   };
-  let c = routes.find((v) => {
+  let c = headerRoutes.find((v) => {
     return parse(sn) === parse(v.href);
   });
   if (!c) {
@@ -44,7 +44,9 @@ export const Header = () => {
         h(
           "div",
           { class: "links" },
-          routes.map((r) => LinkIcon(r.name, { active: r.name !== c.name }))
+          headerRoutes.map((r) =>
+            LinkIcon(r.name, { active: r.name !== c.name })
+          )
         ),
       ]),
     ]),

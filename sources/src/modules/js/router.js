@@ -3,7 +3,7 @@ import svg_photograph from "/assets/svgs/photograph.svg";
 import svg_chart_bar from "/assets/svgs/chart-bar.svg";
 import svg_pencil_alt from "/assets/svgs/pencil-alt.svg";
 
-export const routes = [
+export const headerRoutes = [
   {
     name: "home",
     href: "/",
@@ -24,21 +24,25 @@ export const routes = [
     href: "/waka/",
     icon: svg_chart_bar,
   },
-  // {
-  //   name: "tools",
-  //   href: "/tools/",
-  //   icon: svg_cube,
-  // },
-  // {
-  //   name: "tools",
-  //   href: "/tools/",
-  //   icon: svg_cube,
-  // },
-  // {
-  //   name: "comps",
-  //   href: "/components/",
-  //   icon: svg_template,
-  // },
+];
+
+export const routes = [
+  ...headerRoutes,
+  {
+    name: "tools",
+    href: "/tools/",
+    icon: svg_home,
+  },
+  {
+    name: "tools",
+    href: "/tools/",
+    icon: svg_home,
+  },
+  {
+    name: "comps",
+    href: "/components/",
+    icon: svg_home,
+  },
 ];
 
 export const pushRoute = (name) => {

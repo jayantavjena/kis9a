@@ -353,7 +353,6 @@ a {
 }
 
 a:hover {
-  filter: brightness(var(--hover-brightness));
   text-decoration: underline;
 }
 
@@ -377,7 +376,6 @@ button {
 
 button:hover {
   cursor: pointer;
-  filter: brightness(var(--hover-brightness));
 }
 
 a b,

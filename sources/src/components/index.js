@@ -1,6 +1,10 @@
 import { Header } from "/components/header";
 import { h, text, app } from "/modules/js/hyperapp.js";
-import { viewLink, viewLinkActive } from "/components/link/unit.js";
+import {
+  viewLink,
+  viewLinkActive,
+  viewLinkIcons,
+} from "/components/link/unit.js";
 import { viewTooltip } from "/components/tooltip/unit.js";
 import {
   viewToast,
@@ -32,6 +36,10 @@ const sides = [
       {
         name: "active",
         view: viewLinkActive,
+      },
+      {
+        name: "icons",
+        view: viewLinkIcons,
       },
     ],
   },
@@ -82,7 +90,13 @@ const setView = (state, views) => {
   const view = h(
     "div",
     {},
-    views.map((v) => h("div", {}, h("div", {}, v.view())))
+    views.map((v) =>
+      h("div", {}, [
+        h("h3", {}, text(v.name)),
+        h("div", {}, h("div", {}, v.view())),
+        h("hr", {}),
+      ])
+    )
   );
   return { ...state, cview: view };
 };
