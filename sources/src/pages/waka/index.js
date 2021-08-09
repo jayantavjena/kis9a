@@ -5,6 +5,7 @@ import { Header } from "/components/header";
 import svg_calendar from "/assets/svgs/calendar.svg";
 import "./index.css";
 import "/layouts/index.css";
+import "/modules/css/fade.css";
 
 const getSvgs = Http({
   url: "/data/wakatime.json",
@@ -76,9 +77,13 @@ app({
                     ),
                   ]),
                 h("div", { class: "item", style: { minHeight: "250px" } }, [
-                  h("img", { src: s.activity }),
-                  h("img", { src: s.percent }),
-                  h("img", { src: s.bar }),
+                  h("img", {
+                    class: "fade-in-2",
+                    src: s.activity,
+                    alt: s.name,
+                  }),
+                  h("img", { class: "fade-in-2", src: s.percent, alt: s.name }),
+                  h("img", { class: "fade-in-2", src: s.bar, alt: s.name }),
                 ]),
               ])
             )

@@ -1,9 +1,11 @@
 import { h, app, text } from "/modules/js/hyperapp.js";
+import { shuffleArray } from "/modules/js/shuffle.js";
 import { Top } from "/components/top";
 import { Http } from "../../modules/js/http.js";
 import { Header } from "/components/header";
-import "/layouts/index.css";
 import "./index.css";
+import "/layouts/index.css";
+import "/modules/css/fade.css";
 // import lazyLoadInit from "./lazyload-init";
 
 // make browser compatibility branch ? check work in modern browsers.
@@ -17,7 +19,7 @@ const getIndexes = Http({
     pureState.indexes = res;
     return {
       ...state,
-      indexes: shuffle(res) || [],
+      indexes: shuffleArray(res) || [],
     };
   },
 });
@@ -53,35 +55,19 @@ const pureState = {
 const initIndexes = getIndexes;
 const initialState = [pureState, initIndexes, initContent];
 
-const shuffle = ([...array]) => {
-  for (let i = array.length - 1; i >= 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-};
-
 const viewImageItem = (name) => {
   switch (true) {
     case isImageFormat(name):
-      return h(
-        "div",
-        {
-          class: "imgc",
-          oncreate: (el) => {
-            console.log(el);
-          },
-        },
-        [
-          h("img", {
-            alt: name,
-            src: `/data/images/${name}`,
-            loading: "lazy",
-            "data-src": `${name}`,
-          }),
-          h("div", { class: "imgc-label" }, text(name)),
-        ]
-      );
+      return h("div", { class: "imgc" }, [
+        h("img", {
+          alt: name,
+          src: `/data/images/${name}`,
+          class: "fade-in-2",
+          loading: "lazy",
+          "data-src": `${name}`,
+        }),
+        h("div", { class: "imgc-label" }, text(name)),
+      ]);
     case isVideoFormat(name):
       return h("div", { class: "imgc" }, [
         h("video", {
@@ -93,32 +79,21 @@ const viewImageItem = (name) => {
       ]);
   }
 };
-// oncreate: fadeIn,
-// onremove: fadeOut,
+
 app({
   init: initialState,
   view: ({ indexes }) =>
-    h(
-      "div",
-      {
-        class: "container",
-        oncreate: (state) => {
-          console.log("hello");
-          return { ...state };
-        },
-      },
-      [
-        Header(),
-        h("main", {}, [
-          h(
-            "div",
-            { class: "content indexes", style: { minHeight: "500px" } },
-            indexes && indexes.map((s) => viewImageItem(s.name))
-          ),
-        ]),
-        Top(),
-      ]
-    ),
+    h("div", { class: "container" }, [
+      Header(),
+      h("main", {}, [
+        h(
+          "div",
+          { class: "content indexes", style: { minHeight: "500px" } },
+          indexes && indexes.map((s) => viewImageItem(s.name))
+        ),
+      ]),
+      Top(),
+    ]),
   subscriptions: () => {},
   node: document.getElementById("app"),
 });

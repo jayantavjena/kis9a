@@ -4,6 +4,7 @@ import { Header } from "/components/header";
 import { Top } from "/components/top";
 import "./index.css";
 import "/layouts/index.css";
+import "/modules/css/fade.css";
 
 const initFeeds = Http({
   url: "https://www.feedrapp.info/?support=true&version=1.3.0&q=https://zenn.dev/kis9a/feed&num=20",
@@ -23,7 +24,7 @@ const viewLoading = () => {
   return h(
     "div",
     {
-      id: "loading",
+      class: "loading fade-in",
       style: {
         width: "100%",
         textAlign: "left",
@@ -54,7 +55,7 @@ app({
                   h(
                     "img",
                     {
-                      class: "feed-thumbnail",
+                      class: "feed-thumbnail fade-in",
                       src: f.enclosure.url,
                       alt: f.title,
                     },
@@ -67,6 +68,6 @@ app({
       ]),
       Top(),
     ]),
-  subscriptions: (state) => {},
+  subscriptions: () => [],
   node: document.getElementById("app"),
 });
