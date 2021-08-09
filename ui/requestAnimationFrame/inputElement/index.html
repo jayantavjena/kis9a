@@ -1,0 +1,69 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta lang=en><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#f00"><meta name=description content="kis9a inputElement - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><link rel=icon href=/assets/icons/favicon.ico><link rel=icon href=/assets/icons/apple-touch-icon.png type=image/x-icon><link rel=apple-touch-icon sizes=120x120 href=/assets/icons/apple-touch-icon-120x120.png><link rel=apple-touch-icon sizes=152x152 href=/assets/icons/apple-touch-icon-152x152.png><link rel=apple-touch-icon sizes=167x167 href=/assets/icons/apple-touch-icon-167x167.png><link rel=apple-touch-icon sizes=180x180 href=/assets/icons/apple-touch-icon-180x180.png><link rel=preconnect href=https://me.kis9a.com><link rel=dns-prefetch href=https://me.kis9a.com><title>kis9a inputElement</title><meta property="og:title" content="kis9a - me"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta property="og:description" content="kis9a inputElement - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta property="og:url" content="https://me.kis9a.com/inputElement"><meta property="og:site_name" content="kis9a - me"><meta property="og:type" content="website"><meta name=twitter:site content="me.kis9a.com/inputElement"><meta name=twitter:card content="summary"><meta name=twitter:title content="me.kis9a"><meta name=twitter:image content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta name=twitter:description content="kis9a inputElement - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><link href=index.css rel=stylesheet><div id=app></div><script type=module src=index.js></script><!doctype html><html lang=ja><meta charset=utf-8><title>Transitionなどでアニメーションできない要素</title><link rel=stylesheet href=../assets/style/style.css><section><h1 class=sectionTitle>プログレスバーをアニメーションさせる</h1><progress value=0 max=100 class=progressBar></progress>
+<button class=playProgress>もう一度はじめから再生する</button></section><section><h1 class=sectionTitle>メーターをアニメーションさせる</h1><meter value=0 max=100 class=meter></meter>
+<button class=playMeter>もう一度はじめから再生する</button>
+<button class=cancelMeter>アニメーションをキャンセルする</button>
+<a href=../ class=backToIndex>一覧に戻る</a></section><script>
+      // アニメーションさせる要素
+      const progress = document.querySelector(".progressBar");
+      // progressのvalue値
+      let progressValue = 0;
+
+      /**
+       * プログレスバーアニメーションの各フレームでの処理
+       */
+      const progressAnimation = () => {
+        // 移動量が100以下の場合に実行
+        if (progressValue < 100) {
+          progressValue++;
+          // 移動量を要素に適用する
+          progress.setAttribute("value", progressValue);
+          // ここで自分自身を呼び出し、繰り返す
+          requestAnimationFrame(progressAnimation);
+        }
+      };
+      progressAnimation();
+
+      document.querySelector(".playProgress").addEventListener("click", () => {
+        console.log(progressValue);
+        if (progressValue < 100) {
+          return;
+        }
+        progressValue = 0;
+        progressAnimation();
+      });
+
+      // アニメーションさせる要素
+      const meter = document.querySelector(".meter");
+      // progressのvalue値
+      let meterValue = 0;
+      let meterAnimationId;
+
+      /**
+       * メーターアニメーションの各フレームでの処理
+       */
+      const meterAnimation = () => {
+        // 移動量が100以下の場合に実行
+        if (meterValue < 100) {
+          meterValue++;
+          // 移動量を要素に適用する
+          meter.setAttribute("value", meterValue);
+          // ここで自分自身を呼び出して再帰処理をし、一意なIDをセット
+          meterAnimationId = requestAnimationFrame(meterAnimation);
+        }
+      };
+      meterAnimation();
+
+      // キャンセルボタンの要素
+      const cancelButton = document.querySelector(".cancelMeter");
+      // キャンセルボタンを押したら実行
+      cancelButton.addEventListener("click", () => {
+        // キャンセル処理。requestAnimationFrame()でセットしたIDを指定する
+        cancelAnimationFrame(meterAnimationId);
+      });
+
+      document.querySelector(".playMeter").addEventListener("click", () => {
+        cancelAnimationFrame(meterAnimationId);
+        meterValue = 0;
+        meterAnimation();
+      });
+    </script>

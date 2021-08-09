@@ -1,0 +1,1 @@
+var v=Object.defineProperty;var u=r=>v(r,"__esModule",{value:!0});var m=(r,t)=>{u(r);for(var f in t)v(r,f,{get:t[f],enumerable:!0})};m(exports,{viewClock:()=>h});var p=[];var c=p.map,g=Array.isArray,C=typeof requestAnimationFrame!="undefined"?requestAnimationFrame:setTimeout;var h=()=>{};0&&(module.exports={viewClock});

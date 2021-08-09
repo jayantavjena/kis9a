@@ -1,0 +1,35 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta lang=en><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#f00"><meta name=description content="kis9a duration - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><link rel=icon href=/assets/icons/favicon.ico><link rel=icon href=/assets/icons/apple-touch-icon.png type=image/x-icon><link rel=apple-touch-icon sizes=120x120 href=/assets/icons/apple-touch-icon-120x120.png><link rel=apple-touch-icon sizes=152x152 href=/assets/icons/apple-touch-icon-152x152.png><link rel=apple-touch-icon sizes=167x167 href=/assets/icons/apple-touch-icon-167x167.png><link rel=apple-touch-icon sizes=180x180 href=/assets/icons/apple-touch-icon-180x180.png><link rel=preconnect href=https://me.kis9a.com><link rel=dns-prefetch href=https://me.kis9a.com><title>kis9a duration</title><meta property="og:title" content="kis9a - me"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta property="og:description" content="kis9a duration - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta property="og:url" content="https://me.kis9a.com/duration"><meta property="og:site_name" content="kis9a - me"><meta property="og:type" content="website"><meta name=twitter:site content="me.kis9a.com/duration"><meta name=twitter:card content="summary"><meta name=twitter:title content="me.kis9a"><meta name=twitter:image content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta name=twitter:description content="kis9a duration - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><link href=index.css rel=stylesheet><div id=app></div><script type=module src=index.js></script><!doctype html><html lang=ja><meta charset=utf-8><title>FPSに依らないアニメーション時間</title><link rel=stylesheet href=../assets/style/style.css><section><h1 class=sectionTitle>1秒かけて右に400px移動する</h1><div class=box></div><button class=play>もう一度はじめから再生する</button>
+<a href=../ class=backToIndex>一覧に戻る</a></section><script>
+      // アニメーションさせる要素
+      const box = document.querySelector(".box");
+      // アニメーションの継続時間
+      const duration = 1000;
+      const moveX = 400;
+      // アニメーションの開始時間を格納する変数
+      let startTime;
+
+      /**
+       * アニメーションの各フレームでの処理
+       */
+      const moveAnimation = () => {
+        // 現在時間の継続時間に対する進捗度を算出
+        const progress = Math.min(1, (Date.now() - startTime) / duration);
+        // 移動量は全体の移動量×進捗度
+        const deltaX = moveX * progress;
+        // 移動量を要素に適用する
+        box.style.transform = `translateX(${deltaX}px)`;
+        // 進捗度が1未満（=100%ではない）場合、自分自身を呼び出し、繰り返す
+        if (progress !== 1) {
+          requestAnimationFrame(moveAnimation);
+        }
+      };
+
+      // Date.now()で開始時間をセットしてアニメーションを実行する
+      startTime = Date.now();
+      moveAnimation();
+
+      document.querySelector("button").addEventListener("click", () => {
+        startTime = Date.now();
+        moveAnimation();
+      });
+    </script>

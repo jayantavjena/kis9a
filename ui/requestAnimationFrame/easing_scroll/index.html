@@ -1,0 +1,67 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta lang=en><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#f00"><meta name=description content="kis9a easing_scroll - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><link rel=icon href=/assets/icons/favicon.ico><link rel=icon href=/assets/icons/apple-touch-icon.png type=image/x-icon><link rel=apple-touch-icon sizes=120x120 href=/assets/icons/apple-touch-icon-120x120.png><link rel=apple-touch-icon sizes=152x152 href=/assets/icons/apple-touch-icon-152x152.png><link rel=apple-touch-icon sizes=167x167 href=/assets/icons/apple-touch-icon-167x167.png><link rel=apple-touch-icon sizes=180x180 href=/assets/icons/apple-touch-icon-180x180.png><link rel=preconnect href=https://me.kis9a.com><link rel=dns-prefetch href=https://me.kis9a.com><title>kis9a easing_scroll</title><meta property="og:title" content="kis9a - me"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta property="og:description" content="kis9a easing_scroll - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta property="og:url" content="https://me.kis9a.com/easing_scroll"><meta property="og:site_name" content="kis9a - me"><meta property="og:type" content="website"><meta name=twitter:site content="me.kis9a.com/easing_scroll"><meta name=twitter:card content="summary"><meta name=twitter:title content="me.kis9a"><meta name=twitter:image content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta name=twitter:description content="kis9a easing_scroll - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><link href=index.css rel=stylesheet><div id=app></div><script type=module src=index.js></script><!doctype html><html lang=ja><meta charset=utf-8><title>トップへ戻るアニメーション（イージングをつけたアニメーション）</title><link rel=stylesheet href=../assets/style/style.css><section><h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!<h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!<h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!<h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!<h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!<h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!<h1 class=sectionTitle>Tile</h1><p class=sectionParagraph>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+excepturi exercitationem facilis fugiat, molestias necessitatibus non
+praesentium quae repellendus tempora ullam!</p><a href=../ class=backToIndex>一覧に戻る</a></section><button class=backToTop>TOP</button>
+<script>
+      // アニメーション時間（ミリ秒）
+      const duration = 1000;
+
+      // アニメーションの開始時間を格納する変数
+      let startTime;
+
+      // アニメーションの開始時のスクロール位置を格納する変数
+      let startScrollY;
+
+      /**
+       * イージング関数
+       * @param x
+       * @returns {number}
+       */
+      const easeOutCubic = (x) => {
+        return 1 - Math.pow(1 - x, 3);
+      };
+
+      /**
+       * アニメーションの各フレームでの処理
+       */
+      const scrollAnimation = () => {
+        // 現在時間の継続時間に対する進捗度を算出
+        const progress = Math.min(1, (Date.now() - startTime) / duration);
+        // スクロール位置はスタート位置からの（1 - 進捗度）を掛けたもの。進捗度にイージングをかけることで、移動量をイージングさせる
+        const scrollY = startScrollY * (1 - easeOutCubic(progress));
+        // 指定した位置へスクロール
+        window.scrollTo(0, scrollY);
+        // 進捗度が1未満（=100%ではない）場合、自分自身を呼び出し、繰り返す
+        if (progress < 1) {
+          requestAnimationFrame(scrollAnimation);
+        }
+      };
+
+      // トップへ戻る要素をクリックしたらスクロールアニメーション実行
+      document.querySelector(".backToTop").addEventListener("click", () => {
+        // Date.now()で開始時間をセット
+        startTime = Date.now();
+        // 現在のスクロール位置をセット
+        startScrollY = window.scrollY;
+        // アニメーション実行
+        scrollAnimation();
+      });
+    </script>
