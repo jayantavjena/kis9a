@@ -231,8 +231,20 @@ func getImagesIndexesJson() string {
 	return filepath.Join(getDataPath(), "images-indexes.json")
 }
 
+func getSvgsIndexesJson() string {
+	return filepath.Join(getDataPath(), "svgs-indexes.json")
+}
+
 func getSrcPath() string {
 	return filepath.Join(getSourcesPath(), "src")
+}
+
+func getAssetsPath() string {
+	return filepath.Join(getSrcPath(), "assets")
+}
+
+func getSvgsPath() string {
+	return filepath.Join(getAssetsPath(), "svgs")
 }
 
 func getActionsPath() string {
@@ -255,6 +267,7 @@ func initializeData() {
 	images2Json()
 	allMemos2Json()
 	waka2Json()
+	svgs2json()
 	err := copyPublishAction()
 	if err != nil {
 		log.Fatal(err)
@@ -277,7 +290,7 @@ func initializeDist() error {
 }
 
 func copyAssetsDirectory() error {
-	dir := filepath.Join(getSrcPath(), "assets")
+	dir := getAssetsPath()
 	walk := func(path string, fi os.FileInfo, err error) error {
 		rp, err := filepath.Rel(getSrcPath(), path)
 		if err != nil {
