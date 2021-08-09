@@ -22,5 +22,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
 
+      - uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r ./sources/rss/rss.zip ./sources/rss/
+
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./sources/rss s3://kis9a-sources-rss --delete
