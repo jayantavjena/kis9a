@@ -1,6 +1,9 @@
 import { app, h, text } from "/modules/js/hyperapp.js";
 import { Hyperway, routeTo } from "/modules/js/hyperway.js";
 import { Header } from "/components/header";
+import { Interval, Now } from "/modules/js/hyperapp-fx.js";
+import { viewDraw } from "./view_draw.js";
+import { viewClock } from "./view_clock.js";
 import "/layouts/index.css";
 import "./index.css";
 
@@ -19,6 +22,8 @@ const viewRoute = (view) => {
       return viewDefaults();
     case "draw":
       return viewDraw();
+    case "clock":
+      return viewClock();
     default:
       return h("div", { class: "not-found" }, text("not found"));
   }
@@ -31,21 +36,48 @@ const viewDefaults = () => {
     h("div", { class: "links" }, [
       Link({ to: "/tools/" }, "TOOLS"),
       Link({ to: "/tools/draw/" }, "DRAW"),
+      Link({ to: "/tools/clock/" }, "CLOCK"),
     ])
   );
 };
 
-const viewDraw = () => {
-  return h("div", {}, text("draw"));
+const UpdateDate = (_, date) =>
+  date.toLocaleString("uk", {
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  });
+
+const TimeSub = Interval({
+  every: 100,
+  asDate: true,
+  action: UpdateDate,
+});
+
+const timeUp = () => {
+  const res = Interval({
+    every: 100,
+    asDate: true,
+    action: UpdateDate,
+  });
+  console.log(res);
 };
 
 const back = (state) => {
   return { ...state, view: "default" };
 };
 
+const tick = (action) => [
+  (dispatch) => {
+    dispatch(action);
+    return () => {};
+  },
+  { action },
+];
+
 app({
   init: initialState,
-  view: ({ view }) =>
+  view: ({ view, time }) =>
     h("div", { class: "container" }, [
       view == "default"
         ? Header()
@@ -83,6 +115,12 @@ app({
           },
         },
       ],
+    }),
+    // TimeSub,
+    tick((state) => {
+      timeUp();
+      console.log(state);
+      return state;
     }),
   ],
   node: document.getElementById("app"),
