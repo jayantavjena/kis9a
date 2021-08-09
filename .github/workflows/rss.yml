@@ -10,10 +10,30 @@ on:
 
 jobs:
   upload:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: install go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.16
+        id: go
+
+      - name: check out
         uses: actions/checkout@v2
+
+      - name: cache
+        uses: actions/cache@v2.1.0
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
+      - name: version
+        run: go version
+
+      - name: build
+        run: GOOS=linux GOARCH=amd64 go build ./sources/rss
 
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -24,7 +44,7 @@ jobs:
 
       - uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r ./sources/rss/rss.zip ./sources/rss/
+          args: zip -qq -r ./sources/rss/rss.zip ./sources/rss/rss
 
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./sources/rss s3://kis9a-sources-rss --delete
