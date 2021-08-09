@@ -33,7 +33,7 @@ jobs:
         run: go version
 
       - name: build
-        run: GOOS=linux GOARCH=amd64 go build ./sources/rss
+        run: (cd ./sources/rss/; GOOS=linux GOARCH=amd64 go build .)
 
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
