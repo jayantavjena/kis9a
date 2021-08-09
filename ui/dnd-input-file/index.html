@@ -1,0 +1,70 @@
+<!doctype html><html lang=en><meta charset=utf-8><meta lang=en><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#f00"><meta name=description content="kis9a dnd-input-file - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta name=mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><link rel=icon href=/assets/icons/favicon.ico><link rel=icon href=/assets/icons/apple-touch-icon.png type=image/x-icon><link rel=apple-touch-icon sizes=120x120 href=/assets/icons/apple-touch-icon-120x120.png><link rel=apple-touch-icon sizes=152x152 href=/assets/icons/apple-touch-icon-152x152.png><link rel=apple-touch-icon sizes=167x167 href=/assets/icons/apple-touch-icon-167x167.png><link rel=apple-touch-icon sizes=180x180 href=/assets/icons/apple-touch-icon-180x180.png><link rel=preconnect href=https://me.kis9a.com><link rel=dns-prefetch href=https://me.kis9a.com><title>kis9a dnd-input-file</title><meta property="og:title" content="kis9a - me"><meta property="og:image" content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta property="og:description" content="kis9a dnd-input-file - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><meta property="og:url" content="https://me.kis9a.com/dnd-input-file"><meta property="og:site_name" content="kis9a - me"><meta property="og:type" content="website"><meta name=twitter:site content="me.kis9a.com/dnd-input-file"><meta name=twitter:card content="summary"><meta name=twitter:title content="me.kis9a"><meta name=twitter:image content="https://avatars2.githubusercontent.com/u/65019715?s=400&u=731fbe172c33e4511a105e3cc5e697c9e3c87fd3&v=4"><meta name=twitter:description content="kis9a dnd-input-file - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com"><link href=index.css rel=stylesheet><div id=app></div><script type=module src=index.js></script><!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(to right, #4568dc, #b06ab3);
+        color: #d7d7ef;
+        font-family: "Lato", sans-serif;
+      }
+
+      h2 {
+        margin: 50px 0;
+      }
+
+      section {
+        flex-grow: 1;
+      }
+
+      .file-drop-area {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 450px;
+        max-width: 100%;
+        padding: 25px;
+        border: 1px dashed rgba(255, 255, 255, 0.4);
+        border-radius: 3px;
+        transition: 0.2s;
+      }
+
+      .file-drop-area .is-active {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .fake-btn {
+        flex-shrink: 0;
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        padding: 8px 15px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .file-msg {
+        font-size: small;
+        font-weight: 300;
+        line-height: 1.4;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .file-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .file-input:focus {
+        outline: none;
+      }
+    </style><h2>Styling Native File Input</h2><div class=file-drop-area><span class=fake-btn>Choose files</span>
+<span class=file-msg>or drag and drop files here</span>
+<input class=file-input type=file multiple></div><script type=module src=./index.js></script><script src=https://code.jquery.com/jquery-3.2.1.min.js></script>
