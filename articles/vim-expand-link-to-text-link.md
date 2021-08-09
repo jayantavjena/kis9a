@@ -1,5 +1,5 @@
 ---
-title: "Vim script. カーソル下のリンクのタイトルを取得して、テキストリンクに置き換える。"
+title: "Vim. カーソル下のリンクのタイトルを取得して、テキストリンクに置き換える。"
 slug: "vim-expand-link-to-text-link"
 emoji: "🛠"
 type: "tech"

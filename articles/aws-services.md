@@ -1,6 +1,6 @@
 ---
-title: "AWSサービス一覧（2021/08/02更新)"
-slug: "aws-services-2021/08/02"
+title: "AWSサービス一覧（2021/08/09更新)"
+slug: "aws-services-2021/08/09"
 emoji: "📆"
 type: "tech"
 topics: ["aws", "githubactions"]
@@ -32,7 +32,7 @@ published: true
 | [Amazon MQ](https://aws.amazon.com/jp/amazon-mq/?c=2&pt=3) | マネージド型メッセージブローカーサービス |
 | [Amazon Simple Notification Service (SNS)](https://aws.amazon.com/jp/sns/?c=2&pt=4) | Pub/sub、SMS、E メール、およびモバイルプッシュ通知 |
 | [Amazon Simple Queue Service (SQS) ](https://aws.amazon.com/jp/sqs/?c=2&pt=5) | マネージド型メッセージキュー |
-| [Amazon AppSync](https://aws.amazon.com/jp/appsync/?c=2&pt=6) | 多くのソースから適切なデータを使用して、大規模にアプリを強化 |
+| [AWS AppSync](https://aws.amazon.com/jp/appsync/?c=2&pt=6) | 多くのソースから適切なデータを使用して、大規模にアプリを強化 |
 | [Amazon Managed Blockchain](https://aws.amazon.com/jp/managed-blockchain/?c=5&pt=1) | スケーラブルなブロックチェーンネットワークを作成および管理 |
 | [Amazon Quantum Ledger Database (QLDB)](https://aws.amazon.com/jp/qldb/?c=5&pt=2) | フルマネージド型台帳データベース |
 | [Alexa for Business](https://aws.amazon.com/jp/alexaforbusiness/?c=6&pt=1) | Alexa を使って組織を強化 |
@@ -185,7 +185,8 @@ published: true
 | [AWS Well-Architected Tool](https://aws.amazon.com/jp/well-architected-tool/?c=15&pt=20) | ワークロードの見直しと改善 |
 | [Amazon Elastic Transcoder](https://aws.amazon.com/jp/elastictranscoder/?c=16&pt=1) | スケーラブルで使いやすいメディア変換サービス |
 | [Amazon Interactive Video Service](https://aws.amazon.com/jp/ivs/?c=16&pt=2a) | マネージドライブ動画ソリューション |
-| [Amazon Kinesis Video Streams](https://aws.amazon.com/jp/kinesis/video-streams/?c=16&pt=2) | ビデオストリームの処理と分析 |
+| [Amazon Nimble Studio](https://aws.amazon.com/jp/nimble-studio/?c=16&pt=10) | デジタルコンテンツ作成スタジオを構築する |
+| [Amazon Kinesis Video Streams](https://aws.amazon.com/jp/kinesis/video-streams/?c=16&pt=2) | Video Streamsの処理と分析 |
 | [AWS Elemental MediaConnect](https://aws.amazon.com/jp/mediaconnect/?c=16&pt=3) | 高い信頼性を安全性を持つライブ動画転送 |
 | [AWS Elemental MediaConvert](https://aws.amazon.com/jp/mediaconvert/?c=16&pt=4) | ファイルベースのビデオコンテンツを変換 |
 | [AWS Elemental MediaLive](https://aws.amazon.com/jp/medialive/?c=16&pt=5) | ライブビデオコンテンツを変換 |
@@ -193,7 +194,6 @@ published: true
 | [AWS Elemental MediaStore](https://aws.amazon.com/jp/mediastore/?c=16&pt=7) | メディアストレージとシンプルな HTTP オリジン |
 | [AWS Elemental MediaTailor](https://aws.amazon.com/jp/mediatailor/?c=16&pt=8) | 動画のパーソナライズと収益化 |
 | [AWS Elemental アプライアンスとソフトウェア](https://aws.amazon.com/jp/elemental-appliances-software/?c=16&pt=9) | オンプレミスメディアソリューション |
-| [AWS Nimble Studio](https://aws.amazon.com/jp/nimble-studio/?c=16&pt=10) | デジタルコンテンツ作成スタジオを構築する |
 | [AWS Migration Hub](https://aws.amazon.com/jp/migration-hub/?c=17&pt=1) | 複数の移行を 1 か所で追跡 |
 | [AWS Application Discovery Service](https://aws.amazon.com/jp/application-discovery/?c=17&pt=2) | オンプレミスのアプリケーションを検出して合理的に移行 |
 | [AWS Application Migration Service (CloudEndure Migration)](https://aws.amazon.com/jp/application-migration-service/?c=17&pt=3a) | 自動化されたリフトアンドシフト移行 |
