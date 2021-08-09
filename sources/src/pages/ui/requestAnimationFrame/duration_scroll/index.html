@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>トップへ戻るアニメーション（FPSに依らないアニメーション時間）</title>
+    <link rel="stylesheet" href="../assets/style/style.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <h1 class="sectionTitle">Tile</h1>
+      <p class="sectionParagraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias
+        omnis totam. Accusantium assumenda consequuntur cumque, doloribus eos
+        excepturi exercitationem facilis fugiat, molestias necessitatibus non
+        praesentium quae repellendus tempora ullam!
+      </p>
+      <a href="../" class="backToIndex">一覧に戻る</a>
+    </section>
+    <button class="backToTop">TOP</button>
+    <script>
+      // アニメーション時間（ミリ秒）
+      const duration = 1000
+
+      // アニメーションの開始時間を格納する変数
+      let startTime;
+
+      // アニメーションの開始時のスクロール位置を格納する変数
+      let startScrollY;
+
+      /**
+       * アニメーションの各フレームでの処理
+       */
+      const scrollAnimation = () => {
+        // 現在時間の継続時間に対する進捗度を算出
+        const progress = Math.min(1, (Date.now() - startTime) / duration);
+        // スクロール位置はスタート位置からの（1 - 進捗度）を掛けたもの
+        const scrollY = startScrollY * (1 - progress);
+        // 指定した位置へスクロール
+        window.scrollTo(0, scrollY);
+        // 進捗度が1未満（=100%ではない）場合、自分自身を呼び出し、繰り返す
+        if (progress < 1) {
+          requestAnimationFrame(scrollAnimation);
+        }
+      };
+
+      // トップへ戻る要素をクリックしたらスクロールアニメーション実行
+      document.querySelector(".backToTop").addEventListener("click", () => {
+        // Date.now()で開始時間をセット
+        startTime = Date.now();
+        // 現在のスクロール位置をセット
+        startScrollY = window.scrollY
+        // アニメーション実行
+        scrollAnimation();
+      });
+    </script>
+  </body>
+</html>

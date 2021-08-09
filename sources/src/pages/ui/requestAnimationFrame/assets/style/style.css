@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --blue: #206fa5;
+  --sky: #6fb8d9;
+  --green: #6fb8d9;
+  --yellow: #f4c14e;
+  --red: #d36950;
+  color: #333333;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: var(--blue);
+}
+
+button {
+  display: block;
+  margin: 16px 0;
+}
+
+.pieChart {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+section {
+  max-width: 450px;
+  margin: 0 auto 24px;
+  padding: 16px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.sectionParagraph {
+  margin-bottom: 24px;
+}
+
+progress,
+meter {
+  display: block;
+}
+
+.backToTop {
+  display: block;
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 56px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.indexTitle {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.indexListWrapper {
+  position: fixed;
+  top: 16px;
+  left: 32px;
+}
+.indexListWrapper li {
+  list-style: none;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.indexListWrapper li a {
+  font-size: 13px;
+  color: inherit;
+  text-decoration: none;
+}
+.indexListWrapper li:before {
+  content: "-";
+  font-size: 13px;
+  margin-right: 0.5em;
+}
+
+.countDown {
+  position: relative;
+  height: 136px;
+  padding: 8px;
+  margin-bottom: 32px;
+  color: #ffe96e;
+  background-color: #000000;
+  text-shadow: 0 0 8px rgba(255, 233, 110, 0.7);
+  border-radius: 2px;
+  box-shadow: 0 0 4px 2px rgba(255, 233, 110, 0.7),
+    inset 0 0 4px 2px rgba(255, 233, 110, 0.7);
+}
+.countDown .en {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.countDown_title {
+  font-weight: 900;
+  font-size: 24px;
+  font-family: "Noto Serif JP", serif;
+}
+.countDown_title .en {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: -4px;
+}
+.countDown_ato {
+  position: absolute;
+  left: 8px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+.countDown_display {
+  position: absolute;
+  z-index: 0;
+  right: 8px;
+  font-family: "DSEG7Classic";
+  font-size: 70px;
+  text-shadow: 0 0 16px rgba(255, 233, 110, 0.7);
+}
+.countDown_display:before {
+  position: absolute;
+  z-index: -1;
+  content: "00:00:00";
+  color: rgba(255, 233, 110, 0.25);
+  text-shadow: none;
+}
+
+.range {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.range input {
+  margin: 0 16px;
+}
+
+.decrement,
+.increment {
+  padding: 4px 8px;
+}
+
+.rangeValue {
+  text-align: center;
+}
+
+.demoTitle {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.demoList {
+  list-style: none;
+}
+.demoList li {
+  margin-bottom: 1em;
+}
+
+.backToIndex {
+  display: block;
+  margin: 24px 0;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>input rangeのアニメーション</title>
+    <link rel="stylesheet" href="../assets/style/style.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="sectionTitle">input type="range"のアニメーション</h1>
+      <div>
+        <div class="range">
+          <button class="decrement">-10</button>
+          <input type="range" value="0" step="1" />
+          <button class="increment">+10</button>
+        </div>
+        <div class="rangeValue">値：<span class="valueDisplay">0</span></div>
+      </div>
+      <a href="../" class="backToIndex">一覧に戻る</a>
+    </section>
+
+    <script>
+      // アニメーションさせる要素
+      const range = document.querySelector("input[type='range']");
+      const display = document.querySelector(".valueDisplay");
+
+      // アニメーション時間
+      const duration = 200;
+
+      // 移動量
+      const change = 10;
+
+      // アニメーションの開始時間を格納する変数
+      let startTime;
+
+      // アニメーション前の値
+      let startValue;
+
+      // プラスかマイナスか
+      let isPlus;
+
+      /**
+       * イージング関数
+       */
+      const easeOutQuart = (x) => {
+        return 1 - Math.pow(1 - x, 4);
+      };
+
+      /**
+       * アニメーションの各フレームでの処理
+       */
+      const moveAnimation = () => {
+        const progress = Math.min(1, (Date.now() - startTime) / duration);
+        const rate = easeOutQuart(progress);
+        // 移動の符号を決める
+        const sign = isPlus ? 1 : -1;
+        console.log(sign);
+        range.value = Number(startValue) + change * rate * sign;
+        display.textContent = range.value;
+        if (progress < 1) {
+          requestAnimationFrame(moveAnimation);
+        }
+      };
+
+      document.querySelector(".increment").addEventListener("click", () => {
+        // アニメーションを実行する
+        startTime = Date.now();
+        startValue = range.value;
+        isPlus = true;
+        moveAnimation();
+      });
+      document.querySelector(".decrement").addEventListener("click", () => {
+        // アニメーションを実行する
+        startTime = Date.now();
+        startValue = range.value;
+        isPlus = false;
+        moveAnimation();
+      });
+
+      // inputの値が変わったら変更
+      range.addEventListener("input", () => {
+        display.textContent = range.value;
+      });
+      display.textContent = range.value;
+    </script>
+  </body>
+</html>
