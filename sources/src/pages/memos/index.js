@@ -103,6 +103,7 @@ const setInputContent = (state, event) => {
   const content = state.contents.map((v) => {
     if (v.name == "memo") {
       v.content = value;
+      window.localStorage.setItem(localStorageKey, value);
     }
     return v;
   });
@@ -201,7 +202,7 @@ const toggleRaw = (state) => {
   return { ...state, rawMode: !state.rawMode };
 };
 
-const defaultState = {
+let defaultState = {
   indexes: "",
   content: { name: "memo", content: "" },
   contents: [
@@ -217,6 +218,8 @@ const defaultState = {
 const baseName = (str) => {
   return new String(str).substring(str.lastIndexOf("/") + 1);
 };
+
+const localStorageKey = "me-kis9a-memo";
 
 const initIndexes = getIndexesJson;
 
@@ -247,9 +250,11 @@ const initContent = [
 const getUrl = () => window.location.href;
 const initialUrl = getUrl();
 
-// Local storage
-// const storageState = JSON.parse(window.localStorage.getItem("app"));
-// const state = storageState ? storageState : defaultState;
+const localStorageMemoContent = window.localStorage.getItem(localStorageKey);
+
+if (localStorageMemoContent) {
+  defaultState.content.content = localStorageMemoContent;
+}
 
 const initialState = [defaultState, initIndexes, initContent, initCategories];
 

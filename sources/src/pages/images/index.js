@@ -3,11 +3,9 @@ import { shuffleArray } from "/modules/js/shuffle.js";
 import { Top } from "/components/top";
 import { Http } from "../../modules/js/http.js";
 import { Header } from "/components/header";
-import { element } from "/modules/js/html";
 import "./index.css";
 import "/layouts/index.css";
 import "/modules/css/fade.css";
-const { div } = element;
 // import lazyLoadInit from "./lazyload-init";
 
 // make browser compatibility branch ? check work in modern browsers.
