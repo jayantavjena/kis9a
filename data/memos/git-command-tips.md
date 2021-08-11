@@ -75,3 +75,5 @@ git gc --aggressive --prune
 git shortlog --since="$(date +"%Y-%m-%d") 00:00:00" --no-merges -sn
 git config --global alias.today "log --since=midnight --author='$(git config user.name)' --oneline"
 ```
+
+[git gc の仕組みを原理から理解してサイズを 136MB → 7.2MB(95%減)まで削減した時の勉強メモ](https://zenn.dev/ulwlu/articles/cc2443d32e2444)

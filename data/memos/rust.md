@@ -9,3 +9,5 @@
 [Rust でつくる Git 入門](https://zenn.dev/uzimaru0000/books/impl-git-in-rust)
 
 [Rust で web サーバ開発ハンズオン](https://zenn.dev/susiyaki/books/b927a18723da01a6066b)
+
+[Typescript の次は Rust かもしれない](https://zenn.dev/akfm/articles/81713d4c1275ac64a75c)
