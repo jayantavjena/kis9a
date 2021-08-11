@@ -2,9 +2,8 @@
 # S3
 ######
 resource "aws_s3_bucket" "static_site" {
-  bucket          = var.bucket_name
-  acl             = "private"
-  max_age_seconds = 3000
+  bucket = var.bucket_name
+  acl    = "private"
   website {
     index_document = "index.html"
     error_document = "error/index.html"
