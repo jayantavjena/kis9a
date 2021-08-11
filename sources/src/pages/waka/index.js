@@ -7,11 +7,15 @@ import "./index.css";
 import "/layouts/index.css";
 import "/modules/css/fade.css";
 
-const getSvgs = Http({
+const initSvgs = Http({
   url: "/data/wakatime.json",
   response: "json",
   action: (state, json) => {
-    pureState.svgs = json.svgs;
+    console.log(
+      json.svgs.map((v) => {
+        // console.log(v.activity);
+      })
+    );
     return {
       ...state,
       svgs: json.svgs || [],
@@ -19,12 +23,11 @@ const getSvgs = Http({
   },
 });
 
-const pureState = {
+const defaultState = {
   svgs: [],
 };
 
-const initSvgs = getSvgs;
-const initialState = [pureState, initSvgs];
+const initialState = [defaultState, initSvgs];
 
 const yymmdd = (dt) => {
   var y = dt.getFullYear();
