@@ -10,7 +10,10 @@ resource "aws_s3_bucket" "static_site" {
     error_document = "error/index.html"
   }
   cors_rule {
-    allowed_origins = ["www.feedrapp.info"]
+    allowed_origins = ["*"]
+    allowed_methods = ["HEAD", "GET", "PUT", "POST", "DELETE"]
+    max_age_seconds = 3000
+    allowed_headers = ["*"]
   }
 }
 
@@ -91,6 +94,38 @@ resource "aws_cloudfront_distribution" "static_site" {
     acm_certificate_arn      = var.acm_certificate_arn
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1"
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 0
+    error_code            = 404
+    response_page_path    = "/error/"
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 0
+    error_code            = 403
+    response_page_path    = "/error/"
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 10
+    error_code            = 500
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 10
+    error_code            = 502
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 30
+    error_code            = 503
+  }
+
+  custom_error_response {
+    error_caching_min_ttl = 30
+    error_code            = 504
   }
 }
 
