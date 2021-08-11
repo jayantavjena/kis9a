@@ -3,7 +3,7 @@ import { shuffleArray } from "/modules/js/shuffle.js";
 import { Top } from "/components/top";
 import { Http } from "../../modules/js/http.js";
 import { Header } from "/components/header";
-import { element } from "/modules/js/html";
+import { element } from "/modules/js/element.js";
 import "./index.css";
 import "/layouts/index.css";
 import "/modules/css/fade.css";
