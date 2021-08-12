@@ -33,3 +33,7 @@ tasks
 └── box
 
 ```
+
+タイムリーなメモ、将来的には破棄するレベルのものを書き込んでいる。
+現在は、Github Project カンバンも並行使用しているからだ。
+<https://github.com/users/kis9a/projects/1?fullscreen=true>
