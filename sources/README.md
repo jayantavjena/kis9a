@@ -32,12 +32,13 @@ kis9a dist # initialize dist directory
 make publish-sources # alias pbs  
 make publish-zenn # alias pbz
 
-use [github-pages](https://github.com/tschaub/gh-pages) for push each branches
+use [github-pages](https://github.com/tschaub/gh-pages) @3.0 for push each branches
 
 github actions
 
 - [terraform](../.github/workflows/terraform.yml) on change sources/terraform/\*
 - [publish](../.github/workflows/publish.yml) on push dist branch upload to s3
+- [rss](../.github/workflows/rss.yml) bynary zip and upload s3 bucket.
 
 ### infrastructure
 
@@ -61,6 +62,12 @@ why use lambda@Edge ?
 
 - don't use npm module  
   use modules/\*.esm.js
+
+##### - xml parse
+
+- [sources/rss](./rss) for parse xml zenn feed <https://zenn.dev/kis9a/feed>.
+- [.github/workflows/rss.yml](../.github/workflows/terraform.yml) bynary zip and upload s3 bucket.
+- API Gateway endpoint <https://9806nuljwd.execute-api.ap-northeast-1.amazonaws.com/default/kis9a-rss-feed>
 
 ##### - components catalog page
 
@@ -97,6 +104,7 @@ why use lambda@Edge ?
 ### Preformance
 
 - PageSpeed Insights based Lighthouse, example:
+  <https://developers.google.com/speed/pagespeed/insights/?url=me.kis9a.com/&tab=desktop>
   <https://developers.google.com/speed/pagespeed/insights/?url=me.kis9a.com/images/&tab=desktop>
 
 ### Improvement
@@ -106,6 +114,7 @@ why use lambda@Edge ?
 - terraform clean up and more cover management resources
 - gh-pages command self made
 - abstract and separation for application and devOps staff
-- incremental bundle -> use esbuild watch function ?
-- stale-while-revalidate: Cache-Control: max-age=600, stale-while-revalidate=30
-- API Gateway + AWS Lambda self hostring RSS parsed JSON API
+- [x] incremental bundle -> use esbuild watch function ? -> other project
+- [x] cache lifecycle invalidate on s3 upload.
+      x stale-while-revalidate: Cache-Control: max-age=600, stale-while-revalidate=30
+- [x] API Gateway + AWS Lambda self hostring RSS parsed JSON API

@@ -7,12 +7,13 @@ import "/layouts/index.css";
 import "/modules/css/fade.css";
 
 const initFeeds = Http({
-  url: "https://www.feedrapp.info/?support=true&version=1.3.0&q=https://zenn.dev/kis9a/feed&num=20",
+  url: "https://9806nuljwd.execute-api.ap-northeast-1.amazonaws.com/default/kis9a-rss-feed",
   response: "json",
   action: (state, res) => {
+    console.log(res);
     return {
       ...state,
-      feeds: res.responseData.feed.entries,
+      feeds: res,
       loading: false,
     };
   },
@@ -56,7 +57,7 @@ app({
                     "img",
                     {
                       class: "feed-thumbnail fade-in",
-                      src: f.enclosure.url,
+                      src: f.enclosures[0].url,
                       alt: f.title,
                     },
                     []
