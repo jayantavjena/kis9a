@@ -98,32 +98,14 @@ resource "aws_cloudfront_distribution" "static_site" {
     error_caching_min_ttl = 0
     error_code            = 404
     response_page_path    = "/error/"
+    response_code         = 200
   }
 
   custom_error_response {
     error_caching_min_ttl = 0
     error_code            = 403
     response_page_path    = "/error/"
-  }
-
-  custom_error_response {
-    error_caching_min_ttl = 10
-    error_code            = 500
-  }
-
-  custom_error_response {
-    error_caching_min_ttl = 10
-    error_code            = 502
-  }
-
-  custom_error_response {
-    error_caching_min_ttl = 30
-    error_code            = 503
-  }
-
-  custom_error_response {
-    error_caching_min_ttl = 30
-    error_code            = 504
+    response_code         = 200
   }
 }
 
