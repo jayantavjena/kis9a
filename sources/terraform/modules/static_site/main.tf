@@ -62,7 +62,6 @@ resource "aws_cloudfront_distribution" "static_site" {
   default_root_object = "index.html"
 
   default_cache_behavior {
-    path_pattern     = "/*"
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = local.s3_origin_id
