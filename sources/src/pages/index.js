@@ -9,6 +9,15 @@ import "/modules/css/fade.css";
 
 const path = window.location.href;
 const pathname = window.location.pathname;
+
+function escapeSlash(str) {
+  return str.replaceAll("/", "");
+}
+
+function isRouteContain() {
+  return routes.some((r) => escapeSlash(r.href) === escapeSlash(pathname));
+}
+
 if (pathname && pathname.charAt(pathname.length - 1) !== "/") {
   if (isRouteContain) {
     window.location.replace(path + "/");
@@ -16,14 +25,6 @@ if (pathname && pathname.charAt(pathname.length - 1) !== "/") {
     window.location.href = "https://me.kis9a.com/error/";
   }
 }
-
-const isRouteContain = () => {
-  return routes.some((r) => escapeSlash(r.href) == escapeSlash(pathname));
-};
-
-const escapeSlash = (str) => {
-  return str.replaceAll("/", "");
-};
 
 const initFeeds = Http({
   url: "https://9806nuljwd.execute-api.ap-northeast-1.amazonaws.com/default/kis9a-rss-feed",
