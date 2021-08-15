@@ -6,11 +6,15 @@ import "./index.css";
 import "/layouts/index.css";
 import "/modules/css/fade.css";
 
+const path = window.location.href;
+if (path !== "https://me.kis9a.com" && path.charAt(path.length - 1) !== "/") {
+  window.location.replace(path + "/");
+}
+
 const initFeeds = Http({
   url: "https://9806nuljwd.execute-api.ap-northeast-1.amazonaws.com/default/kis9a-rss-feed",
   response: "json",
   action: (state, res) => {
-    console.log(res);
     return {
       ...state,
       feeds: res,
