@@ -2,14 +2,28 @@ import { h, app, text } from "/modules/js/hyperapp.js";
 import { Http } from "/modules/js/Http.js";
 import { Header } from "/components/header";
 import { Top } from "/components/top";
+import { routes } from "/modules/js/router.js";
 import "./index.css";
 import "/layouts/index.css";
 import "/modules/css/fade.css";
 
 const path = window.location.href;
-if (path !== "https://me.kis9a.com" && path.charAt(path.length - 1) !== "/") {
-  window.location.replace(path + "/");
+const pathname = window.location.pathname;
+if (pathname && pathname.charAt(pathname.length - 1) !== "/") {
+  if (isRouteContain) {
+    window.location.replace(path + "/");
+  } else {
+    window.location.href = "https://me.kis9a.com/error/";
+  }
 }
+
+const isRouteContain = () => {
+  return routes.some((r) => escapeSlash(r.href) == escapeSlash(pathname));
+};
+
+const escapeSlash = (str) => {
+  return str.replaceAll("/", "");
+};
 
 const initFeeds = Http({
   url: "https://9806nuljwd.execute-api.ap-northeast-1.amazonaws.com/default/kis9a-rss-feed",
