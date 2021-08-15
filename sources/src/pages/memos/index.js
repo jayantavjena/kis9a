@@ -1,19 +1,20 @@
 import { app, h, text } from "/modules/js/hyperapp.js";
-import snarkdown from "/modules/js/snarkdown.js";
 import { Header } from "/components/header";
 import { Http } from "/modules/js/Http.js";
 import { Keyboard } from "/modules/js/subs/Keyboard.js";
 import { Toast } from "/components/toast";
 import { Top } from "/components/top";
 import { Tooltip, RemoveTooltip } from "/components/Tooltip";
-import "./index.css";
-import "/layouts/index.css";
+import snarkdown from "/modules/js/snarkdown.js";
+import autosize from "/modules/js/autosize.js";
 import svg_clear from "/assets/svgs/trash.svg";
 import svg_close from "/assets/svgs/x.svg";
 import svg_share from "/assets/svgs/external-link.svg";
 import svg_raw from "/assets/svgs/view-list.svg";
 import svg_tag from "/assets/svgs/tag.svg";
 import svg_pencil_alt from "/assets/svgs/pencil-alt.svg";
+import "/layouts/index.css";
+import "./index.css";
 
 const getIndexesJson = Http({
   url: "/data/memos-indexes.json",
@@ -99,6 +100,7 @@ const onInputFocus = (state) => {
 };
 
 const setInputContent = (state, event) => {
+  autosize(event.target);
   const value = event.target.value;
   const content = state.contents.map((v) => {
     if (v.name == "memo") {
