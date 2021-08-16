@@ -10,6 +10,7 @@ ss: serve-sources
 sz: serve-zenn
 sm: serve-memos
 ls: show-list
+pa: push-all
 pbz: publish-zenn
 pbs: publish-sources
 help: show-help
@@ -23,6 +24,9 @@ push: ## push ${dir}
 	@make check-staged
 	@git commit -m "${dir}: update ${DATE} ${msg}"
 	@git push
+
+push-all: ## push all
+	@$(foreach val, $(DIRS), make push dir=$(val);)
 
 publish-sources: ## publish sources
 	@${PROFILE_NAME} bundle
