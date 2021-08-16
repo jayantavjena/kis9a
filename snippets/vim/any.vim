@@ -75,3 +75,35 @@ function! s:some()
   echo vs
 endfunction
 nnoremap <silent> <Leader>gu :call <SID>some()<CR>
+
+if exists('$TMUX')
+  let dir = fnamemodify(getcwd(), ":t")
+  autocmd BufEnter,FocusGained * call system("tmux rename-window " . dir)
+  autocmd VimLeave * call system("tmux rename-window zsh")
+endif
+
+augroup vimrc-local
+  autocmd!
+  autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))
+augroup END
+
+function! s:vimrc_local(loc)
+let files = findfile('.vimrc.local', escape(a:loc, ' ') . ';', -1)
+for i in reverse(filter(files, 'filereadable(v:val)'))
+  source `=i`
+endfor
+endfunction
+
+if !empty(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
+xnoremap * :<c-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<c-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+function! s:VSetSearch()
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
+
