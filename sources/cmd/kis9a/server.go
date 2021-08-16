@@ -29,6 +29,16 @@ func server(port string) {
 				if !ok {
 					return
 				}
+				if event.Op&fsnotify.Create == fsnotify.Create {
+					if err := bundle(); err != nil {
+						log.Println(err)
+					}
+				}
+				if event.Op&fsnotify.Remove == fsnotify.Remove {
+					if err := bundle(); err != nil {
+						log.Println(err)
+					}
+				}
 				if event.Op&fsnotify.Write == fsnotify.Write {
 					if err := bundle(); err != nil {
 						log.Println(err)
