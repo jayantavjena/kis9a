@@ -6,9 +6,9 @@ import { routes } from "/modules/js/router.js";
 import "./index.css";
 import "/layouts/index.css";
 import "/modules/css/fade.css";
-
 const path = window.location.href;
 const pathname = window.location.pathname;
+// const fs = require('fs').promises
 
 function escapeSlash(str) {
   return str.replaceAll("/", "");

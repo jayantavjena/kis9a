@@ -284,3 +284,7 @@ func isDirectory(path string) (bool, error) {
 	}
 	return fileInfo.IsDir(), err
 }
+
+//   banner: {
+//     js: "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);"
+//   },
