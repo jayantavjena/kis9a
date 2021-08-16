@@ -73,6 +73,10 @@ why use lambda@Edge ?
 
 - https://me.kis9a.com/components/
 
+##### - preview memos/ with docsify.js
+
+- https://me.kis9a.com/data/memos/#/
+
 ##### - whatch file changes
 
 - use [sar](https://github.com/kis9a/sar) command  
