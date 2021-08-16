@@ -93,6 +93,10 @@ install-gh-pages() {
 	npm install -g gh-pages@3.0
 }
 
+install-live-server() {
+	npm install -g live-server
+}
+
 install-sar() {
 	go get github.com/kis9a/sar
 }
@@ -133,6 +137,10 @@ fi
 
 if ! is_exists "gh-pages"; then
 	install-gh-pages
+fi
+
+if ! is_exists "live-server"; then
+	install-live-server
 fi
 
 if [[ ! -d $PROFILE ]]; then
