@@ -44,6 +44,7 @@ const (
 	GIF
 	JS
 	CSS
+	GO
 	HTML
 	JSON
 	SVG
@@ -170,6 +171,8 @@ func getFileType(path string) FileType {
 		return JS
 	case ".css":
 		return CSS
+	case ".go":
+		return GO
 	case ".html":
 		return HTML
 	case ".json":

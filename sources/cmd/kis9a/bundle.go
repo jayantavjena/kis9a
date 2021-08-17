@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/evanw/esbuild/pkg/api"
 	"github.com/tdewolff/minify/v2"
@@ -146,6 +147,10 @@ func bundleByFileType(path string, base string) error {
 		if err := bundleCSS(path, wp); err != nil {
 			return err
 		}
+	case GO:
+		// if err := execCustomScript(path); err != nil {
+		// 	return err
+		// }
 	}
 	is, err := isDirectory(path)
 	if err != nil {
@@ -277,6 +282,15 @@ func bundleCSS(path string, wp string) error {
 	return err
 }
 
+func execCustomScript(path string) error {
+	cmd := strings.Join([]string{"( cd ", path, "; go run ", path, ")"}, "")
+	_, err := execOutput(cmd)
+	if err != nil {
+		return err
+	}
+	return err
+}
+
 func isDirectory(path string) (bool, error) {
 	fileInfo, err := os.Stat(path)
 	if err != nil {
@@ -284,7 +298,3 @@ func isDirectory(path string) (bool, error) {
 	}
 	return fileInfo.IsDir(), err
 }
-
-//   banner: {
-//     js: "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);"
-//   },
