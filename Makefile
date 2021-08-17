@@ -51,7 +51,7 @@ serve-memos: ## serve memos
 
 memos-create-sidebar-file: ## memos create sidebar file
 	@ls memos | grep .md | xargs -I {} bash -c "echo - [{}]\({}\) >> ./memos/_sidebar.md"
-	@sort -u ./memos/_sidebar.md
+	@sort -u ./memos/_sidebar.md | tee ./memos/_sidebar.md
 
 link: ## link data files
 	@$(foreach val, $(LINKFILES), ln -sfnv $(abspath $(val)) $(PROFILE_PATH)/sources/dist/data/$(val);)
