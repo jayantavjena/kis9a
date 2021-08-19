@@ -1,0 +1,16 @@
+button {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+form {
+  margin: 0;
+  border: none;
+}
