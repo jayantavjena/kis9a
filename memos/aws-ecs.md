@@ -1,3 +1,6 @@
+[ECS 運用のノウハウ - Qiita](https://qiita.com/naomichi-y/items/d933867127f27524686a)
+[コンテナ運用に関する 7 つのベストプラクティス - TechLunch](https://techlunch.hatenablog.com/entry/2018/08/16/095749)
+
 コントロールプレーン ECS EKS
 データプレーン EC2 Fargate
 
@@ -6,8 +9,6 @@ fargate task execution
 ECS servie
 
 latest 運用はやめよう
-
-[コンテナ運用に関する 7 つのベストプラクティス - TechLunch](https://techlunch.hatenablog.com/entry/2018/08/16/095749)
 
 - deploy structure
 
