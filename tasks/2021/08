@@ -1,3 +1,53 @@
+	// group := costexplorer.GroupDefinition{
+	// 	Key:  aws.String("SERVICE"),
+	// 	Type: aws.String("DIMENSION"),
+	// }
+	// groups := []*costexplorer.GroupDefinition{&group}
+	// input.GroupBy = groups
+
+
+func getCost() (Response, error) {
+	svc := cloudwatch.New(session.New(), &aws.Config{Region: aws.String("us-east-1")})
+	now := time.Now()
+	params := &cloudwatch.GetMetricStatisticsInput{
+		Dimensions: []*cloudwatch.Dimension{
+			{
+				Name:  aws.String("Currency"),
+				Value: aws.String("USD"),
+			},
+		},
+		StartTime:  aws.Time(time.Date(now.Year(), now.Month(), 1, 0, 0, 0, 0, time.UTC)),
+		EndTime:    aws.Time(now),
+		Period:     aws.Int64(86400),
+		Namespace:  aws.String("AWS/Billing"),
+		MetricName: aws.String("EstimatedCharges"),
+		Statistics: []*string{
+			aws.String(cloudwatch.StatisticMaximum),
+		},
+	}
+	resp, err := svc.GetMetricStatistics(params)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(resp)
+	return Response{
+		Message: "",
+	}, nil
+}
+
+func sumCost(cost *costexplorer.GetCostAndUsageOutput) (total string) {
+	sum := 0.0
+	for _, data := range cost.ResultsByTime[0].Groups {
+		amount, _ := strconv.ParseFloat(*data.Metrics["UnblendedCost"].Amount, 64)
+
+		sum = sum + amount
+	}
+	total = fmt.Sprintf("%.10f", sum)
+	return total
+}
+
+リージョンを us-east-1 にしたら、秒で作りやがった。
+terraform の aws_acm_certificate リソースに region がなかったから、リージョンを分けたい場合、acm だけ別のプロバイダーで定義するといいかも。
 
 [S3 + AWS Cognito + Google認証でドメイン制限のついた非公開サイトを作る - Sanwa Systems Tech Blog](https://tech.sanwasystem.com/entry/2018/06/19/103639)
 
