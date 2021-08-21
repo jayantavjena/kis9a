@@ -22,3 +22,13 @@ SOLID 原則:
 
 - Dependency inversion principle：依存性逆転の原則:
   上位のモジュールは下位のモジュールに依存してはならなくて、どちらも抽象に依存してる状態にする事。これは上述通り。
+
+信頼性を評価する概念 ~ RASIS（ラシス）
+
+- Reliability: 信頼性
+- Availability: 可用性
+- Serviceability: 保守性
+- Integrity: 保全性
+- Security: 安全性
+
+
