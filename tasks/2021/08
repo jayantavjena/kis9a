@@ -48,6 +48,7 @@ func sumCost(cost *costexplorer.GetCostAndUsageOutput) (total string) {
 
 リージョンを us-east-1 にしたら、秒で作りやがった。
 terraform の aws_acm_certificate リソースに region がなかったから、リージョンを分けたい場合、acm だけ別のプロバイダーで定義するといいかも。
+- [【hey佐藤裕介】天才と呼ばれた男が、20代で経験した挫折から学んだこと「若手エンジニアは“つよくてニューゲーム”状態をつくれ」 - エンジニアtype | 転職type](https://type.jp/et/feature/9856/)
 
 [S3 + AWS Cognito + Google認証でドメイン制限のついた非公開サイトを作る - Sanwa Systems Tech Blog](https://tech.sanwasystem.com/entry/2018/06/19/103639)
 
