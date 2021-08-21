@@ -19,7 +19,7 @@ function isRouteContain() {
 }
 
 if (pathname && pathname.charAt(pathname.length - 1) !== "/") {
-  if (isRouteContain) {
+  if (isRouteContain()) {
     window.location.replace(path + "/");
   } else {
     window.location.href = "https://me.kis9a.com/error/";
