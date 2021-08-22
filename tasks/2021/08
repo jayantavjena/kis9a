@@ -1,3 +1,45 @@
+local cb = require'diffview.config'.diffview_callback
+require'diffview'.setup {
+  diff_binaries = false,
+  file_panel = {
+    position = "left",
+    width = 35,
+    height = 10,
+    use_icons = true
+  },
+  key_bindings = {
+    disable_defaults = false,
+    view = {
+      ["<tab>"]     = cb("select_next_entry"),
+      ["<s-tab>"]   = cb("select_prev_entry"),
+      ["<leader>e"] = cb("focus_files"),
+      ["<leader>b"] = cb("toggle_files"),
+    },
+    file_panel = {
+      ["j"]             = cb("next_entry"),
+      ["<down>"]        = cb("next_entry"),
+      ["k"]             = cb("prev_entry"),
+      ["<up>"]          = cb("prev_entry"),
+      ["<cr>"]          = cb("select_entry"),
+      ["o"]             = cb("select_entry"),
+      ["<2-LeftMouse>"] = cb("select_entry"),
+      ["-"]             = cb("toggle_stage_entry"),
+      ["S"]             = cb("stage_all"),
+      ["U"]             = cb("unstage_all"),
+      ["X"]             = cb("restore_entry"),
+      ["R"]             = cb("refresh_files"),
+      ["<tab>"]         = cb("select_next_entry"),
+      ["<s-tab>"]       = cb("select_prev_entry"),
+      ["<leader>e"]     = cb("focus_files"),
+      ["<leader>b"]     = cb("toggle_files"),
+    }
+  }
+}
+  
+Plug sindrets/diffview.nvim
+[GitHub - JacobSNGoodwin/memrizr at lesson-09](https://github.com/JacobSNGoodwin/memrizr/tree/lesson-09)
+
+  https://www.amazon.co.jp/gp/video/detail/B076J9K82W/ref=atv_me_kid_c_JslnYP_brws_11_1?language=en
 	// group := costexplorer.GroupDefinition{
 	// 	Key:  aws.String("SERVICE"),
 	// 	Type: aws.String("DIMENSION"),
