@@ -80,14 +80,14 @@ zvm_after_init_commands+=(zvm_after_init)
 # prompt
 
 zstyle ':vcs*info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green} %c%u%b%f"
+zstyle ':vcs_info:git:_' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:_' unstagedstr "%F{red}+"
+zstyle ':vcs_info:_' formats "%F{green} %c%u%b%f"
 zstyle ':vcs_info:\*' actionformats '%b|%a'
 precmd () { vcs_info; precmd() { echo } }
 \_vcs_precmd () { vcs_info }
 add-zsh-hook precmd \_vcs_precmd
-PROMPT='%F{142}< %~%f${vcs_info_msg_0*} %F{142}>%f '
+PROMPT='%F{142}< %~%f${vcs_info_msg_0_} %F{142}>%f '
 
 # bindkey
 
@@ -177,3 +177,5 @@ CMD ["nginx", "-g", "daemon off;"]
 | up    | △          | ○            | ○            |
 | start | ×          | ×            | ○            |
 | run   | ○ （単独） | ○ （単独）   | ○ （単独）   |
+
+CHOKIDAR_USEPOLLING

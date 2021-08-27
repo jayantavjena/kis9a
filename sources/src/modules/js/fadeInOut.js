@@ -1,7 +1,7 @@
 export const fadeIn = (el, time) => {
   el.style.opacity = 0;
   let last = +new Date();
-  var tick = function () {
+  const tick = function () {
     el.style.opacity = +el.style.opacity + (new Date() - last) / time;
     last = +new Date();
     if (+el.style.opacity < 1) {
@@ -15,7 +15,7 @@ export const fadeIn = (el, time) => {
 export const fadeOut = (el, time) => {
   el.style.opacity = 1;
   let last = +new Date();
-  var tick = function () {
+  const tick = function () {
     el.style.opacity = +el.style.opacity - (new Date() - last) / time;
     last = +new Date();
     if (+el.style.opacity > 0) {

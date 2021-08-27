@@ -9,7 +9,6 @@
 
 - In node, you can load a module using node --experimental-modules file.mjs. Note that node requires the .mjs extension unless you have configured "type": "module" in your package.json file. You can use the out extension setting in esbuild to customize the output extension for the files esbuild generates. You can read more about using ECMAScript modules in node here.
 
-
 ```
 const shuffle = ([...array]) => {
   for (let i = array.length - 1; i >= 0; i--) {
@@ -20,3 +19,5 @@ const shuffle = ([...array]) => {
 };
 
 ```
+
+- [.mjs とは何か、またはモジュールベース JS とエコシステムの今後 | blog.jxck.io](https://blog.jxck.io/entries/2017-08-15/universal-mjs-ecosystem.html)

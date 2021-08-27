@@ -1,0 +1,48 @@
+:root {
+  --brand-basic: #dee8f3;
+  --brand-accent: #31456a;
+}
+
+[data-theme="dark"] {
+  --brand-basic: #31456a;
+  --brand-accent: #dee8f3;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brand-basic);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-toggle {
+  background-color: var(--brand-basic);
+  color: var(--brand-accent);
+  height: 48px;
+  width: 150px;
+  font-size: 16px;
+  border-radius: 6px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  border: 3px solid var(--brand-accent);
+}
+
+.button-toggle:hover {
+  background-color: var(--brand-accent);
+  color: var(--brand-basic);
+}
+
+.button-toggle:focus {
+  outline: none;
+}
