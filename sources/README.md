@@ -149,7 +149,7 @@ if (pathname && pathname.charAt(pathname.length - 1) !== "/") {
 - gh-pages command self made
 - css architecture change to css module or css in js or BEM.
 - abstract and separation for application and devOps staff
-- [x] incremental bundle -> use esbuild watch function ? -> other project
+- [x] incremental bundle -> use esbuild watch function, css module -> [GitHub - kis9a/esbuild-hyperapp](https://github.com/kis9a/esbuild-hyperapp)
 - [x] cache lifecycle invalidate on s3 upload.
       x stale-while-revalidate: Cache-Control: max-age=600, stale-while-revalidate=30
 - [x] API Gateway + AWS Lambda self hostring RSS parsed JSON API
