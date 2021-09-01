@@ -22,3 +22,24 @@ mysql> select user, host from mysql.user;
 - [MySQL :: MySQL 8.0 Reference Manual :: 13.3.6 LOCK TABLES and UNLOCK TABLES Statements](https://dev.mysql.com/doc/refman/8.0/en/lock-tables.html)
 - [MySQL :: MySQL 8.0 Reference Manual :: 12.16 Information Functions](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html)
 - [ストアドプロシージャの基本的ななにか - Qiita](https://qiita.com/setsuna82001/items/e742338eb93e3a48ba46)
+
+```sql
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nickname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+```
+
+MySQL：~/.my.cnf で設定
+
+[client]
+database=DB 名
+user=ユーザー名
+password=パスワード

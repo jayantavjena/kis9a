@@ -1,3 +1,9 @@
+[hyperapp/docs at main · jorgebucaran/hyperapp · GitHub](https://github.com/jorgebucaran/hyperapp/tree/main/docs)
+
+- dispatch 関数は、Action を実行し、作成された State の更新と Effect の実行を行う関数です
+- Effect は非同期処理や副作用を扱います。簡単に言うと、State を変更しない動作を行います。
+- Action は新しい State と Effect の作成を行う関数です
+
 https://github.com/diontools/typerapp
 
 ```

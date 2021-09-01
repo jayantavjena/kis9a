@@ -6,6 +6,17 @@ Granting privileges on database. psql=# grant all privileges on database <dbname
 
 \du
 
+デフォルト接続先
+PostgreSQL：環境変数で設定
+
+export PGDATABASE=DB 名
+export PGHOST=ホスト
+export PGPORT=ポート番号
+export PGUSER=ユーザー名
+export PGPASSWORD=パスワード
+
+パスワードは~/.pgpass でも設定できる。
+
 ```
 $ psql -d postgres
 
