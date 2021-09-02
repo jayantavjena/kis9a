@@ -1,3 +1,10 @@
+[Docker って何？ って聞かれたときの解説、の解説](https://zenn.dev/koduki/articles/b4cb0551523919)
+
+- Docker は仮想化であるコンテナの実装の一種
+- ただし、広義の Docker は OCI 系コンテナの総称
+- アプリの配布と実行の仕組みと思えば OK
+- コンテナにより IaC や一貫したデプロイ、H/W の効率的な利用がしやすくなる
+
 [docker-compose depends_on と links の違い - Qiita](https://qiita.com/sivertigo/items/9baa73d922a68788402b)
 
 ```
