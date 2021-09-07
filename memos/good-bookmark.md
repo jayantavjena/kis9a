@@ -1,2 +1,3 @@
 - [ざっくり AWS | AWS の料金を日本円でざっくり計算](https://aws-rough.cc/)
 - [RegEX Cheat Sheet & Quick Reference](https://quickref.me/)
+- [Clean Coder Blog](https://blog.cleancoder.com/)
