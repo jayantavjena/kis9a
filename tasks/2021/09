@@ -1,0 +1,73 @@
+func add(c *gin.Context) {
+	client := db.Connect()
+	user := client.User.Create()
+	user.SetFirstName("first")
+	user.SetLastName("last")
+	user.SetCompanyID(1)
+	if _, err := user.Save(context.Background()); err != nil {
+		log.Println(err.Error())
+	}
+	c.String(http.StatusOK, "message hello")
+}
+
+func test(c *gin.Context) {
+	client := db.Connect()
+	ctx := context.Background()
+	items, err := client.User.Query().All(ctx)
+	if err != nil {
+		log.Fatalf("failed querying todos: %v", err)
+	}
+	var res string
+	log.Println(items)
+	for _, t := range items {
+		log.Println(t.ID, t)
+		res = res + t.FirstName
+	}
+	// db.User.Get()
+	c.String(http.StatusOK, "message hello"+res)
+}
+
+
+
+I'm not sure if hyperway's performance is optimal, but I like the interface.
+
+// func dbMigrate() {
+// 	dbname := os.Getenv("POSTGRES_DB")
+// 	dbuser := os.Getenv("POSTGRES_USER")
+// 	dbpass := os.Getenv("POSTGRES_PASSWORD")
+// 	dbhost := os.Getenv("POSTGRES_HOST")
+// 	dbport := os.Getenv("POSTGRES_PORT")
+
+// 	client, err := ent.Open("postgres", fmt.Sprintf("host=%s port=%s user=%s dbname=%s password=%s sslmode=disable",
+// 		dbhost, dbport, dbuser, dbname, dbpass))
+// 	if err != nil {
+// 		log.Fatalf("failed opening connection to postgres: %v", err)
+// 	}
+// 	defer client.Close()
+// 	ctx := context.Background()
+// 	if err := client.Schema.WriteTo(ctx, os.Stdout, migrate.WithForeignKeys(false)); err != nil {
+// 		log.Fatalf("failed printing schema changes: %v", err)
+// 	}
+// }
+
+
+      MYSQL_ROOT_PASSWORD: pass 
+      MYSQL_DATABASE: auth_server
+      MYSQL_USER: po3rin
+      MYSQL_PASSWORD: 1234567890
+
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id integer AUTO_INCREMENT,
+  name varchar(255),
+  mail varchar(255),
+  password varchar(255),
+  primary key(id)
+);
+
+INSERT INTO users (name, mail, password)
+VALUES
+  ('po3rin', 'test1@mail.com', 'pass1'),
+  ('taro', 'test2@mail.com', 'pass2');
