@@ -10,6 +10,8 @@
 - [Go でオプショナルパラメータをどう扱うか - 1 ミリもわからん](https://raahii.github.io/posts/optional-parameters-in-go/)
 - [AWS CDK×LINE BOT ハンズオン～アプリとインフラをコード管理しよう～](https://zenn.dev/ufoo68/books/3fbd1969bd4b21c5454b)
 - [Go の Type Sets proposal を読む](https://zenn.dev/nobishii/articles/99a2b55e2d3e50#context)
+- [Go の構造体の使われ方の設計 | フューチャー技術ブログ](https://future-architect.github.io/articles/20210525a/)
+- [あなたの Go アプリ/ライブラリのパッケージ構成もっとシンプルでよくない？ | フューチャー技術ブログ](https://future-architect.github.io/articles/20200528/)
 
 Go2
 
