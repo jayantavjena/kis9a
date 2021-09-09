@@ -5,10 +5,10 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env node process/build.mjs",
-    "build:prod": "cross-env NODE_ENV=production node process/build.mjs",
-    "serve": "cross-env PORT=8889 node process/serve.mjs -w",
-    "serve:prod": "cross-env NODE_ENV=production PORT=8888 node process/serve.mjs -w"
+    "build": "cross-env PROFILE=kis9a node process/build.mjs",
+    "build:prod": "cross-env PROFILE=kis9a NODE_ENV=production node process/build.mjs",
+    "serve": "cross-env PROFILE=kis9a PORT=8889 node process/serve.mjs -w",
+    "serve:prod": "cross-env PROFILE=kis9a NODE_ENV=production PORT=8888 node process/serve.mjs -w"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
