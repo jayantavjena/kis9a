@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "name": "kis9a-src",
+  "description": "kis9a src",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env node process/build.mjs",
+    "build:prod": "cross-env NODE_ENV=production node process/build.mjs",
+    "serve": "cross-env PORT=8889 node process/serve.mjs -w",
+    "serve:prod": "cross-env NODE_ENV=production PORT=8888 node process/serve.mjs -w"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.12.22",
+    "esbuild-css-modules-plugin": "^2.0.8"
+  },
+  "dependencies": {
+    "hyperapp": "^2.0.19",
+    "hyperapp-fx": "^2.0.0-beta.2",
+    "hyperway": "^0.3.0"
+  }
+}
