@@ -1,3 +1,45 @@
+// docker-compose run api sh && go generate .
+//go:generate go install github.com/volatiletech/sqlboiler/v4@latest
+//go:generate go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest
+//go:generate sqlboiler --config sqlboiler.toml psql
+
+curl -H "Content-Type: image/png" --data-binary "@test.png" -X POST https://XXXXX.execute-api.ap-northeast-1.amazonaws.com/test/myresource
+
+言語やOSによってはプログラムの実行時に特定のソフトウェア部品が必要な場合があり、これを「ランタイムライブラリ」（runtime library）「ランタイムパッケージ」（runtime package）「ランタイムエンジン」（runtime engine）「ランタイムモジュール」（runtime module）などと言うが、これらを略してランタイムと呼ぶ場合がある。
+
+const getAllFiles = (dir, filePaths = []) => {
+  fs.readdirSync(dir).forEach((file) => {
+    const filepath = path.join(dir, file);
+    if (fs.statSync(filepath).isDirectory()) {
+      filePaths = getAllFiles();
+    } else {
+      filePaths.push(filepath);
+    }
+  });
+  return filePaths;
+};
+
+Worn-Off-Keys-Cognito-Tutorials/
+https://github.com/gin-contrib/cors
+
+[Serverless Framework Documentation](https://www.serverless.com/framework/docs/)
+
+[GitHub - chrisxue815/realworld-aws-lambda-dynamodb-go: Medium.com clone (called Conduit) built with AWS Lambda, DynamoDB, Go and Serverless](https://github.com/chrisxue815/realworld-aws-lambda-dynamodb-go)
+
+//go:generate go install github.com/volatiletech/sqlboiler/v4@latest
+//go:generate go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest
+//go:generate sqlboiler --config sqlboiler.toml psql
+
+func passwordEncrypt(password string) (string, error) {
+	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	return string(hash), err
+}
+
+func compareHashAndPassword(hash, password string) error {
+	return bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+}
+
+
 func add(c *gin.Context) {
 	client := db.Connect()
 	user := client.User.Create()
