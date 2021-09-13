@@ -1,6 +1,6 @@
 ---
-title: "AWSサービス一覧（2021/09/06更新)"
-slug: "aws-services-2021/09/06"
+title: "AWSサービス一覧（2021/09/13更新)"
+slug: "aws-services-2021/09/13"
 emoji: "📆"
 type: "tech"
 topics: ["aws", "githubactions"]
@@ -76,7 +76,8 @@ published: true
 | [Amazon DynamoDB](https://aws.amazon.com/jp/dynamodb/?c=9&pt=2) | マネージド型の NoSQL データベース |
 | [Amazon DocumentDB (MongoDB 互換)](https://aws.amazon.com/jp/documentdb/?c=9&pt=3) | フルマネージド型ドキュメントデータベース |
 | [Amazon ElastiCache](https://aws.amazon.com/jp/elasticache/?c=9&pt=4) | インメモリキャッシングシステム |
-| [Amazon Keyspaces (Apache Cassandra 用)](https://aws.amazon.com/jp/keyspaces/?c=9&pt=5) | マネージド型の Cassandra 対応データベース |
+| [Amazon Keyspaces (Apache Cassandra 向け)](https://aws.amazon.com/jp/keyspaces/?c=9&pt=5) | マネージド型の Cassandra 対応データベース |
+| [Amazon MemoryDB for Redis](https://aws.amazon.com/jp/memorydb/) | 超高速なパフォーマンスを実現する Redis 互換性と耐久性のあるインメモリデータベース |
 | [Amazon Neptune ](https://aws.amazon.com/jp/neptune/?c=9&pt=6) | フルマネージド型グラフデータベースサービス |
 | [Amazon Quantum Ledger Database (QLDB)](https://aws.amazon.com/jp/qldb/?c=9&pt=7) | フルマネージド型台帳データベース |
 | [Amazon RDS](https://aws.amazon.com/jp/rds/?c=9&pt=8) | MySQL、PostgreSQL、Oracle、SQL Server、MariaDB 向けのマネージドリレーショナルデータベースサービス |
