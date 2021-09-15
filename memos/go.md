@@ -390,3 +390,5 @@ $(BINDIR)/protoc-gen-go: go.sum
 ```
 
 - [Go で使う Makefile の育て方](https://zenn.dev/rosylilly/articles/202105-go-makefile)
+
+go get github.com/suntong/html2md
