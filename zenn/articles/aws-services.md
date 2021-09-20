@@ -1,6 +1,6 @@
 ---
-title: "AWSサービス一覧（2021/09/13更新)"
-slug: "aws-services-2021/09/13"
+title: "AWSサービス一覧（2021/09/20更新)"
+slug: "aws-services-2021/09/20"
 emoji: "📆"
 type: "tech"
 topics: ["aws", "githubactions"]
@@ -61,7 +61,7 @@ published: true
 | [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/jp/ecs/?c=7a&pt=2) | コンテナを実行するためのきわめて安全で信頼性と拡張性が高い方法 |
 | [Amazon ECS Anywhere](https://aws.amazon.com/jp/ecs/anywhere/?c=7a&pt=2) | 顧客が管理するインフラでコンテナを実行 |
 | [Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/jp/eks/?c=7a&pt=3) | 信頼性が最も高い Kubernetes の実行方法 |
-| [Amazon EKS Anywhere (近日公開)](https://aws.amazon.com/jp/eks/eks-anywhere/) | インフラストラクチャでの Kubernetes |
+| [Amazon EKS Anywhere](https://aws.amazon.com/jp/eks/eks-anywhere/) | インフラストラクチャでの Kubernetes |
 | [Amazon EKS Distro](https://aws.amazon.com/jp/eks/eks-distro/) | 一貫した Kubernetes クラスターの実行 |
 | [AWS App2Container](https://aws.amazon.com/jp/app2container/?c=7a&pt=1a) | 既存のアプリケーションのコンテナ化と移行 |
 | [AWS App Runner](https://aws.amazon.com/jp/apprunner/?c=7a&pt=1b) | コンテナ化されたウェブアプリを大規模に構築・実行 |
