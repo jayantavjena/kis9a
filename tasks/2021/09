@@ -1,3 +1,36 @@
+
+func HandlerBasic(req events.APIGatewayProxyRequest) (Response, error) {
+	var res Response
+	var buf bytes.Buffer
+	var img Request
+	if err := json.Unmarshal([]byte(req.Body), img); err != nil {
+		res = Response{
+			StatusCode:      400,
+			IsBase64Encoded: false,
+			Body:            req.Body,
+			Headers: map[string]string{
+				"Content-Type": "application/json",
+			},
+		}
+		return res, nil
+	}
+	log.Println(req.Body)
+	log.Println(req.IsBase64Encoded)
+	res = Response{
+		StatusCode:      200,
+		IsBase64Encoded: false,
+		Body:            buf.String(),
+		Headers: map[string]string{
+			"Content-Type": "application/json",
+		},
+	}
+	return res, nil
+}
+
+
+https://github.com/ssb-ngi-pointer/go-ssb-room
+
+
 // docker-compose run api sh && go generate .
 //go:generate go install github.com/volatiletech/sqlboiler/v4@latest
 //go:generate go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest
