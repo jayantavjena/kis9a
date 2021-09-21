@@ -31,6 +31,46 @@ func HandlerBasic(req events.APIGatewayProxyRequest) (Response, error) {
 https://github.com/ssb-ngi-pointer/go-ssb-room
 
 
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Effect": "Allow",
+      "Principal": "*",
+      "Resource": [
+        "arn:aws:s3:::/*"
+      ]
+    }
+  ]
+}
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "WriteObjectActions",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:AbortMultipartUpload",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:ListBucketMultipartUploads",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::"
+    }
+  ]
+}
+
+
+値をv,eに入れる方法 、reduceの仕様に関しては、
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce を見てください。
+コードも追記したので確認してください。
+
+https://teratail.com/questions/349562
 // docker-compose run api sh && go generate .
 //go:generate go install github.com/volatiletech/sqlboiler/v4@latest
 //go:generate go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest
