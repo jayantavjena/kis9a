@@ -1,5 +1,31 @@
 [GitHub - gohandson/testing-ja: テストの書き方やテクニックを学ぶハンズオンです](https://github.com/gohandson/testing-ja)
 
+[go test で出来ること - Qiita](https://qiita.com/taizo/items/82930518430f940721a0)
+
+- func (\*T) Fail
+  実行後にそのテストは失敗となるが、そのテストの処理は続く
+
+- format 構造や変数を渡してメッセージを表示させたい場合
+  func (*T) Error
+  func (*T) Errorf
+
+- func (\*T) FatalNow
+  実行後にそのテストは失敗となり、そのテストの処理は止まる。
+  format 構造や変数を渡してメッセージを表示させたい場合
+  func (*T) Fatal
+  func (*T) Fatalf
+
+- t.Skip()
+  そのテストをスキップする。
+  func (*T) Skip は func (*T) SkipNow のエイリアス。
+  両方とも、その後の処理は実行されない。
+
+- t.Log()
+  Println などと同じように、値を実行時に表示してくれる。
+  直接 fmt.Println()を使う場合との違いは、行数をきちんと出してくれる。
+  ちなみに出力は、go test は、テキストは失敗するか
+  -v オプションをつけたときしか表示されない。
+
 - go test command options
 
 -v : 詳細を表示する

@@ -77,3 +77,28 @@ git config --global alias.today "log --since=midnight --author='$(git config use
 ```
 
 [git gc の仕組みを原理から理解してサイズを 136MB → 7.2MB(95%減)まで削減した時の勉強メモ](https://zenn.dev/ulwlu/articles/cc2443d32e2444)
+
+```
+#!/bin/bash
+
+function main() {
+	user=$(git config --list | grep user.name | cut -f 2 -d "=")
+
+  if [[ 'kis9a' = "$user" ]]; then
+		git config --global user.name 'kis9ax'
+		git config --global github.user 'kis9ax'
+		git config --global user.email 'kaito@gmail.com'
+  elif [[ 'kis9ax' = "$user" ]]; then
+		git config --global user.name 'kis9a'
+		git config --global github.user 'kis9a'
+		git config --global user.email 'kis9ax@gmail.com'
+  fi
+
+   user=$(git config --list | grep user.name | cut -f 2 -d "=")
+   email=$(git config --list | grep user.email | cut -f 2 -d "=")
+
+   echo "$user" "$email"
+}
+
+main
+```
