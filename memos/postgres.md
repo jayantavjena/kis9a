@@ -189,3 +189,21 @@ CREATE TABLE IF NOT EXISTS users (
 
 ALTER TABLE users OWNER TO postgres;
 ```
+
+```
+logging_collector=on
+log_line_prefix='[%t]%u %d %p[%l]'
+log_min_duration_statement=5000
+
+log_directory = '/var/log/postgresql'
+log_filename = 'postgresql.log'
+log_file_mode = 0640
+log_truncate_on_rotation = off
+log_statement = 'all'
+
+sudo mkdir -p /var/log/postgresql
+sudo chown -R postgres:adm /var/log/postgresql
+sudo chmod 750 /var/log/postgresql
+```
+
+[PostgreSQL で最低限設定しておくべきログ関連パラメータ＋ α - Qiita](https://qiita.com/ynakayama/items/d38c70dd7b61590e3f4e)
