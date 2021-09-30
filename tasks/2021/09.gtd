@@ -1,3 +1,13 @@
+2021-09-30
+
+o pallet token
+o research IEO, NFT, PLT from coinchecka articles.
+
+// hyperapp + esbuild + css module で最小構成でフロントエンドを作成するが、特にレスポンスデータの型付が出来ない事、
+// 型推論が効かないので大きくすると訳分からなくなるのでTypescriptも導入しようと思ったが、
+// Elmをまず検討して見ることにした。architecture が確立されてないと手を出したくない。
+// https://guide.elm-lang.org/architecture/
+
 
 // func TestGetTodo(t *testing.T) {
 // 	t.Run("test root handler", func(t *testing.T) {
@@ -200,7 +210,7 @@ I'm not sure if hyperway's performance is optimal, but I like the interface.
 
       MYSQL_ROOT_PASSWORD: pass 
       MYSQL_DATABASE: auth_server
-      MYSQL_USER: po3rin
+      MYSQL_USER: 
       MYSQL_PASSWORD: 1234567890
 
 
@@ -216,5 +226,5 @@ CREATE TABLE users (
 
 INSERT INTO users (name, mail, password)
 VALUES
-  ('po3rin', 'test1@mail.com', 'pass1'),
+  ('', 'test1@mail.com', 'pass1'),
   ('taro', 'test2@mail.com', 'pass2');
