@@ -136,7 +136,7 @@ set -g @powertab-pathname on
 | prefix + n        | 次のウインドウへ移動                   |
 | prefix + p        | 前のウインドウへ移動                   |
 | prefix + \|       | 左右にペイン分割                       |
-| prefix + *-        | 上下にペイン分割                       |
+| prefix + \*-      | 上下にペイン分割                       |
 | prefix + h        | 左のペインに移動                       |
 | prefix + j        | 下のペインに移動                       |
 | prefix + k        | 上のペインに移動                       |
@@ -154,3 +154,10 @@ set -g @powertab-pathname on
 | prefix + v        | コピー開始位置決定(vi モード)          |
 | prefix + y        | コピー終了位置決定(vi モード)          |
 | prefix + Crtl + p | コピー内容の貼り付け                   |
+
+" tmux
+" if exists("$TMUX")
+" let dir= fnamemodify(getcwd(), ":t")
+" autocmd BufWinEnter _ call system("tmux rename-window " .dir)
+" autocmd VimLeave _ call system("tmux rename-window zsh")
+" endif
