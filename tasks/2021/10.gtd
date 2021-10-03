@@ -1,0 +1,46 @@
+2021-10
+
+// 業務知識ま割りの補強,調べる。block-chain ことはじめ。
+// Goの基礎とアルゴリズム的な課題解決。社内アウトプットの導線。
+// C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
+// Rust の機能の把握, Webサーバー開発での応用とか見てみる。
+// 間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
+// ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。
+// IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
+// 基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
+// leetcode-vim, leetcode-vscode 等, エディタのインテグレーションを学習プロセスに含める。
+// refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
+
+2021-10-04
+
+- leave home AM: 7:30
+
+2021-10-03
+
+o (1) hp mail-check and reply.
+o (1) leetcode-vim research.
+o (1) イーサリアム、ビットコインの違い、エクスプローラーとは。
+o (1) ブロックチェーンのトランザクションについて詳しく。
+x syntax hilight の色変更、追加.
+x 交通情報の整理 -> screen shot.
+x block-chain系の書籍の整理. -> kindleで読めるやつがいい, Mastering bitcoin.
+x leetcode の問題の整理. -> 問題のリスト化. -> GitHub gist. ref solution: https://github.com/austingebauer/go-leetcode
+x minecraft build basic homes and gauge.
+
+
+2021-10-02
+
+x money schemed. 20 -> ipad 8, next_funds 8.
+x cleanup subscriptions.
+x changed main pc ops.
+x research for block-chain roadmap. -> https://github.com/OffcierCia/DeFi-Developer-Road-Map
+x バリデーションの重複処理に関して, frontend, backend. -> https://qiita.com/isaaac/items/4ca28057a45dddb14a64
+x repository visibility. -> 一年以上前のプロトタイププライベートやフォークはリサイクル or 消す運用。
+x minecreaft command listed.
+x 情報発信に関しての整理. -> Go, JavaScript, IaC, block-chain で続行
+x 情報発信の種類、技術記事の種類について調べる。 -> やってみた、できた、tips, なぜか？、翻訳、推奨。
+
+2021-10-01
+
+x tasks for eip
+x first time to go
