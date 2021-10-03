@@ -14,13 +14,18 @@
 2021-10-04
 
 - leave home AM: 7:30
+- freee 経費申請画面を見つける
+o research https://github.com/skygragon/leetcode-cli
 
 2021-10-03
 
-o (1) hp mail-check and reply.
-o (1) leetcode-vim research.
-o (1) イーサリアム、ビットコインの違い、エクスプローラーとは。
-o (1) ブロックチェーンのトランザクションについて詳しく。
+~ (1) leetcode-vim research. -> https://github.com/skygragon/leetcode-cli
+x (1) イーサリアム、ビットコインの違い、エクスプローラーとは。
+x (1) ブロックチェーンのトランザクションについて詳しく。
+x (1) freee login and 勤怠申請。
+x (1) hp mail-check and reply.
+x GitHub follow topic の整理
+x pc change to light mode.
 x syntax hilight の色変更、追加.
 x 交通情報の整理 -> screen shot.
 x block-chain系の書籍の整理. -> kindleで読めるやつがいい, Mastering bitcoin.
@@ -30,7 +35,7 @@ x minecraft build basic homes and gauge.
 
 2021-10-02
 
-x money schemed. 20 -> ipad 8, next_funds 8.
+x money schemed. 20 -> ipad 8, next_funds 8. -> 見える化
 x cleanup subscriptions.
 x changed main pc ops.
 x research for block-chain roadmap. -> https://github.com/OffcierCia/DeFi-Developer-Road-Map
