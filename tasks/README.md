@@ -10,14 +10,12 @@ _No time management,
 ```sh
 export MEMOS=$HOME/kis9a/memos
 export TASK=$HOME/kis9a/tasks/$(date +%Y)/$(date +%m).md
-export BOX=$HOME/notes/tasks/box
 ```
 
 .vimrc
 
 ```vim
 nnoremap <silent> <Leader>n :tabnew<CR>:cd $MEMOS<CR>
-nnoremap <silent> <Leader>b :tabnew<CR>:e $BOX<CR>
 nnoremap <silent> <Leader>j :tabnew<CR>:e $TASK<CR>
 ```
 
@@ -34,6 +32,7 @@ tasks
 
 ```
 
-タイムリーなメモ、将来的には破棄するレベルのものを書き込んでいる。
-現在は、Github Project カンバンも並行使用しているからだ。
-<https://github.com/users/kis9a/projects/1?fullscreen=true>
+タイムリーなメモ、将来的には破棄するレベルのものもを書き込んでいる。
+
+拡張子.gtd なファイルに対しての独自の syntax hilight.
+[GitHub - kis9a/vim-gtd: Visual assistance for gtd with vim simple syntax hilight.](https://github.com/kis9a/vim-gtd)
