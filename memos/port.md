@@ -29,3 +29,21 @@
 凡例
 
 <https://ja.wikipedia.org/wiki/TCPやUDPにおけるポート番号の一覧>
+
+### Important ports on transport layer
+
+| Port Number | Protocol | Application                     |
+| ----------- | -------- | ------------------------------- |
+| 20          | TCP      | FTP data                        |
+| 21          | TCP      | FTP control                     |
+| 22          | TCP      | SSH                             |
+| 23          | TCP      | Telnet                          |
+| 25          | TCP      | SMTP                            |
+| 53          | UDP, TCP | DNS                             |
+| 67, 68      | UDP      | DHCP                            |
+| 69          | UDP      | TFTP                            |
+| 80          | TCP      | HTTP                            |
+| 110         | TCP      | POP3                            |
+| 161         | UDP      | SNMP                            |
+| 443         | TCP      | SSL                             |
+| 16384-32767 | UDP      | TRP-base Voice (VoIP) and Video |
