@@ -10,16 +10,49 @@
 // 基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
 // leetcode-vim, leetcode-vscode 等, エディタのインテグレーションを学習プロセスに含める。
 // refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
+// [GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
+// [web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
+// https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
+
+// ELM もキャッチアップしとくか？
+// https://github.com/phenax/esbuild-plugin-elm
+// https://qiita.com/niso1985/items/c4084d996b89582aaf1c
+// https://qiita.com/IzumiSy
 
 2021-10-04
 
-- leave home AM: 7:30
-- freee 経費申請画面を見つける
-o research https://github.com/skygragon/leetcode-cli
+o vim-gtd の syntax-hilight の match pattern の fix と追加。
+o freee 経費申請画面を見つける
+o 読む 20:00 ~ https://tech.fressets.com/2289/ 
+o https://github.com/budougumi0617/leetgode を試す。
+o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。
+o 単純なテキストファイルのフォーマッターの追加。
+x sysstat について調べる。
+x 社 GitHub リポジトリの概要の把握といくつかのプロジェクトのローカル環境の構築。
+x テストインスタンスにログインしていろいろ見る。
+x scp command について調べる -> local での検証。TODO: how to scp client.
+x プラットフォームと情報発信の関連性。
+x rabbit-mqって何？ SQS -> [ Documentation: Table of Contents](https://www.rabbitmq.com/documentation.html)
+// [いいねが欲しけりゃコードを書くな - Qiita](https://qiita.com/fmfm_mdk/items/61d86fef2ed26656369d)
+// Zenn Books と知名度、わかりやすい記事を書くという幅の狭さ。好きなトピックに振れるか？
+// プラットフォームならではの圧力。拡散リスク。 -> 自分のブログ等 -> の集客の流れがいいかも。
+// articlesを自分のサイトに載せる scrap-box 的な UI インターフェースも。
+
+~ research [GitHub - skygragon/leetcode-cli: A cli tool to enjoy leetcode!](https://github.com/skygragon/leetcode-cli)
+~ 社 インフラ ~ バックエンドの構成の理解 -> 情報が少ないので、後で。
+x grpc のロードバランシングについてみる - [gRPCアプリをAWS ELBで負荷分散してみた | DevelopersIO](https://dev.classmethod.jp/articles/balancing-grpc-app-by-elb/)
+x Load balancer 概要復習 -> https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html
+x OSI model のメモ, tcp/ip model.
+x leave home AM: 7:30
+
+// service --status-all
+// タスクターゲットは，ある特定のファイルを作るためではなく，作業を行うコマンドとして利用したい場合に用いられます． 
+// .PHONYは，タスクターゲットを宣言するためのターゲットです
 
 2021-10-03
 
-~ (1) leetcode-vim research. -> https://github.com/skygragon/leetcode-cli
+~ (1) leetcode-vim research. -> ~https://github.com/skygragon/leetcode-cli~
 x (1) イーサリアム、ビットコインの違い、エクスプローラーとは。
 x (1) ブロックチェーンのトランザクションについて詳しく。
 x (1) freee login and 勤怠申請。
