@@ -26,8 +26,16 @@ https://qiita.com/IzumiSy
 o [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
 o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
 o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。
-o freee のプロフィール編集。
 o freee 経費申請画面を見つける。
+//  https://techblog.blockchain.bitflyer.com/entry/2020/04/22/190025
+o 個人ルートアカウント add MFA for the root user to improve security for this account.
+x terraform VPC 作成, alb の設定。
+x terraform init for
+x Satoshi Nakamoto https://bitcoin.org/bitcoin.pdf -> kindleに送る。
+x 個人AWSアカウントの設定,認証。
+x blockchain の用語を整理してメモにまとめる。
+~ kindle に送るを自動化、github リポジトリと連携。
+x freee のプロフィール編集。
 
 2021-10-04
 
