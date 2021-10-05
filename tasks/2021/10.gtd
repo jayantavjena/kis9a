@@ -21,14 +21,20 @@ https://qiita.com/niso1985/items/c4084d996b89582aaf1c
 https://qiita.com/IzumiSy
 */
 
+o freee 経費申請画面を見つける。
+o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+// [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+
+2021-10-06
+
+o Watch List [くろかわこうへいのAWS講座VPC編](https://www.youtube.com/watch?v=mHi2yFWLz9M) -> /memos/vpc.md
+o vpc の構成 -> 冗長化
+
 2021-10-05
 
-o [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
-o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
-o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。
-o freee 経費申請画面を見つける。
-//  https://techblog.blockchain.bitflyer.com/entry/2020/04/22/190025
-o 個人ルートアカウント add MFA for the root user to improve security for this account.
+~ 個人ルートアカウント add MFA for the root user to improve security for this account.
+x youtube-dlで情報集め -> 通勤時ぐいおん用
+x watch [エンジニアとおカネの話【M3 Tech Talk 第156回】 - YouTube](https://t.co/ICpYhcU919?amp=1)
 x terraform VPC 作成, alb の設定。
 x terraform init for
 x Satoshi Nakamoto https://bitcoin.org/bitcoin.pdf -> kindleに送る。
@@ -36,6 +42,8 @@ x 個人AWSアカウントの設定,認証。
 x blockchain の用語を整理してメモにまとめる。
 ~ kindle に送るを自動化、github リポジトリと連携。
 x freee のプロフィール編集。
+/* o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。 */
+//  https://techblog.blockchain.bitflyer.com/entry/2020/04/22/190025
 
 2021-10-04
 
