@@ -245,3 +245,8 @@ Plug 'aklt/plantuml-syntax', { 'for': 'uml' }
 | %          | 現在編集しているファイル名が格納されている。                 |
 | \*         | クリップボードの内容が格納されている。                       |
 | +          | 上と同じ(win, mac)                                           |
+
+```
+" Disabled built-in SQL completion in Vim
+let g:omni_sql_no_default_maps = 1
+```
