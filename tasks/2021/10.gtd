@@ -1,33 +1,41 @@
 2021-10
 
-// 業務知識ま割りの補強,調べる。block-chain ことはじめ。
-// Goの基礎とアルゴリズム的な課題解決。社内アウトプットの導線。
-// C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
-// Rust の機能の把握, Webサーバー開発での応用とか見てみる。
-// 間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
-// ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。
-// IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
-// 基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
-// leetcode-vim, leetcode-vscode 等, エディタのインテグレーションを学習プロセスに含める。
-// refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
-// [GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
-// [web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
-// https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
+/*
+業務知識ま割りの補強,調べる。block-chain ことはじめ。
+Goの基礎とアルゴリズム的な課題解決。社内アウトプットの導線。
+C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
+Rust の機能の把握, Webサーバー開発での応用とか見てみる。
+間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
+ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。
+IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
+基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
+leetcode-vim, leetcode-vscode 等, エディタのインテグレーションを学習プロセスに含める。
+refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
+[GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
+[web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
+https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
 
-// ELM もキャッチアップしとくか？
-// https://github.com/phenax/esbuild-plugin-elm
-// https://qiita.com/niso1985/items/c4084d996b89582aaf1c
-// https://qiita.com/IzumiSy
+ELM もキャッチアップしとくか？
+https://github.com/phenax/esbuild-plugin-elm
+https://qiita.com/niso1985/items/c4084d996b89582aaf1c
+https://qiita.com/IzumiSy
+*/
+
+2021-10-05
+
+o [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。
+o freee のプロフィール編集。
+o freee 経費申請画面を見つける。
 
 2021-10-04
 
-o vim-gtd の syntax-hilight の match pattern の fix と追加。
-o freee 経費申請画面を見つける
-o 読む 20:00 ~ https://tech.fressets.com/2289/ 
-o https://github.com/budougumi0617/leetgode を試す。
-o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
-o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。
-o 単純なテキストファイルのフォーマッターの追加。
+~ 単純なテキストファイルのフォーマッターの追加。 -> ない
+x elm examples の収集。
+~ 読む 20:00 ~ https://tech.fressets.com/2289/ -> わからん
+x https://github.com/budougumi0617/leetgode を試す。 -> generate 問題文の整形が必要。使わない。
+x vim-gtd の syntax-hilight の match pattern の fix と追加。
 x sysstat について調べる。
 x 社 GitHub リポジトリの概要の把握といくつかのプロジェクトのローカル環境の構築。
 x テストインスタンスにログインしていろいろ見る。
