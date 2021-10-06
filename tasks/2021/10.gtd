@@ -27,8 +27,16 @@ o 読む [Bitcoinトランザクションをバイナリから理解していく
 
 2021-10-06
 
+o ALB の導入。
 o Watch List [くろかわこうへいのAWS講座VPC編](https://www.youtube.com/watch?v=mHi2yFWLz9M) -> /memos/vpc.md
+o vs command embed statics and build to binary and distribute.
+o scp local and docker remote.
 o vpc の構成 -> 冗長化
+o monit と system.d に関して見る。
+x ALB とドメインの紐付け。
+o Local環境構築
+o testnet の中身をみる。プロセスとかサービスとかログとかみる。
+o サブネットのプライベート、パブリック等の設計。
 
 2021-10-05
 
