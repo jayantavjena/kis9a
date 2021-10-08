@@ -25,18 +25,65 @@ o freee 経費申請画面を見つける。
 o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
 // [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
 
+2021-10-09
+
+2021-10-08
+
+x ec2 auto-scaling の設定。
+x AMIアタッチ用の権限調査。 -> PassRole add to IAM Policy.
+x テンプレートに AMI ロールを設定。
+x auto-scaling の動作確認。test-in, test-out schedule.
+x 不要なインスタンスの終了, アクセステスト用のinstance の作成。
+x AMIの開発用のインスタンス。
+~ AMIイメージの更新フロー, 保存される状態を動作を確認する。 -> shell scirpt 化。
+x LB HTTPS化　検証用ドメインの証明書の発行。
+x LB HTTPS 化 -> 関連性の整理。
+o update-ami.bash -> get instance-template id and create image -> output ami-id.json
+o update-template.bash -> read ami-id.json -> update template ami field.
+o 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
+o SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
+o /etc/hosts/ の名前解決して、接続のインターフェースをわかりやすく。
+o ssh 周りのコンフィグファイルの調査。
+o セキュリティーアップデートのHookの導入を考える。
+o AWS Backup EC2 の調査。
+o Chef と Ansible を比較する。
+o AMIとEC2 template の更新用のパッチ。
+o EC2の権限を特定のインスタンスに絞りたい。
+
+2021-10-07
+
+x clean up tasks yesterday.
+x data extract script and task.
+x setup aws SSM login.
+x ssm 接続用ローカルプラグイン等の導入。
+x global ip を調べて、アクセス制限。 curl ifconfig.io
+x インスタンスにsshエージェント等の設定。ロール割り当て。
+~ terraform-inventory を試す。
+x 名刺の肩書きをどのようにするか。 -> ...事業部、エンジニアポジション
+x provider のprofile 有効範囲を調べる。-> 他のアカウントにIaCしてしまった。
+x ssm のコード化。
+
+/*
+TerraformのprovisionerにはAnsibleがないが terraform-inventory が 
+.tfstateファイルからdynamic inventoryを生成しAnsibleでのterraformリソースの構成管理を可能にしてくれるようなので試してみた。 
+
+https://7me.nobiki.com/2020/04/02/sar-command-memo/
+*/
+
+Requirements
+
 2021-10-06
 
-o ALB の導入。
-o Watch List [くろかわこうへいのAWS講座VPC編](https://www.youtube.com/watch?v=mHi2yFWLz9M) -> /memos/vpc.md
-o vs command embed statics and build to binary and distribute.
-o scp local and docker remote.
-o vpc の構成 -> 冗長化
-o monit と system.d に関して見る。
+x ALB の導入。
+x Watch List [くろかわこうへいのAWS講座VPC編](https://www.youtube.com/watch?v=mHi2yFWLz9M) -> /memos/vpc.md
+~ vs command embed statics and build to binary and distribute.
+x scp local and docker remote.
+x vpc の構成 -> 冗長化 を見る。
+~ monit と system.d に関して見る。
 x ALB とドメインの紐付け。
-o Local環境構築
-o testnet の中身をみる。プロセスとかサービスとかログとかみる。
-o サブネットのプライベート、パブリック等の設計。
+x Local環境構築用のdocker image の初期化。
+x testnet の中身をみる。プロセスとかサービスとかログとかみる。
+~ サブネットのプライベート、パブリック等の設計。
 
 2021-10-05
 
