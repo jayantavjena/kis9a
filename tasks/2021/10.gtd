@@ -27,6 +27,34 @@ o 読む [Bitcoinトランザクションをバイナリから理解していく
 
 2021-10-09
 
+x ssm login のIaC 化
+x alb の https 化の IaC。
+~ cv を description で共有。
+~ terraform-dev-instance 開発用のインスタンスのIAC. -> auto-scaling, AMI. -> 開発用インスタンスは、運用見合わせ
+x 社内のtimes に通知する。
+x wa1 のインスタンスをssm ログインできるようにする。
+x alb のhttps化 zenn に ポストする。-> [EC2 + ALB + Route53 ... 構成を terraform で適当に管理してみる。](https://zenn.dev/kis9a/scraps/ffbe3f8ebfc43f)
+x ssm login に関して zenn にポストする -> [SSM で EC2 インスタンスにログインできるようにする。](https://zenn.dev/kis9a/scraps/72f205eed406ce)
+x 動作確認 & 投稿 [diodonfrost/terraform-aws-lambda-scheduler-stop-start を使って、EC2インスタンスの起動、停止スケジュールを管理。](https://zenn.dev/kis9a/scraps/988fbe1b495821)
+o wa1 のインスタンスをオートスケールさせる。スケジュール停止、起動。
+/* provisioner "remote-exec" { *//*{{{*/
+/*   inline = [ */
+/*     "sudo su -", */
+/*     "apt update", */
+/*     "apt install lighttpd -y", */
+/*     "service lighttpd start" */
+/*   ] */
+
+/*   connection { */
+/*     type        = "ssh" */
+/*     host        = self.public_ip */
+/*     user        = "ubuntu" */
+/*     private_key = file("./wa1.pem") */
+/*   } */
+/* } */
+/*}}}*/
+[CloudFront+ALB+S3でリダイレクト+静的サイトホスティングする環境をTerraformで作ってみた - Qiita](https://qiita.com/t-okibayashi/items/49b3968e5b686af663ba)
+
 2021-10-08
 
 x ec2 auto-scaling の設定。
@@ -70,20 +98,19 @@ TerraformのprovisionerにはAnsibleがないが terraform-inventory が
 https://7me.nobiki.com/2020/04/02/sar-command-memo/
 */
 
-Requirements
-
 2021-10-06
 
 x ALB の導入。
-x Watch List [くろかわこうへいのAWS講座VPC編](https://www.youtube.com/watch?v=mHi2yFWLz9M) -> /memos/vpc.md
-~ vs command embed statics and build to binary and distribute.
-x scp local and docker remote.
-x vpc の構成 -> 冗長化 を見る。
 ~ monit と system.d に関して見る。
+x Watch List [くろかわこうへいのAWS講座VPC編](https://www.youtube.com/watch?v=mHi2yFWLz9M) -> /memos/vpc.md
+x scp local and docker remote.
+x Go I/O の抽象性 見る -> [Goから学ぶI/O](https://zenn.dev/hsaki/books/golang-io-package)
+x fs pacakge のコードリーディング
+x fs pushed tag:v0.1.0
 x ALB とドメインの紐付け。
-x Local環境構築用のdocker image の初期化。
-x testnet の中身をみる。プロセスとかサービスとかログとかみる。
-~ サブネットのプライベート、パブリック等の設計。
+~ scheme fs extends for embed and media.
+~ testnet の中身をみる。プロセスとかサービスとかログとかみる。
+~ vs command embed statics and build to binary and distribute.
 
 2021-10-05
 
@@ -99,6 +126,7 @@ x blockchain の用語を整理してメモにまとめる。
 x freee のプロフィール編集。
 /* o 冗長な構成でVPCからAWSコンソールからマニュアルでアプリケーションを組んでみる。 */
 //  https://techblog.blockchain.bitflyer.com/entry/2020/04/22/190025
+// ffmpeg -i test.mp4 -vframes 1 -vf "scale=360:-1" small_thumnail.png
 
 2021-10-04
 
