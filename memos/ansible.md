@@ -49,3 +49,5 @@ You can find an example of how I do it at c10k/infrastructureThanks! Until next 
 
 冪等性
 ホストが既に playbook によって指定された状態にある場合、Ansible は何もしません。つまり Ansible を何度実行してもホストは同じ状態になります。間違って複数回実行してもホストの環境を破壊することはありません。
+
+blockinfile : 複数行を扱える file モジュール

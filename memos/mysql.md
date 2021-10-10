@@ -43,3 +43,26 @@ MySQL：~/.my.cnf で設定
 database=DB 名
 user=ユーザー名
 password=パスワード
+
+```
+# DB一覧
+SHOW databases;
+
+# user一覧
+SELECT host, user FROM user;
+
+# グローバルレベル権限のリスト
+SELECT * FROM information_schema.user_privileges;
+
+# データベースレベル権限のリスト
+SELECT * FROM information_schema.schema_privileges;
+
+# テーブルレベル権限のリスト
+SELECT * FROM information_schema.table_privileges;
+
+# カラムレベル権限のリスト
+SELECT * FROM information_schema.column_privileges;
+
+# ユーザ別の権限一覧
+SHOW GRANTS FOR '<user>'@'<db>';
+```
