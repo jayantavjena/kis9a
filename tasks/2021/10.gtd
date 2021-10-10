@@ -21,13 +21,70 @@ https://qiita.com/niso1985/items/c4084d996b89582aaf1c
 https://qiita.com/IzumiSy
 */
 
-o freee 経費申請画面を見つける。
-o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+
 // [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+o ミドルウェアのプロビジョニングツールの再度リサーチ。
+o 見る <[【本編 32:17 より】Infra Study Meetup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
+o https://github.com/awslabs/aws-lambda-go-api-proxy のドキュメントを読み理解する。
+o lambda で gin の proxy が動作しているかどうかの確認。
+o Ansible 周りの記事を漁ります。https://zenn.dev/topics/ansible
+o 進数変換スクリプト Golang
+o 1 read bitcoin transaction section.
+o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+o 1 read proof of work section.
+o base-number に関して、Golang の 標準パッケージ、数学。
+o freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。
+
+2021-10-11
+
+o 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
+o SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
+o /etc/hosts/ の名前解決して、接続のインターフェースをわかりやすく。
+o ssh 周りのコンフィグファイルの調査。
+o セキュリティーアップデートのHookの導入を考える。
+o AWS Backup EC2 の調査。
+o AMI の開発方法を調べる。
+o AMIとEC2 template の更新用のパッチ。
+o EC2の権限を特定のインスタンスに絞りたい。
+
+2021-10-10
+
+x 詳細Bitcoin の購入
+x 詳細Bitcoin の index を整理する
+x 1 read bitcoin-cli section
+~ 読む ssh-fzf を作ってみる/*{{{*/
+```
+function ssh-peco() {
+  local user="ec2-user"
+  local host=$(aws ec2 describe-instances \
+                 --region ap-northeast-1 \
+                 --output json \
+                 --filters "Name=instance-state-code,Values=16" | \
+               jq -r '.Reservations[].Instances[] | [.Tags[] | select(.Key == "Name").Value][] + "\t" + .InstanceType + "\t" + .PrivateIpAddress + "\t" + .State.Name' |\
+               awk '{printf "%-30s %-15s %-15s %-10s\n",$1,$2,$3,$4}' |\
+               sort |\
+               peco | awk '{print $3}')
+  ssh -i ~/.ssh/key/auth-dev.pem \
+      -o StrictHostKeyChecking=no \
+      -o UserKnownHostsFile=/dev/null \
+      "$user@$host"
+}
+```
+/*}}}*/
+x Chef と Ansible を比較する。
+x 開発、アウトプット支援用のインスタンス -> dev1, domain: dev1.kis9b.com.
+x 基本的な構成から, EC2インスタンスのデプロイ with terraform.
+x 基本的な構成から
+x (1) freee のプロフィールの情報登録。 必要なもの振込先口座, 社保対応,基礎年金,現住所,住民票住所,雇用保険番号,484806770
+x wa1 のインスタンスをオートスケールさせる。スケジュール停止、起動。
+x ec2 スケジュール停止、起動に関しての投稿 -> [diodonfrost/terraform-aws-lambda-scheduler-stop-start を使って、EC2インスタンスの起動、停止スケジュールを管理。](https://zenn.dev/kis9a/scraps/988fbe1b495821)
+x dev1 インスタンスの要件を整理する -> <https://gist.github.com/kis9a/07a95ff4291fd06e9492987c741af251>
+~ update-ami.bash -> get instance-template id and create image -> output ami-id.json
+~ update-template.bash -> read ami-id.json -> update template ami field.
 
 2021-10-09
 
-x ssm login のIaC 化
+x xssm login のIaC 化
 x alb の https 化の IaC。
 ~ cv を description で共有。
 ~ terraform-dev-instance 開発用のインスタンスのIAC. -> auto-scaling, AMI. -> 開発用インスタンスは、運用見合わせ
@@ -36,7 +93,6 @@ x wa1 のインスタンスをssm ログインできるようにする。
 x alb のhttps化 zenn に ポストする。-> [EC2 + ALB + Route53 ... 構成を terraform で適当に管理してみる。](https://zenn.dev/kis9a/scraps/ffbe3f8ebfc43f)
 x ssm login に関して zenn にポストする -> [SSM で EC2 インスタンスにログインできるようにする。](https://zenn.dev/kis9a/scraps/72f205eed406ce)
 x 動作確認 & 投稿 [diodonfrost/terraform-aws-lambda-scheduler-stop-start を使って、EC2インスタンスの起動、停止スケジュールを管理。](https://zenn.dev/kis9a/scraps/988fbe1b495821)
-o wa1 のインスタンスをオートスケールさせる。スケジュール停止、起動。
 /* provisioner "remote-exec" { *//*{{{*/
 /*   inline = [ */
 /*     "sudo su -", */
@@ -53,7 +109,7 @@ o wa1 のインスタンスをオートスケールさせる。スケジュー�
 /*   } */
 /* } */
 /*}}}*/
-[CloudFront+ALB+S3でリダイレクト+静的サイトホスティングする環境をTerraformで作ってみた - Qiita](https://qiita.com/t-okibayashi/items/49b3968e5b686af663ba)
+x [CloudFront+ALB+S3でリダイレクト+静的サイトホスティングする環境をTerraformで作ってみた - Qiita](https://qiita.com/t-okibayashi/items/49b3968e5b686af663ba)
 
 2021-10-08
 
@@ -66,17 +122,6 @@ x AMIの開発用のインスタンス。
 ~ AMIイメージの更新フロー, 保存される状態を動作を確認する。 -> shell scirpt 化。
 x LB HTTPS化　検証用ドメインの証明書の発行。
 x LB HTTPS 化 -> 関連性の整理。
-o update-ami.bash -> get instance-template id and create image -> output ami-id.json
-o update-template.bash -> read ami-id.json -> update template ami field.
-o 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
-o SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
-o /etc/hosts/ の名前解決して、接続のインターフェースをわかりやすく。
-o ssh 周りのコンフィグファイルの調査。
-o セキュリティーアップデートのHookの導入を考える。
-o AWS Backup EC2 の調査。
-o Chef と Ansible を比較する。
-o AMIとEC2 template の更新用のパッチ。
-o EC2の権限を特定のインスタンスに絞りたい。
 
 2021-10-07
 
