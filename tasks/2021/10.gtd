@@ -1,31 +1,24 @@
 2021-10
 
-/*
-業務知識ま割りの補強,調べる。block-chain ことはじめ。
-Goの基礎とアルゴリズム的な課題解決。社内アウトプットの導線。
-C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
-Rust の機能の把握, Webサーバー開発での応用とか見てみる。
+/* MEMO
+x Goの基礎とアルゴリズム的な課題解決。 -> 標準パッケージのコードリーディング  -> zenn scraps
 間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
+業務知識ま割りの補強,調べる。block-chain ことはじめ。 -> 詳解 block-chain を読む。
 ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。
-IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
-基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
-leetcode-vim, leetcode-vscode 等, エディタのインテグレーションを学習プロセスに含める。
 refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
+社内アウトプットの導線。 -> インフラ関連のzenn-scraps
+基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
+IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
 [GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
 [web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
 https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
-
-ELM もキャッチアップしとくか？
-https://github.com/phenax/esbuild-plugin-elm
-https://qiita.com/niso1985/items/c4084d996b89582aaf1c
-https://qiita.com/IzumiSy
-*/
-
-
+経費申請項目: 交通費、NFTの教科書、詳解Bitcoin.
 // [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+
 o ミドルウェアのプロビジョニングツールの再度リサーチ。
 o 見る <[【本編 32:17 より】Infra Study Meetup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
 o https://github.com/awslabs/aws-lambda-go-api-proxy のドキュメントを読み理解する。
+o dynamodb のローカル環境の構築とデプロイまでのフロー。
 o lambda で gin の proxy が動作しているかどうかの確認。
 o Ansible 周りの記事を漁ります。https://zenn.dev/topics/ansible
 o 進数変換スクリプト Golang
@@ -34,6 +27,10 @@ o 読む [Bitcoinトランザクションをバイナリから理解していく
 o 1 read proof of work section.
 o base-number に関して、Golang の 標準パッケージ、数学。
 o freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。
+o role model selections
+o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
+o github laberer の terraform コード, 類似プロジェクトのIaCを試す。
+*/
 
 2021-10-11
 
@@ -46,6 +43,7 @@ o AWS Backup EC2 の調査。
 o AMI の開発方法を調べる。
 o AMIとEC2 template の更新用のパッチ。
 o EC2の権限を特定のインスタンスに絞りたい。
+o zennの記事をtwitterにかっこよく投稿する。 -> 動的OGPとバックエンド。
 
 2021-10-10
 
@@ -71,6 +69,8 @@ function ssh-peco() {
 }
 ```
 /*}}}*/
+x vim-gtd の ハイライトの無効化、DONE, STOP の時。
+x 髭をソル JK を拾わない。
 x Chef と Ansible を比較する。
 x 開発、アウトプット支援用のインスタンス -> dev1, domain: dev1.kis9b.com.
 x 基本的な構成から, EC2インスタンスのデプロイ with terraform.
@@ -81,6 +81,8 @@ x ec2 スケジュール停止、起動に関しての投稿 -> [diodonfrost/ter
 x dev1 インスタンスの要件を整理する -> <https://gist.github.com/kis9a/07a95ff4291fd06e9492987c741af251>
 ~ update-ami.bash -> get instance-template id and create image -> output ami-id.json
 ~ update-template.bash -> read ami-id.json -> update template ami field.
+~ leetcode-vim, leetcode-vscode 等, エディタのインテグレーションを学習プロセスに含める。 -> leetcode 標準が最適解。
+x ELM もキャッチアップしとくか？ https://github.com/phenax/esbuild-plugin-elm https://qiita.com/niso1985/items/c4084d996b89582aaf1c https://qiita.com/IzumiSy -> プライベートリポジトリの作成、まだインプットしない。
 
 2021-10-09
 
