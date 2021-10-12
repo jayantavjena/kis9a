@@ -250,3 +250,15 @@ Plug 'aklt/plantuml-syntax', { 'for': 'uml' }
 " Disabled built-in SQL completion in Vim
 let g:omni_sql_no_default_maps = 1
 ```
+
+```
+a,b,c
+aa,bb,cc
+aaa,bbb,ccc
+
+↑ の 3 行を選択して、「:'<,'>!column -t -s ","」
+
+a b c
+aa bb cc
+aaa bbb ccc
+```

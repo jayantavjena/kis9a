@@ -11,3 +11,5 @@
 [Rust で web サーバ開発ハンズオン](https://zenn.dev/susiyaki/books/b927a18723da01a6066b)
 
 [Typescript の次は Rust かもしれない](https://zenn.dev/akfm/articles/81713d4c1275ac64a75c)
+
+[Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/)
