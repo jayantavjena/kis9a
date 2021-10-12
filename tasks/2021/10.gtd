@@ -12,11 +12,11 @@ IaC周りの理解の強化。特にterraform のスニペットを増やした�
 [GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
 [web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
 https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
-経費申請項目: 交通費、NFTの教科書、詳解Bitcoin.
+経費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
 // [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
-
+o [Developer Roadmaps](https://roadmap.sh/)
 o ミドルウェアのプロビジョニングツールの再度リサーチ。
-o 見る <[【本編 32:17 より】Infra Study Meetup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
+o 見る <[【本編 32:17 より】Infra Study Metup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
 o https://github.com/awslabs/aws-lambda-go-api-proxy のドキュメントを読み理解する。
 o dynamodb のローカル環境の構築とデプロイまでのフロー。
 o lambda で gin の proxy が動作しているかどうかの確認。
@@ -30,20 +30,55 @@ o freee 経費申請画面を見つける。 -> 権限がない、調整中？�
 o role model selections
 o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
 o github laberer の terraform コード, 類似プロジェクトのIaCを試す。
+[AWS-CLIによるAMI作成と削除自動化（JSON取得によるRedmineチケット駆動） - Qiita](https://qiita.com/silva114jp/items/f0de1aa4f2ece78a0af4)
 */
+
+2021-10-12
+
+x ALBにログの設定.
+x (1) タスク整理.
+x terraform-bastion initialized.
+x /etc/hosts/ の名前解決して、接続のインターフェースをわかりやすく。
+o 十分な睡眠が必要
+o 駅通知, ハロワ手続き
+o 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
+o SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
+o ssh 周りのコンフィグファイルの調査。
+o セキュリティーアップデートのHookの導入を考える。
+
+o 各インスタンスの設定は、bastion server の公開鍵を~/.ssh/autolizeation に追加する。
+o 構築の自動化(Ansible, terraform) -> コンテナ化 -> データベース -> ログメトリクス
+o ssm -> ssh_key
+o ALB + ログの設定
+o aurora_db
+o clean up manual resource. -> remote bastion, rpcvhosts all.
+o pbz
+o aws-servicesが、壊れているので更新する。
+o terraform の CI·CD に関しての環境構築をする。
+o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
+o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
 
 2021-10-11
 
-o 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
-o SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
-o /etc/hosts/ の名前解決して、接続のインターフェースをわかりやすく。
-o ssh 周りのコンフィグファイルの調査。
-o セキュリティーアップデートのHookの導入を考える。
-o AWS Backup EC2 の調査。
-o AMI の開発方法を調べる。
-o AMIとEC2 template の更新用のパッチ。
-o EC2の権限を特定のインスタンスに絞りたい。
-o zennの記事をtwitterにかっこよく投稿する。 -> 動的OGPとバックエンド。
+x ssh - o -> bastion-test-access  の確認。
+x ssh -i basetion.pem bastion-template にアクセスして設定を書く。ssh-keygen で鍵作成
+x ssh -i bastion.pem bastion-test-access インスタンスにssh して鍵を配置する。
+x setuped host name alias
+x tmux 入れとく
+x geth command  についての学習。
+x memos/ ディレクトリの構造変更、リポジトリの分断化。 -> memos/category/adadf.md, ex: business/
+~ Logrotate ~/.zsh_history
+x Auto-scaling group の修正。
+x AWS Backup EC2 の調査。
+~ EC2の権限を特定のインスタンスに絞りたい。
+~ zennの記事をtwitterにかっこよく投稿する。 -> 動的OGPとバックエンド。
+x 公開鍵認証。SSH 周りの設定ファイル群を抑える。
+x [Ethereum(Geth) RPiC リクエスト Invalid host specified」対処法](https://tech.gootablog.com/article/geth-rpc-error/)
+x [雄みを感じるとどうなるか知ってるか - 雑記帳](https://zawariatlas.hatenablog.com/entry/2019/05/31/223302)
+x [勝手に世間のために生きている人たち - Neo's World](https://neos21.net/blog/2021/10/11-01.html)
+~ [既存EC2をベースに起動テンプレートを作る | Oji-Cloud](https://oji-cloud.net/2019/08/05/post-2597/)
+- AMI の開発方法を調べる。 AMIとEC2 template の更新用のパッチ。シェルスクリプト。
+- 自動起動と停止のterraform EC2 + CloudWatch + SSM. - https://dev.classmethod.jp/articles/tsnote-ec2-ssm-automation/, https://agohack.com/scheduled-start-and-stop-ec2-with-aws-cloudwatch-event/
 
 2021-10-10
 
