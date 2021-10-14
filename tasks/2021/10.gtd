@@ -33,30 +33,117 @@ o github laberer の terraform コード, 類似プロジェクトのIaCを試�
 [AWS-CLIによるAMI作成と削除自動化（JSON取得によるRedmineチケット駆動） - Qiita](https://qiita.com/silva114jp/items/f0de1aa4f2ece78a0af4)
 */
 
+2021-10-16
+
+o ~駅通知~, ハロワ手続き
+
+2021-10-15
+
+o aws-services が、壊れているので更新する。
+o pbz
+o terraform の CI·CD に関しての環境構築をする。
+o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
+o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
+
+2021-10-14
+
+" TabLine {{{
+function! s:sid_prefix()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+endfunction
+
+function! s:tb()
+  " let s='%#TabLineDir# [%{toupper(fnamemodify(getcwd(), ":t"))}]'
+  let s=''
+  for i in range(1, tabpagenr('$'))
+    let bufnrs = tabpagebuflist(i)
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]
+    let no = i
+    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+    let title = fnamemodify(bufname(bufnr), ':t')
+    let title = title
+    let s .= '%'.i.'T'
+    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+    let s .= ' '.no .':'. title
+    let s .= mod
+    let s .= '%#TabLineFill#'
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+  return s
+endfunction
+
+let &tabline = '%!'. s:sid_prefix() . 'tb()'
+
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt
+nnoremap <Leader>10 10gt
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-w>d :tabclose<CR>
+nnoremap <C-w>c :tabnew<CR>
+"}}}
+" tmux/*{{{*/
+if exists("$TMUX")
+  let dir= fnamemodify(getcwd(), ":t")
+  autocmd VimEnter * call system("tmux rename-window " .dir)
+  autocmd VimLeave * call system("tmux rename-window zsh")
+endif
+/*}}}*/
+
+x ログイン情報をもらう
+x terraform init aurora_db 必要なリソース、リレーションの整理。
+x fix tmux color to minimalize.
+x ssh command wrap for tmux rename window.
+x domain の疎通を確認する
+x ALB terraform import and fixes.
+x test instance の ami の更新。
+x test instance の ネットワーク構成の変更。
+o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
+o VPC IP 制限確認
+o ready for explorer code reading.
+x bastion server の AMI 更新.
+x ssh host configuration setting.
+x terraform local environment for docker.
+x AMIの更新 -> ssh-keygen, ssh config の設定。
+x ssm-agent log 確認 -> https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/sysman-agent-logs.html
+o ssm cloudwatch logs の設定.
+o IaC CI·CD structure scheme.
+o 一時的な構成で terraform の directory 構成をタスク単位に変更。
+o aurora_db research.
+o 事例を探す。
+o mysql調査終わらせる。-> レプリケーション手順確認。
+
+2021-10-13
+
+- vim coc colors 周りのvimscriptを見る。
+- read [Hashpalette white paper](https://document.hashpalette.com/HashpalettePaper.pdf)
+x sort out tasks and requirements.
+~ bastion server test workspace and request check.
+x get credential key and schedule to survey db instance.
+x clean up manual resource. -> remote bastion, rpcvhosts all.
+
 2021-10-12
 
 x ALBにログの設定.
 x (1) タスク整理.
 x terraform-bastion initialized.
 x /etc/hosts/ の名前解決して、接続のインターフェースをわかりやすく。
-o 十分な睡眠が必要
-o 駅通知, ハロワ手続き
-o 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
-o SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
-o ssh 周りのコンフィグファイルの調査。
-o セキュリティーアップデートのHookの導入を考える。
-
-o 各インスタンスの設定は、bastion server の公開鍵を~/.ssh/autolizeation に追加する。
-o 構築の自動化(Ansible, terraform) -> コンテナ化 -> データベース -> ログメトリクス
-o ssm -> ssh_key
-o ALB + ログの設定
-o aurora_db
-o clean up manual resource. -> remote bastion, rpcvhosts all.
-o pbz
-o aws-servicesが、壊れているので更新する。
-o terraform の CI·CD に関しての環境構築をする。
-o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
-o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
+x 十分な睡眠が必要
+x 一つのキーペアで各インスタンスにログインできる。アクセステスト用のインスタンスの設定。
+x SG VPC ローカルIPアドレスによるインスタンスのアクセス制限。
+x ssh 周りのコンフィグファイルの調査。
+x セキュリティーアップデートのHookの導入を考える。
+x 各インスタンスの設定は、bastion server の公開鍵を~/.ssh/autolizeation に追加する。
+x 構築の自動化(Ansible, terraform) -> コンテナ化 -> データベース -> ログメトリクス
+x ssm -> ssh_key
+x ALB + ログの設定
 
 2021-10-11
 
