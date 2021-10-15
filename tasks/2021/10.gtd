@@ -13,7 +13,7 @@ IaC周りの理解の強化。特にterraform のスニペットを増やした�
 [web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
 https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
 経費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
-// [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+[GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
 o [Developer Roadmaps](https://roadmap.sh/)
 o ミドルウェアのプロビジョニングツールの再度リサーチ。
 o 見る <[【本編 32:17 より】Infra Study Metup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
@@ -35,11 +35,30 @@ o github laberer の terraform コード, 類似プロジェクトのIaCを試�
 
 2021-10-16
 
+12 ~ 13
+
 o ~駅通知~, ハロワ手続き
+
+# subnet groups
+resource "aws_db_subnet_group" "db" {
+  name       = "${var.service}-subnet-group-db"
+  subnet_ids = [aws_subnet.db.id]
+  tags       = var.service_tags
+}
+custom_origin_config {
+  http_port              = "80"
+  https_port             = "443"
+  origin_protocol_policy = "http-only"
+  origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
+}
 
 2021-10-15
 
-o 納品用の本番環境構築 terraform
+x 納品用の本番環境構築(cb) の詳細を確認
+o cb: terraform 命名, ファイル構成の設計。 service-unit-env-app
+x 用途に対しての区分の設定。
+o サービス関連共通のリソースの定義
+o [TerraformでプライベートサブネットとNATゲートウェイを管理する - GeekFactory](https://int128.hatenablog.com/entry/2018/06/28/180504)
 o terraform の CI·CD に関しての環境構築をする。
 o terraform profile を引数で指定できるようにする。
 o Markdown to PDF を作る。
@@ -48,6 +67,45 @@ o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hel
 o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
 o VPC IP 制限確認
 o https://www.gnu.org/software/groff/manual/groff.html#Table-of-Contents
+x how to use image in groff -> groff $file.ms -T ps > $file.ps; ps2pdf $file.ps
+/*{{{*/ Terraform 一時的な待機
+/* resource "aws_db_proxy" "use_aurora" { */
+/*   name                   = local.rds_proxy_name */
+/*   debug_logging          = true */
+/*   engine_family          = "MYSQL" */
+/*   idle_client_timeout    = 60 */
+/*   require_tls            = false */
+/*   role_arn               = aws_iam_role.dbproxy.arn */
+/*   vpc_security_group_ids = [aws_security_group.aurora.id] */
+/*   vpc_subnet_ids         = data.aws_subnet_ids.my_vpc.ids */
+/*   depends_on = [ */
+/*     aws_rds_cluster_instance.use_aurora, */
+/*   ] */
+
+
+/*   auth { */
+/*     auth_scheme = "SECRETS" */
+/*     iam_auth    = "DISABLED" */
+/*     secret_arn  = aws_secretsmanager_secret.dbproxy.arn */
+/*   } */
+/* } */
+
+/* resource "aws_db_proxy_default_target_group" "use_aurora" { */
+/*   db_proxy_name = aws_db_proxy.use_aurora.name */
+
+/*   connection_pool_config { */
+/*     connection_borrow_timeout    = 120 */
+/*     max_connections_percent      = 100 */
+/*     max_idle_connections_percent = 50 */
+/*   } */
+/* } */
+
+/* resource "aws_db_proxy_target" "use_aurora" { */
+/*   db_proxy_name         = aws_db_proxy.use_aurora.name */
+/* #   db_cluster_identifier = aws_rds_cluster.use_aurora.id */
+/* #   target_group_name     = aws_db_proxy_default_target_group.use_aurora.name */
+/* # } */
+/*}}}*/
 o ready for explorer code reading.
 o IaC CI·CD structure scheme.
 o 一時的な構成で terraform の directory 構成をタスク単位に変更。
