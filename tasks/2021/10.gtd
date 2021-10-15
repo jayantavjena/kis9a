@@ -39,11 +39,33 @@ o ~駅通知~, ハロワ手続き
 
 2021-10-15
 
-o aws-services が、壊れているので更新する。
-o pbz
+o 納品用の本番環境構築 terraform
 o terraform の CI·CD に関しての環境構築をする。
+o terraform profile を引数で指定できるようにする。
+o Markdown to PDF を作る。
 o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
 o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
+o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
+o VPC IP 制限確認
+o https://www.gnu.org/software/groff/manual/groff.html#Table-of-Contents
+o ready for explorer code reading.
+o IaC CI·CD structure scheme.
+o 一時的な構成で terraform の directory 構成をタスク単位に変更。
+o aurora_db research.
+o mysql調査終わらせる。-> レプリケーション手順確認。
+x Groff preview/*{{{*/
+function! Preview()
+	let extension = expand('%:e')
+	if extension == "ms"
+		execute "! groff -ms \"%\" -T pdf > /tmp/op.pdf"
+	elseif extension == "tex"
+		execute "! pandoc -f latex -t latex \"%\" -o /tmp/op.pdf"
+	elseif extension == "md"
+		execute "! pandoc \"%\" -s -o /tmp/op.pdf"
+	endif
+	execute "! zathura /tmp/op.pdf &"
+endfunction
+/*}}}*/
 
 2021-10-14
 
@@ -97,6 +119,7 @@ if exists("$TMUX")
 endif
 /*}}}*/
 
+o groff sytax clean up
 x ログイン情報をもらう
 x terraform init aurora_db 必要なリソース、リレーションの整理。
 x fix tmux color to minimalize.
@@ -105,20 +128,14 @@ x domain の疎通を確認する
 x ALB terraform import and fixes.
 x test instance の ami の更新。
 x test instance の ネットワーク構成の変更。
-o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
-o VPC IP 制限確認
-o ready for explorer code reading.
+x aws-services が、壊れているので更新する。
+x pbz
 x bastion server の AMI 更新.
 x ssh host configuration setting.
 x terraform local environment for docker.
 x AMIの更新 -> ssh-keygen, ssh config の設定。
 x ssm-agent log 確認 -> https://docs.aws.amazon.com/ja_jp/systems-manager/latest/userguide/sysman-agent-logs.html
-o ssm cloudwatch logs の設定.
-o IaC CI·CD structure scheme.
-o 一時的な構成で terraform の directory 構成をタスク単位に変更。
-o aurora_db research.
-o 事例を探す。
-o mysql調査終わらせる。-> レプリケーション手順確認。
+x ssm cloudwatch logs の設定初期化.
 
 2021-10-13
 
