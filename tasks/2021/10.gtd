@@ -33,13 +33,109 @@ o github laberer の terraform コード, 類似プロジェクトのIaCを試�
 [AWS-CLIによるAMI作成と削除自動化（JSON取得によるRedmineチケット駆動） - Qiita](https://qiita.com/silva114jp/items/f0de1aa4f2ece78a0af4)
 */
 
-2021-10-16
-
-12 ~ 13
+2021-10-17
 
 o ~駅通知~, ハロワ手続き
 
-# subnet groups
+2021-10-16
+
+# route_table{{{
+resource "aws_route_table" "this" {
+  vpc_id = aws_vpc.this.id
+  tags   = var.service_tags
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.this.id
+  }
+}
+
+# route_table (public_a)
+resource "aws_route_table_association" "public_a" {
+  subnet_id      = aws_subnet.public_a.id
+  route_table_id = aws_route_table.this.id
+}
+
+# route_table (app_a)
+resource "aws_route_table_association" "app_a" {
+  subnet_id      = aws_subnet.app_a.id
+  route_table_id = aws_route_table.this.id
+}
+
+# route_table (db_a)
+resource "aws_route_table_association" "db_a" {
+  subnet_id      = aws_subnet.db_a.id
+  route_table_id = aws_route_table.this.id
+}
+
+# route_table (public_c)
+resource "aws_route_table_association" "public_c" {
+  subnet_id      = aws_subnet.public_c.id
+  route_table_id = aws_route_table.this.id
+}
+
+# route_table (app_c)
+resource "aws_route_table_association" "app_c" {
+  subnet_id      = aws_subnet.app_c.id
+  route_table_id = aws_route_table.this.id
+}
+
+# route_table (db_c)
+resource "aws_route_table_association" "db_c" {
+  subnet_id      = aws_subnet.db_c.id
+  route_table_id = aws_route_table.this.id
+}
+/*}}}*/
+/*{{{*/
+# subnet (public_a)
+resource "aws_subnet" "public_a" {
+  availability_zone = "ap-northeast-1a"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "100.32.0.0/20"
+  tags              = var.service_tags
+}
+
+# subnet (app_a)
+resource "aws_subnet" "app_a" {
+  availability_zone = "ap-northeast-1a"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "100.32.16.0/20"
+  tags              = var.service_tags
+}
+
+# subnet (db_a)
+resource "aws_subnet" "db_a" {
+  availability_zone = "ap-northeast-1a"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "100.32.64.0/20"
+  tags              = var.service_tags
+}
+
+# subnet (public_c)
+resource "aws_subnet" "public_c" {
+  availability_zone = "ap-northeast-1c"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "100.32.0.0/20"
+  tags              = var.service_tags
+}
+
+# subnet (app_c)
+resource "aws_subnet" "app_c" {
+  availability_zone = "ap-northeast-1c"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "100.32.16.0/20"
+  tags              = var.service_tags
+}
+
+# subnet (db_c)
+resource "aws_subnet" "db_c" {
+  availability_zone = "ap-northeast-1c"
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = "100.32.64.0/20"
+  tags              = var.service_tags
+}
+/*}}}*/
+# subnet groups{{{
 resource "aws_db_subnet_group" "db" {
   name       = "${var.service}-subnet-group-db"
   subnet_ids = [aws_subnet.db.id]
@@ -50,23 +146,32 @@ custom_origin_config {
   https_port             = "443"
   origin_protocol_policy = "http-only"
   origin_ssl_protocols   = ["TLSv1", "TLSv1.1", "TLSv1.2"]
-}
+}# }}}
+x docker volumes, container, images remove and clean.
+x clean up pc for volumes.
+x docker groff 環境の構築。
+x 環境ごとにディレクトリを分ける。
+x cloufront, s3 のログの設定。
+x 各リソース環境名を変更する。
+x resource apply fixes。
+x VPCの冗長化、マルチAZの対応。
+o terraform の CI·CD に関しての環境構築をする。
+o mysql調査終わらせる。-> レプリケーション手順確認。
+o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
+o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
+o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
 
 2021-10-15
 
 x 納品用の本番環境構築(cb) の詳細を確認
-o cb: terraform 命名, ファイル構成の設計。 service-unit-env-app
+x cb: terraform 命名, ファイル構成の設計。 service-unit-env-app
 x 用途に対しての区分の設定。
-o サービス関連共通のリソースの定義
-o [TerraformでプライベートサブネットとNATゲートウェイを管理する - GeekFactory](https://int128.hatenablog.com/entry/2018/06/28/180504)
-o terraform の CI·CD に関しての環境構築をする。
-o terraform profile を引数で指定できるようにする。
-o Markdown to PDF を作る。
-o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
-o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
-o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
-o VPC IP 制限確認
-o https://www.gnu.org/software/groff/manual/groff.html#Table-of-Contents
+x サービス関連共通のリソースの定義
+x [TerraformでプライベートサブネットとNATゲートウェイを管理する - GeekFactory](https://int128.hatenablog.com/entry/2018/06/28/180504)
+x terraform profile を引数で指定できるようにする。
+x Markdown to PDF を作る。 -> groff に移行。
+x VPC IP 制限確認
+x https://www.gnu.org/software/groff/manual/groff.html#Table-of-Contents
 x how to use image in groff -> groff $file.ms -T ps > $file.ps; ps2pdf $file.ps
 /*{{{*/ Terraform 一時的な待機
 /* resource "aws_db_proxy" "use_aurora" { */
@@ -106,11 +211,10 @@ x how to use image in groff -> groff $file.ms -T ps > $file.ps; ps2pdf $file.ps
 /* #   target_group_name     = aws_db_proxy_default_target_group.use_aurora.name */
 /* # } */
 /*}}}*/
-o ready for explorer code reading.
-o IaC CI·CD structure scheme.
-o 一時的な構成で terraform の directory 構成をタスク単位に変更。
-o aurora_db research.
-o mysql調査終わらせる。-> レプリケーション手順確認。
+x ready for explorer code reading.
+x IaC CI·CD structure scheme.
+x 一時的な構成で terraform の directory 構成をタスク単位に変更。
+x aurora_db research.
 x Groff preview/*{{{*/
 function! Preview()
 	let extension = expand('%:e')
