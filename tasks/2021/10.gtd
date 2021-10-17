@@ -33,9 +33,32 @@ o github laberer の terraform コード, 類似プロジェクトのIaCを試�
 [AWS-CLIによるAMI作成と削除自動化（JSON取得によるRedmineチケット駆動） - Qiita](https://qiita.com/silva114jp/items/f0de1aa4f2ece78a0af4)
 */
 
+o https://github.com/yyoshiki41/radigo
+o https://www.gnu.org/software/groff/manual/groff.html
+
+2021-10-18
+
+o 全社会議だけは参加します。 -> 1 week で prod まで。
+o ~駅通知~, ハロワ手続き
+
 2021-10-17
 
-o ~駅通知~, ハロワ手続き
+o ami の更新
+o KMS での認証情報の管理
+o mysql_client, redis_client のインストール
+o cb の方に踏み台サーバを作る。
+o rds の force replace bug は発生しているか？
+o tfvars による環境構築方法の汎用化
+o zenn-scraps -> markdown
+o terraform の CI·CD に関しての環境構築をする。
+o mysql調査終わらせる。-> レプリケーション手順確認。
+o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
+o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
+o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
+# go download[] {{{
+$ go install golang.org/dl/go1.10.7@latest
+$ go1.10.7 download
+# }}}
 
 2021-10-16
 
@@ -155,11 +178,6 @@ x cloufront, s3 のログの設定。
 x 各リソース環境名を変更する。
 x resource apply fixes。
 x VPCの冗長化、マルチAZの対応。
-o terraform の CI·CD に関しての環境構築をする。
-o mysql調査終わらせる。-> レプリケーション手順確認。
-o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
-o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
-o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
 
 2021-10-15
 
