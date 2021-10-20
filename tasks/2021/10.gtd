@@ -6,7 +6,7 @@ x Goの基礎とアルゴリズム的な課題解決。 -> 標準パッケージ
 業務知識ま割りの補強,調べる。block-chain ことはじめ。 -> 詳解 block-chain を読む。
 ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。
 refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
-社内アウトプットの導線。 -> インフラ関連のzenn-scraps
+社内アウトプットの導線。 -> インフラ関連のzenn-scraps -> 4記事投稿した。
 基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
 IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
 [GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
@@ -14,47 +14,74 @@ IaC周りの理解の強化。特にterraform のスニペットを増やした�
 https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
 経費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
 [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
-o [Developer Roadmaps](https://roadmap.sh/)
-o ミドルウェアのプロビジョニングツールの再度リサーチ。
-o 見る <[【本編 32:17 より】Infra Study Metup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
+*/
+
+o Ansible 周りの記事を漁ります。https://zenn.dev/topics/ansible
+o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+o freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。
+o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
+o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
+o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
 o https://github.com/awslabs/aws-lambda-go-api-proxy のドキュメントを読み理解する。
 o dynamodb のローカル環境の構築とデプロイまでのフロー。
 o lambda で gin の proxy が動作しているかどうかの確認。
-o Ansible 周りの記事を漁ります。https://zenn.dev/topics/ansible
-o 進数変換スクリプト Golang
-o 1 read bitcoin transaction section.
-o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
-o 1 read proof of work section.
-o base-number に関して、Golang の 標準パッケージ、数学。
-o freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。
-o role model selections
-o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
-o github laberer の terraform コード, 類似プロジェクトのIaCを試す。
-[AWS-CLIによるAMI作成と削除自動化（JSON取得によるRedmineチケット駆動） - Qiita](https://qiita.com/silva114jp/items/f0de1aa4f2ece78a0af4)
-*/
+o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
+x base-number に関して、Golang の 標準パッケージ、数学。
+x 進数変換スクリプト Golang
+o サービスチャンネルの統一。
+o LINE 消す。
+o Twitter 2 消す。
+o 名刺管理
+o 睡眠
+o 自己管理
+o マインドセット再
 
-o https://github.com/yyoshiki41/radigo
-o https://www.gnu.org/software/groff/manual/groff.html
+2021-10-20
+
+
+2021-10-19
+
+o k8s のdocker 非推奨について調べて読む。dockersim の役割/*{{{*/
+/*
+CRI(Container Runtime Interface)の完全な実装を含む利用可能なコンテナランタイムの使用を検討するようにと推奨しています
+<https://gavin-zhou.medium.com/%E3%81%AA%E3%81%9Ckubernetes%E3%81%AFdocker%E3%82%92%E6%8D%A8%E3%81%A6%E3%81%9F%E3%81%AE%E3%81%8B-124bfce69f47>
+[k8s 1.20のDocker非推奨問題でEKSを使用しているプロジェクトが対応すること - Tech Inside Drecom](https://tech.drecom.co.jp/k8s-1_20-problem-for-eks-with-docker/)
+[Dockerは非推奨じゃないし今すぐ騒ぐのをやめろ - Cloud Penguins](https://jaco.udcp.info/entry/2020/12/03/172843)
+[KubernetesのDockershim廃止における開発者の対応 - inductor&#39;s blog](https://blog.inductor.me/entry/2020/12/03/144834)
+*//*}}}*/
+x write [scrap about Groff and PDF. How to presentation and LT. ](https://zenn.dev/kis9a/scraps/6591ed66745eb9)
+x write [Docker image hashicorp/terraform を使用して、 ローカルで terraform の実行環境を作る。](https://zenn.dev/kis9a/scraps/8f905d56b41485)
 
 2021-10-18
 
-o 全社会議だけは参加します。 -> 1 week で prod まで。
-o ~駅通知~, ハロワ手続き
+~ 全社会議だけは参加します。 -> 1 week で prod まで。
+x ~駅通知~, ハロワ　雇用保険番号
+x 転職お断りメール4件。
+~ 住民票
+~ UFJ 電話番号、住所変更
+x (1) groff のドキュメント読み込み
+x ~groff sql 拡張~, macro 機能。
+x https://www.gnu.org/software/groff/manual/groff.html
+x introduction scheme
+x learn groff tbl syntax
+x watch playlist for groff
+x how to landing groff page
+x github laberer の terraform コード, 類似プロジェクトのIaCを試す。
+~ [AWS-CLIによるAMI作成と削除自動化（JSON取得によるRedmineチケット駆動） - Qiita](https://qiita.com/silva114jp/items/f0de1aa4f2ece78a0af4)
+x ミドルウェアのプロビジョニングツールの再度リサーチ。
 
 2021-10-17
 
-o ami の更新
-o KMS での認証情報の管理
-o mysql_client, redis_client のインストール
-o cb の方に踏み台サーバを作る。
-o rds の force replace bug は発生しているか？
-o tfvars による環境構築方法の汎用化
-o zenn-scraps -> markdown
-o terraform の CI·CD に関しての環境構築をする。
-o mysql調査終わらせる。-> レプリケーション手順確認。
-o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
-o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
-o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
+x ami の更新
+x KMS での認証情報の管理
+x mysql_client, redis_client のインストール
+x cb の方に踏み台サーバを作る。
+x rds の force replace bug は発生しているか？
+x tfvars による環境構築方法の汎用化
+~ zenn-scraps -> markdown
+~ terraform の CI·CD に関しての環境構築をする。
+x 見る <[【本編 32:17 より】Infra Study Metup #1「Infrastructure as Codeのこれまでとこれから」 - YouTube](https://www.youtube.com/watch?v=_bLzgd_UlbU)>
+~ mysql調査終わらせる。-> レプリケーション手順確認。
 # go download[] {{{
 $ go install golang.org/dl/go1.10.7@latest
 $ go1.10.7 download
