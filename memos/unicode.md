@@ -1,3 +1,5 @@
+https://shanabrian.com/web/unicode-encode-decode/
+
  U+F8FF
 ✔ U+2714
 ❤ U+2764
