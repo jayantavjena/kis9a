@@ -18,7 +18,6 @@ https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/wha
 
 o Ansible 周りの記事を漁ります。https://zenn.dev/topics/ansible
 o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
-o freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。
 o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
 o 見る [Rust で単方向 LinkedList を実装する | ゴミ箱](https://53ningen.com/linkedlist-in-rust/) -> init
 o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
@@ -28,16 +27,56 @@ o lambda で gin の proxy が動作しているかどうかの確認。
 o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
 x base-number に関して、Golang の 標準パッケージ、数学。
 x 進数変換スクリプト Golang
-o サービスチャンネルの統一。
-o LINE 消す。
-o Twitter 2 消す。
-o 名刺管理
-o 睡眠
-o 自己管理
-o マインドセット再
+
+2021-10-21
+
+o VPO application module is most important
 
 2021-10-20
 
+o docker 環境構築手順の書き換え。
+o Makefile 設定ファイルを絶対パスに変更。
+o 携帯電話の通知設定。
+o 通知チャンネルの統一
+  o aws-cost-line-notify -> slack.
+  o aws cost warning -> slack.
+  o gmail important -> slack.
+  o twitter 2 -> slack.
+  o 統一後の記事更新, output 関連。
+o LINE 消す。
+o zenn-scraps の機能要望。-> scraps の管理
+o nested syntax highlight match pattern. trimmed first word match.
+o 名刺管理
+o 自己管理
+o いらないインスタンスを消す。
+o 源泉徴収票の提出。
+o 家計簿確認, 計画。
+o amazon magic mouse 買う
+o amazon prime の支払いがなぜかできてないので、修正する。
+o ドメイン 証明書の設定 
+o ssoを始める。
+o freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。-> 招待メールきた
+o kis9a/snippets -> の以降
+o terraform の小さいやつのまとめリポジトリを作る。
+o レプリケーションについて読む
+  o [MySQL入門　レプリケーション編 - Qiita](https://qiita.com/Tocyuki/items/c224cef57493f536a941)
+  o [MySQLでMaster-Slave構成のレプリケーション設定 - Qiita](https://qiita.com/ksugawara61/items/fdd5ae9b78931540887f)
+  o [MySQL入門　レプリケーション編 - Qiita](https://qiita.com/Tocyuki/items/c224cef57493f536a941)
+  o [MySQLでMaster-Slave構成のレプリケーション設定 - Qiita](https://qiita.com/ksugawara61/items/fdd5ae9b78931540887f)
+  o [MySQL on EC2 → Aurora にレプリケーションをしてみた - kakakakakku blog](https://kakakakakku.hatenablog.com/entry/2017/02/03/223834)
+  o [MySQL on EC2 → Aurora にレプリケーションをしてみた - kakakakakku blog](https://kakakakakku.hatenablog.com/entry/2017/02/03/223834)
+o Pulumi に関して調べる
+  o [Gosuke Miyashita](https://mizzy.org/)
+  o https://qiita.com/ttkn9a/items/6fb71af2d265939184c3
+x Twitter 2 消す。
+x 睡眠
+x cloudfront のBasic認証。
+x ttl の設定の調節
+x ecs task definition の設定。
+x alb にドメインを設定
+x 状況を整理する必要がある。
+x 残りの要件の確認
+x どのresources 管理は手動でやるのかterraform でやるのか
 
 2021-10-19
 
