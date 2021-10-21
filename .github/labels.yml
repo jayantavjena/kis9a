@@ -1,54 +1,1971 @@
 # This config is example
 
 labels:
-  - name: "area/kubernetes"
-    description: "Indicates an issue on Kubernetes area."
-    color: "1d76db"
-  - name: "area/security"
-    description: "Indicates an issue on security area."
-    color: "1d76db"
-  - name: "kind/discussion"
-    description: "Categorizes issue or PR as related to discussion."
-    color: "bfd4f2"
-  - name: "kind/incident"
-    description: "Categorizes issue or PR as related to an incident."
-    color: "d93f0b"
-  - name: "kind/proactive"
-    description: "Categorizes issue or PR as related to proactive tasks."
-    color: "9CCC65"
-  - name: "kind/reactive"
-    description: "Categorizes issue or PR as related to reactive tasks."
-    color: "FFA000"
-  - name: "lifecycle/stale"
-    description: "Denotes an issue or PR has remained open with no activity and has become stale."
-    color: "784212"
-  - name: "lifecycle/frozen"
-    description: "Indicates that an issue or PR should not be auto-closed due to staleness."
-    color: "C2F8FF"
-  - name: "redis"
-    description: "Redis category"
-    color: "ff0000"
-  - name: "P0"
-    description: ""
-    color: "d93f0b"
-  - name: "P1"
-    description: ""
-    color: "fbca04"
-  - name: "P2"
-    description: ""
-    color: "f9bb5e"
+  - name: 1C Enterprise
+    description: languages 1C Enterprise
+    color: 814CCC
+  - name: 4D
+    description: languages 4D
+    color: 004289
+  - name: ABAP
+    description: languages ABAP
+    color: E8274B
+  - name: ABAP CDS
+    description: languages ABAP CDS
+    color: 555e25
+  - name: ActionScript
+    description: languages ActionScript
+    color: 882B0F
+  - name: Ada
+    description: languages Ada
+    color: 02f88c
+  - name: Adobe Font Metrics
+    description: languages Adobe Font Metrics
+    color: fa0f00
+  - name: Agda
+    description: languages Agda
+    color: 315665
+  - name: AGS Script
+    description: languages AGS Script
+    color: B9D9FF
+  - name: AIDL
+    description: languages AIDL
+    color: 34EB6B
+  - name: AL
+    description: languages AL
+    color: 3AA2B5
+  - name: Alloy
+    description: languages Alloy
+    color: 64C800
+  - name: Alpine Abuild
+    description: languages Alpine Abuild
+    color: 0D597F
+  - name: Altium Designer
+    description: languages Altium Designer
+    color: A89663
+  - name: AMPL
+    description: languages AMPL
+    color: E6EFBB
+  - name: AngelScript
+    description: languages AngelScript
+    color: C7D7DC
+  - name: Ant Build System
+    description: languages Ant Build System
+    color: A9157E
+  - name: ANTLR
+    description: languages ANTLR
+    color: 9DC3FF
+  - name: ApacheConf
+    description: languages ApacheConf
+    color: d12127
+  - name: Apex
+    description: languages Apex
+    color: 1797c0
+  - name: API Blueprint
+    description: languages API Blueprint
+    color: 2ACCA8
+  - name: APL
+    description: languages APL
+    color: 5A8164
+  - name: Apollo Guidance Computer
+    description: languages Apollo Guidance Computer
+    color: 0B3D91
+  - name: AppleScript
+    description: languages AppleScript
+    color: 101F1F
+  - name: Arc
+    description: languages Arc
+    color: aa2afe
+  - name: AsciiDoc
+    description: languages AsciiDoc
+    color: 73a0c5
+  - name: ASP.NET
+    description: languages ASP.NET
+    color: 9400ff
+  - name: AspectJ
+    description: languages AspectJ
+    color: a957b0
+  - name: Assembly
+    description: languages Assembly
+    color: 6E4C13
+  - name: Astro
+    description: languages Astro
+    color: ff5a03
+  - name: Asymptote
+    description: languages Asymptote
+    color: ff0000
+  - name: ATS
+    description: languages ATS
+    color: 1ac620
+  - name: Augeas
+    description: languages Augeas
+    color: 9CC134
+  - name: AutoHotkey
+    description: languages AutoHotkey
+    color: 6594b9
+  - name: AutoIt
+    description: languages AutoIt
+    color: 1C3552
+  - name: Avro IDL
+    description: languages Avro IDL
+    color: 0040FF
+  - name: Awk
+    description: languages Awk
+    color: c30e9b
+  - name: Ballerina
+    description: languages Ballerina
+    color: FF5000
+  - name: BASIC
+    description: languages BASIC
+    color: ff0000
+  - name: Batchfile
+    description: languages Batchfile
+    color: C1F12E
+  - name: Beef
+    description: languages Beef
+    color: a52f4e
+  - name: BibTeX
+    description: languages BibTeX
+    color: 778899
+  - name: Bicep
+    description: languages Bicep
+    color: 519aba
+  - name: Bison
+    description: languages Bison
+    color: 6A463F
+  - name: BitBake
+    description: languages BitBake
+    color: 00bce4
+  - name: Blade
+    description: languages Blade
+    color: f7523f
+  - name: BlitzBasic
+    description: languages BlitzBasic
+    color: 00FFAE
+  - name: BlitzMax
+    description: languages BlitzMax
+    color: cd6400
+  - name: Bluespec
+    description: languages Bluespec
+    color: 12223c
+  - name: Boo
+    description: languages Boo
+    color: d4bec1
+  - name: Boogie
+    description: languages Boogie
+    color: c80fa0
+  - name: Brainfuck
+    description: languages Brainfuck
+    color: 2F2530
+  - name: Brightscript
+    description: languages Brightscript
+    color: 662D91
+  - name: Browserslist
+    description: languages Browserslist
+    color: ffd539
+  - name: C
+    description: languages C
+    color: 555555
+  - name: C
+    description: languages C
+    color: 178600
+  - name: C++
+    description: languages C++
+    color: f34b7d
+  - name: Cabal Config
+    description: languages Cabal Config
+    color: 483465
+  - name: Cap'n Proto
+    description: languages Cap'n Proto
+    color: c42727
+  - name: Ceylon
+    description: languages Ceylon
+    color: dfa535
+  - name: Chapel
+    description: languages Chapel
+    color: 8dc63f
+  - name: ChucK
+    description: languages ChucK
+    color: 3f8000
+  - name: Cirru
+    description: languages Cirru
+    color: ccccff
+  - name: Clarion
+    description: languages Clarion
+    color: db901e
+  - name: Classic ASP
+    description: languages Classic ASP
+    color: 6a40fd
+  - name: Clean
+    description: languages Clean
+    color: 3F85AF
+  - name: Click
+    description: languages Click
+    color: E4E6F3
+  - name: CLIPS
+    description: languages CLIPS
+    color: 00A300
+  - name: Clojure
+    description: languages Clojure
+    color: db5855
+  - name: Closure Templates
+    description: languages Closure Templates
+    color: 0d948f
+  - name: Cloud Firestore Security Rules
+    description: languages Cloud Firestore Security Rules
+    color: FFA000
+  - name: CMake
+    description: languages CMake
+    color: DA3434
+  - name: CodeQL
+    description: languages CodeQL
+    color: 140f46
+  - name: CoffeeScript
+    description: languages CoffeeScript
+    color: 244776
+  - name: ColdFusion
+    description: languages ColdFusion
+    color: ed2cd6
+  - name: ColdFusion CFC
+    description: languages ColdFusion CFC
+    color: ed2cd6
+  - name: COLLADA
+    description: languages COLLADA
+    color: F1A42B
+  - name: Common Lisp
+    description: languages Common Lisp
+    color: 3fb68b
+  - name: Common Workflow Language
+    description: languages Common Workflow Language
+    color: B5314C
+  - name: Component Pascal
+    description: languages Component Pascal
+    color: B0CE4E
+  - name: Coq
+    description: languages Coq
+    color: d0b68c
+  - name: Crystal
+    description: languages Crystal
+    color: 000100
+  - name: CSON
+    description: languages CSON
+    color: 244776
+  - name: Csound
+    description: languages Csound
+    color: 1a1a1a
+  - name: Csound Document
+    description: languages Csound Document
+    color: 1a1a1a
+  - name: Csound Score
+    description: languages Csound Score
+    color: 1a1a1a
+  - name: CSS
+    description: languages CSS
+    color: 563d7c
+  - name: CSV
+    description: languages CSV
+    color: 237346
+  - name: Cuda
+    description: languages Cuda
+    color: 3A4E3A
+  - name: CUE
+    description: languages CUE
+    color: 5886E1
+  - name: CWeb
+    description: languages CWeb
+    color: 00007a
+  - name: Cython
+    description: languages Cython
+    color: fedf5b
+  - name: D
+    description: languages D
+    color: ba595e
+  - name: Dafny
+    description: languages Dafny
+    color: FFEC25
+  - name: Darcs Patch
+    description: languages Darcs Patch
+    color: 8eff23
+  - name: Dart
+    description: languages Dart
+    color: 00B4AB
+  - name: DataWeave
+    description: languages DataWeave
+    color: 003a52
+  - name: Dhall
+    description: languages Dhall
+    color: dfafff
+  - name: DirectX 3D File
+    description: languages DirectX 3D File
+    color: aace60
+  - name: DM
+    description: languages DM
+    color: 447265
+  - name: Dockerfile
+    description: languages Dockerfile
+    color: 384d54
+  - name: Dogescript
+    description: languages Dogescript
+    color: cca760
+  - name: Dylan
+    description: languages Dylan
+    color: 6c616e
+  - name: E
+    description: languages E
+    color: ccce35
+  - name: Easybuild
+    description: languages Easybuild
+    color: 069406
+  - name: eC
+    description: languages eC
+    color: 913960
+  - name: Ecere Projects
+    description: languages Ecere Projects
+    color: 913960
+  - name: ECL
+    description: languages ECL
+    color: 8a1267
+  - name: ECLiPSe
+    description: languages ECLiPSe
+    color: 001d9d
+  - name: EditorConfig
+    description: languages EditorConfig
+    color: fff1f2
+  - name: Eiffel
+    description: languages Eiffel
+    color: 4d6977
+  - name: EJS
+    description: languages EJS
+    color: a91e50
+  - name: Elixir
+    description: languages Elixir
+    color: 6e4a7e
+  - name: Elm
+    description: languages Elm
+    color: 60B5CC
+  - name: Emacs Lisp
+    description: languages Emacs Lisp
+    color: c065db
+  - name: EmberScript
+    description: languages EmberScript
+    color: FFF4F3
+  - name: EQ
+    description: languages EQ
+    color: a78649
+  - name: Erlang
+    description: languages Erlang
+    color: B83998
+  - name: F
+    description: languages F
+    color: b845fc
+  - name: F*
+    description: languages F*
+    color: 572e30
+  - name: Factor
+    description: languages Factor
+    color: 636746
+  - name: Fancy
+    description: languages Fancy
+    color: 7b9db4
+  - name: Fantom
+    description: languages Fantom
+    color: 14253c
+  - name: Faust
+    description: languages Faust
+    color: c37240
+  - name: Fennel
+    description: languages Fennel
+    color: fff3d7
+  - name: FIGlet Font
+    description: languages FIGlet Font
+    color: FFDDBB
+  - name: Filebench WML
+    description: languages Filebench WML
+    color: F6B900
+  - name: fish
+    description: languages fish
+    color: 4aae47
+  - name: Fluent
+    description: languages Fluent
+    color: ffcc33
+  - name: FLUX
+    description: languages FLUX
+    color: 88ccff
+  - name: Forth
+    description: languages Forth
+    color: 341708
+  - name: Fortran
+    description: languages Fortran
+    color: 4d41b1
+  - name: Fortran Free Form
+    description: languages Fortran Free Form
+    color: 4d41b1
+  - name: FreeBasic
+    description: languages FreeBasic
+    color: 867db1
+  - name: FreeMarker
+    description: languages FreeMarker
+    color: 0050b2
+  - name: Frege
+    description: languages Frege
+    color: 00cafe
+  - name: Futhark
+    description: languages Futhark
+    color: 5f021f
+  - name: G-code
+    description: languages G-code
+    color: D08CF2
+  - name: Game Maker Language
+    description: languages Game Maker Language
+    color: 71b417
+  - name: GAML
+    description: languages GAML
+    color: FFC766
+  - name: GAMS
+    description: languages GAMS
+    color: f49a22
+  - name: GAP
+    description: languages GAP
+    color: 0000cc
+  - name: GCC Machine Description
+    description: languages GCC Machine Description
+    color: FFCFAB
+  - name: GDScript
+    description: languages GDScript
+    color: 355570
+  - name: GEDCOM
+    description: languages GEDCOM
+    color: 003058
+  - name: Gemfile.lock
+    description: languages Gemfile.lock
+    color: 701516
+  - name: Genie
+    description: languages Genie
+    color: fb855d
+  - name: Genshi
+    description: languages Genshi
+    color: 951531
+  - name: Gentoo Ebuild
+    description: languages Gentoo Ebuild
+    color: 9400ff
+  - name: Gentoo Eclass
+    description: languages Gentoo Eclass
+    color: 9400ff
+  - name: Gerber Image
+    description: languages Gerber Image
+    color: d20b00
+  - name: Gherkin
+    description: languages Gherkin
+    color: 5B2063
+  - name: Git Attributes
+    description: languages Git Attributes
+    color: F44D27
+  - name: Git Config
+    description: languages Git Config
+    color: F44D27
+  - name: GLSL
+    description: languages GLSL
+    color: 5686a5
+  - name: Glyph
+    description: languages Glyph
+    color: c1ac7f
+  - name: Gnuplot
+    description: languages Gnuplot
+    color: f0a9f0
+  - name: Go
+    description: languages Go
+    color: 00ADD8
+  - name: Go Checksums
+    description: languages Go Checksums
+    color: 00ADD8
+  - name: Go Module
+    description: languages Go Module
+    color: 00ADD8
+  - name: Golo
+    description: languages Golo
+    color: 88562A
+  - name: Gosu
+    description: languages Gosu
+    color: 82937f
+  - name: Grace
+    description: languages Grace
+    color: 615f8b
+  - name: Gradle
+    description: languages Gradle
+    color: 02303a
+  - name: Grammatical Framework
+    description: languages Grammatical Framework
+    color: ff0000
+  - name: GraphQL
+    description: languages GraphQL
+    color: e10098
+  - name: Graphviz (DOT)
+    description: languages Graphviz (DOT)
+    color: 2596be
+  - name: Groovy
+    description: languages Groovy
+    color: 4298b8
+  - name: Groovy Server Pages
+    description: languages Groovy Server Pages
+    color: 4298b8
+  - name: Hack
+    description: languages Hack
+    color: 878787
+  - name: Haml
+    description: languages Haml
+    color: ece2a9
+  - name: Handlebars
+    description: languages Handlebars
+    color: f7931e
+  - name: HAProxy
+    description: languages HAProxy
+    color: 106da9
+  - name: Harbour
+    description: languages Harbour
+    color: 0e60e3
+  - name: Haskell
+    description: languages Haskell
+    color: 5e5086
+  - name: Haxe
+    description: languages Haxe
+    color: df7900
+  - name: HiveQL
+    description: languages HiveQL
+    color: dce200
+  - name: HLSL
+    description: languages HLSL
+    color: aace60
+  - name: HolyC
+    description: languages HolyC
+    color: ffefaf
+  - name: HTML
+    description: languages HTML
+    color: e34c26
+  - name: HTML+ECR
+    description: languages HTML+ECR
+    color: 2e1052
+  - name: HTML+EEX
+    description: languages HTML+EEX
+    color: 6e4a7e
+  - name: HTML+ERB
+    description: languages HTML+ERB
+    color: 701516
+  - name: HTML+PHP
+    description: languages HTML+PHP
+    color: 4f5d95
+  - name: HTML+Razor
+    description: languages HTML+Razor
+    color: 512be4
+  - name: HTTP
+    description: languages HTTP
+    color: 005C9C
+  - name: HXML
+    description: languages HXML
+    color: f68712
+  - name: Hy
+    description: languages Hy
+    color: 7790B2
+  - name: IDL
+    description: languages IDL
+    color: a3522f
+  - name: Idris
+    description: languages Idris
+    color: b30000
+  - name: Ignore List
+    description: languages Ignore List
+    color: 000000
+  - name: IGOR Pro
+    description: languages IGOR Pro
+    color: 0000cc
+  - name: ImageJ Macro
+    description: languages ImageJ Macro
+    color: 99AAFF
+  - name: INI
+    description: languages INI
+    color: d1dbe0
+  - name: Inno Setup
+    description: languages Inno Setup
+    color: 264b99
+  - name: Io
+    description: languages Io
+    color: a9188d
+  - name: Ioke
+    description: languages Ioke
+    color: 078193
+  - name: Isabelle
+    description: languages Isabelle
+    color: FEFE00
+  - name: Isabelle ROOT
+    description: languages Isabelle ROOT
+    color: FEFE00
+  - name: J
+    description: languages J
+    color: 9EEDFF
+  - name: JAR Manifest
+    description: languages JAR Manifest
+    color: b07219
+  - name: Jasmin
+    description: languages Jasmin
+    color: d03600
+  - name: Java
+    description: languages Java
+    color: b07219
+  - name: Java Properties
+    description: languages Java Properties
+    color: 2A6277
+  - name: Java Server Pages
+    description: languages Java Server Pages
+    color: 2A6277
+  - name: JavaScript
+    description: languages JavaScript
+    color: f1e05a
+  - name: JavaScript+ERB
+    description: languages JavaScript+ERB
+    color: f1e05a
+  - name: Jest Snapshot
+    description: languages Jest Snapshot
+    color: 15c213
+  - name: JFlex
+    description: languages JFlex
+    color: DBCA00
+  - name: Jinja
+    description: languages Jinja
+    color: a52a22
+  - name: Jison
+    description: languages Jison
+    color: 56b3cb
+  - name: Jison Lex
+    description: languages Jison Lex
+    color: 56b3cb
+  - name: Jolie
+    description: languages Jolie
+    color: 843179
+  - name: jq
+    description: languages jq
+    color: c7254e
+  - name: JSON
+    description: languages JSON
+    color: 292929
+  - name: JSON with Comments
+    description: languages JSON with Comments
+    color: 292929
+  - name: JSON5
+    description: languages JSON5
+    color: 267CB9
+  - name: JSONiq
+    description: languages JSONiq
+    color: 40d47e
+  - name: JSONLD
+    description: languages JSONLD
+    color: 0c479c
+  - name: Jsonnet
+    description: languages Jsonnet
+    color: 0064bd
+  - name: Julia
+    description: languages Julia
+    color: a270ba
+  - name: Jupyter Notebook
+    description: languages Jupyter Notebook
+    color: DA5B0B
+  - name: Kaitai Struct
+    description: languages Kaitai Struct
+    color: 773b37
+  - name: KakouneScript
+    description: languages KakouneScript
+    color: 6f8042
+  - name: KiCad Layout
+    description: languages KiCad Layout
+    color: 2f4aab
+  - name: KiCad Legacy Layout
+    description: languages KiCad Legacy Layout
+    color: 2f4aab
+  - name: KiCad Schematic
+    description: languages KiCad Schematic
+    color: 2f4aab
+  - name: Kotlin
+    description: languages Kotlin
+    color: A97BFF
+  - name: KRL
+    description: languages KRL
+    color: 28430A
+  - name: LabVIEW
+    description: languages LabVIEW
+    color: fede06
+  - name: Lark
+    description: languages Lark
+    color: 2980B9
+  - name: Lasso
+    description: languages Lasso
+    color: 999999
+  - name: Latte
+    description: languages Latte
+    color: f2a542
+  - name: Less
+    description: languages Less
+    color: 1d365d
+  - name: Lex
+    description: languages Lex
+    color: DBCA00
+  - name: LFE
+    description: languages LFE
+    color: 4C3023
+  - name: LilyPond
+    description: languages LilyPond
+    color: 9ccc7c
+  - name: Liquid
+    description: languages Liquid
+    color: 67b8de
+  - name: Literate Agda
+    description: languages Literate Agda
+    color: 315665
+  - name: Literate CoffeeScript
+    description: languages Literate CoffeeScript
+    color: 244776
+  - name: Literate Haskell
+    description: languages Literate Haskell
+    color: 5e5086
+  - name: LiveScript
+    description: languages LiveScript
+    color: 499886
+  - name: LLVM
+    description: languages LLVM
+    color: 185619
+  - name: Logtalk
+    description: languages Logtalk
+    color: 295b9a
+  - name: LOLCODE
+    description: languages LOLCODE
+    color: cc9900
+  - name: LookML
+    description: languages LookML
+    color: 652B81
+  - name: LSL
+    description: languages LSL
+    color: 3d9970
+  - name: Lua
+    description: languages Lua
+    color: 000080
+  - name: Macaulay2
+    description: languages Macaulay2
+    color: d8ffff
+  - name: Makefile
+    description: languages Makefile
+    color: 427819
+  - name: Mako
+    description: languages Mako
+    color: 7e858d
+  - name: Markdown
+    description: languages Markdown
+    color: 083fa1
+  - name: Marko
+    description: languages Marko
+    color: 42bff2
+  - name: Mask
+    description: languages Mask
+    color: f97732
+  - name: Mathematica
+    description: languages Mathematica
+    color: dd1100
+  - name: MATLAB
+    description: languages MATLAB
+    color: e16737
+  - name: Max
+    description: languages Max
+    color: c4a79c
+  - name: MAXScript
+    description: languages MAXScript
+    color: 00a6a6
+  - name: mcfunction
+    description: languages mcfunction
+    color: E22837
+  - name: Mercury
+    description: languages Mercury
+    color: ff2b2b
+  - name: Meson
+    description: languages Meson
+    color: 007800
+  - name: Metal
+    description: languages Metal
+    color: 8f14e9
+  - name: Mirah
+    description: languages Mirah
+    color: c7a938
+  - name: mIRC Script
+    description: languages mIRC Script
+    color: 3d57c3
+  - name: MLIR
+    description: languages MLIR
+    color: 5EC8DB
+  - name: Modelica
+    description: languages Modelica
+    color: de1d31
+  - name: Modula-2
+    description: languages Modula-2
+    color: 10253f
+  - name: Modula-3
+    description: languages Modula-3
+    color: 223388
+  - name: MoonScript
+    description: languages MoonScript
+    color: ff4585
+  - name: Motorola 68K Assembly
+    description: languages Motorola 68K Assembly
+    color: 005daa
+  - name: MQL4
+    description: languages MQL4
+    color: 62A8D6
+  - name: MQL5
+    description: languages MQL5
+    color: 4A76B8
+  - name: MTML
+    description: languages MTML
+    color: b7e1f4
+  - name: mupad
+    description: languages mupad
+    color: 244963
+  - name: Mustache
+    description: languages Mustache
+    color: 724b3b
+  - name: nanorc
+    description: languages nanorc
+    color: 2d004d
+  - name: NCL
+    description: languages NCL
+    color: 28431f
+  - name: Nearley
+    description: languages Nearley
+    color: 990000
+  - name: Nemerle
+    description: languages Nemerle
+    color: 3d3c6e
+  - name: nesC
+    description: languages nesC
+    color: 94B0C7
+  - name: NetLinx
+    description: languages NetLinx
+    color: 0aa0ff
+  - name: NetLinx+ERB
+    description: languages NetLinx+ERB
+    color: 747faa
+  - name: NetLogo
+    description: languages NetLogo
+    color: ff6375
+  - name: NewLisp
+    description: languages NewLisp
+    color: 87AED7
+  - name: Nextflow
+    description: languages Nextflow
+    color: 3ac486
+  - name: Nginx
+    description: languages Nginx
+    color: 009639
+  - name: Nim
+    description: languages Nim
+    color: ffc200
+  - name: Nit
+    description: languages Nit
+    color: 009917
+  - name: Nix
+    description: languages Nix
+    color: 7e7eff
+  - name: NPM Config
+    description: languages NPM Config
+    color: cb3837
+  - name: Nu
+    description: languages Nu
+    color: c9df40
+  - name: NumPy
+    description: languages NumPy
+    color: 9C8AF9
+  - name: Nunjucks
+    description: languages Nunjucks
+    color: 3d8137
+  - name: NWScript
+    description: languages NWScript
+    color: 111522
+  - name: Objective-C
+    description: languages Objective-C
+    color: 438eff
+  - name: Objective-C++
+    description: languages Objective-C++
+    color: 6866fb
+  - name: Objective-J
+    description: languages Objective-J
+    color: ff0c5a
+  - name: ObjectScript
+    description: languages ObjectScript
+    color: 424893
+  - name: OCaml
+    description: languages OCaml
+    color: 3be133
+  - name: Odin
+    description: languages Odin
+    color: 60AFFE
+  - name: Omgrofl
+    description: languages Omgrofl
+    color: cabbff
+  - name: ooc
+    description: languages ooc
+    color: b0b77e
+  - name: Opal
+    description: languages Opal
+    color: f7ede0
+  - name: Open Policy Agent
+    description: languages Open Policy Agent
+    color: 7d9199
+  - name: OpenCL
+    description: languages OpenCL
+    color: ed2e2d
+  - name: OpenEdge ABL
+    description: languages OpenEdge ABL
+    color: 5ce600
+  - name: OpenQASM
+    description: languages OpenQASM
+    color: AA70FF
+  - name: OpenSCAD
+    description: languages OpenSCAD
+    color: e5cd45
+  - name: Org
+    description: languages Org
+    color: 77aa99
+  - name: Oxygene
+    description: languages Oxygene
+    color: cdd0e3
+  - name: Oz
+    description: languages Oz
+    color: fab738
+  - name: P4
+    description: languages P4
+    color: 7055b5
+  - name: Pan
+    description: languages Pan
+    color: cc0000
+  - name: Papyrus
+    description: languages Papyrus
+    color: 6600cc
+  - name: Parrot
+    description: languages Parrot
+    color: f3ca0a
+  - name: Pascal
+    description: languages Pascal
+    color: E3F171
+  - name: Pawn
+    description: languages Pawn
+    color: dbb284
+  - name: PEG.js
+    description: languages PEG.js
+    color: 234d6b
+  - name: Pep8
+    description: languages Pep8
+    color: C76F5B
+  - name: Perl
+    description: languages Perl
+    color: 0298c3
+  - name: PHP
+    description: languages PHP
+    color: 4F5D95
+  - name: PicoLisp
+    description: languages PicoLisp
+    color: 6067af
+  - name: PigLatin
+    description: languages PigLatin
+    color: fcd7de
+  - name: Pike
+    description: languages Pike
+    color: 005390
+  - name: PLpgSQL
+    description: languages PLpgSQL
+    color: 336790
+  - name: PLSQL
+    description: languages PLSQL
+    color: dad8d8
+  - name: PogoScript
+    description: languages PogoScript
+    color: d80074
+  - name: PostCSS
+    description: languages PostCSS
+    color: dc3a0c
+  - name: PostScript
+    description: languages PostScript
+    color: da291c
+  - name: POV-Ray SDL
+    description: languages POV-Ray SDL
+    color: 6bac65
+  - name: PowerBuilder
+    description: languages PowerBuilder
+    color: 8f0f8d
+  - name: PowerShell
+    description: languages PowerShell
+    color: 012456
+  - name: Prisma
+    description: languages Prisma
+    color: 0c344b
+  - name: Processing
+    description: languages Processing
+    color: 0096D8
+  - name: Prolog
+    description: languages Prolog
+    color: 74283c
+  - name: Propeller Spin
+    description: languages Propeller Spin
+    color: 7fa2a7
+  - name: Pug
+    description: languages Pug
+    color: a86454
+  - name: Puppet
+    description: languages Puppet
+    color: 302B6D
+  - name: PureBasic
+    description: languages PureBasic
+    color: 5a6986
+  - name: PureScript
+    description: languages PureScript
+    color: 1D222D
+  - name: Python
+    description: languages Python
+    color: 3572A5
+  - name: Python console
+    description: languages Python console
+    color: 3572A5
+  - name: Python traceback
+    description: languages Python traceback
+    color: 3572A5
+  - name: q
+    description: languages q
+    color: 0040cd
+  - name: Q
+    description: languages Q
+    color: fed659
+  - name: QML
+    description: languages QML
+    color: 44a51c
+  - name: Qt Script
+    description: languages Qt Script
+    color: 00b841
+  - name: Quake
+    description: languages Quake
+    color: 882233
+  - name: R
+    description: languages R
+    color: 198CE7
+  - name: Racket
+    description: languages Racket
+    color: 3c5caa
+  - name: Ragel
+    description: languages Ragel
+    color: 9d5200
+  - name: Raku
+    description: languages Raku
+    color: 0000fb
+  - name: RAML
+    description: languages RAML
+    color: 77d9fb
+  - name: Rascal
+    description: languages Rascal
+    color: fffaa0
+  - name: RDoc
+    description: languages RDoc
+    color: 701516
+  - name: Reason
+    description: languages Reason
+    color: ff5847
+  - name: Rebol
+    description: languages Rebol
+    color: 358a5b
+  - name: Record Jar
+    description: languages Record Jar
+    color: 0673ba
+  - name: Red
+    description: languages Red
+    color: f50000
+  - name: Regular Expression
+    description: languages Regular Expression
+    color: 009a00
+  - name: Ren'Py
+    description: languages Ren'Py
+    color: ff7f7f
+  - name: ReScript
+    description: languages ReScript
+    color: ed5051
+  - name: reStructuredText
+    description: languages reStructuredText
+    color: 141414
+  - name: REXX
+    description: languages REXX
+    color: d90e09
+  - name: Ring
+    description: languages Ring
+    color: 2D54CB
+  - name: Riot
+    description: languages Riot
+    color: A71E49
+  - name: RMarkdown
+    description: languages RMarkdown
+    color: 198ce7
+  - name: RobotFramework
+    description: languages RobotFramework
+    color: 00c0b5
+  - name: Roff
+    description: languages Roff
+    color: ecdebe
+  - name: Roff Manpage
+    description: languages Roff Manpage
+    color: ecdebe
+  - name: Rouge
+    description: languages Rouge
+    color: cc0088
+  - name: Ruby
+    description: languages Ruby
+    color: 701516
+  - name: RUNOFF
+    description: languages RUNOFF
+    color: 665a4e
+  - name: Rust
+    description: languages Rust
+    color: dea584
+  - name: SaltStack
+    description: languages SaltStack
+    color: 646464
+  - name: SAS
+    description: languages SAS
+    color: B34936
+  - name: Sass
+    description: languages Sass
+    color: a53b70
+  - name: Scala
+    description: languages Scala
+    color: c22d40
+  - name: Scaml
+    description: languages Scaml
+    color: bd181a
+  - name: Scheme
+    description: languages Scheme
+    color: 1e4aec
+  - name: Scilab
+    description: languages Scilab
+    color: ca0f21
+  - name: SCSS
+    description: languages SCSS
+    color: c6538c
+  - name: sed
+    description: languages sed
+    color: 64b970
+  - name: Self
+    description: languages Self
+    color: 0579aa
+  - name: ShaderLab
+    description: languages ShaderLab
+    color: 222c37
+  - name: Shell
+    description: languages Shell
+    color: 89e051
+  - name: Shen
+    description: languages Shen
+    color: 120F14
+  - name: Singularity
+    description: languages Singularity
+    color: 64E6AD
+  - name: Slash
+    description: languages Slash
+    color: 007eff
+  - name: Slice
+    description: languages Slice
+    color: 003fa2
+  - name: Slim
+    description: languages Slim
+    color: 2b2b2b
+  - name: Smalltalk
+    description: languages Smalltalk
+    color: 596706
+  - name: Smarty
+    description: languages Smarty
+    color: f0c040
+  - name: SmPL
+    description: languages SmPL
+    color: c94949
+  - name: Solidity
+    description: languages Solidity
+    color: AA6746
+  - name: SourcePawn
+    description: languages SourcePawn
+    color: f69e1d
+  - name: SPARQL
+    description: languages SPARQL
+    color: 0C4597
+  - name: SQF
+    description: languages SQF
+    color: 3F3F3F
+  - name: SQL
+    description: languages SQL
+    color: e38c00
+  - name: SQLPL
+    description: languages SQLPL
+    color: e38c00
+  - name: Squirrel
+    description: languages Squirrel
+    color: 800000
+  - name: SRecode Template
+    description: languages SRecode Template
+    color: 348a34
+  - name: Stan
+    description: languages Stan
+    color: b2011d
+  - name: Standard ML
+    description: languages Standard ML
+    color: dc566d
+  - name: Starlark
+    description: languages Starlark
+    color: 76d275
+  - name: Stata
+    description: languages Stata
+    color: 1a5f91
+  - name: StringTemplate
+    description: languages StringTemplate
+    color: 3fb34f
+  - name: Stylus
+    description: languages Stylus
+    color: ff6347
+  - name: SubRip Text
+    description: languages SubRip Text
+    color: 9e0101
+  - name: SugarSS
+    description: languages SugarSS
+    color: 2fcc9f
+  - name: SuperCollider
+    description: languages SuperCollider
+    color: 46390b
+  - name: Svelte
+    description: languages Svelte
+    color: ff3e00
+  - name: SVG
+    description: languages SVG
+    color: ff9900
+  - name: Swift
+    description: languages Swift
+    color: F05138
+  - name: SystemVerilog
+    description: languages SystemVerilog
+    color: DAE1C2
+  - name: Tcl
+    description: languages Tcl
+    color: e4cc98
+  - name: Terra
+    description: languages Terra
+    color: 00004c
+  - name: TeX
+    description: languages TeX
+    color: 3D6117
+  - name: Textile
+    description: languages Textile
+    color: ffe7ac
+  - name: TextMate Properties
+    description: languages TextMate Properties
+    color: df66e4
+  - name: Thrift
+    description: languages Thrift
+    color: D12127
+  - name: TI Program
+    description: languages TI Program
+    color: A0AA87
+  - name: TLA
+    description: languages TLA
+    color: 4b0079
+  - name: TOML
+    description: languages TOML
+    color: 9c4221
+  - name: TSQL
+    description: languages TSQL
+    color: e38c00
+  - name: TSV
+    description: languages TSV
+    color: 237346
+  - name: TSX
+    description: languages TSX
+    color: 2b7489
+  - name: Turing
+    description: languages Turing
+    color: cf142b
+  - name: Twig
+    description: languages Twig
+    color: c1d026
+  - name: TXL
+    description: languages TXL
+    color: 0178b8
+  - name: TypeScript
+    description: languages TypeScript
+    color: 2b7489
+  - name: Unified Parallel C
+    description: languages Unified Parallel C
+    color: 4e3617
+  - name: Unity3D Asset
+    description: languages Unity3D Asset
+    color: 222c37
+  - name: Uno
+    description: languages Uno
+    color: 9933cc
+  - name: UnrealScript
+    description: languages UnrealScript
+    color: a54c4d
+  - name: UrWeb
+    description: languages UrWeb
+    color: ccccee
+  - name: V
+    description: languages V
+    color: 4f87c4
+  - name: Vala
+    description: languages Vala
+    color: fbe5cd
+  - name: Valve Data Format
+    description: languages Valve Data Format
+    color: f26025
+  - name: VBA
+    description: languages VBA
+    color: 867db1
+  - name: VBScript
+    description: languages VBScript
+    color: 15dcdc
+  - name: VCL
+    description: languages VCL
+    color: 148AA8
+  - name: Verilog
+    description: languages Verilog
+    color: b2b7f8
+  - name: VHDL
+    description: languages VHDL
+    color: adb2cb
+  - name: Vim Help File
+    description: languages Vim Help File
+    color: 199f4b
+  - name: Vim Script
+    description: languages Vim Script
+    color: 199f4b
+  - name: Vim Snippet
+    description: languages Vim Snippet
+    color: 199f4b
+  - name: Visual Basic .NET
+    description: languages Visual Basic .NET
+    color: 945db7
+  - name: Volt
+    description: languages Volt
+    color: 1F1F1F
+  - name: Vue
+    description: languages Vue
+    color: 41b883
+  - name: wdl
+    description: languages wdl
+    color: 42f1f4
+  - name: Web Ontology Language
+    description: languages Web Ontology Language
+    color: 5b70bd
+  - name: WebAssembly
+    description: languages WebAssembly
+    color: 04133b
+  - name: Wikitext
+    description: languages Wikitext
+    color: fc5757
+  - name: Windows Registry Entries
+    description: languages Windows Registry Entries
+    color: 52d5ff
+  - name: wisp
+    description: languages wisp
+    color: 7582D1
+  - name: Wollok
+    description: languages Wollok
+    color: a23738
+  - name: World of Warcraft Addon Data
+    description: languages World of Warcraft Addon Data
+    color: f7e43f
+  - name: X10
+    description: languages X10
+    color: 4B6BEF
+  - name: xBase
+    description: languages xBase
+    color: 403a40
+  - name: XC
+    description: languages XC
+    color: 99DA07
+  - name: XML
+    description: languages XML
+    color: 0060ac
+  - name: XML Property List
+    description: languages XML Property List
+    color: 0060ac
+  - name: Xojo
+    description: languages Xojo
+    color: 81bd41
+  - name: Xonsh
+    description: languages Xonsh
+    color: 285EEF
+  - name: XQuery
+    description: languages XQuery
+    color: 5232e7
+  - name: XSLT
+    description: languages XSLT
+    color: EB8CEB
+  - name: Xtend
+    description: languages Xtend
+    color: 24255d
+  - name: Yacc
+    description: languages Yacc
+    color: 4B6C4B
+  - name: YAML
+    description: languages YAML
+    color: cb171e
+  - name: YARA
+    description: languages YARA
+    color: 220000
+  - name: YASnippet
+    description: languages YASnippet
+    color: 32AB90
+  - name: ZAP
+    description: languages ZAP
+    color: 0d665e
+  - name: ZenScript
+    description: languages ZenScript
+    color: 00BCD1
+  - name: Zephir
+    description: languages Zephir
+    color: 118f9e
+  - name: Zig
+    description: languages Zig
+    color: ec915c
+  - name: ZIL
+    description: languages ZIL
+    color: dc75e5
+  - name: Zimpl
+    description: languages Zimpl
+    color: d67711
 
 repos:
   - name: kis9a/kis9a
     labels:
-      - area/kubernetes
-      - area/security
-      - kind/discussion
-      - kind/incident
-      - kind/proactive
-      - kind/reactive
-      - lifecycle/stale
-      - redis
-      - P0
-      - P1
-      - P2
+      - 4D
+      - ABAP
+      - ABAP CDS
+      - ActionScript
+      - Ada
+      - Adobe Font Metrics
+      - Agda
+      - AGS Script
+      - AIDL
+      - AL
+      - Alloy
+      - Alpine Abuild
+      - Altium Designer
+      - AMPL
+      - AngelScript
+      - Ant Build System
+      - ANTLR
+      - ApacheConf
+      - Apex
+      - API Blueprint
+      - APL
+      - Apollo Guidance Computer
+      - AppleScript
+      - Arc
+      - AsciiDoc
+      - ASL
+      - ASP.NET
+      - AspectJ
+      - Assembly
+      - Astro
+      - Asymptote
+      - ATS
+      - Augeas
+      - AutoHotkey
+      - AutoIt
+      - Avro IDL
+      - Awk
+      - Ballerina
+      - BASIC
+      - Batchfile
+      - Beef
+      - Befunge
+      - BibTeX
+      - Bicep
+      - Bison
+      - BitBake
+      - Blade
+      - BlitzBasic
+      - BlitzMax
+      - Bluespec
+      - Boo
+      - Boogie
+      - Brainfuck
+      - Brightscript
+      - Browserslist
+      - C
+      - C#
+      - C++
+      - C2hs Haskell
+      - Cabal Config
+      - Cap'n Proto
+      - CartoCSS
+      - Ceylon
+      - Chapel
+      - Charity
+      - ChucK
+      - Cirru
+      - Clarion
+      - Classic ASP
+      - Clean
+      - Click
+      - CLIPS
+      - Clojure
+      - Closure Templates
+      - Cloud Firestore Security Rules
+      - CMake
+      - COBOL
+      - CodeQL
+      - CoffeeScript
+      - ColdFusion
+      - ColdFusion CFC
+      - COLLADA
+      - Common Lisp
+      - Common Workflow Language
+      - Component Pascal
+      - Cool
+      - Coq
+      - Crystal
+      - CSON
+      - Csound
+      - Csound Document
+      - Csound Score
+      - CSS
+      - CSV
+      - Cuda
+      - CUE
+      - CWeb
+      - Cycript
+      - Cython
+      - D
+      - Dafny
+      - Darcs Patch
+      - Dart
+      - DataWeave
+      - Dhall
+      - DIGITAL Command Language
+      - DirectX 3D File
+      - DM
+      - Dockerfile
+      - Dogescript
+      - DTrace
+      - Dylan
+      - E
+      - Easybuild
+      - eC
+      - Ecere Projects
+      - ECL
+      - ECLiPSe
+      - EditorConfig
+      - Eiffel
+      - EJS
+      - Elixir
+      - Elm
+      - Emacs Lisp
+      - EmberScript
+      - EQ
+      - Erlang
+      - F#
+      - F*
+      - Factor
+      - Fancy
+      - Fantom
+      - Faust
+      - Fennel
+      - FIGlet Font
+      - Filebench WML
+      - Filterscript
+      - fish
+      - Fluent
+      - FLUX
+      - Forth
+      - Fortran
+      - Fortran Free Form
+      - FreeBasic
+      - FreeMarker
+      - Frege
+      - Futhark
+      - G-code
+      - Game Maker Language
+      - GAML
+      - GAMS
+      - GAP
+      - GCC Machine Description
+      - GDB
+      - GDScript
+      - GEDCOM
+      - Gemfile.lock
+      - Genie
+      - Genshi
+      - Gentoo Ebuild
+      - Gentoo Eclass
+      - Gerber Image
+      - Gherkin
+      - Git Attributes
+      - Git Config
+      - GLSL
+      - Glyph
+      - Gnuplot
+      - Go
+      - Go Checksums
+      - Go Module
+      - Golo
+      - Gosu
+      - Grace
+      - Gradle
+      - Grammatical Framework
+      - GraphQL
+      - Graphviz (DOT)
+      - Groovy
+      - Groovy Server Pages
+      - Hack
+      - Haml
+      - Handlebars
+      - HAProxy
+      - Harbour
+      - Haskell
+      - Haxe
+      - HCL
+      - HiveQL
+      - HLSL
+      - HolyC
+      - HTML
+      - HTML+ECR
+      - HTML+EEX
+      - HTML+ERB
+      - HTML+PHP
+      - HTML+Razor
+      - HTTP
+      - HXML
+      - Hy
+      - HyPhy
+      - IDL
+      - Idris
+      - Ignore List
+      - IGOR Pro
+      - ImageJ Macro
+      - Inform 7
+      - INI
+      - Inno Setup
+      - Io
+      - Ioke
+      - Isabelle
+      - Isabelle ROOT
+      - J
+      - JAR Manifest
+      - Jasmin
+      - Java
+      - Java Properties
+      - Java Server Pages
+      - JavaScript
+      - JavaScript+ERB
+      - Jest Snapshot
+      - JFlex
+      - Jinja
+      - Jison
+      - Jison Lex
+      - Jolie
+      - jq
+      - JSON
+      - JSON with Comments
+      - JSON5
+      - JSONiq
+      - JSONLD
+      - Jsonnet
+      - Julia
+      - Jupyter Notebook
+      - Kaitai Struct
+      - KakouneScript
+      - KiCad Layout
+      - KiCad Legacy Layout
+      - KiCad Schematic
+      - Kotlin
+      - KRL
+      - LabVIEW
+      - Lark
+      - Lasso
+      - Latte
+      - Lean
+      - Less
+      - Lex
+      - LFE
+      - LilyPond
+      - Limbo
+      - Liquid
+      - Literate Agda
+      - Literate CoffeeScript
+      - Literate Haskell
+      - LiveScript
+      - LLVM
+      - Logos
+      - Logtalk
+      - LOLCODE
+      - LookML
+      - LoomScript
+      - LSL
+      - Lua
+      - M
+      - M4
+      - M4Sugar
+      - Macaulay2
+      - Makefile
+      - Mako
+      - Markdown
+      - Marko
+      - Mask
+      - Mathematica
+      - MATLAB
+      - Max
+      - MAXScript
+      - mcfunction
+      - Mercury
+      - Meson
+      - Metal
+      - MiniD
+      - Mirah
+      - mIRC Script
+      - MLIR
+      - Modelica
+      - Modula-2
+      - Modula-3
+      - Module Management System
+      - Monkey
+      - Moocode
+      - MoonScript
+      - Motorola 68K Assembly
+      - MQL4
+      - MQL5
+      - MTML
+      - MUF
+      - mupad
+      - Mustache
+      - Myghty
+      - nanorc
+      - NASL
+      - NCL
+      - Nearley
+      - Nemerle
+      - nesC
+      - NetLinx
+      - NetLinx+ERB
+      - NetLogo
+      - NewLisp
+      - Nextflow
+      - Nginx
+      - Nim
+      - Nit
+      - Nix
+      - NPM Config
+      - NSIS
+      - Nu
+      - NumPy
+      - Nunjucks
+      - NWScript
+      - Objective-C
+      - Objective-C++
+      - Objective-J
+      - ObjectScript
+      - OCaml
+      - Odin
+      - Omgrofl
+      - ooc
+      - Opa
+      - Opal
+      - Open Policy Agent
+      - OpenCL
+      - OpenEdge ABL
+      - OpenQASM
+      - OpenRC runscript
+      - OpenSCAD
+      - Org
+      - Ox
+      - Oxygene
+      - Oz
+      - P4
+      - Pan
+      - Papyrus
+      - Parrot
+      - Parrot Assembly
+      - Parrot Internal Representation
+      - Pascal
+      - Pawn
+      - PEG.js
+      - Pep8
+      - Perl
+      - PHP
+      - PicoLisp
+      - PigLatin
+      - Pike
+      - PLpgSQL
+      - PLSQL
+      - PogoScript
+      - Pony
+      - PostCSS
+      - PostScript
+      - POV-Ray SDL
+      - PowerBuilder
+      - PowerShell
+      - Prisma
+      - Processing
+      - Prolog
+      - Propeller Spin
+      - Pug
+      - Puppet
+      - PureBasic
+      - PureScript
+      - Python
+      - Python console
+      - Python traceback
+      - q
+      - Q#
+      - QMake
+      - QML
+      - Qt Script
+      - Quake
+      - R
+      - Racket
+      - Ragel
+      - Raku
+      - RAML
+      - Rascal
+      - RDoc
+      - REALbasic
+      - Reason
+      - Rebol
+      - Record Jar
+      - Red
+      - Redcode
+      - Regular Expression
+      - Ren'Py
+      - RenderScript
+      - ReScript
+      - reStructuredText
+      - REXX
+      - Ring
+      - Riot
+      - RMarkdown
+      - RobotFramework
+      - Roff
+      - Roff Manpage
+      - Rouge
+      - RPC
+      - Ruby
+      - RUNOFF
+      - Rust
+      - Sage
+      - SaltStack
+      - SAS
+      - Sass
+      - Scala
+      - Scaml
+      - Scheme
+      - Scilab
+      - SCSS
+      - sed
+      - Self
+      - ShaderLab
+      - Shell
+      - ShellSession
+      - Shen
+      - Sieve
+      - Singularity
+      - Slash
+      - Slice
+      - Slim
+      - Smali
+      - Smalltalk
+      - Smarty
+      - SmPL
+      - SMT
+      - Solidity
+      - SourcePawn
+      - SPARQL
+      - SQF
+      - SQL
+      - SQLPL
+      - Squirrel
+      - SRecode Template
+      - Stan
+      - Standard ML
+      - Starlark
+      - Stata
+      - StringTemplate
+      - Stylus
+      - SubRip Text
+      - SugarSS
+      - SuperCollider
+      - Svelte
+      - SVG
+      - Swift
+      - SWIG
+      - SystemVerilog
+      - Tcl
+      - Tcsh
+      - Terra
+      - TeX
+      - Textile
+      - TextMate Properties
+      - Thrift
+      - TI Program
+      - TLA
+      - TOML
+      - TSQL
+      - TSV
+      - TSX
+      - Turing
+      - Twig
+      - TXL
+      - TypeScript
+      - Unified Parallel C
+      - Unity3D Asset
+      - Unix Assembly
+      - Uno
+      - UnrealScript
+      - UrWeb
+      - V
+      - Vala
+      - Valve Data Format
+      - VBA
+      - VBScript
+      - VCL
+      - Verilog
+      - VHDL
+      - Vim Help File
+      - Vim Script
+      - Vim Snippet
+      - Visual Basic .NET
+      - Volt
+      - Vue
+      - wdl
+      - Web Ontology Language
+      - WebAssembly
+      - WebIDL
+      - Wikitext
+      - Windows Registry Entries
+      - wisp
+      - Wollok
+      - World of Warcraft Addon Data
+      - X10
+      - xBase
+      - XC
+      - XML
+      - XML Property List
+      - Xojo
+      - Xonsh
+      - XProc
+      - XQuery
+      - XS
+      - XSLT
+      - Xtend
+      - Yacc
+      - YAML
+      - YARA
+      - YASnippet
+      - ZAP
+      - Zeek
+      - ZenScript
+      - Zephir
+      - Zig
+      - ZIL
+      - Zimpl
