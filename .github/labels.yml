@@ -39,7 +39,7 @@ labels:
     color: "f9bb5e"
 
 repos:
-  - name: kis9a/github-labeler-demo
+  - name: kis9a/kis9a
     labels:
       - area/kubernetes
       - area/security
