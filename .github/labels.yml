@@ -1,5 +1,3 @@
-# This config is example
-
 labels:
   - name: 1C Enterprise
     description: languages 1C Enterprise
@@ -1439,6 +1437,7 @@ labels:
 repos:
   - name: kis9a/kis9a
     labels:
+      - 1C Enterprise
       - 4D
       - ABAP
       - ABAP CDS
@@ -1464,7 +1463,6 @@ repos:
       - AppleScript
       - Arc
       - AsciiDoc
-      - ASL
       - ASP.NET
       - AspectJ
       - Assembly
@@ -1480,7 +1478,6 @@ repos:
       - BASIC
       - Batchfile
       - Beef
-      - Befunge
       - BibTeX
       - Bicep
       - Bison
@@ -1495,15 +1492,11 @@ repos:
       - Brightscript
       - Browserslist
       - C
-      - C#
       - C++
-      - C2hs Haskell
       - Cabal Config
       - Cap'n Proto
-      - CartoCSS
       - Ceylon
       - Chapel
-      - Charity
       - ChucK
       - Cirru
       - Clarion
@@ -1515,7 +1508,6 @@ repos:
       - Closure Templates
       - Cloud Firestore Security Rules
       - CMake
-      - COBOL
       - CodeQL
       - CoffeeScript
       - ColdFusion
@@ -1524,7 +1516,6 @@ repos:
       - Common Lisp
       - Common Workflow Language
       - Component Pascal
-      - Cool
       - Coq
       - Crystal
       - CSON
@@ -1536,7 +1527,6 @@ repos:
       - Cuda
       - CUE
       - CWeb
-      - Cycript
       - Cython
       - D
       - Dafny
@@ -1544,12 +1534,10 @@ repos:
       - Dart
       - DataWeave
       - Dhall
-      - DIGITAL Command Language
       - DirectX 3D File
       - DM
       - Dockerfile
       - Dogescript
-      - DTrace
       - Dylan
       - E
       - Easybuild
@@ -1566,7 +1554,6 @@ repos:
       - EmberScript
       - EQ
       - Erlang
-      - F#
       - F*
       - Factor
       - Fancy
@@ -1575,7 +1562,6 @@ repos:
       - Fennel
       - FIGlet Font
       - Filebench WML
-      - Filterscript
       - fish
       - Fluent
       - FLUX
@@ -1592,7 +1578,6 @@ repos:
       - GAMS
       - GAP
       - GCC Machine Description
-      - GDB
       - GDScript
       - GEDCOM
       - Gemfile.lock
@@ -1626,7 +1611,6 @@ repos:
       - Harbour
       - Haskell
       - Haxe
-      - HCL
       - HiveQL
       - HLSL
       - HolyC
@@ -1639,13 +1623,11 @@ repos:
       - HTTP
       - HXML
       - Hy
-      - HyPhy
       - IDL
       - Idris
       - Ignore List
       - IGOR Pro
       - ImageJ Macro
-      - Inform 7
       - INI
       - Inno Setup
       - Io
@@ -1686,28 +1668,21 @@ repos:
       - Lark
       - Lasso
       - Latte
-      - Lean
       - Less
       - Lex
       - LFE
       - LilyPond
-      - Limbo
       - Liquid
       - Literate Agda
       - Literate CoffeeScript
       - Literate Haskell
       - LiveScript
       - LLVM
-      - Logos
       - Logtalk
       - LOLCODE
       - LookML
-      - LoomScript
       - LSL
       - Lua
-      - M
-      - M4
-      - M4Sugar
       - Macaulay2
       - Makefile
       - Mako
@@ -1722,27 +1697,20 @@ repos:
       - Mercury
       - Meson
       - Metal
-      - MiniD
       - Mirah
       - mIRC Script
       - MLIR
       - Modelica
       - Modula-2
       - Modula-3
-      - Module Management System
-      - Monkey
-      - Moocode
       - MoonScript
       - Motorola 68K Assembly
       - MQL4
       - MQL5
       - MTML
-      - MUF
       - mupad
       - Mustache
-      - Myghty
       - nanorc
-      - NASL
       - NCL
       - Nearley
       - Nemerle
@@ -1757,7 +1725,6 @@ repos:
       - Nit
       - Nix
       - NPM Config
-      - NSIS
       - Nu
       - NumPy
       - Nunjucks
@@ -1770,24 +1737,19 @@ repos:
       - Odin
       - Omgrofl
       - ooc
-      - Opa
       - Opal
       - Open Policy Agent
       - OpenCL
       - OpenEdge ABL
       - OpenQASM
-      - OpenRC runscript
       - OpenSCAD
       - Org
-      - Ox
       - Oxygene
       - Oz
       - P4
       - Pan
       - Papyrus
       - Parrot
-      - Parrot Assembly
-      - Parrot Internal Representation
       - Pascal
       - Pawn
       - PEG.js
@@ -1800,7 +1762,6 @@ repos:
       - PLpgSQL
       - PLSQL
       - PogoScript
-      - Pony
       - PostCSS
       - PostScript
       - POV-Ray SDL
@@ -1818,8 +1779,6 @@ repos:
       - Python console
       - Python traceback
       - q
-      - Q#
-      - QMake
       - QML
       - Qt Script
       - Quake
@@ -1830,15 +1789,12 @@ repos:
       - RAML
       - Rascal
       - RDoc
-      - REALbasic
       - Reason
       - Rebol
       - Record Jar
       - Red
-      - Redcode
       - Regular Expression
       - Ren'Py
-      - RenderScript
       - ReScript
       - reStructuredText
       - REXX
@@ -1849,11 +1805,9 @@ repos:
       - Roff
       - Roff Manpage
       - Rouge
-      - RPC
       - Ruby
       - RUNOFF
       - Rust
-      - Sage
       - SaltStack
       - SAS
       - Sass
@@ -1866,18 +1820,14 @@ repos:
       - Self
       - ShaderLab
       - Shell
-      - ShellSession
       - Shen
-      - Sieve
       - Singularity
       - Slash
       - Slice
       - Slim
-      - Smali
       - Smalltalk
       - Smarty
       - SmPL
-      - SMT
       - Solidity
       - SourcePawn
       - SPARQL
@@ -1898,10 +1848,8 @@ repos:
       - Svelte
       - SVG
       - Swift
-      - SWIG
       - SystemVerilog
       - Tcl
-      - Tcsh
       - Terra
       - TeX
       - Textile
@@ -1919,7 +1867,6 @@ repos:
       - TypeScript
       - Unified Parallel C
       - Unity3D Asset
-      - Unix Assembly
       - Uno
       - UnrealScript
       - UrWeb
@@ -1940,7 +1887,6 @@ repos:
       - wdl
       - Web Ontology Language
       - WebAssembly
-      - WebIDL
       - Wikitext
       - Windows Registry Entries
       - wisp
@@ -1953,9 +1899,7 @@ repos:
       - XML Property List
       - Xojo
       - Xonsh
-      - XProc
       - XQuery
-      - XS
       - XSLT
       - Xtend
       - Yacc
@@ -1963,7 +1907,6 @@ repos:
       - YARA
       - YASnippet
       - ZAP
-      - Zeek
       - ZenScript
       - Zephir
       - Zig
