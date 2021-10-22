@@ -27,23 +27,76 @@ o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化に
 x base-number に関して、Golang の 標準パッケージ、数学。
 x 進数変換スクリプト Golang
 
+2021-10-25
+2021-10-24
+2021-10-23
+2021-10-22
+
+o about scraps/*{{{*/
+スクラップを何個か買いてて思ったのは
+知識のダッシュボード的な使い方をしたい。
+見る側にとっても角側にとってもすごくわかりやいですがやはり機能が少ない、
+Zennのスクラップに記事を載せるメリットは、 簡単に描き始められる。 比較的多くの人に見てもらえる。反応がある時が嬉。
+ですが、Github で管理できな、移行できない スクラップ一覧の検索性、管理が難しいです。
+Github sources -> Github Issues か
+自分は、Trello とかより Redmine の方が好きだったりします。
+/*}}}*/
+
+terraformの設定を眺めていたのですが、Fargate のロール周りでお願いがあります。
+https://github.com/palettechain/terraform/blob/master/coinbook/prod/ecs.tf#L8
+タスク実行ロールは環境ごとに分けて作成してください。秘匿情報の取得の為にパラメータストアへのアクセスがありますので他の環境へアクセスできる状態は避けたいです
+タスク実行ロールとタスクロールは分けてください。実行ロールはタスク実行とパラメータストアのリードアクセスのみですので、メール送信などはできません
+タスクロールについてはステージング用に palette-nft というIAMユーザーがいるので、そこからポリシーをピックアップしたロールを別途作成してください。
+また、palette-nft ユーザーは CircleCI から ECR へのアクセスや ECS のデプロイができるように権限が追加されています。coinbook 本番用にもデプロイなどができるようにユーザーを作っていただければと:pray:
+
+
+aws iam list-attached-user-policies --user-name palette-nft
+
+ATTACHEDPOLICIES        arn:aws:iam::695299050844:policy/PaletteNFTDeployECSTask        PaletteNFTDeployECSTask
+ATTACHEDPOLICIES        arn:aws:iam::695299050844:policy/PaletteNFTParameterStoreReadAccess     PaletteNFTParameterStoreReadAccess
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/SecretsManagerReadWrite SecretsManagerReadWrite
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess     AmazonElastiCacheFullAccess
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonS3FullAccess      AmazonS3FullAccess
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AWSCodeDeployRoleForECS AWSCodeDeployRoleForECS
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonSESFullAccess     AmazonSESFullAccess
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonRDSDataFullAccess AmazonRDSDataFullAccess
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy   AmazonECSTaskExecutionRolePolicy
+ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess AmazonSSMReadOnlyAccess
+
 2021-10-21
 
 o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init
 o frontend cache 要件確認 TTL 設定 
 o ssoを始める。basic 認証のLambda function をみる。
 o レプリケーションについて読む
-  o [MySQL入門　レプリケーション編 - Qiita](https://qiita.com/Tocyuki/items/c224cef57493f536a941)
-  o [MySQLでMaster-Slave構成のレプリケーション設定 - Qiita](https://qiita.com/ksugawara61/items/fdd5ae9b78931540887f)
+  o replication-demo instance の作成。
   o [MySQL入門　レプリケーション編 - Qiita](https://qiita.com/Tocyuki/items/c224cef57493f536a941)
   o [MySQLでMaster-Slave構成のレプリケーション設定 - Qiita](https://qiita.com/ksugawara61/items/fdd5ae9b78931540887f)
   o [MySQL on EC2 → Aurora にレプリケーションをしてみた - kakakakakku blog](https://kakakakakku.hatenablog.com/entry/2017/02/03/223834)
-  o [MySQL on EC2 → Aurora にレプリケーションをしてみた - kakakakakku blog](https://kakakakakku.hatenablog.com/entry/2017/02/03/223834)
+o ECS/Fargate
+  o タスク実行ロールは環境ごとに分けて作成してください。
+  o タスク実行ロールとタスクロールは分けてください。
+o singer のリソースの確認。
 o 通知チャンネルの統一
   o aws-cost-line-notify -> slack.
   o aws cost warning -> slack.
   o gmail important -> slack.
   o 統一後の記事更新, output 関連。
+o AWS 今かかっている cost 調査
+o netrw の 今開いているファイルの親ディレクトリを開く関数。
+o AWS cost alert の調査。 -> slack 連携
+o me.kis9a.com のリダイレクト -> <https://github.com/kis9a/kis9a>
+o github issue template に関して調べる。
+o github-labeler でのラベルのセットアップ,言語、カテゴリー。
+! terraform CI·CD pipeline の構築。
+! kis9a/kis9a に関しての設計
+  o images/README.md の初期化
+  o memos/subs/ ディレクトリの 許容 
+  o memos/ ファイル群の整理
+  o waka/ の整理 
+o dotfiles の整理
+o tasks/ directory の整理。
+
 x 証明書ACM登録 内容確認 with openssl command.
 x freee 経費申請画面を見つける。 -> 権限がない、調整中？月末に確認。-> 招待メールきた
 
