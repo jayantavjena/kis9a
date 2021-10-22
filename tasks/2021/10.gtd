@@ -42,27 +42,6 @@ Github sources -> Github Issues か
 自分は、Trello とかより Redmine の方が好きだったりします。
 /*}}}*/
 
-terraformの設定を眺めていたのですが、Fargate のロール周りでお願いがあります。
-https://github.com/palettechain/terraform/blob/master/coinbook/prod/ecs.tf#L8
-タスク実行ロールは環境ごとに分けて作成してください。秘匿情報の取得の為にパラメータストアへのアクセスがありますので他の環境へアクセスできる状態は避けたいです
-タスク実行ロールとタスクロールは分けてください。実行ロールはタスク実行とパラメータストアのリードアクセスのみですので、メール送信などはできません
-タスクロールについてはステージング用に palette-nft というIAMユーザーがいるので、そこからポリシーをピックアップしたロールを別途作成してください。
-また、palette-nft ユーザーは CircleCI から ECR へのアクセスや ECS のデプロイができるように権限が追加されています。coinbook 本番用にもデプロイなどができるようにユーザーを作っていただければと:pray:
-
-
-aws iam list-attached-user-policies --user-name palette-nft
-
-ATTACHEDPOLICIES        arn:aws:iam::695299050844:policy/PaletteNFTDeployECSTask        PaletteNFTDeployECSTask
-ATTACHEDPOLICIES        arn:aws:iam::695299050844:policy/PaletteNFTParameterStoreReadAccess     PaletteNFTParameterStoreReadAccess
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/SecretsManagerReadWrite SecretsManagerReadWrite
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess     AmazonElastiCacheFullAccess
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonS3FullAccess      AmazonS3FullAccess
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AWSCodeDeployRoleForECS AWSCodeDeployRoleForECS
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonSESFullAccess     AmazonSESFullAccess
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonRDSDataFullAccess AmazonRDSDataFullAccess
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy   AmazonECSTaskExecutionRolePolicy
-ATTACHEDPOLICIES        arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess AmazonSSMReadOnlyAccess
-
 2021-10-21
 
 o 見る [Rust の基本的な文法メモ | ゴミ箱](https://53ningen.com/hello-rust/) -> init

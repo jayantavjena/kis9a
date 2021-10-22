@@ -1,0 +1,30 @@
+name: Sync labels
+
+on: [pull_request]
+
+jobs:
+  sync:
+    name: Dry run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Sync labels with dryrun option
+        uses: b4b4r07/github-labeler@master
+        with:
+          dryrun: "true"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: labeler
+      - name: Post github-labeler command result to GitHub comment
+        uses: b4b4r07/action-github-comment@master
+        if: steps.labeler.outputs.result
+        with:
+          body: |
+            ## github-labeler result
+            ```
+            ${{ steps.labeler.outputs.result }}
+            ```
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG: trace
