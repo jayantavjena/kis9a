@@ -1,0 +1,302 @@
+labels:
+  - name: AsciiDoc
+    description: languages AsciiDoc
+    color: 73a0c5
+  - name: Awk
+    description: languages Awk
+    color: c30e9b
+  - name: C
+    description: languages C
+    color: 555555
+  - name: C
+    description: languages C
+    color: 178600
+  - name: C++
+    description: languages C++
+    color: f34b7d
+  - name: CSS
+    description: languages CSS
+    color: 563d7c
+  - name: CSV
+    description: languages CSV
+    color: 237346
+  - name: Dart
+    description: languages Dart
+    color: 00B4AB
+  - name: E
+    description: languages E
+    color: ccce35
+  - name: EJS
+    description: languages EJS
+    color: a91e50
+  - name: Elixir
+    description: languages Elixir
+    color: 6e4a7e
+  - name: Elm
+    description: languages Elm
+    color: 60B5CC
+  - name: Emacs Lisp
+    description: languages Emacs Lisp
+    color: c065db
+  - name: Erlang
+    description: languages Erlang
+    color: B83998
+  - name: F
+    description: languages F
+    color: b845fc
+  - name: fish
+    description: languages fish
+    color: 4aae47
+  - name: FLUX
+    description: languages FLUX
+    color: 88ccff
+  - name: Fortran
+    description: languages Fortran
+    color: 4d41b1
+  - name: GAP
+    description: languages GAP
+    color: 0000cc
+  - name: GLSL
+    description: languages GLSL
+    color: 5686a5
+  - name: Go
+    description: languages Go
+    color: 00ADD8
+  - name: GraphQL
+    description: languages GraphQL
+    color: e10098
+  - name: Groovy
+    description: languages Groovy
+    color: 4298b8
+  - name: Haskell
+    description: languages Haskell
+    color: 5e5086
+  - name: HTML
+    description: languages HTML
+    color: e34c26
+  - name: Java
+    description: languages Java
+    color: b07219
+  - name: JavaScript
+    description: languages JavaScript
+    color: f1e05a
+  - name: jq
+    description: languages jq
+    color: c7254e
+  - name: JSON
+    description: languages JSON
+    color: 292929
+  - name: Julia
+    description: languages Julia
+    color: a270ba
+  - name: Jupyter Notebook
+    description: languages Jupyter Notebook
+    color: DA5B0B
+  - name: Kotlin
+    description: languages Kotlin
+    color: A97BFF
+  - name: Less
+    description: languages Less
+    color: 1d365d
+  - name: Liquid
+    description: languages Liquid
+    color: 67b8de
+  - name: Lua
+    description: languages Lua
+    color: 000080
+  - name: Makefile
+    description: languages Makefile
+    color: 427819
+  - name: Markdown
+    description: languages Markdown
+    color: 083fa1
+  - name: MoonScript
+    description: languages MoonScript
+    color: ff4585
+  - name: Nginx
+    description: languages Nginx
+    color: 009639
+  - name: Nim
+    description: languages Nim
+    color: ffc200
+  - name: Nix
+    description: languages Nix
+    color: 7e7eff
+  - name: Perl
+    description: languages Perl
+    color: 0298c3
+  - name: PHP
+    description: languages PHP
+    color: 4F5D95
+  - name: PostScript
+    description: languages PostScript
+    color: da291c
+  - name: Processing
+    description: languages Processing
+    color: 0096D8
+  - name: Puppet
+    description: languages Puppet
+    color: 302B6D
+  - name: Python
+    description: languages Python
+    color: 3572A5
+  - name: R
+    description: languages R
+    color: 198CE7
+  - name: Raku
+    description: languages Raku
+    color: 0000fb
+  - name: Roff
+    description: languages Roff
+    color: ecdebe
+  - name: Ruby
+    description: languages Ruby
+    color: 701516
+  - name: Rust
+    description: languages Rust
+    color: dea584
+  - name: Sass
+    description: languages Sass
+    color: a53b70
+  - name: Scala
+    description: languages Scala
+    color: c22d40
+  - name: SCSS
+    description: languages SCSS
+    color: c6538c
+  - name: sed
+    description: languages sed
+    color: 64b970
+  - name: Shell
+    description: languages Shell
+    color: 89e051
+  - name: Slim
+    description: languages Slim
+    color: 2b2b2b
+  - name: Solidity
+    description: languages Solidity
+    color: AA6746
+  - name: SQL
+    description: languages SQL
+    color: e38c00
+  - name: Svelte
+    description: languages Svelte
+    color: ff3e00
+  - name: Swift
+    description: languages Swift
+    color: F05138
+  - name: TeX
+    description: languages TeX
+    color: 3D6117
+  - name: TOML
+    description: languages TOML
+    color: 9c4221
+  - name: TSX
+    description: languages TSX
+    color: 2b7489
+  - name: TypeScript
+    description: languages TypeScript
+    color: 2b7489
+  - name: V
+    description: languages V
+    color: 4f87c4
+  - name: Vim Script
+    description: languages Vim Script
+    color: 199f4b
+  - name: Vim Snippet
+    description: languages Vim Snippet
+    color: 199f4b
+  - name: Volt
+    description: languages Volt
+    color: 1F1F1F
+  - name: Vue
+    description: languages Vue
+    color: 41b883
+  - name: WebAssembly
+    description: languages WebAssembly
+    color: 04133b
+  - name: XML
+    description: languages XML
+    color: 0060ac
+  - name: Zig
+    description: languages Zig
+    color: ec915c
+
+repos:
+  - name: kis9a/kis9a
+    labels:
+      - AsciiDoc
+      - Awk
+      - Ballerina
+      - C
+      - C
+      - C++
+      - CSS
+      - CSV
+      - Dart
+      - E
+      - EJS
+      - Elixir
+      - Elm
+      - Emacs Lisp
+      - Erlang
+      - F
+      - fish
+      - FLUX
+      - Fortran
+      - GAP
+      - GLSL
+      - Go
+      - GraphQL
+      - Groovy
+      - Haskell
+      - HTML
+      - Java
+      - JavaScript
+      - jq
+      - JSON
+      - Julia
+      - Jupyter Notebook
+      - Kotlin
+      - Less
+      - Liquid
+      - Lua
+      - Makefile
+      - Markdown
+      - MoonScript
+      - Nginx
+      - Nim
+      - Nix
+      - Perl
+      - PHP
+      - PostScript
+      - Processing
+      - Puppet
+      - Python
+      - R
+      - Raku
+      - Roff
+      - Ruby
+      - Rust
+      - Sass
+      - Scala
+      - SCSS
+      - sed
+      - Shell
+      - Slim
+      - Solidity
+      - SQL
+      - Svelte
+      - Swift
+      - TeX
+      - TOML
+      - TSX
+      - TypeScript
+      - V
+      - Vim Script
+      - Vim Snippet
+      - Volt
+      - Vue
+      - WebAssembly
+      - XML
+      - Zig
