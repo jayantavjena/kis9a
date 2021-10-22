@@ -218,9 +218,6 @@ labels:
   - name: XML
     description: languages XML
     color: 0060ac
-  - name: YAML
-    description: languages YAML
-    color: cb171e
   - name: Zig
     description: languages Zig
     color: ec915c
@@ -302,5 +299,4 @@ repos:
       - Vue
       - WebAssembly
       - XML
-      - YAML
       - Zig
