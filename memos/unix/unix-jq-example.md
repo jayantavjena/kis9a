@@ -3,6 +3,7 @@
 - [jq コマンドを使う日常のご紹介 - Qiita](https://qiita.com/takeshinoda@github/items/2dec7a72930ec1f658af)
 - [ズンドコキヨシ with jq - Qiita](https://qiita.com/takeshinoda@github/items/bd74b3f621177daefb95)
 - [ゴリラ言語の読み方 - Qiita](https://qiita.com/mattn/items/65ec8f5256e244e1ed77)
+- [jq Cheet Sheet · GitHub](https://gist.github.com/olih/f7437fb6962fb3ee9fe95bda8d2c8fa4)
 
  curl -s "https://api.github.com/users/kis9a/repos" | jq '.[] | select(.fork == false) | .'
 
@@ -275,4 +276,40 @@ echo '{"items":[{"item_id":1,"name":"すてきな雑貨","price":2500},{"item_id
   4500
 ]
 ```
+```
+
+```
+echo '[
+             {   "name": "sample-a",
+                 "version": "1.3" },
+             {   "name": "sample-a",
+                 "version": "2.5" },
+             {   "name": "sample-a",
+                 "version": "2.19" },
+             {   "name": "sample-a",
+                 "version": "1.0" },
+             {   "name": "sample-b",
+                 "version": "1.0" },
+             {   "name": "sample-b",
+                 "version": "1.1" },
+             {   "name": "sample-b",
+                 "version": "1.3" },
+             {   "name": "sample-b",
+                 "version": "1.20" }
+         ]' | \
+jq -r 'sort_by(.version | split(".") | map(tonumber) ) | reverse | unique_by(.name)'
+[
+  {
+    "name": "sample-a",
+    "version": "2.19"
+  },
+  {
+    "name": "sample-b",
+    "version": "1.20"
+  }
+]
+```
+
+```
+| jq 'to_entries | map({ name: .key, description: "languages \(.key)" })'
 ```
