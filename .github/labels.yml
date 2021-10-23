@@ -245,6 +245,9 @@ labels:
   - name: Invalid
     description: This doesn't seem right
     color: e4e669
+  - name: AWS
+    description: Amazon web service
+    color: ffa500
   - name: Amazon Athena
     description: Query Data in S3 using SQL
     color: ffa500
@@ -1076,6 +1079,7 @@ repos:
       - Help wanted
       - Question
       - Invalid
+      - AWS
       - Amazon Athena
       - Amazon CloudSearch
       - Amazon Elasticsearch Service
