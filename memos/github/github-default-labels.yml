@@ -1,0 +1,33 @@
+labels:
+  - name: Bug
+    description: Something isn't working
+    color: d73a4a
+  - name: Documentation
+    description: Improvements or additions to documentation
+    color: 0075ca
+  - name: Duplicate
+    description: This issue or pull request already exists
+    color: cfd3d7
+  - name: Enhancement
+    description: New feature or request
+    color: a2eeef
+  - name: Help wanted
+    description: Extra attention is needed
+    color: 008672
+  - name: Question
+    description: Further information is requested
+    color: d876e3
+  - name: Invalid
+    description: This doesn't seem right
+    color: e4e669
+
+repos:
+  - name: kis9a/kis9a
+    labels:
+      - Bug
+      - Documentation
+      - Duplicate
+      - Enhancement
+      - Help wanted
+      - Question
+      - Invalid
