@@ -1,1045 +1,1126 @@
 labels:
-- name: Alexa for Business
-  description: Empower your Organization with Alexa
-  color: ffa500
-- name: Amazon API Gateway
-  description: Build, Deploy, and Manage APIs
-  color: ffa500
-- name: Amazon AppFlow
-  description: No code integration for SaaS apps & AWS services
-  color: ffa500
-- name: Amazon AppStream 2.0
-  description: Stream Desktop Applications Securely to a Browser
-  color: ffa500
-- name: Amazon Athena
-  description: Query Data in S3 using SQL
-  color: ffa500
-- name: Amazon Augmented AI
-  description: Easily implement human review of ML predictions
-  color: ffa500
-- name: Amazon Aurora
-  description: High Performance Managed Relational Database
-  color: ffa500
-- name: Amazon Aurora Serverless v2 (Preview)
-  description: Instantly scale to >100,000 transactions per second
-  color: ffa500
-- name: Amazon Chime
-  description: Frustration-free Meetings, Video Calls, and Chat
-  color: ffa500
-- name: Amazon CloudSearch
-  description: Managed Search Service
-  color: ffa500
-- name: Amazon CloudWatch
-  description: Monitor Resources and Applications
-  color: ffa500
-- name: Amazon CodeGuru
-  description: Find your most expensive lines of code
-  color: ffa500
-- name: Amazon Comprehend
-  description: Discover Insights and Relationships in Text
-  color: ffa500
-- name: Amazon Connect
-  description: Cloud-based Contact Center
-  color: ffa500
-- name: Amazon Corretto
-  description: Production-ready distribution of OpenJDK
-  color: ffa500
-- name: Amazon DevOps Guru
-  description: ML-powered cloud operations service
-  color: ffa500
-- name: Amazon DocumentDB (with MongoDB compatibility)
-  description: Fully managed document database
-  color: ffa500
-- name: Amazon DynamoDB
-  description: Managed NoSQL Database
-  color: ffa500
-- name: Amazon EC2
-  description: Virtual Servers in the Cloud
-  color: ffa500
-- name: Amazon EC2 Auto Scaling
-  description: Scale Compute Capacity to Meet Demand
-  color: ffa500
-- name: Amazon ECS Anywhere
-  description: Run containers on customer-managed infrastructure
-  color: ffa500
-- name: Amazon EKS Anywhere
-  description: Kubernetes on your infrastructure
-  color: ffa500
-- name: Amazon EKS Distro
-  description: Run consistent Kubernetes clusters
-  color: ffa500
-- name: Amazon Elastic Container Registry
-  description: Easily store, manage, and deploy container images
-  color: ffa500
-- name: Amazon Elastic Container Service (ECS)
-  description: Highly secure, reliable, and scalable way to run containers
-  color: ffa500
-- name: Amazon Elastic Inference
-  description: Deep learning inference acceleration
-  color: ffa500
-- name: Amazon Elastic Kubernetes Service (EKS)
-  description: The most trusted way to run Kubernetes
-  color: ffa500
-- name: Amazon Elastic Transcoder
-  description: Easy-to-use Scalable Media Transcoding
-  color: ffa500
-- name: Amazon ElastiCache
-  description: In-memory Caching System
-  color: ffa500
-- name: Amazon Elasticsearch Service
-  description: Run and Scale Elasticsearch Clusters
-  color: ffa500
-- name: Amazon EMR
-  description: Hosted Hadoop Framework
-  color: ffa500
-- name: Amazon EventBridge
-  description: Serverless event bus for SaaS apps & AWS services
-  color: ffa500
-- name: Amazon FinSpace
-  description: Analytics for the financial services industry
-  color: ffa500
-- name: Amazon Forecast
-  description: Increase forecast accuracy using machine learning
-  color: ffa500
-- name: Amazon Fraud Detector
-  description: Detect more online fraud faster
-  color: ffa500
-- name: Amazon GameLift
-  description: Simple, Fast, Cost-effective Dedicated Game Server Hosting
-  color: ffa500
-- name: Amazon Healthlake
-  description: Make sense of health data
-  color: ffa500
-- name: Amazon Honeycode (Beta)
-  description: Build mobile & web apps without programming
-  color: ffa500
-- name: Amazon Interactive Video Service
-  description: Managed Live Video Solution
-  color: ffa500
-- name: Amazon Kendra
-  description: Reinvent enterprise search with ML
-  color: ffa500
-- name: Amazon Keyspaces (for Apache Cassandra)
-  description: Managed Cassandra-compatible database
-  color: ffa500
-- name: Amazon Kinesis
-  description: Work with Real-time Streaming Data
-  color: ffa500
-- name: Amazon Kinesis Video Streams
-  description: Process and Analyze Video Streams
-  color: ffa500
-- name: Amazon Lex
-  description: Build Voice and Text Chatbots
-  color: ffa500
-- name: Amazon Lightsail
-  description: Launch and Manage Virtual Private Servers
-  color: ffa500
-- name: Amazon Location Service (Preview)
-  description: Securely and easily add location data to applications
-  color: ffa500
-- name: Amazon Lookout for Equipment
-  description: Detect abnormal behavior by analyzing sensor data
-  color: ffa500
-- name: Amazon Lookout for Metrics
-  description: Detect anomalies in metrics
-  color: ffa500
-- name: Amazon Lookout for Vision
-  description: Spot product defects using computer vision
-  color: ffa500
-- name: Amazon Lumberyard
-  description: A Free Cross-platform 3D Game Engine with Full Source, Integrated with
-    AWS and Twitch
-  color: ffa500
-- name: Amazon Managed Blockchain
-  description: Create and manage scalable blockchain networks
-  color: ffa500
-- name: Amazon Managed Service for Grafana
-  description: Powerful interactive data visualizations
-  color: ffa500
-- name: Amazon Managed Service for Prometheus
-  description: Highly available, secure monitoring for containers
-  color: ffa500
-- name: Amazon Managed Streaming for Apache Kafka
-  description: Fully managed Apache Kafka service
-  color: ffa500
-- name: Amazon Managed Workflows for Apache Airflow
-  description: Highly available, secure, and managed workflow orchestration
-  color: ffa500
-- name: Amazon MemoryDB for Redis
-  description: Redis-compatible, durable, in-memory database that delivers ultra-fast
-    performance
-  color: ffa500
-- name: Amazon Monitron
-  description: End-to-end system for equipment monitoring
-  color: ffa500
-- name: Amazon MQ
-  description: Managed Message Broker Service
-  color: ffa500
-- name: Amazon Neptune
-  description: Fully Managed Graph Database Service
-  color: ffa500
-- name: Amazon Nimble Studio
-  description: Build a digital content creation studio
-  color: ffa500
-- name: Amazon Personalize
-  description: Build real-time recommendations into your applications
-  color: ffa500
-- name: Amazon Pinpoint
-  description: Personalized User Engagement Across Channels
-  color: ffa500
-- name: Amazon Polly
-  description: Turn Text into Lifelike Speech
-  color: ffa500
-- name: Amazon Quantum Ledger Database (QLDB)
-  description: Fully managed ledger database
-  color: ffa500
-- name: Amazon QuickSight
-  description: Fast Business Analytics Service
-  color: ffa500
-- name: Amazon RDS
-  description: Managed Relational Database Service for MySQL, PostgreSQL, Oracle,
-    SQL Server, and MariaDB
-  color: ffa500
-- name: Amazon RDS on VMware
-  description: Automate on-premises database management
-  color: ffa500
-- name: Amazon Redshift
-  description: Fast, Simple, Cost-effective Data Warehousing
-  color: ffa500
-- name: Amazon Rekognition
-  description: Analyze Image and Video
-  color: ffa500
-- name: Amazon SageMaker
-  description: Build, Train, and Deploy Machine Learning Models at Scale
-  color: ffa500
-- name: Amazon SageMaker Data Wrangler
-  description: The fastest way to prepare data for ML
-  color: ffa500
-- name: Amazon SageMaker Ground Truth
-  description: Build accurate ML training datasets
-  color: ffa500
-- name: Amazon Simple Email Service (SES)
-  description: Email Sending and Receiving
-  color: ffa500
-- name: Amazon Simple Notification Service (SNS)
-  description: Pub/sub, SMS, email, and mobile push notifications
-  color: ffa500
-- name: Amazon Simple Queue Service (SQS)
-  description: Managed message queues
-  color: ffa500
-- name: Amazon Textract
-  description: Extract text and data from documents
-  color: ffa500
-- name: Amazon Timestream
-  description: Fully managed time series database
-  color: ffa500
-- name: Amazon Transcribe
-  description: Automatic Speech Recognition
-  color: ffa500
-- name: Amazon Translate
-  description: Natural and Fluent Language Translation
-  color: ffa500
-- name: Amazon WorkDocs
-  description: Secure enterprise document storage and sharing
-  color: ffa500
-- name: Amazon WorkLink
-  description: Enable mobile access to internal websites
-  color: ffa500
-- name: Amazon WorkMail
-  description: Secure and Managed Business Email and Calendaring
-  color: ffa500
-- name: Amazon WorkSpaces
-  description: Desktop Computing Service
-  color: ffa500
-- name: Apache MXNet on AWS
-  description: Scalable, High-performance Deep Learning
-  color: ffa500
-- name: AsciiDoc
-  description: languages AsciiDoc
-  color: 73a0c5
-- name: Awk
-  description: languages Awk
-  color: c30e9b
-- name: AWS
-  description: Amazon web service
-  color: ffa500
-- name: AWS Amplify
-  description: Build and deploy mobile and web applications
-  color: ffa500
-- name: AWS App Runner
-  description: Build and run containerized web apps at scale
-  color: ffa500
-- name: AWS App2Container
-  description: Containerize and migrate existing applications
-  color: ffa500
-- name: AWS Application Discovery Service
-  description: Discover On-Premises Applications to Streamline Migration
-  color: ffa500
-- name: AWS AppSync
-  description: Power your apps with the right data from many sources, at scale
-  color: ffa500
-- name: AWS Auto Scaling
-  description: Scale Multiple Resources to Meet Demand
-  color: ffa500
-- name: AWS Batch
-  description: Run Batch Jobs at Any Scale
-  color: ffa500
-- name: AWS Budgets
-  description: Set Custom Cost and Usage Budgets
-  color: ffa500
-- name: AWS Chatbot
-  description: ChatOps for AWS
-  color: ffa500
-- name: AWS Cloud Development Kit (CDK)
-  description: Model cloud infrastructure using code
-  color: ffa500
-- name: AWS Cloud9
-  description: Write, Run, and Debug Code on a Cloud IDE
-  color: ffa500
-- name: AWS CloudFormation
-  description: Create and Manage Resources with Templates
-  color: ffa500
-- name: AWS CloudShell
-  description: Browser-based shell environment
-  color: ffa500
-- name: AWS CloudTrail
-  description: Track User Activity and API Usage
-  color: ffa500
-- name: AWS CodeArtifact
-  description: Secure, scalable, and cost-effective artifact management for software
-    development
-  color: ffa500
-- name: AWS CodeBuild
-  description: Build and Test Code
-  color: ffa500
-- name: AWS CodeCommit
-  description: Store Code in Private Git Repositories
-  color: ffa500
-- name: AWS CodeDeploy
-  description: Automate Code Deployment
-  color: ffa500
-- name: AWS CodePipeline
-  description: Release Software using Continuous Delivery
-  color: ffa500
-- name: AWS CodeStar
-  description: Develop and Deploy AWS Applications
-  color: ffa500
-- name: AWS Command Line Interface
-  description: Unified Tool to Manage AWS Services
-  color: ffa500
-- name: AWS Compute Optimizer
-  description: Identify optimal AWS Compute resources
-  color: ffa500
-- name: AWS Config
-  description: Track Resource Inventory and Changes
-  color: ffa500
-- name: AWS Console Mobile Application
-  description: Access resources on the go
-  color: ffa500
-- name: AWS Control Tower
-  description: Set up and govern a secure, compliant, multi-account environment
-  color: ffa500
-- name: AWS Copilot
-  description: Easily deploy and operate containerized applications
-  color: ffa500
-- name: AWS Cost and Usage Report
-  description: Access Comprehensive Cost and Usage Information
-  color: ffa500
-- name: AWS Cost Explorer
-  description: Analyze Your AWS Cost and Usage
-  color: ffa500
-- name: AWS Data Exchange
-  description: Find, subscribe to, and use third-party data in the cloud
-  color: ffa500
-- name: AWS Data Pipeline
-  description: Orchestration Service for Periodic, Data-driven Workflows
-  color: ffa500
-- name: AWS Database Migration Service
-  description: Migrate Databases with Minimal Downtime
-  color: ffa500
-- name: AWS Deep Learning AMIs
-  description: Quickly Start Deep Learning on EC2
-  color: ffa500
-- name: AWS Deep Learning Containers
-  description: Docker images for deep learning
-  color: ffa500
-- name: AWS DeepComposer
-  description: ML enabled musical keyboard
-  color: ffa500
-- name: AWS DeepLens
-  description: Deep Learning Enabled Video Camera
-  color: ffa500
-- name: AWS DeepRacer
-  description: Autonomous 1/18th scale race car, driven by ML
-  color: ffa500
-- name: AWS Device Farm
-  description: Test Android, iOS, and web apps on real devices in the AWS cloud
-  color: ffa500
-- name: AWS Distro for OpenTelemetry (Preview)
-  description: Collect correlated metrics and traces
-  color: ffa500
-- name: AWS Elastic Beanstalk
-  description: Run and Manage Web Apps
-  color: ffa500
-- name: AWS Elemental Appliances & Software
-  description: On-premises media solutions
-  color: ffa500
-- name: AWS Elemental MediaConnect
-  description: Reliable and secure live video transport
-  color: ffa500
-- name: AWS Elemental MediaConvert
-  description: Convert File-based Video Content
-  color: ffa500
-- name: AWS Elemental MediaLive
-  description: Convert Live Video Content
-  color: ffa500
-- name: AWS Elemental MediaPackage
-  description: Video Origination and Packaging
-  color: ffa500
-- name: AWS Elemental MediaStore
-  description: Media Storage and Simple HTTP Origin
-  color: ffa500
-- name: AWS Elemental MediaTailor
-  description: Video Personalization and Monetization
-  color: ffa500
-- name: AWS Fargate
-  description: Serverless compute for containers
-  color: ffa500
-- name: AWS Fault Injection Simulator
-  description: Fully managed fault injection service
-  color: ffa500
-- name: AWS Glue
-  description: Simple, scalable, and serverless data integration
-  color: ffa500
-- name: AWS Greengrass
-  description: Local Compute, Messaging, and Sync for Devices
-  color: ffa500
-- name: AWS Inferentia
-  description: Machine learning inference chip
-  color: ffa500
-- name: AWS IoT 1-Click
-  description: One Click Creation of an AWS Lambda Trigger
-  color: ffa500
-- name: AWS IoT Analytics
-  description: Analytics for IoT Devices
-  color: ffa500
-- name: AWS IoT Button
-  description: Cloud Programmable Dash Button
-  color: ffa500
-- name: AWS IoT Core
-  description: Connect Devices to the Cloud
-  color: ffa500
-- name: AWS IoT Device Defender
-  description: Security Management for IoT Devices
-  color: ffa500
-- name: AWS IoT Device Management
-  description: Onboard, Organize, and Remotely Manage IoT Devices
-  color: ffa500
-- name: AWS IoT Events
-  description: IoT event detection and response
-  color: ffa500
-- name: AWS IoT SiteWise
-  description: IoT data collector and interpreter
-  color: ffa500
-- name: AWS IoT Things Graph
-  description: Easily connect devices and web services
-  color: ffa500
-- name: AWS Lake Formation
-  description: Build a secure data lake in days
-  color: ffa500
-- name: AWS Lambda
-  description: Run your Code in Response to Events
-  color: ffa500
-- name: AWS Launch Wizard
-  description: Easily size, configure, and deploy third party applications on AWS
-  color: ffa500
-- name: AWS License Manager
-  description: Track, manage, and control licenses
-  color: ffa500
-- name: AWS Managed Services
-  description: Infrastructure operations management for AWS
-  color: ffa500
-- name: AWS Management Console
-  description: Web-based user interface
-  color: ffa500
-- name: AWS Migration Hub
-  description: Track Migrations from a Single Place
-  color: ffa500
-- name: AWS OpsWorks
-  description: Automate Operations with Chef and Puppet
-  color: ffa500
-- name: AWS Organizations
-  description: Central governance and management across AWS accounts
-  color: ffa500
-- name: AWS Outposts
-  description: Run AWS services on-premises
-  color: ffa500
-- name: AWS Panorama (Preview)
-  description: Improve operations with computer vision at the edge
-  color: ffa500
-- name: AWS Partner Device Catalog
-  description: Curated catalog of AWS-compatible IoT hardware
-  color: ffa500
-- name: AWS Personal Health Dashboard
-  description: Personalized View of AWS Service Health
-  color: ffa500
-- name: AWS Proton
-  description: Automated management for container and serverless deployment
-  color: ffa500
-- name: AWS Serverless Application Repository
-  description: Discover, Deploy, and Publish Serverless Applications
-  color: ffa500
-- name: AWS Service Catalog
-  description: Create and Use Standardized Products
-  color: ffa500
-- name: AWS Snow Family
-  description: Physical devices to aggregate and process data in edge locations, then
-    transfer to AWS
-  color: ffa500
-- name: AWS Step Functions
-  description: Coordinate Distributed Applications
-  color: ffa500
-- name: AWS Systems Manager
-  description: Gain Operational Insights and Take Action
-  color: ffa500
-- name: AWS Tools and SDKs
-  description: Tools and SDKs for AWS
-  color: ffa500
-- name: AWS Trusted Advisor
-  description: Optimize Performance and Security
-  color: ffa500
-- name: AWS Wavelength
-  description: Deliver ultra-low latency applications for 5G devices
-  color: ffa500
-- name: AWS Well-Architected Tool
-  description: Review and improve your workloads
-  color: ffa500
-- name: AWS X-Ray
-  description: Analyze and debug your applications
-  color: ffa500
-- name: Bug
-  description: Something isn't working
-  color: d73a4a
-- name: C
-  description: languages C
-  color: "555555"
-- name: C++
-  description: languages C++
-  color: f34b7d
-- name: CSS
-  description: languages CSS
-  color: 563d7c
-- name: CSV
-  description: languages CSV
-  color: "237346"
-- name: Dart
-  description: languages Dart
-  color: 00B4AB
-- name: Documentation
-  description: Improvements or additions to documentation
-  color: 0075ca
-- name: Duplicate
-  description: This issue or pull request already exists
-  color: cfd3d7
-- name: E
-  description: languages E
-  color: ccce35
-- name: EJS
-  description: languages EJS
-  color: a91e50
-- name: Elixir
-  description: languages Elixir
-  color: 6e4a7e
-- name: Elm
-  description: languages Elm
-  color: 60B5CC
-- name: Emacs Lisp
-  description: languages Emacs Lisp
-  color: c065db
-- name: Enhancement
-  description: New feature or request
-  color: a2eeef
-- name: Erlang
-  description: languages Erlang
-  color: B83998
-- name: F
-  description: languages F
-  color: b845fc
-- name: fish
-  description: languages fish
-  color: 4aae47
-- name: FLUX
-  description: languages FLUX
-  color: 88ccff
-- name: Fortran
-  description: languages Fortran
-  color: 4d41b1
-- name: FreeRTOS
-  description: Real-time operating system for microcontrollers
-  color: ffa500
-- name: GAP
-  description: languages GAP
-  color: 0000cc
-- name: GitHub Actions
-  description: GitHub Actions
-  color: "000000"
-- name: GLSL
-  description: languages GLSL
-  color: 5686a5
-- name: Go
-  description: languages Go
-  color: 00ADD8
-- name: GraphQL
-  description: languages GraphQL
-  color: e10098
-- name: Groovy
-  description: languages Groovy
-  color: 4298b8
-- name: Haskell
-  description: languages Haskell
-  color: 5e5086
-- name: HCL
-  description: languages HCL
-  color: "808080"
-- name: Help wanted
-  description: Extra attention is needed
-  color: "008672"
-- name: HTML
-  description: languages HTML
-  color: e34c26
-- name: Invalid
-  description: This doesn't seem right
-  color: e4e669
-- name: Java
-  description: languages Java
-  color: b07219
-- name: JavaScript
-  description: languages JavaScript
-  color: f1e05a
-- name: jq
-  description: languages jq
-  color: c7254e
-- name: JSON
-  description: languages JSON
-  color: "292929"
-- name: Julia
-  description: languages Julia
-  color: a270ba
-- name: Jupyter Notebook
-  description: languages Jupyter Notebook
-  color: DA5B0B
-- name: Kotlin
-  description: languages Kotlin
-  color: A97BFF
-- name: Less
-  description: languages Less
-  color: 1d365d
-- name: Liquid
-  description: languages Liquid
-  color: 67b8de
-- name: Lua
-  description: languages Lua
-  color: "000080"
-- name: Makefile
-  description: languages Makefile
-  color: "427819"
-- name: Markdown
-  description: languages Markdown
-  color: 083fa1
-- name: MoonScript
-  description: languages MoonScript
-  color: ff4585
-- name: Nginx
-  description: languages Nginx
-  color: "009639"
-- name: Nim
-  description: languages Nim
-  color: ffc200
-- name: Nix
-  description: languages Nix
-  color: 7e7eff
-- name: Perl
-  description: languages Perl
-  color: 0298c3
-- name: PHP
-  description: languages PHP
-  color: 4F5D95
-- name: PostScript
-  description: languages PostScript
-  color: da291c
-- name: Processing
-  description: languages Processing
-  color: 0096D8
-- name: Puppet
-  description: languages Puppet
-  color: 302B6D
-- name: Python
-  description: languages Python
-  color: 3572A5
-- name: PyTorch on AWS
-  description: Flexible open-source machine learning framework
-  color: ffa500
-- name: Question
-  description: Further information is requested
-  color: d876e3
-- name: R
-  description: languages R
-  color: 198CE7
-- name: Raku
-  description: languages Raku
-  color: 0000fb
-- name: Red Hat OpenShift Service on AWS
-  description: Managed Red Hat OpenShift clusters
-  color: ffa500
-- name: Reserved Instance Reporting
-  description: Dive Deeper into Your Reserved Instances (RIs)
-  color: ffa500
-- name: Roff
-  description: languages Roff
-  color: ecdebe
-- name: Ruby
-  description: languages Ruby
-  color: "701516"
-- name: Rust
-  description: languages Rust
-  color: dea584
-- name: Sass
-  description: languages Sass
-  color: a53b70
-- name: Savings Plans
-  description: Save up to 72% on compute usage with flexible pricing
-  color: ffa500
-- name: Scala
-  description: languages Scala
-  color: c22d40
-- name: SCSS
-  description: languages SCSS
-  color: c6538c
-- name: sed
-  description: languages sed
-  color: 64b970
-- name: Shell
-  description: languages Shell
-  color: "89e051"
-- name: Slim
-  description: languages Slim
-  color: 2b2b2b
-- name: Solidity
-  description: languages Solidity
-  color: AA6746
-- name: SQL
-  description: languages SQL
-  color: e38c00
-- name: Svelte
-  description: languages Svelte
-  color: ff3e00
-- name: Swift
-  description: languages Swift
-  color: F05138
-- name: TensorFlow on AWS
-  description: Open-source Machine Intelligence Library
-  color: ffa500
-- name: Terraform
-  description: languages terraform
-  color: "5319E7"
-- name: TeX
-  description: languages TeX
-  color: 3D6117
-- name: TOML
-  description: languages TOML
-  color: 9c4221
-- name: TSX
-  description: languages TSX
-  color: 2b7489
-- name: TypeScript
-  description: languages TypeScript
-  color: 2b7489
-- name: V
-  description: languages V
-  color: 4f87c4
-- name: Vim Script
-  description: languages Vim Script
-  color: 199f4b
-- name: Vim Snippet
-  description: languages Vim Snippet
-  color: 199f4b
-- name: VMware Cloud on AWS
-  description: Build a Hybrid Cloud without Custom Hardware
-  color: ffa500
-- name: Volt
-  description: languages Volt
-  color: 1F1F1F
-- name: Vue
-  description: languages Vue
-  color: 41b883
-- name: WebAssembly
-  description: languages WebAssembly
-  color: 04133b
-- name: XML
-  description: languages XML
-  color: 0060ac
-- name: Zig
-  description: languages Zig
-  color: ec915c
+  - name: Fixes
+    description: fixes
+    color: 808080
+  - name: Support
+    description: support
+    color: 808080
+  - name: Incident
+    description: incident
+    color: 808080
+  - name: PostgreSQL
+    description: postgresql
+    color: 808080
+  - name: MySQL
+    description: mysql
+    color: 808080
+  - name: Operation
+    description: operations
+    color: 808080
+  - name: Monitoring
+    description: monitoring
+    color: 808080
+  - name: Tips
+    description: tips
+    color: 808080
+  - name: Alexa for Business
+    description: Empower your Organization with Alexa
+    color: ffa500
+  - name: Amazon KMS
+    description: Managed Creation and Control of Encryption Keys
+    color: ffa500
+  - name: Amazon CloudFront
+    description: Global Content Delivery Network
+    color: ffa500
+  - name: Amazon Route 53
+    description: Scalable Domain Name System
+    color: ffa500
+  - name: AWS App Mesh
+    description: Monitor and control microservices
+    color: ffa500
+  - name: AWS Secrets Manager
+    description: Rotate, Manage, and Retrieve Secrets
+    color: ffa500
+  - name: AWS Security Hub
+    description: Unified security and compliance center
+    color: ffa500
+  - name: AWS WAF
+    description: Filter Malicious Web Traffic
+    color: ffa500
+  - name: AWS Backup
+    description: Centralized backup across AWS services
+    color: ffa500
+  - name: Amazon VPC
+    description: Isolated Cloud Resources
+    color: ffa500
+  - name: Amazon Cognito
+    description: Identity Management for your Apps
+    color: ffa500
+  - name: Amazon Certificate Manager
+    description: Provision, Manage, and Deploy SSL/TLS Certificates
+    color: ffa500
+  - name: Amazon API Gateway
+    description: Build, Deplsoy, and Manage APIs
+    color: ffa500
+  - name: Amazon AppFlow
+    description: No code integration for SaaS apps & AWS services
+    color: ffa500
+  - name: Amazon AppStream 2.0
+    description: Stream Desktop Applications Securely to a Browser
+    color: ffa500
+  - name: Amazon Athena
+    description: Query Data in S3 using SQL
+    color: ffa500
+  - name: Amazon Augmented AI
+    description: Easily implement human review of ML predictions
+    color: ffa500
+  - name: Amazon Aurora
+    description: High Performance Managed Relational Database
+    color: ffa500
+  - name: Amazon Aurora Serverless v2 (Preview)
+    description: Instantly scale to >100,000 transactions per second
+    color: ffa500
+  - name: Amazon Chime
+    description: Frustration-free Meetings, Video Calls, and Chat
+    color: ffa500
+  - name: Amazon CloudSearch
+    description: Managed Search Service
+    color: ffa500
+  - name: Amazon CloudWatch
+    description: Monitor Resources and Applications
+    color: ffa500
+  - name: Amazon CodeGuru
+    description: Find your most expensive lines of code
+    color: ffa500
+  - name: Amazon Comprehend
+    description: Discover Insights and Relationships in Text
+    color: ffa500
+  - name: Amazon Connect
+    description: Cloud-based Contact Center
+    color: ffa500
+  - name: Amazon Corretto
+    description: Production-ready distribution of OpenJDK
+    color: ffa500
+  - name: Amazon DevOps Guru
+    description: ML-powered cloud operations service
+    color: ffa500
+  - name: Amazon DocumentDB (with MongoDB compatibility)
+    description: Fully managed document database
+    color: ffa500
+  - name: Amazon DynamoDB
+    description: Managed NoSQL Database
+    color: ffa500
+  - name: Amazon EC2
+    description: Virtual Servers in the Cloud
+    color: ffa500
+  - name: Amazon EC2 Auto Scaling
+    description: Scale Compute Capacity to Meet Demand
+    color: ffa500
+  - name: Amazon ECS Anywhere
+    description: Run containers on customer-managed infrastructure
+    color: ffa500
+  - name: Amazon EKS Anywhere
+    description: Kubernetes on your infrastructure
+    color: ffa500
+  - name: Amazon EKS Distro
+    description: Run consistent Kubernetes clusters
+    color: ffa500
+  - name: Amazon Elastic Container Registry
+    description: Easily store, manage, and deploy container images
+    color: ffa500
+  - name: Amazon Elastic Container Service (ECS)
+    description: Highly secure, reliable, and scalable way to run containers
+    color: ffa500
+  - name: Amazon Elastic Inference
+    description: Deep learning inference acceleration
+    color: ffa500
+  - name: Amazon Elastic Kubernetes Service (EKS)
+    description: The most trusted way to run Kubernetes
+    color: ffa500
+  - name: Amazon Elastic Transcoder
+    description: Easy-to-use Scalable Media Transcoding
+    color: ffa500
+  - name: Amazon ElastiCache
+    description: In-memory Caching System
+    color: ffa500
+  - name: Amazon Elasticsearch Service
+    description: Run and Scale Elasticsearch Clusters
+    color: ffa500
+  - name: Amazon EMR
+    description: Hosted Hadoop Framework
+    color: ffa500
+  - name: Amazon EventBridge
+    description: Serverless event bus for SaaS apps & AWS services
+    color: ffa500
+  - name: Amazon FinSpace
+    description: Analytics for the financial services industry
+    color: ffa500
+  - name: Amazon Forecast
+    description: Increase forecast accuracy using machine learning
+    color: ffa500
+  - name: Amazon Fraud Detector
+    description: Detect more online fraud faster
+    color: ffa500
+  - name: Amazon GameLift
+    description: Simple, Fast, Cost-effective Dedicated Game Server Hosting
+    color: ffa500
+  - name: Amazon Healthlake
+    description: Make sense of health data
+    color: ffa500
+  - name: Amazon Honeycode (Beta)
+    description: Build mobile & web apps without programming
+    color: ffa500
+  - name: Amazon Interactive Video Service
+    description: Managed Live Video Solution
+    color: ffa500
+  - name: Amazon Kendra
+    description: Reinvent enterprise search with ML
+    color: ffa500
+  - name: Amazon Keyspaces (for Apache Cassandra)
+    description: Managed Cassandra-compatible database
+    color: ffa500
+  - name: Amazon Kinesis
+    description: Work with Real-time Streaming Data
+    color: ffa500
+  - name: Amazon Kinesis Video Streams
+    description: Process and Analyze Video Streams
+    color: ffa500
+  - name: Amazon Lex
+    description: Build Voice and Text Chatbots
+    color: ffa500
+  - name: Amazon Lightsail
+    description: Launch and Manage Virtual Private Servers
+    color: ffa500
+  - name: Amazon Location Service (Preview)
+    description: Securely and easily add location data to applications
+    color: ffa500
+  - name: Amazon Lookout for Equipment
+    description: Detect abnormal behavior by analyzing sensor data
+    color: ffa500
+  - name: Amazon Lookout for Metrics
+    description: Detect anomalies in metrics
+    color: ffa500
+  - name: Amazon Lookout for Vision
+    description: Spot product defects using computer vision
+    color: ffa500
+  - name: Amazon Lumberyard
+    description:
+      A Free Cross-platform 3D Game Engine with Full Source, Integrated with
+      AWS and Twitch
+    color: ffa500
+  - name: Amazon Managed Blockchain
+    description: Create and manage scalable blockchain networks
+    color: ffa500
+  - name: Amazon Managed Service for Grafana
+    description: Powerful interactive data visualizations
+    color: ffa500
+  - name: Amazon Managed Service for Prometheus
+    description: Highly available, secure monitoring for containers
+    color: ffa500
+  - name: Amazon Managed Streaming for Apache Kafka
+    description: Fully managed Apache Kafka service
+    color: ffa500
+  - name: Amazon Managed Workflows for Apache Airflow
+    description: Highly available, secure, and managed workflow orchestration
+    color: ffa500
+  - name: Amazon MemoryDB for Redis
+    description:
+      Redis-compatible, durable, in-memory database that delivers ultra-fast
+      performance
+    color: ffa500
+  - name: Amazon Monitron
+    description: End-to-end system for equipment monitoring
+    color: ffa500
+  - name: Amazon MQ
+    description: Managed Message Broker Service
+    color: ffa500
+  - name: Amazon Neptune
+    description: Fully Managed Graph Database Service
+    color: ffa500
+  - name: Amazon Nimble Studio
+    description: Build a digital content creation studio
+    color: ffa500
+  - name: Amazon Personalize
+    description: Build real-time recommendations into your applications
+    color: ffa500
+  - name: Amazon Pinpoint
+    description: Personalized User Engagement Across Channels
+    color: ffa500
+  - name: Amazon Polly
+    description: Turn Text into Lifelike Speech
+    color: ffa500
+  - name: Amazon Quantum Ledger Database (QLDB)
+    description: Fully managed ledger database
+    color: ffa500
+  - name: Amazon QuickSight
+    description: Fast Business Analytics Service
+    color: ffa500
+  - name: Amazon RDS
+    description:
+      Managed Relational Database Service for MySQL, PostgreSQL, Oracle,
+      SQL Server, and MariaDB
+    color: ffa500
+  - name: Amazon RDS on VMware
+    description: Automate on-premises database management
+    color: ffa500
+  - name: Amazon Redshift
+    description: Fast, Simple, Cost-effective Data Warehousing
+    color: ffa500
+  - name: Amazon Rekognition
+    description: Analyze Image and Video
+    color: ffa500
+  - name: Amazon SageMaker
+    description: Build, Train, and Deploy Machine Learning Models at Scale
+    color: ffa500
+  - name: Amazon SageMaker Data Wrangler
+    description: The fastest way to prepare data for ML
+    color: ffa500
+  - name: Amazon SageMaker Ground Truth
+    description: Build accurate ML training datasets
+    color: ffa500
+  - name: Amazon Simple Email Service (SES)
+    description: Email Sending and Receiving
+    color: ffa500
+  - name: Amazon Simple Notification Service (SNS)
+    description: Pub/sub, SMS, email, and mobile push notifications
+    color: ffa500
+  - name: Amazon Simple Queue Service (SQS)
+    description: Managed message queues
+    color: ffa500
+  - name: Amazon Textract
+    description: Extract text and data from documents
+    color: ffa500
+  - name: Amazon Timestream
+    description: Fully managed time series database
+    color: ffa500
+  - name: Amazon Transcribe
+    description: Automatic Speech Recognition
+    color: ffa500
+  - name: Amazon Translate
+    description: Natural and Fluent Language Translation
+    color: ffa500
+  - name: Amazon WorkDocs
+    description: Secure enterprise document storage and sharing
+    color: ffa500
+  - name: Amazon WorkLink
+    description: Enable mobile access to internal websites
+    color: ffa500
+  - name: Amazon WorkMail
+    description: Secure and Managed Business Email and Calendaring
+    color: ffa500
+  - name: Amazon WorkSpaces
+    description: Desktop Computing Service
+    color: ffa500
+  - name: Apache MXNet on AWS
+    description: Scalable, High-performance Deep Learning
+    color: ffa500
+  - name: AsciiDoc
+    description: languages AsciiDoc
+    color: 73a0c5
+  - name: Awk
+    description: languages Awk
+    color: c30e9b
+  - name: AWS
+    description: Amazon web service
+    color: ffa500
+  - name: AWS Amplify
+    description: Build and deploy mobile and web applications
+    color: ffa500
+  - name: AWS App Runner
+    description: Build and run containerized web apps at scale
+    color: ffa500
+  - name: AWS App2Container
+    description: Containerize and migrate existing applications
+    color: ffa500
+  - name: AWS Application Discovery Service
+    description: Discover On-Premises Applications to Streamline Migration
+    color: ffa500
+  - name: AWS AppSync
+    description: Power your apps with the right data from many sources, at scale
+    color: ffa500
+  - name: AWS Auto Scaling
+    description: Scale Multiple Resources to Meet Demand
+    color: ffa500
+  - name: AWS Batch
+    description: Run Batch Jobs at Any Scale
+    color: ffa500
+  - name: AWS Budgets
+    description: Set Custom Cost and Usage Budgets
+    color: ffa500
+  - name: AWS Chatbot
+    description: ChatOps for AWS
+    color: ffa500
+  - name: AWS Cloud Development Kit (CDK)
+    description: Model cloud infrastructure using code
+    color: ffa500
+  - name: AWS Cloud9
+    description: Write, Run, and Debug Code on a Cloud IDE
+    color: ffa500
+  - name: AWS CloudFormation
+    description: Create and Manage Resources with Templates
+    color: ffa500
+  - name: AWS CloudShell
+    description: Browser-based shell environment
+    color: ffa500
+  - name: AWS CloudTrail
+    description: Track User Activity and API Usage
+    color: ffa500
+  - name: AWS CodeArtifact
+    description:
+      Secure, scalable, and cost-effective artifact management for software
+      development
+    color: ffa500
+  - name: AWS CodeBuild
+    description: Build and Test Code
+    color: ffa500
+  - name: AWS CodeCommit
+    description: Store Code in Private Git Repositories
+    color: ffa500
+  - name: AWS CodeDeploy
+    description: Automate Code Deployment
+    color: ffa500
+  - name: AWS CodePipeline
+    description: Release Software using Continuous Delivery
+    color: ffa500
+  - name: AWS CodeStar
+    description: Develop and Deploy AWS Applications
+    color: ffa500
+  - name: AWS Command Line Interface
+    description: Unified Tool to Manage AWS Services
+    color: ffa500
+  - name: AWS Compute Optimizer
+    description: Identify optimal AWS Compute resources
+    color: ffa500
+  - name: AWS Config
+    description: Track Resource Inventory and Changes
+    color: ffa500
+  - name: AWS Console Mobile Application
+    description: Access resources on the go
+    color: ffa500
+  - name: AWS Control Tower
+    description: Set up and govern a secure, compliant, multi-account environment
+    color: ffa500
+  - name: AWS Copilot
+    description: Easily deploy and operate containerized applications
+    color: ffa500
+  - name: AWS Cost and Usage Report
+    description: Access Comprehensive Cost and Usage Information
+    color: ffa500
+  - name: AWS Cost Explorer
+    description: Analyze Your AWS Cost and Usage
+    color: ffa500
+  - name: AWS Data Exchange
+    description: Find, subscribe to, and use third-party data in the cloud
+    color: ffa500
+  - name: AWS Data Pipeline
+    description: Orchestration Service for Periodic, Data-driven Workflows
+    color: ffa500
+  - name: AWS Database Migration Service
+    description: Migrate Databases with Minimal Downtime
+    color: ffa500
+  - name: AWS Deep Learning AMIs
+    description: Quickly Start Deep Learning on EC2
+    color: ffa500
+  - name: AWS Deep Learning Containers
+    description: Docker images for deep learning
+    color: ffa500
+  - name: AWS DeepComposer
+    description: ML enabled musical keyboard
+    color: ffa500
+  - name: AWS DeepLens
+    description: Deep Learning Enabled Video Camera
+    color: ffa500
+  - name: AWS DeepRacer
+    description: Autonomous 1/18th scale race car, driven by ML
+    color: ffa500
+  - name: AWS Device Farm
+    description: Test Android, iOS, and web apps on real devices in the AWS cloud
+    color: ffa500
+  - name: AWS Distro for OpenTelemetry (Preview)
+    description: Collect correlated metrics and traces
+    color: ffa500
+  - name: AWS Elastic Beanstalk
+    description: Run and Manage Web Apps
+    color: ffa500
+  - name: AWS Elemental Appliances & Software
+    description: On-premises media solutions
+    color: ffa500
+  - name: AWS Elemental MediaConnect
+    description: Reliable and secure live video transport
+    color: ffa500
+  - name: AWS Elemental MediaConvert
+    description: Convert File-based Video Content
+    color: ffa500
+  - name: AWS Elemental MediaLive
+    description: Convert Live Video Content
+    color: ffa500
+  - name: AWS Elemental MediaPackage
+    description: Video Origination and Packaging
+    color: ffa500
+  - name: AWS Elemental MediaStore
+    description: Media Storage and Simple HTTP Origin
+    color: ffa500
+  - name: AWS Elemental MediaTailor
+    description: Video Personalization and Monetization
+    color: ffa500
+  - name: AWS Fargate
+    description: Serverless compute for containers
+    color: ffa500
+  - name: AWS Fault Injection Simulator
+    description: Fully managed fault injection service
+    color: ffa500
+  - name: AWS Glue
+    description: Simple, scalable, and serverless data integration
+    color: ffa500
+  - name: AWS Greengrass
+    description: Local Compute, Messaging, and Sync for Devices
+    color: ffa500
+  - name: AWS Inferentia
+    description: Machine learning inference chip
+    color: ffa500
+  - name: AWS IoT 1-Click
+    description: One Click Creation of an AWS Lambda Trigger
+    color: ffa500
+  - name: AWS IoT Analytics
+    description: Analytics for IoT Devices
+    color: ffa500
+  - name: AWS IoT Button
+    description: Cloud Programmable Dash Button
+    color: ffa500
+  - name: AWS IoT Core
+    description: Connect Devices to the Cloud
+    color: ffa500
+  - name: AWS IoT Device Defender
+    description: Security Management for IoT Devices
+    color: ffa500
+  - name: AWS IoT Device Management
+    description: Onboard, Organize, and Remotely Manage IoT Devices
+    color: ffa500
+  - name: AWS IoT Events
+    description: IoT event detection and response
+    color: ffa500
+  - name: AWS IoT SiteWise
+    description: IoT data collector and interpreter
+    color: ffa500
+  - name: AWS IoT Things Graph
+    description: Easily connect devices and web services
+    color: ffa500
+  - name: AWS Lake Formation
+    description: Build a secure data lake in days
+    color: ffa500
+  - name: AWS Lambda
+    description: Run your Code in Response to Events
+    color: ffa500
+  - name: AWS Launch Wizard
+    description: Easily size, configure, and deploy third party applications on AWS
+    color: ffa500
+  - name: AWS License Manager
+    description: Track, manage, and control licenses
+    color: ffa500
+  - name: AWS Managed Services
+    description: Infrastructure operations management for AWS
+    color: ffa500
+  - name: AWS Management Console
+    description: Web-based user interface
+    color: ffa500
+  - name: AWS Migration Hub
+    description: Track Migrations from a Single Place
+    color: ffa500
+  - name: AWS OpsWorks
+    description: Automate Operations with Chef and Puppet
+    color: ffa500
+  - name: AWS Organizations
+    description: Central governance and management across AWS accounts
+    color: ffa500
+  - name: AWS Outposts
+    description: Run AWS services on-premises
+    color: ffa500
+  - name: AWS Panorama (Preview)
+    description: Improve operations with computer vision at the edge
+    color: ffa500
+  - name: AWS Partner Device Catalog
+    description: Curated catalog of AWS-compatible IoT hardware
+    color: ffa500
+  - name: AWS Personal Health Dashboard
+    description: Personalized View of AWS Service Health
+    color: ffa500
+  - name: AWS Proton
+    description: Automated management for container and serverless deployment
+    color: ffa500
+  - name: AWS Serverless Application Repository
+    description: Discover, Deploy, and Publish Serverless Applications
+    color: ffa500
+  - name: AWS Service Catalog
+    description: Create and Use Standardized Products
+    color: ffa500
+  - name: AWS Snow Family
+    description:
+      Physical devices to aggregate and process data in edge locations, then
+      transfer to AWS
+    color: ffa500
+  - name: AWS Step Functions
+    description: Coordinate Distributed Applications
+    color: ffa500
+  - name: AWS Systems Manager
+    description: Gain Operational Insights and Take Action
+    color: ffa500
+  - name: AWS Tools and SDKs
+    description: Tools and SDKs for AWS
+    color: ffa500
+  - name: AWS Trusted Advisor
+    description: Optimize Performance and Security
+    color: ffa500
+  - name: AWS Wavelength
+    description: Deliver ultra-low latency applications for 5G devices
+    color: ffa500
+  - name: AWS Well-Architected Tool
+    description: Review and improve your workloads
+    color: ffa500
+  - name: AWS X-Ray
+    description: Analyze and debug your applications
+    color: ffa500
+  - name: Bug
+    description: Something isn't working
+    color: d73a4a
+  - name: C
+    description: languages C
+    color: "555555"
+  - name: C++
+    description: languages C++
+    color: f34b7d
+  - name: CSS
+    description: languages CSS
+    color: 563d7c
+  - name: CSV
+    description: languages CSV
+    color: "237346"
+  - name: Dart
+    description: languages Dart
+    color: 00B4AB
+  - name: Documentation
+    description: Improvements or additions to documentation
+    color: 0075ca
+  - name: Duplicate
+    description: This issue or pull request already exists
+    color: cfd3d7
+  - name: E
+    description: languages E
+    color: ccce35
+  - name: EJS
+    description: languages EJS
+    color: a91e50
+  - name: Elixir
+    description: languages Elixir
+    color: 6e4a7e
+  - name: Elm
+    description: languages Elm
+    color: 60B5CC
+  - name: Emacs Lisp
+    description: languages Emacs Lisp
+    color: c065db
+  - name: Enhancement
+    description: New feature or request
+    color: a2eeef
+  - name: Erlang
+    description: languages Erlang
+    color: B83998
+  - name: F
+    description: languages F
+    color: b845fc
+  - name: fish
+    description: languages fish
+    color: 4aae47
+  - name: FLUX
+    description: languages FLUX
+    color: 88ccff
+  - name: Fortran
+    description: languages Fortran
+    color: 4d41b1
+  - name: FreeRTOS
+    description: Real-time operating system for microcontrollers
+    color: ffa500
+  - name: GAP
+    description: languages GAP
+    color: 0000cc
+  - name: GitHub Actions
+    description: GitHub Actions
+    color: "000000"
+  - name: GLSL
+    description: languages GLSL
+    color: 5686a5
+  - name: Go
+    description: languages Go
+    color: 00ADD8
+  - name: GraphQL
+    description: languages GraphQL
+    color: e10098
+  - name: Groovy
+    description: languages Groovy
+    color: 4298b8
+  - name: Haskell
+    description: languages Haskell
+    color: 5e5086
+  - name: HCL
+    description: languages HCL
+    color: "808080"
+  - name: Help wanted
+    description: Extra attention is needed
+    color: "008672"
+  - name: HTML
+    description: languages HTML
+    color: e34c26
+  - name: Invalid
+    description: This doesn't seem right
+    color: e4e669
+  - name: Java
+    description: languages Java
+    color: b07219
+  - name: JavaScript
+    description: languages JavaScript
+    color: f1e05a
+  - name: jq
+    description: languages jq
+    color: c7254e
+  - name: JSON
+    description: languages JSON
+    color: "292929"
+  - name: Julia
+    description: languages Julia
+    color: a270ba
+  - name: Jupyter Notebook
+    description: languages Jupyter Notebook
+    color: DA5B0B
+  - name: Kotlin
+    description: languages Kotlin
+    color: A97BFF
+  - name: Less
+    description: languages Less
+    color: 1d365d
+  - name: Liquid
+    description: languages Liquid
+    color: 67b8de
+  - name: Lua
+    description: languages Lua
+    color: "000080"
+  - name: Makefile
+    description: languages Makefile
+    color: "427819"
+  - name: Markdown
+    description: languages Markdown
+    color: 083fa1
+  - name: MoonScript
+    description: languages MoonScript
+    color: ff4585
+  - name: Nginx
+    description: languages Nginx
+    color: "009639"
+  - name: Nim
+    description: languages Nim
+    color: ffc200
+  - name: Nix
+    description: languages Nix
+    color: 7e7eff
+  - name: Perl
+    description: languages Perl
+    color: 0298c3
+  - name: PHP
+    description: languages PHP
+    color: 4F5D95
+  - name: PostScript
+    description: languages PostScript
+    color: da291c
+  - name: Processing
+    description: languages Processing
+    color: 0096D8
+  - name: Puppet
+    description: languages Puppet
+    color: 302B6D
+  - name: Python
+    description: languages Python
+    color: 3572A5
+  - name: PyTorch on AWS
+    description: Flexible open-source machine learning framework
+    color: ffa500
+  - name: Question
+    description: Further information is requested
+    color: d876e3
+  - name: R
+    description: languages R
+    color: 198CE7
+  - name: Raku
+    description: languages Raku
+    color: 0000fb
+  - name: Red Hat OpenShift Service on AWS
+    description: Managed Red Hat OpenShift clusters
+    color: ffa500
+  - name: Reserved Instance Reporting
+    description: Dive Deeper into Your Reserved Instances (RIs)
+    color: ffa500
+  - name: Roff
+    description: languages Roff
+    color: ecdebe
+  - name: Ruby
+    description: languages Ruby
+    color: "701516"
+  - name: Rust
+    description: languages Rust
+    color: dea584
+  - name: Sass
+    description: languages Sass
+    color: a53b70
+  - name: Savings Plans
+    description: Save up to 72% on compute usage with flexible pricing
+    color: ffa500
+  - name: Scala
+    description: languages Scala
+    color: c22d40
+  - name: SCSS
+    description: languages SCSS
+    color: c6538c
+  - name: sed
+    description: languages sed
+    color: 64b970
+  - name: Shell
+    description: languages Shell
+    color: "89e051"
+  - name: Slim
+    description: languages Slim
+    color: 2b2b2b
+  - name: Solidity
+    description: languages Solidity
+    color: AA6746
+  - name: SQL
+    description: languages SQL
+    color: e38c00
+  - name: Svelte
+    description: languages Svelte
+    color: ff3e00
+  - name: Swift
+    description: languages Swift
+    color: F05138
+  - name: TensorFlow on AWS
+    description: Open-source Machine Intelligence Library
+    color: ffa500
+  - name: Terraform
+    description: languages terraform
+    color: "5319E7"
+  - name: TeX
+    description: languages TeX
+    color: 3D6117
+  - name: TOML
+    description: languages TOML
+    color: 9c4221
+  - name: TSX
+    description: languages TSX
+    color: 2b7489
+  - name: TypeScript
+    description: languages TypeScript
+    color: 2b7489
+  - name: V
+    description: languages V
+    color: 4f87c4
+  - name: Vim Script
+    description: languages Vim Script
+    color: 199f4b
+  - name: Vim Snippet
+    description: languages Vim Snippet
+    color: 199f4b
+  - name: VMware Cloud on AWS
+    description: Build a Hybrid Cloud without Custom Hardware
+    color: ffa500
+  - name: Volt
+    description: languages Volt
+    color: 1F1F1F
+  - name: Vue
+    description: languages Vue
+    color: 41b883
+  - name: WebAssembly
+    description: languages WebAssembly
+    color: 04133b
+  - name: XML
+    description: languages XML
+    color: 0060ac
+  - name: Zig
+    description: languages Zig
+    color: ec915c
 repos:
-- name: kis9a/kis9a
-  labels:
-  - Alexa for Business
-  - Amazon API Gateway
-  - Amazon AppFlow
-  - Amazon AppStream 2.0
-  - Amazon Athena
-  - Amazon Augmented AI
-  - Amazon Aurora
-  - Amazon Aurora Serverless v2 (Preview)
-  - Amazon Chime
-  - Amazon CloudSearch
-  - Amazon CloudWatch
-  - Amazon CodeGuru
-  - Amazon Comprehend
-  - Amazon Connect
-  - Amazon Corretto
-  - Amazon DevOps Guru
-  - Amazon DocumentDB (with MongoDB compatibility)
-  - Amazon DynamoDB
-  - Amazon EC2
-  - Amazon EC2 Auto Scaling
-  - Amazon ECS Anywhere
-  - Amazon EKS Anywhere
-  - Amazon EKS Distro
-  - Amazon Elastic Container Registry
-  - Amazon Elastic Container Service (ECS)
-  - Amazon Elastic Inference
-  - Amazon Elastic Kubernetes Service (EKS)
-  - Amazon Elastic Transcoder
-  - Amazon ElastiCache
-  - Amazon Elasticsearch Service
-  - Amazon EMR
-  - Amazon EventBridge
-  - Amazon FinSpace
-  - Amazon Forecast
-  - Amazon Fraud Detector
-  - Amazon GameLift
-  - Amazon Healthlake
-  - Amazon Honeycode (Beta)
-  - Amazon Interactive Video Service
-  - Amazon Kendra
-  - Amazon Keyspaces (for Apache Cassandra)
-  - Amazon Kinesis
-  - Amazon Kinesis Video Streams
-  - Amazon Lex
-  - Amazon Lightsail
-  - Amazon Location Service (Preview)
-  - Amazon Lookout for Equipment
-  - Amazon Lookout for Metrics
-  - Amazon Lookout for Vision
-  - Amazon Lumberyard
-  - Amazon Managed Blockchain
-  - Amazon Managed Service for Grafana
-  - Amazon Managed Service for Prometheus
-  - Amazon Managed Streaming for Apache Kafka
-  - Amazon Managed Workflows for Apache Airflow
-  - Amazon MemoryDB for Redis
-  - Amazon Monitron
-  - Amazon MQ
-  - Amazon Neptune
-  - Amazon Nimble Studio
-  - Amazon Personalize
-  - Amazon Pinpoint
-  - Amazon Polly
-  - Amazon Quantum Ledger Database (QLDB)
-  - Amazon QuickSight
-  - Amazon RDS
-  - Amazon RDS on VMware
-  - Amazon Redshift
-  - Amazon Rekognition
-  - Amazon SageMaker
-  - Amazon SageMaker Data Wrangler
-  - Amazon SageMaker Ground Truth
-  - Amazon Simple Email Service (SES)
-  - Amazon Simple Notification Service (SNS)
-  - Amazon Simple Queue Service (SQS)
-  - Amazon Textract
-  - Amazon Timestream
-  - Amazon Transcribe
-  - Amazon Translate
-  - Amazon WorkDocs
-  - Amazon WorkLink
-  - Amazon WorkMail
-  - Amazon WorkSpaces
-  - Apache MXNet on AWS
-  - AsciiDoc
-  - Awk
-  - AWS
-  - AWS Amplify
-  - AWS App Runner
-  - AWS App2Container
-  - AWS Application Discovery Service
-  - AWS AppSync
-  - AWS Auto Scaling
-  - AWS Batch
-  - AWS Budgets
-  - AWS Chatbot
-  - AWS Cloud Development Kit (CDK)
-  - AWS Cloud9
-  - AWS CloudFormation
-  - AWS CloudShell
-  - AWS CloudTrail
-  - AWS CodeArtifact
-  - AWS CodeBuild
-  - AWS CodeCommit
-  - AWS CodeDeploy
-  - AWS CodePipeline
-  - AWS CodeStar
-  - AWS Command Line Interface
-  - AWS Compute Optimizer
-  - AWS Config
-  - AWS Console Mobile Application
-  - AWS Control Tower
-  - AWS Copilot
-  - AWS Cost and Usage Report
-  - AWS Cost Explorer
-  - AWS Data Exchange
-  - AWS Data Pipeline
-  - AWS Database Migration Service
-  - AWS Deep Learning AMIs
-  - AWS Deep Learning Containers
-  - AWS DeepComposer
-  - AWS DeepLens
-  - AWS DeepRacer
-  - AWS Device Farm
-  - AWS Distro for OpenTelemetry (Preview)
-  - AWS Elastic Beanstalk
-  - AWS Elemental Appliances & Software
-  - AWS Elemental MediaConnect
-  - AWS Elemental MediaConvert
-  - AWS Elemental MediaLive
-  - AWS Elemental MediaPackage
-  - AWS Elemental MediaStore
-  - AWS Elemental MediaTailor
-  - AWS Fargate
-  - AWS Fault Injection Simulator
-  - AWS Glue
-  - AWS Greengrass
-  - AWS Inferentia
-  - AWS IoT 1-Click
-  - AWS IoT Analytics
-  - AWS IoT Button
-  - AWS IoT Core
-  - AWS IoT Device Defender
-  - AWS IoT Device Management
-  - AWS IoT Events
-  - AWS IoT SiteWise
-  - AWS IoT Things Graph
-  - AWS Lake Formation
-  - AWS Lambda
-  - AWS Launch Wizard
-  - AWS License Manager
-  - AWS Managed Services
-  - AWS Management Console
-  - AWS Migration Hub
-  - AWS OpsWorks
-  - AWS Organizations
-  - AWS Outposts
-  - AWS Panorama (Preview)
-  - AWS Partner Device Catalog
-  - AWS Personal Health Dashboard
-  - AWS Proton
-  - AWS Serverless Application Repository
-  - AWS Service Catalog
-  - AWS Snow Family
-  - AWS Step Functions
-  - AWS Systems Manager
-  - AWS Tools and SDKs
-  - AWS Trusted Advisor
-  - AWS Wavelength
-  - AWS Well-Architected Tool
-  - AWS X-Ray
-  - Bug
-  - C
-  - C++
-  - CSS
-  - CSV
-  - Dart
-  - Documentation
-  - Duplicate
-  - E
-  - EJS
-  - Elixir
-  - Elm
-  - Emacs Lisp
-  - Enhancement
-  - Erlang
-  - F
-  - fish
-  - FLUX
-  - Fortran
-  - FreeRTOS
-  - GAP
-  - GitHub Actions
-  - GLSL
-  - Go
-  - GraphQL
-  - Groovy
-  - Haskell
-  - HCL
-  - Help wanted
-  - HTML
-  - Invalid
-  - Java
-  - JavaScript
-  - jq
-  - JSON
-  - Julia
-  - Jupyter Notebook
-  - Kotlin
-  - Less
-  - Liquid
-  - Lua
-  - Makefile
-  - Markdown
-  - MoonScript
-  - Nginx
-  - Nim
-  - Nix
-  - Perl
-  - PHP
-  - PostScript
-  - Processing
-  - Puppet
-  - Python
-  - PyTorch on AWS
-  - Question
-  - R
-  - Raku
-  - Red Hat OpenShift Service on AWS
-  - Reserved Instance Reporting
-  - Roff
-  - Ruby
-  - Rust
-  - Sass
-  - Savings Plans
-  - Scala
-  - SCSS
-  - sed
-  - Shell
-  - Slim
-  - Solidity
-  - SQL
-  - Svelte
-  - Swift
-  - TensorFlow on AWS
-  - Terraform
-  - TeX
-  - TOML
-  - TSX
-  - TypeScript
-  - V
-  - Vim Script
-  - Vim Snippet
-  - VMware Cloud on AWS
-  - Volt
-  - Vue
-  - WebAssembly
-  - XML
-  - Zig
+  - name: kis9a/kis9a
+    labels:
+      - Fixes
+      - Support
+      - Incident
+      - PostgreSQL
+      - MySQL
+      - Operation
+      - Monitoring
+      - Tips
+      - Amazon KMS
+      - Amazon CloudFront
+      - Amazon Route 53
+      - AWS App Mesh
+      - AWS Secrets Manager
+      - AWS Security Hub
+      - AWS WAF
+      - AWS Backup
+      - Amazon VPC
+      - Amazon Certificate Manager
+      - Amazon Cognito
+      - Alexa for Business
+      - Amazon API Gateway
+      - Amazon AppFlow
+      - Amazon AppStream 2.0
+      - Amazon Athena
+      - Amazon Augmented AI
+      - Amazon Aurora
+      - Amazon Aurora Serverless v2 (Preview)
+      - Amazon Chime
+      - Amazon CloudSearch
+      - Amazon CloudWatch
+      - Amazon CodeGuru
+      - Amazon Comprehend
+      - Amazon Connect
+      - Amazon Corretto
+      - Amazon DevOps Guru
+      - Amazon DocumentDB (with MongoDB compatibility)
+      - Amazon DynamoDB
+      - Amazon EC2
+      - Amazon EC2 Auto Scaling
+      - Amazon ECS Anywhere
+      - Amazon EKS Anywhere
+      - Amazon EKS Distro
+      - Amazon Elastic Container Registry
+      - Amazon Elastic Container Service (ECS)
+      - Amazon Elastic Inference
+      - Amazon Elastic Kubernetes Service (EKS)
+      - Amazon Elastic Transcoder
+      - Amazon ElastiCache
+      - Amazon Elasticsearch Service
+      - Amazon EMR
+      - Amazon EventBridge
+      - Amazon FinSpace
+      - Amazon Forecast
+      - Amazon Fraud Detector
+      - Amazon GameLift
+      - Amazon Healthlake
+      - Amazon Honeycode (Beta)
+      - Amazon Interactive Video Service
+      - Amazon Kendra
+      - Amazon Keyspaces (for Apache Cassandra)
+      - Amazon Kinesis
+      - Amazon Kinesis Video Streams
+      - Amazon Lex
+      - Amazon Lightsail
+      - Amazon Location Service (Preview)
+      - Amazon Lookout for Equipment
+      - Amazon Lookout for Metrics
+      - Amazon Lookout for Vision
+      - Amazon Lumberyard
+      - Amazon Managed Blockchain
+      - Amazon Managed Service for Grafana
+      - Amazon Managed Service for Prometheus
+      - Amazon Managed Streaming for Apache Kafka
+      - Amazon Managed Workflows for Apache Airflow
+      - Amazon MemoryDB for Redis
+      - Amazon Monitron
+      - Amazon MQ
+      - Amazon Neptune
+      - Amazon Nimble Studio
+      - Amazon Personalize
+      - Amazon Pinpoint
+      - Amazon Polly
+      - Amazon Quantum Ledger Database (QLDB)
+      - Amazon QuickSight
+      - Amazon RDS
+      - Amazon RDS on VMware
+      - Amazon Redshift
+      - Amazon Rekognition
+      - Amazon SageMaker
+      - Amazon SageMaker Data Wrangler
+      - Amazon SageMaker Ground Truth
+      - Amazon Simple Email Service (SES)
+      - Amazon Simple Notification Service (SNS)
+      - Amazon Simple Queue Service (SQS)
+      - Amazon Textract
+      - Amazon Timestream
+      - Amazon Transcribe
+      - Amazon Translate
+      - Amazon WorkDocs
+      - Amazon WorkLink
+      - Amazon WorkMail
+      - Amazon WorkSpaces
+      - Apache MXNet on AWS
+      - AsciiDoc
+      - Awk
+      - AWS
+      - AWS Amplify
+      - AWS App Runner
+      - AWS App2Container
+      - AWS Application Discovery Service
+      - AWS AppSync
+      - AWS Auto Scaling
+      - AWS Batch
+      - AWS Budgets
+      - AWS Chatbot
+      - AWS Cloud Development Kit (CDK)
+      - AWS Cloud9
+      - AWS CloudFormation
+      - AWS CloudShell
+      - AWS CloudTrail
+      - AWS CodeArtifact
+      - AWS CodeBuild
+      - AWS CodeCommit
+      - AWS CodeDeploy
+      - AWS CodePipeline
+      - AWS CodeStar
+      - AWS Command Line Interface
+      - AWS Compute Optimizer
+      - AWS Config
+      - AWS Console Mobile Application
+      - AWS Control Tower
+      - AWS Copilot
+      - AWS Cost and Usage Report
+      - AWS Cost Explorer
+      - AWS Data Exchange
+      - AWS Data Pipeline
+      - AWS Database Migration Service
+      - AWS Deep Learning AMIs
+      - AWS Deep Learning Containers
+      - AWS DeepComposer
+      - AWS DeepLens
+      - AWS DeepRacer
+      - AWS Device Farm
+      - AWS Distro for OpenTelemetry (Preview)
+      - AWS Elastic Beanstalk
+      - AWS Elemental Appliances & Software
+      - AWS Elemental MediaConnect
+      - AWS Elemental MediaConvert
+      - AWS Elemental MediaLive
+      - AWS Elemental MediaPackage
+      - AWS Elemental MediaStore
+      - AWS Elemental MediaTailor
+      - AWS Fargate
+      - AWS Fault Injection Simulator
+      - AWS Glue
+      - AWS Greengrass
+      - AWS Inferentia
+      - AWS IoT 1-Click
+      - AWS IoT Analytics
+      - AWS IoT Button
+      - AWS IoT Core
+      - AWS IoT Device Defender
+      - AWS IoT Device Management
+      - AWS IoT Events
+      - AWS IoT SiteWise
+      - AWS IoT Things Graph
+      - AWS Lake Formation
+      - AWS Lambda
+      - AWS Launch Wizard
+      - AWS License Manager
+      - AWS Managed Services
+      - AWS Management Console
+      - AWS Migration Hub
+      - AWS OpsWorks
+      - AWS Organizations
+      - AWS Outposts
+      - AWS Panorama (Preview)
+      - AWS Partner Device Catalog
+      - AWS Personal Health Dashboard
+      - AWS Proton
+      - AWS Serverless Application Repository
+      - AWS Service Catalog
+      - AWS Snow Family
+      - AWS Step Functions
+      - AWS Systems Manager
+      - AWS Tools and SDKs
+      - AWS Trusted Advisor
+      - AWS Wavelength
+      - AWS Well-Architected Tool
+      - AWS X-Ray
+      - Bug
+      - C
+      - C++
+      - CSS
+      - CSV
+      - Dart
+      - Documentation
+      - Duplicate
+      - E
+      - EJS
+      - Elixir
+      - Elm
+      - Emacs Lisp
+      - Enhancement
+      - Erlang
+      - F
+      - fish
+      - FLUX
+      - Fortran
+      - FreeRTOS
+      - GAP
+      - GitHub Actions
+      - GLSL
+      - Go
+      - GraphQL
+      - Groovy
+      - Haskell
+      - HCL
+      - Help wanted
+      - HTML
+      - Invalid
+      - Java
+      - JavaScript
+      - jq
+      - JSON
+      - Julia
+      - Jupyter Notebook
+      - Kotlin
+      - Less
+      - Liquid
+      - Lua
+      - Makefile
+      - Markdown
+      - MoonScript
+      - Nginx
+      - Nim
+      - Nix
+      - Perl
+      - PHP
+      - PostScript
+      - Processing
+      - Puppet
+      - Python
+      - PyTorch on AWS
+      - Question
+      - R
+      - Raku
+      - Red Hat OpenShift Service on AWS
+      - Reserved Instance Reporting
+      - Roff
+      - Ruby
+      - Rust
+      - Sass
+      - Savings Plans
+      - Scala
+      - SCSS
+      - sed
+      - Shell
+      - Slim
+      - Solidity
+      - SQL
+      - Svelte
+      - Swift
+      - TensorFlow on AWS
+      - Terraform
+      - TeX
+      - TOML
+      - TSX
+      - TypeScript
+      - V
+      - Vim Script
+      - Vim Snippet
+      - VMware Cloud on AWS
+      - Volt
+      - Vue
+      - WebAssembly
+      - XML
+      - Zig
