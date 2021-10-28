@@ -1,3 +1,6 @@
+html
+
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,3 +58,5 @@
     <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
   </body>
 </html>
+
+```
