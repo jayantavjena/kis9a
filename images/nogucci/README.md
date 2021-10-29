@@ -1,1 +1,1 @@
-![nogucci](./nogucci.mp4)
+![nogucci](./nogucci.gif)
