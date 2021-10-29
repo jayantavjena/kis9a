@@ -1,3 +1,5 @@
+[GitHub - zencoder/go-dash: A Go library for generating MPEG-DASH manifests.](https://github.com/zencoder/go-dash)
+
 # !!!THIS PROJECT IS NOT MAINTAINED ANYMORE!!!
 
 You can use https://github.com/alioygur/is package instead of this. 

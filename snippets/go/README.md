@@ -18,3 +18,6 @@ let g:coc_global_extensions = [
       \, ]
 
 ```
+
+[GitHub - Alikhll/golang-developer-roadmap: Roadmap to becoming a Go developer in 2020](https://github.com/Alikhll/golang-developer-roadmap)
+<https://raw.githubusercontent.com/Alikhll/golang-developer-roadmap/master/golang-developer-roadmap.png>
