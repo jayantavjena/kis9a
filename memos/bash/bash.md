@@ -256,3 +256,5 @@ string comparison
 | `128+n`   | シグナル `n` で致命的なエラー                               | `$ kill -9 $PPID`       | 例では， `$?` は 137（128 + 9）を返す                  |
 | `130`     | スクリプトが Ctrl+C で終了                                  | Ctrl+C                  | Ctrl+C はシグナル 2 で終了する = 128 + 2 = 130（上記） |
 | `255`     | 範囲外の exit status                                        | `$ exit -1`             | `exit`                                                 |
+
+"${base%/}/${rel}"
