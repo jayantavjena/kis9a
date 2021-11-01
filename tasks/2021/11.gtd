@@ -39,15 +39,29 @@ o dynamodb のローカル環境の構築とデプロイまでのフロー。
 
 *//*}}}*/
 
+
+2021-11-02
+
+o slack のトークン取得方法。Webhook/ slack-bot 関連のリサーチ
+o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
+o cloudwatch-alerm -> lambda の実行テストを実践。
+o manage cost tags for billing.
+o fix aws-services script.
+o remove aws-services script action.
+
 2021-11-01
 
-o lambda context 値の確認。
-o slack のトークン取得方法。Webhook/ slack-bot 関連のリサーチ
-o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた | DevelopersIO](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
-o cloudwatch-alerm -> lambda の実行テストを実践。
-o https://github.com/kis9a/aws-cost-line-notify のアーキティクチャ変更に関しての記事の更新。
-o transfer aws cost at october.
-o manage cost tags for billing.
+x transfer aws cost at october.
+x try to fix invalid content-type when upload image.
+x read [クレデンシャルの適切な扱い方 ー AWS SDK for Goの場合 | DevelopersIO](https://dev.classmethod.jp/articles/using-credential-at-aws-sdk-for-go/)
+x fix InvalidAccessKeyId error. -> documented.
+x schdule not woking fix re apply and setup kms.
+x https://github.com/kis9a/aws-cost-line-notify のアーキティクチャ変更に関しての記事の更新。
+x try lambda-upload allow all resource remove under /*{{{*/
+# resources = [
+#   "${aws_s3_bucket.this.arn}"
+# ]
+#}}}
 x kms line token/*{{{*/
 ```
 ecoh $AWS_COST_LINE_NOTIFY_TOKEN > secret.txt
