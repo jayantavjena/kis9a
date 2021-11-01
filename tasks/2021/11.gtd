@@ -1,6 +1,6 @@
 2021-11
 
-/* MEMO
+/* MEMO{{{
 x Goの基礎とアルゴリズム的な課題解決。 -> 標準パッケージのコードリーディング  -> zenn scraps
 間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
 業務知識ま割りの補強,調べる。block-chain ことはじめ。 -> 詳解 block-chain を読む。
@@ -14,20 +14,15 @@ IaC周りの理解の強化。特にterraform のスニペットを増やした�
 https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
 経費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
 [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
-*/
-
-/*
+[APIを利用したPLTの取引について &#8211; Coincheck blog](https://coincheck.blog/12771)
+amazon magic mouse 買う
 C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
 Rust の機能の把握, Webサーバー開発での応用とか見てみる。
 get: iPad air, pen, cover, shouse, hair cut 10 man-yen
-
 クレジットカード·簿記に関して学ぶ。
 15 以降に予定を設定する。
 会食: 後半 10h
 マインドセット再 目標設定
-*/
-
-o amazon magic mouse 買う
 o AMB init with terraform
 o code reading https://github.com/crisadamo/gochain
 o code reading https://github.com/izqui/blockchain
@@ -35,13 +30,39 @@ o set fargate scheduling. -> [AWS節約術 : 自動で任意の時間にFargate�
 o fargateのusecaseの整理.
 o (1) code-build, code-deploy, code-pipeline と GitHub の連携 関連の調査
 o terraform の運用方針を決める。
-o n-stg 環境の構築初期。変数の初期化。ディレクトリ構成。
 o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
 [Terraform で AWS Load Balancer Controller を宣言的にデプロイする](https://zenn.dev/yukin01/articles/6dd6542993ab166d51c2)
 [TerratestによるTerraformコードの単体テスト](https://zenn.dev/aquamarinearia/articles/terratest_testing_terrafom_code)
 o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
 o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
-o https://github.com/awslabs/aws-lambda-go-api-proxy のドキュメントを読み理解する。
 o dynamodb のローカル環境の構築とデプロイまでのフロー。
-o lambda で gin の proxy が動作しているかどうかの確認。
 
+*//*}}}*/
+
+2021-11-01
+
+o lambda context 値の確認。
+o slack のトークン取得方法。Webhook/ slack-bot 関連のリサーチ
+o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた | DevelopersIO](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
+o cloudwatch-alerm -> lambda の実行テストを実践。
+o https://github.com/kis9a/aws-cost-line-notify のアーキティクチャ変更に関しての記事の更新。
+o transfer aws cost at october.
+o manage cost tags for billing.
+x kms line token/*{{{*/
+```
+ecoh $AWS_COST_LINE_NOTIFY_TOKEN > secret.txt
+## $keyId known after terraform apply.
+id=$(aws kms generate-data-key --key-id $keyId --key-spec AES_256 --output json | jq .KeyId)
+aws kms encrypt --key-id $id --plaintext fileb://secret.txt --query CiphertextBlob --output text > lambda-upload.yaml.encrypted
+```/*}}}*/
+x add environment block for lambda function/*{{{*/
+environment {
+  variables = {
+/*}}}*/
+/* fix lambda iam role{{{
+downloader := s3manager.NewDownloader(sess)
+n, err := downloader.Download(f, &s3.GetObjectInput{
+  Bucket: aws.String(bucketName),
+  Key:    aws.String(objectKey),
+})
+/*}}}*/
