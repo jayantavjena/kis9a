@@ -62,6 +62,11 @@ o read cloudwatch alarm resources.
 o initialize cloudwatch alarm test resource.
 o aws cloudwatch set-alarm-state --alarm-name $ --state-value $ --state-reason "test"
 o [GolangでSlack Interactive Messageを使ったBotを書く](https://engineering.mercari.com/blog/entry/2017-05-23-095500/)
+x init me/cv_22_01.md
+~ init me/cv_22_08.md
+x kms encrypt / new bastion / s3 bucket rename ...
+x migrate terraform resource another account.
+x multi account operation.
 x destroy lambda-upload resource
 x あの日たてたリソースの名前も用途も管理者も金額も後色々、僕たちはまだ知らない
 x archive  post about frontend learning cost reduce.
