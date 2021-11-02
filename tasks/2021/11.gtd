@@ -39,21 +39,48 @@ o dynamodb のローカル環境の構築とデプロイまでのフロー。
 
 *//*}}}*/
 
+
+o 1 password の導入/*{{{*/
+  o research and examination.
+  o application subscriptions -> Apoleストアでは月会費450円もしくは年会費3,900円
+  o connect google account
+  o chrome extensions.
+/*}}}*/
 o project management
+o datadog の個人での導入
+o bigqury の個人での導入
 
 2021-11-02
 
-o codeing interview https://github.com/juuuuuun-dev/coding-interview
-o how to cloudwatch alarm test.
-o release validation for upload filetype.
-o slack のトークン取得方法。Webhook/ slack-bot 関連のリサーチ
 o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
 o cloudwatch-alerm -> lambda の実行テストを実践。
-o manage cost tags for billing.
 o (1) lambda のローカル実行方法の調べ。
 o 目的を決める。-> 自己分析期間とメトリクス、監視方法に関して考える。
-o 月次勤怠締め申請に関しての情報を仕入れる
-o 
+o "github.com/slack-go/slack" を使用してみる。[slack-go Slack にメッセージを投稿](https://zenn.dev/kou_pg_0131/articles/go-slack-go-usage)
+o password check [How Secure Is My Password?](https://howsecureismypassword.net/)
+o read cloudwatch alarm resources.
+o initialize cloudwatch alarm test resource.
+o aws cloudwatch set-alarm-state --alarm-name $ --state-value $ --state-reason "test"
+o [GolangでSlack Interactive Messageを使ったBotを書く](https://engineering.mercari.com/blog/entry/2017-05-23-095500/)
+x destroy lambda-upload resource
+x あの日たてたリソースの名前も用途も管理者も金額も後色々、僕たちはまだ知らない
+x archive  post about frontend learning cost reduce.
+x cloudtrailのIaC, clean up iam role, post.
+~ aws [AWS CLF、SAA、SOA、DVA4冠までの道のり](https://zenn.dev/mn87/articles/0b8b6d8bf49249) -> 体系化は後でいい
+~ terraform から cloudformation resource で chatbot を管理する。 -> 学習コスト。
+x Removed the title of blockchain engineer. -> customer-tailored service orientation engineer
+x 請求アラートのIaC -> [CloudWatchで請求アラームを作成する](https://zenn.dev/mn87/articles/ec5a57228c491c) -> don't use mail
+~ 請求書アラートのIaC -> [請求アラームをAWS ChatbotでSlackに通知してみた](https://zenn.dev/mn87/articles/17901f9a88b706) -> no support tf aws chatbot
+x slack のトークン取得方法。Webhook/ slack-bot 関連のリサーチ
+x lambda triger の設定 / example s3 put object.
+x make private 
+x release validation for upload filetype at javascript.
+~ manage cost tags for billing. -> sep account.
+x memo coding-interview algorithm
+x clean up relation for company. buyout, subsidiary.
+x 月次勤怠締め申請は必要か？
+x cloudtrail log の調査
+x archive task files.
 x read [リモートワークを支える 社内セキュリティ基盤の構築と運用](https://speakerdeck.com/mizutani/secueiry-for-wfh?slide=29)
 x read [AWS S3を中心としたセキュリティログ基盤の紹介をしました](https://techlife.cookpad.com/entry/aws-tma-2019)
 ~ 24365
