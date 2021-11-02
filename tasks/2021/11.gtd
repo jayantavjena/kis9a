@@ -39,15 +39,27 @@ o dynamodb のローカル環境の構築とデプロイまでのフロー。
 
 *//*}}}*/
 
+o project management
 
 2021-11-02
 
+o codeing interview https://github.com/juuuuuun-dev/coding-interview
+o how to cloudwatch alarm test.
+o release validation for upload filetype.
 o slack のトークン取得方法。Webhook/ slack-bot 関連のリサーチ
 o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
 o cloudwatch-alerm -> lambda の実行テストを実践。
 o manage cost tags for billing.
-o fix aws-services script.
-o remove aws-services script action.
+o (1) lambda のローカル実行方法の調べ。
+o 目的を決める。-> 自己分析期間とメトリクス、監視方法に関して考える。
+o 月次勤怠締め申請に関しての情報を仕入れる
+o 
+x read [リモートワークを支える 社内セキュリティ基盤の構築と運用](https://speakerdeck.com/mizutani/secueiry-for-wfh?slide=29)
+x read [AWS S3を中心としたセキュリティログ基盤の紹介をしました](https://techlife.cookpad.com/entry/aws-tma-2019)
+~ 24365
+~ mv dotfiles ~/kis9a/dotfiles
+x fix aws-services script.
+~ remove aws-services script action.
 
 2021-11-01
 
