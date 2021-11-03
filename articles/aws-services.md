@@ -1,6 +1,6 @@
 ---
-title: "AWSサービス一覧（2021/10/25更新)"
-slug: "aws-services-2021/10/25"
+title: "AWSサービス一覧（2021/11/01更新)"
+slug: "aws-services-2021/11/01"
 emoji: "📆"
 type: "tech"
 topics: ["aws", "githubactions"]
