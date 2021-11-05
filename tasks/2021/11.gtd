@@ -73,21 +73,45 @@ o https://qiita.com/kooohei/items/e9f8692b9ebe90b6a9df
 o https://menslog.net/2021/02/02/kimetunoyaiba-back-settings/
 o terraform modulelize
 o https://maku77.github.io/vim/basic/search.html
+o read cloudwatch alarm resources.
+o initialize cloudwatch alarm test resource.
+o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
+o aws cloudwatch set-alarm-state --alarm-name $ --state-value $ --state-reason "test"
+o cloudwatch-alerm -> lambda の実行テストを実践。
+o fzf に関しての調べ in slack vim-jp.
+o [GitHub - anyakichi/lambda-rust-api-sample](https://github.com/anyakichi/lambda-rust-api-sample)
+o how to create vim-snippets plugin.
+o vim-zenn-snippets <https://github.com/kis9a/vim-zenn>
+o script for development instance https://github.com/motojouya/ec2-develop/blob/master/init.sh
+o serverless GitHub API の hook の使用。
+o [Golang でコマンドライン Fuzzy Finder 「gof」作った。 - Qiita](https://qiita.com/mattn/items/edea1be5a6d84663ab8b) の実装
+o 個人のproject management とディレクトリ構成。
+o 構成図を書いて一度整理する。
+x スタートアップ 経由でのマネタイズ関連。
+x 株式会社 unkonow のリポジトリの作成。
+x 定量か指標の組み込み。
+x cd ~, pushd ~ > /dev/null
+x ec2 instance の開発環境での使用事例.
+x commented for youtube video about ipad blink shell.
+x read [TerraformでAWSのスポットインスタンスを作成する - Qiita](https://qiita.com/m-shimao/items/0832d67b6abdc22ba2f0)
+x read [AWS Spot Instance Guide: 7 Things You Should Know - ParkMyCloud](https://www.parkmycloud.com/blog/aws-spot-instance/)
+
+2021-11-03
+
+~ zenn-markdown snippets
+x init me/cv_22_01.md
+~ init me/cv_22_08.md
+x (1) lambda のローカル実行方法の調べ。
+x [GolangでSlack Interactive Messageを使ったBotを書く](https://engineering.mercari.com/blog/entry/2017-05-23-095500/)
+x 開発用インスタンスの作成 - nvim install.
+x how to manage ami.
+x [EC2をリモート開発環境にする時のTips](https://zenn.dev/suzuk1satosh1/articles/2b8e4fa4259e51)
+x 目的を決める。-> 自己分析期間とメトリクス、監視方法に関して考える。
 
 2021-11-02
 
-o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
-o cloudwatch-alerm -> lambda の実行テストを実践。
-o (1) lambda のローカル実行方法の調べ。
-o 目的を決める。-> 自己分析期間とメトリクス、監視方法に関して考える。
-o "github.com/slack-go/slack" を使用してみる。[slack-go Slack にメッセージを投稿](https://zenn.dev/kou_pg_0131/articles/go-slack-go-usage)
-o password check [How Secure Is My Password?](https://howsecureismypassword.net/)
-o read cloudwatch alarm resources.
-o initialize cloudwatch alarm test resource.
-o aws cloudwatch set-alarm-state --alarm-name $ --state-value $ --state-reason "test"
-o [GolangでSlack Interactive Messageを使ったBotを書く](https://engineering.mercari.com/blog/entry/2017-05-23-095500/)
-x init me/cv_22_01.md
-~ init me/cv_22_08.md
+x "github.com/slack-go/slack" を使用してみる。[slack-go Slack にメッセージを投稿](https://zenn.dev/kou_pg_0131/articles/go-slack-go-usage)
+x password check [How Secure Is My Password?](https://howsecureismypassword.net/)
 x kms encrypt / new bastion / s3 bucket rename ...
 x migrate terraform resource another account.
 x multi account operation.
