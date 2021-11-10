@@ -39,54 +39,124 @@ o dynamodb のローカル環境の構築とデプロイまでのフロー。
 
 *//*}}}*/
 
+2021-11-11
 
-o 1 password の導入/*{{{*/
-  o research and examination.
-  o application subscriptions -> Apoleストアでは月会費450円もしくは年会費3,900円
-  o connect google account
-  o chrome extensions.
+o 分割統治マスター定理の証明
+o 原産当時再帰マスター定理の証明
+o マイナンバー月の住民票を取りに行く。
+o 目的の明確化
+
+2021-11-10
+
+x kis9a/vim-snippets plugin の初期化
+x マイナンバーを見つける
+x 124 - 341 までに絞る。
+x サイコロゲーム ROCE に繋げたい。
+x 反復か再帰のどちらが適切か？
+x ハノイの塔 x A(n + 1) = 2An + 1, An = 2^n -1
+x 再帰に関しての定義整理
+x subscription to be recreated. に関してのスレッドを読む。
+~ google meet を録音して共通用語を抑える。
+x tesnet 用の ALB ドメインの設定
+x hustle or hassle
+o 再帰の概念: 階乗の例/*{{{*/
+n! に関して
+n! = 1 // if n = 0
+n! = n x (n-1) // if n >0
+func fact(init n) {
+if (n == 1) {
+return 1
+} else {
+return n*
+}
+return n*fact
+}
 /*}}}*/
-o project management
-o datadog の個人での導入
-o bigqury の個人での導入
+o 階乗の例の際のメモリの動き/*{{{*/
+if n == 4
+4!
+4 * 3!
+3 * 2!
+2 * 1!
+1
+/*}}}*/
+x why closed hyperway navigation issue?
+x check comment about hyperway.
 
-2021-11-07
-2021-11-06
-2021-11-05
+2021-11-09
+
+x Cライブラリのインストール方法。
+x 単純なポインター演算を初めて見る。
+x [Google Chromeで条件にマッチした履歴を削除](https://qiita.com/kaityo256/items/dd306110580100159041)
+x clang 実行環境の準備
+x clang 始める。zenn.dev.
+x [Docker for Macを使っていたらディスク容量を圧迫していたので](https://qiita.com/shinespark/items/526b70b5f0b1ac643ba0)
+x read [今日からできるプログラムの高速化(C/C++)](https://zenn.dev/irugo/articles/4bd113195228c3)
+x e の要件に関して理解する[2021-11-08
+x ssm parameter の設定
+x data 構造とアルゴリズム
+x dns setting for stag domain.
+x ssm praemter setting
+x 環境構築 C
+x format c: fd -ec | xargs -I {} bash -c "clang-format {} | tee {}"
+x shell parameter の整理
+x man hoo | col -b | nvim -
+x init clang snippets
+x find . -maxdepth 1 | grep -e Ch -e Ap | xargs -n 1 bash -c 'echo ${0: -2}'
+x [はじめに｜net／httpでつくるHTTPルーター 自作入門](https://zenn.dev/bmf_san/books/3f41c5cd34ec3f/viewer/dce8ca)
 
 2021-11-04
+2021-11-05
+2021-11-06
+2021-11-07
 
-o [GitHub Actions でも [skip ci] が使えるようになりました](https://zenn.dev/snowcait/articles/ef60401313a3fc)
-o findy のアカウント削除。
-o [Toreru](https://toreru.jp/)
-o [80万円／月～の案件一覧](https://freelance.levtech.jp/project/sala-6/)
-o [Blockchain学習メモ](https://zenn.dev/razokulover/scraps/b85e061d8c06fd)
-o [GitHub - MasakiMisawa/cwl-transfer-slack-sample](https://github.com/MasakiMisawa/cwl-transfer-slack-sample)
-o https://github.com/georgyo/ifconfig.io
-o [CloudWatch Events または Alarm で条件に一致したにも関わらず Amazon SNS トピックで通知が送信されないときの対処法 | DevelopersIO](https://dev.classmethod.jp/articles/tsnote-sns-topic-policy-encryption-cloudwatch-001/)
-o Lambda cloudwatch [Lambdaをどう管理する？ - 秋の魔法使い](https://radiochemical.hatenablog.com/entry/2020/08/30/180000)
-o t3.largeで環境構築やってみる。起動時間とコストの算出プログラム。
-o やっぱり Lambda より chatbot の方がいいかもな。 -> [CloudWatchのアラートをSlackへ通知する](https://zenn.dev/3104/articles/6bb3603feb64a0)
-o https://qiita.com/hayao_k/items/529539bbb07736ea0f41
-o [Web3.0のインターネット基盤になっていくEthereum](https://nobumei.substack.com/p/web30ethereum)
-o https://qiita.com/kooohei/items/e9f8692b9ebe90b6a9df
-o https://menslog.net/2021/02/02/kimetunoyaiba-back-settings/
-o terraform modulelize
-o https://maku77.github.io/vim/basic/search.html
-o read cloudwatch alarm resources.
-o initialize cloudwatch alarm test resource.
-o [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
-o aws cloudwatch set-alarm-state --alarm-name $ --state-value $ --state-reason "test"
-o cloudwatch-alerm -> lambda の実行テストを実践。
-o fzf に関しての調べ in slack vim-jp.
-o [GitHub - anyakichi/lambda-rust-api-sample](https://github.com/anyakichi/lambda-rust-api-sample)
-o how to create vim-snippets plugin.
-o vim-zenn-snippets <https://github.com/kis9a/vim-zenn>
-o script for development instance https://github.com/motojouya/ec2-develop/blob/master/init.sh
-o serverless GitHub API の hook の使用。
-o [Golang でコマンドライン Fuzzy Finder 「gof」作った。 - Qiita](https://qiita.com/mattn/items/edea1be5a6d84663ab8b) の実装
-o 個人のproject management とディレクトリ構成。
-o 構成図を書いて一度整理する。
+x 1 password の導入/*{{{*/
+  x research and examination.
+  x application subscriptions -> Apoleストアでは月会費450円もしくは年会費3,900円
+  x connect google account
+  x chrome extensions.
+/*}}}*/
+x clean up task lists.
+x https://github.com/higuruchi/sijimi
+x github api usage https://github.com/mattn/gh-star/blob/main/main.go
+x [GitHub Actions でも [skip ci] が使えるようになりました](https://zenn.dev/snowcait/articles/ef60401313a3fc)
+x findy のアカウント削除。
+x [Toreru](https://toreru.jp/)
+x [80万円／月～の案件一覧](https://freelance.levtech.jp/project/sala-6/)
+x [Blockchain学習メモ](https://zenn.dev/razokulover/scraps/b85e061d8c06fd)
+x [GitHub - MasakiMisawa/cwl-transfer-slack-sample](https://github.com/MasakiMisawa/cwl-transfer-slack-sample)
+x 初期化 pc1
+x セットアップ pc1
+x 初期化 pc2
+x buy clang data strcture and algorithm.
+x https://github.com/georgyo/ifconfig.io
+x [CloudWatch Events Amazon SNS トピックで通知が送信されないときの対処法](https://dev.classmethod.jp/articles/tsnote-sns-topic-policy-encryption-cloudwatch-001/)
+x Lambda cloudwatch [Lambdaをどう管理する？ - 秋の魔法使い](https://radiochemical.hatenablog.com/entry/2020/08/30/180000)
+x t3.largeで環境構築やってみる。起動時間とコストの算出プログラム。
+x やっぱり Lambda より chatbot の方がいいかもな。 -> [CloudWatchのアラートをSlackへ通知する](https://zenn.dev/3104/articles/6bb3603feb64a0)
+x https://qiita.com/hayao_k/items/529539bbb07736ea0f41
+x [Web3.0のインターネット基盤になっていくEthereum](https://nobumei.substack.com/p/web30ethereum)
+x https://qiita.com/kooohei/items/e9f8692b9ebe90b6a9df
+x project management -> PMBOOK
+x datadog の個人での導入
+x bigqury の個人での導入
+x https://menslog.net/2021/02/02/kimetunoyaiba-back-settings/
+x terraform modulelize
+x https://maku77.github.io/vim/basic/search.html
+x read cloudwatch alarm resources.
+x initialize cloudwatch alarm test resource.
+x [LambdaイベントソースのSNSからCloudWatch Alarm名を取得してみた](https://dev.classmethod.jp/articles/lambda-sns-cloudwatch-alarm/)
+x aws cloudwatch set-alarm-state --alarm-name $ --state-value $ --state-reason "test"
+x cloudwatch-alerm -> lambda の実行テストを実践。
+x fzf に関しての調べ in slack vim-jp.
+x [GitHub - anyakichi/lambda-rust-api-sample](https://github.com/anyakichi/lambda-rust-api-sample)
+x how to create vim-snippets plugin.
+x vim-zenn-snippets <https://github.com/kis9a/vim-zenn>
+x script for development instance https://github.com/motojouya/ec2-develop/blob/master/init.sh
+x serverless GitHub API の hook の使用。
+x [Golang でコマンドライン Fuzzy Finder 「gof」作った。 - Qiita](https://qiita.com/mattn/items/edea1be5a6d84663ab8b) の実装
+x 個人のproject management とディレクトリ構成。
+x 構成図を書いて一度整理する。
 x スタートアップ 経由でのマネタイズ関連。
 x 株式会社 unkonow のリポジトリの作成。
 x 定量か指標の組み込み。
