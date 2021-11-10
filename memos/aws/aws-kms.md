@@ -25,3 +25,6 @@ arn:aws:kms:ap-northeast-1:{aws-account}:alias/demo-alias
 export KEYID=$(aws kms list-aliases \
 --query 'Aliases[?AliasName==`alias/palette-explorer-prod`]' | jq -r '.[].AliasArn')
 
+```
+aws kms decrypt --ciphertext-blob fileb://<(cat explorer_secrets.yaml.encrypted | base64 -D) --key-id $key_id --output json --profile hashport-tf | jq .Plaintext --raw-output | base64 -D
+```

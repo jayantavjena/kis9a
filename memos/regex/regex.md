@@ -1,3 +1,4 @@
+- [正規表現の正規とは何か気になったら正規表現の歴史を紐解くことになってしまった話](https://zenn.dev/yucatio/articles/0b554e59db0158)
 - [基本的な正規表現一覧 | murashun.jp](https://murashun.jp/article/programming/regular-expression.html)
 
 | 正規表現の例 | 意味 | マッチする例 |
