@@ -3,7 +3,7 @@ name: terraform
 on:
   push:
     branches:
-      - main
+      - ig
     paths:
       - "infrastructure/terraform/*"
       - ".github/workflows/terraform.yml"
@@ -35,7 +35,7 @@ jobs:
         id: apply
         run: |
           terraform apply -auto-approve \
-          -var 'bucket_name=${{ secrets.S3_BUCKET_NAME }}' \
+          -var 'bucket_name=${{ secrets.IG_S3_BUCKET_NAME }}' \
           -var 'region'=${{ secrets.AWS_REGION }}
         continue-on-error: true
         working-directory: "./infrastructure/terraform"
