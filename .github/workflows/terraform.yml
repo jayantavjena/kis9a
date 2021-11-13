@@ -3,7 +3,7 @@ name: terraform
 on:
   push:
     branches:
-      - main
+      - ig
     paths:
       - "infrastructure/terraform/*"
       - ".github/workflows/terraform.yml"
