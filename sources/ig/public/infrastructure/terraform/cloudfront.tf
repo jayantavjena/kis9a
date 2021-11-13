@@ -1,38 +1,5 @@
-provider "aws" {
-  region = var.region
-}
-
-resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = aws_s3_bucket.deploy_bucket.id
-  policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Sid       = "PublicReadGetObject"
-        Effect    = "Allow"
-        Principal = "*"
-        Action    = "s3:GetObject"
-        Resource  = "${aws_s3_bucket.deploy_bucket.arn}/*"
-      },
-    ]
-  })
-}
-
-resource "aws_s3_bucket" "deploy_bucket" {
-  bucket = var.bucket_name
-  acl    = "public-read"
-
-  website {
-    index_document = "index.html"
-    error_document = "index.html"
-  }
-}
-
-resource "aws_cloudfront_origin_access_identity" "cloudfront_oia" {
-  comment = "example origin access identify"
-}
-
 resource "aws_cloudfront_distribution" "website_cdn" {
+  aliases = [var.domain]
   enabled = true
 
   origin {
@@ -74,14 +41,8 @@ resource "aws_cloudfront_distribution" "website_cdn" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = var.ssl_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
-}
-
-output "website_cdn_id" {
-  value = aws_cloudfront_distribution.website_cdn.id
-}
-
-output "website_endpoint" {
-  value = aws_cloudfront_distribution.website_cdn.domain_name
 }

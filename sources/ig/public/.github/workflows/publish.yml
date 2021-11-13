@@ -12,17 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-
-      - name: Install node dependencies
-        run: yarn install
-
-      - name: Build production
-        run: yarn build:prod
-
       - name: Configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -31,7 +20,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Upload statics to S3 bucket
-        run: aws s3 sync ./dist s3://${{ secrets.IG_S3_BUCKET_NAME }}
+        run: aws s3 sync ./ s3://${{ secrets.IG_S3_BUCKET_NAME }}
 
   invalidate-cache:
     runs-on: ubuntu-20.04

@@ -80,7 +80,7 @@ app({
           h("h1", {}, text("ig.kis9a".toUpperCase())),
           h("div", { class: "right" }, [
             h("div", {
-              innerHTML: mode ? svg_light : svg_moon,
+              innerHTML: mode ? svg_moon : svg_light,
               onclick: (state) => {
                 if (mode) {
                   document.body.style.background = "black";
