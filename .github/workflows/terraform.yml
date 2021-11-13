@@ -26,15 +26,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Run a multi-line script
-        run: |
-          pwd
-          ls -la
-
       - name: Terraform Init
         id: init
         run: terraform init
-        working-directory: ./infrastructure/terraform"
+        working-directory: "./infrastructure/terraform"
 
       - name: Terraform Apply
         id: apply
@@ -43,4 +38,4 @@ jobs:
           -var 'bucket_name=${{ secrets.IG_S3_BUCKET_NAME }}' \
           -var 'region'=${{ secrets.AWS_REGION }}
         continue-on-error: true
-        working-directory: ./infrastructure/terraform"
+        working-directory: "./infrastructure/terraform"
