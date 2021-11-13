@@ -1,7 +1,7 @@
 {
-  "name": "kis9a - me",
-  "short_name": "me.kis9a",
-  "description": "kis9a - manage profile, images, memos, snippets, tasks, zenn, wkatime | me.kis9a.com",
+  "name": "kis9a - ig",
+  "short_name": "ig.kis9a",
+  "description": "ig.kis9a.com images",
   "start_url": "/",
   "display": "standalone",
   "background_color": "crimson",

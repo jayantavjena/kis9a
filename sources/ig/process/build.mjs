@@ -1,5 +1,4 @@
 import esbuild from "esbuild";
-import cssModulesPlugin from "esbuild-css-modules-plugin";
 import { createIndexes } from "./createIndex.mjs";
 import { outputIndexes } from "./outputIndex.mjs";
 import cwd from "./cwd.mjs";
@@ -19,7 +18,6 @@ esbuild
     outdir: "dist",
     bundle: true,
     sourcemap: false,
-    plugins: [cssModulesPlugin()],
     minify: isMinify,
     loader: {
       ".png": "dataurl",

@@ -1,8 +1,7 @@
 {
   "version": "1.0",
-  "name": "kis9a-src",
-  "description": "kis9a src",
-  "license": "MIT",
+  "name": "kis9a-ig",
+  "description": "kis9a ig",
   "main": "index.js",
   "scripts": {
     "build": "cross-env PROFILE=kis9a node process/build.mjs",
@@ -12,12 +11,9 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "esbuild": "^0.12.22",
-    "esbuild-css-modules-plugin": "^2.0.8"
+    "esbuild": "^0.12.22"
   },
   "dependencies": {
-    "hyperapp": "^2.0.19",
-    "hyperapp-fx": "^2.0.0-beta.2",
-    "hyperway": "^0.3.0"
+    "hyperapp": "^2.0.19"
   }
 }

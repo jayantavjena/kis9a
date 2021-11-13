@@ -1,5 +1,4 @@
 import esbuild from "esbuild";
-import cssModulesPlugin from "esbuild-css-modules-plugin";
 import http from "http";
 import fs from "fs";
 import path from "path";
@@ -54,7 +53,6 @@ esbuildServer(
     outdir: "dist",
     bundle: true,
     sourcemap: false,
-    plugins: [cssModulesPlugin()],
     minify: isMinify,
     loader: {
       ".png": "dataurl",
