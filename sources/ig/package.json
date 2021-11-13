@@ -14,6 +14,7 @@
     "esbuild": "^0.12.22"
   },
   "dependencies": {
-    "hyperapp": "^2.0.19"
+    "hyperapp": "^2.0.19",
+    "register-service-worker": "^1.7.2"
   }
 }
