@@ -33,6 +33,7 @@ resource "aws_cloudfront_origin_access_identity" "cloudfront_oia" {
 }
 
 resource "aws_cloudfront_distribution" "website_cdn" {
+  aliases = [var.domain]
   enabled = true
 
   origin {
@@ -74,8 +75,11 @@ resource "aws_cloudfront_distribution" "website_cdn" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = var.ssl_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
+
 }
 
 output "website_cdn_id" {
