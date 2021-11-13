@@ -1,7 +1,3 @@
-resource "aws_cloudfront_origin_access_identity" "cloudfront_oia" {
-  comment = "example origin access identify"
-}
-
 resource "aws_cloudfront_distribution" "website_cdn" {
   aliases = [var.domain]
   enabled = true

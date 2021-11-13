@@ -16,7 +16,7 @@ variable "domain" {
   default = "ig.kis9a.com"
 }
 
-variable "ssl_domain" {
+variable "ssl_arn" {
   type    = string
   default = "arn:aws:acm:us-east-1:298276046670:certificate/55c5ce44-b780-45ea-b5b2-c550cdcde710"
 }
