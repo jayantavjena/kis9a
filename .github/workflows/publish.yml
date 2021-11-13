@@ -18,9 +18,11 @@ jobs:
           node-version: 16.x
 
       - name: Install node dependencies
+        working-directory: ./sources/ig
         run: yarn install
 
       - name: Build production
+        working-directory: ./sources/ig
         run: yarn build:prod
 
       - name: Configure aws credentials
@@ -31,6 +33,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Upload statics to S3 bucket
+        working-directory: ./sources/ig
         run: aws s3 sync ./dist s3://${{ secrets.IG_S3_BUCKET_NAME }}
 
   invalidate-cache:
