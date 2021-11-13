@@ -1,3 +1,4 @@
+/* normalized-css */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -184,4 +185,76 @@ template {
 .container {
   margin: 1rem;
   font-size: 1.5rem;
+}
+
+/* customized */
+@supports (display: grid) {
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+.images img {
+  height: auto;
+  width: 100%;
+  pointer-events: none;
+  border: 1px solid var(--color-bg-secondary);
+  border-radius: 2px;
+}
+
+.images video {
+  height: auto;
+  width: 100%;
+  border: 1px solid var(--color-bg-secondary);
+  border-radius: 2px;
+}
+
+.imgc {
+  position: relative;
+  height: auto;
+  float: left;
+  opacity: 0.95;
+  width: 100%;
+  padding-bottom: 0;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgc div {
+  position: absolute;
+  bottom: 1px;
+  right: 0px;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.imgc img {
+  box-shadow: 0 0 1px 1px var(--color-bg-secondary);
+}
+
+.imgc:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.imgc img:hover {
+  box-shadow: 0 0 2px 2px var(--color-bg-secondary);
+}
+
+.imgc:hover div {
+  width: 100px;
+  padding: 1.5rem;
+  visibility: visible;
+  opacity: 0.7;
+  border-radius: 2px 0px 0px 0px;
 }
