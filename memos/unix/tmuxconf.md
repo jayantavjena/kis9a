@@ -161,3 +161,5 @@ set -g @powertab-pathname on
 " autocmd BufWinEnter _ call system("tmux rename-window " .dir)
 " autocmd VimLeave _ call system("tmux rename-window zsh")
 " endif
+
+set-option -g status-right "#[fg=#ff0000,bg=color16] #h | LA: #(cut -d' ' -f-3 /proc/loadavg) | %m/%d %H:%M:%S#[default]"

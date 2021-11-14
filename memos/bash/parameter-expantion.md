@@ -69,4 +69,31 @@ echo ${url/http/https}
 foo=abcdefg
 echo ${foo/%?/}
 後方一致除去: ${parameter%word}
+
+
+```
+
+```
+url="http://example.com/path/to/file.txt"
+
+echo $url
+# http://example.com/path/to/file.txt
+
+echo ${url#*/}
+# /example.com/path/to/file.txt
+
+echo ${url##*/}
+# file.txt
+
+echo ${url##*.}
+
+bash -c 'echo "${0%.png}.jpg"' "apple.png"
+
+img="apple.png"
+echo "${img%.png}.jpg"
+echo "${img:1:2}.jpg" # pp
+echo "${img:1:2}.jpg" # pp
+echo "${img:+string}" # string
+echo "${img:-string}" # apple
+echo "${#img}"
 ```
