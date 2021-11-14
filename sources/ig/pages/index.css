@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  max-width: 1400px;
+  max-width: 1350px;
   display: block;
   margin: 0 auto;
 }
@@ -192,15 +192,25 @@ template {
 @supports (display: grid) {
   .images {
     display: grid;
+    margin: 0 1.5rem;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 2.1rem;
+    row-gap: 5rem;
     padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .images {
+    margin: 0 1.2rem;
+    padding: 0.4rem;
   }
 }
 
 .images img {
   height: auto;
-  width: 100%;
   pointer-events: none;
   border: 1px solid var(--color-bg-secondary);
   border-radius: 2px;
@@ -222,7 +232,6 @@ template {
   padding-bottom: 0;
   line-height: 0;
   display: flex;
-  /* justify-content: center; */
 }
 
 .imgc div {
@@ -247,8 +256,11 @@ template {
   opacity: 1;
 }
 
-.imgc img:hover {
+.imgc:hover {
   box-shadow: 0 0 2px 2px var(--color-bg-secondary);
+  transition-duration: 500ms;
+  transform: scale(1.6);
+  z-index: 10000;
 }
 
 .imgc:hover div {
@@ -262,13 +274,23 @@ template {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   margin: 1rem 2rem;
+  margin-bottom: 3rem;
 }
 
 .header h1 {
   font-size: 1.5rem;
   margin-right: 0.4rem;
+  font-family: "Didot", "Helvetica Neue" !important;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  font-style: normal;
+  display: block;
+  line-height: 1em;
+  font-weight: 700;
+  width: 100%;
 }
 
 .header .right {
@@ -279,6 +301,16 @@ template {
   width: 1.5rem;
   height: 2rem;
   cursor: pointer;
+  padding: 0.2rem 0.4rem;
   opacity: 0.8;
-  padding: 0 0.5rem;
+}
+
+.header .svgc {
+  margin: 0.2rem 0.5rem;
+}
+
+.header svg:hover {
+  opacity: 1;
+  border: 1px insert currentColor;
+  box-shadow: 4px 4px currentColor;
 }
