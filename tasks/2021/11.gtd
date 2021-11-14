@@ -14,6 +14,9 @@ IaC周りの理解の強化。特にterraform のスニペットを増やした�
 https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
 経費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
 [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+[2019年のDevOps/MLOpsエンジニアの標準的スキルセット - Qiita](https://qiita.com/poly_soft/items/8dd105341869f93b129c)
+[moffersで年収1200万円のオファーをゲットしたエンジニアの業務経歴を公開します - Qiita](https://qiita.com/poly_soft/items/f08460f559ed5e9304b5)
+[これまで書いてきた記事を整理した - Qiita](https://qiita.com/neruneruo/items/1da0dec96d0bf918dbb7)
 [APIを利用したPLTの取引について &#8211; Coincheck blog](https://coincheck.blog/12771)
 amazon magic mouse 買う
 C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
@@ -36,15 +39,189 @@ o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化に
 o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
 o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
 o dynamodb のローカル環境の構築とデプロイまでのフロー。
+//*}}}*/
 
-*//*}}}*/
+2021-11-15
+
+o 二段階認証 AWSアカウント 2
+o プロフィール登録
+o 構成図 cb
+o 返信 4
+
+o career/*{{{*/
+1.大量アクセスを捌く業務経験
+　スケールアウトやスケールアップによるインフラの冗長化もこれにあたるか。
+　Amazon CloudFrontやElastic cash(redis)を使用した、大容量データを
+　高速に送る技術もこれにあたるかもしれない。
+
+2.大規模データを扱う業務経験
+　いわゆるビッグデータからpythonなどでデータ分析して
+　ビジネスに生かすデータサイエンティストがその部類にあたる。
+
+3.難易度の高い言語による開発経験
+　C++やJAVAは間違いなく、難易度が高い言語なので、
+　長い業務経験者なら重宝される？
+　今だったら、pythonやgoのほうが、将来性ありそうな気がする。
+
+4.アーキテクト的な業務経験
+　いわゆる上流業務、新規開発フェーズで仕様が決まってない中、
+　アーキテクト設計してドキュメントに落とす仕事がこれにあたる。
+
+5.DevOps系の業務経験
+　CICDパイプラインの構築
+　　（circleCI・aws code deploy・aws code build）
+　インフラのコード化
+　　（terraform・ansible・cloudfomation）
+/*}}}*/
+
+2022-11-14
+
+x advent calendar schedule scheme.
+x owned media の構築 scheme.
+x What is DI container?
+x 収支計画 -> DONE report for private repository pkis9a/balance
+o read [僕らは何故Kubernetesを使うのか](https://zenn.dev/esaka/articles/2d117655af1f03cf2444){{{
+> コンテナオーケストレーション
+Docker公式のSwarm
+Googleを中心としたOSSのKubernetes
+Mesos社によるMarathon
+CoreOS社によるfleet
+HashiCorp社によるNomad
+AWSによるElasic Container Service
+Kubernetesは技術的な完成度、コミュニティの成長という2点でデファクトスタンダードになったと思います。
+Cloud Native Computing Foundation(CNCF)
+リソースを効率的に利用するためにコンテナ技術が使われだした
+コンテナを商用環境でスケーラブルに扱うためにコンテナオーケストレーション技術が誕生した
+多数の企業を巻き込んだKubernetesがコンテナオーケストレーションのデファクトスタンダードになった
+kubernetes
+多様なワークフローに対応できるほどに多機能
+宣言的設定と突き合わせループによるリソース管理
+CRDなど拡張性が高い
+
+/*}}}*/
+x read [AWSの保守運用を自動化するためのアーキテクチャ](https://qiita.com/uzresk/items/776bb789a8585654a978)
+x LeetCode Go ->  [LeetCode解いた時の考え方](https://zenn.dev/esaka/scraps/4d1c4042e60d60)
+x read [TerraformでCodeBuildのレポート機能を使ってみる - Qiita](https://qiita.com/neruneruo/items/c10c7983a586f2819bbe)
+x read [批判は賢い選択肢ではないということ](https://mycode.rip/criticism-is-not-good-choice){{{
+> 損失回避バイアスという損をしたくない心理的バイアス。
+作品を批判することは、その良いと評価した人に対して認知的不協和（不快感）を与える行為。
+さらに不快感を覚えた人は、批判行為を行った人に対しても良くないイメージを抱きます。
+「これは損失回避バイアスのせいによる不快感だ」「批判者の人格と意見は別けて考えるべきだ」と、
+合理的に考える人の割合は少ないと推測できるので、結果的に多くの人を敵に回してることが分かります。
+社会的承認を求める人たちは気後れを感じるでしょう。大局的に見れば、批判は本人にとっても世界をあまり良くないベクトルに向ける行為です。
+/*}}}*/
+x docker imageのサイズを落とす ->  Multi Stage Build の使用。{{{
+ビルド処理にはGoのランタイムがいるのですが、バイナリの実行にはランタイム不要
+FROM golang:alpine as builder
+RUN git clone github.com/hoge/hoge.git
+WORKDIR hoge
+RUN go build
+
+FROM alpine
+COPY --from=builder /go/hoge/app /app
+CMD ["/app"]/*}}}*/
+x 会社のソースコードを読む
+x 返信 2
+x dot.kis9a.com redirector
+x 二段階認証 自分のAWSアカウント
+x snippets/ README.md の更新。
+x tasks/ README.md の更新。
+x make precache.manifest.js/*{{{*/
+const precacheManifestHash = (() => {
+  const hash = crypto.createHash("md5");
+  hash.update(precacheManifest);
+  return hash.digest("hex");
+})();
+
+fs.writeFileSync(
+  `./precache-manifest.${precacheManifestHash}.js`,
+  precacheManifest,
+  { encoding: "utf8" }
+);
+[怖くないPWA - 既存静的サイトを爆速でPWA化する - Qiita](https://qiita.com/shellyln/items/48e51b554044293ada24)
+/*}}}*/
+~ me iam の管理。 frontend-deploy: s3 + cloudfront, route53, acm ... 結構面倒
+
+2021-11-13
+
+x git-secrets の導入
+x my number card.
+x hair cut at mens wish. 13:00 ~
+/* o write to storage{{{
+const storageArea = (area) => window[area + "Storage"] || localStorage;
+
+const writeToStorage = (props) => [
+  storageArea(props.area).setItem(props.key, props.converter(props.value)),
+  ((source, assign) => {
+    var result = {},
+      i;
+    for (i in source) result[i] = source[i];
+    for (i in assign) result[i] = assign[i];
+    return result;
+  },
+  ({
+    converter: props.converter || JSON.stringify,
+  },
+  props)),
+];
+
+const readFromStorage = (props) => [
+  (dispatch, props) => {
+    try {
+      var value = props.converter(storageArea(props.area).getItem(props.key));
+      var dispatchProps = assign({}, props.props || {});
+      dispatchProps[props.prop || "value"] = value;
+      dispatch(props.action, dispatchProps);
+    } catch (error) {
+      dispatch(props.error);
+    }
+  },
+  ((source, assign) => {
+    var result = {},
+      i;
+    for (i in source) result[i] = source[i];
+    for (i in assign) result[i] = assign[i];
+    return result;
+  },
+  ({
+    converter: props.converter || JSON.parse,
+    error: props.error,
+  },
+  props)),
+];
+*/ 
+/*}}}*/
+
+2021-11-12
+
+x mock image viewer.
+x variables refactoring.
+x e 向き先 設定 -> prod 向き先変更時 通知
+x ecr repository 共通化 -> 通知
+x rpc URL の変更
+x twitter access key を復活
+x iam 共通化 リファクタ
+x タスク整理
 
 2021-11-11
 
-o 分割統治マスター定理の証明
-o 原産当時再帰マスター定理の証明
-o マイナンバー月の住民票を取りに行く。
-o 目的の明確化
+x tmux clock.
+x write terraform cicd diagrams.
+x マイナンバー月の住民票を取りに行く。
+x init ultisnips directory.
+x fix testnet instance.
+x unused repositories make private.
+x Dotfiles clean/*{{{*/
+  x fix snippets.userSnippetsDirectory path
+  x refactor: remove comments
+  x chore: remove nvim colorscheme anynight.vim
+  x remove delta to use vim-diff
+  x chore: remove unused functions
+  x move hop.nvim to easymotion.vim
+  x fix: source file when file exsits on zsh
+  x deinit submodule for ultisnips
+  x init ultisnips as submodules
+/*}}}*/
 
 2021-11-10
 
