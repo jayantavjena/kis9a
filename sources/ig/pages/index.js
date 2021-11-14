@@ -1,7 +1,16 @@
 import { app, h, text } from "hyperapp";
 import "./index.css";
 import { register } from "register-service-worker";
-register("/service-worker.js", { registrationOptions: { scope: "./" } });
+
+register("/service-worker.js", {
+  registrationOptions: { scope: "./" },
+  updated() {
+    window.location.reload(true);
+  },
+  error(error) {
+    console.error(error);
+  },
+});
 
 const svg_moon =
   "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'><path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'/></svg>";

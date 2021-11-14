@@ -1,4 +1,5 @@
 import esbuild from "esbuild";
+import "./createPrecacheManifest.mjs";
 import { createIndexes } from "./createIndex.mjs";
 import { outputIndexes } from "./outputIndex.mjs";
 import cwd from "./cwd.mjs";
