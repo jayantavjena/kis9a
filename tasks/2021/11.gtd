@@ -39,14 +39,107 @@ o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化に
 o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
 o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
 o dynamodb のローカル環境の構築とデプロイまでのフロー。
+o vue.js / typescript project 構成の確認
+o JWT 認証のDEMO書く
+o vim 選択範囲の空白文字の削除 referenced camelsnek.
+o static site https://github.com/mozamimy/salmon
 //*}}}*/
+
+2021-11-17
+
+~ [Amazon ECRのイメージスキャン結果をSlackに通知する](https://qiita.com/hayao_k/items/116e5540b2bf0c2a2c9d) -> リクエストの投げ方が参考-> 
+o sns-topic のサービス毎の作成とchatbot リソースのチャンネル毎の作成
+o cloudwatch alert fargate の値の設定 メトリクスの確認する必要性
+o [AWS Fargate 使用状況メトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/userguide/monitoring-fargate-usage.html)
+o [Amazon ECS CloudWatch のメトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/cloudwatch-metrics.html)
+o データ構造 https://blog.junkata.com/categories/go
+o chatops [GitHub - mozamimy/telescreen: A slack bot to forward messages by simple routing definition](https://github.com/mozamimy/telescreen)
+o [GitHub - mozamimy/github-issue-opener: A serverless application to open a GitHub issue by SNS notification.](https://github.com/mozamimy/github-issue-opener)
+o https://github.com/waveaccounting/terraform-aws-chatbot-slack-configuration 使ってみた -> scraps
+
+2021-11-16
+
+x chatbot 用のIAM role の作成、管理
+x cloudwatch alert -> slack の terraform 化とscraps
+x buy IPad & 目的か -> research 昼休み
+x cloudwatch alert - SNS 疎通確認。
+x EC2 -> cloudwatch alarm の設定 / SNS 連携 テスト / Chatbot 確認。
+x aws cloudwatch set-alarm-state --alarm-name $ --state-value ALARM --state-reason "test"   ALARM
+x https://github.com/kis9a/aws-cost-line-notify の README.md を埋める。Slack 連携
+x chatbot 用の IAM role の作成 terraform.
+x [CloudWatchでテストのためにアラームを発報させる3つの方法 - DENET 技術ブログ](https://blog.denet.co.jp/cloudwatch3/){{{
+1.本当にアラーム発生条件に該当する状態にする
+2.テストでアラーム発報②：アラーム発生条件の閾値を手動で調整する
+3.set-alarm-state コマンドを使用してアラーム状態の変更する
+/*}}}*/
+x remove-empty-line
+x /dev/stdin の使い方 [/dev/stderr（/dev/std{in,out}も）は使うべきではない](https://qiita.com/richmikangithub/items/a3803d816c196ecebff5)
+x drank/*{{{*/
+空腹感が増し、食欲が増進する
+血管が拡張し、血行が良くなる
+緊張がほぐれ、コミュニケーションが円滑になる
+ストレスが緩和される
+体や健康に良い/*}}}*/
+x stderr に色をつける。
+x read [shell/bash generate random alphanumeric string · GitHub](https://gist.github.com/earthgecko/3089509){{{
+base64 /dev/urandom | tr -d '/+' | dd bs=32 count=1 2>/dev/null
+LC_ALL=C; cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1
+cat /dev/urandom | tr -dc 'a-z0-9' | head -c 32
+tr -dc '[:alnum:]' < /dev/urandom  | dd bs=4 count=8 2>/dev/null
+od -x /dev/urandom | head -1 | awk '{OFS="-"; print $2$3,$4,$5,$6,$7$8$9}'
+/*}}}*/
+x [AWSサーバレス環境における必要最低限の監視設定(ECS+Fargate編)](https://qiita.com/toshipon/items/886579563d1a1b739322){{{
+セキュリティ監視
+外形監視
+リソース監視
+アプリケーション監視
+コスト監視
+/*}}}*/
+x stag の追従
+x create user and grant, stag db connection 確認
+x add MFA device to c's IAM.
+x ssm-start-settion command/*{{{*/
+function ssm-start-session() {
+  instance=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=$1" --profile "$2" --output json \
+    | jq -r ".Reservations|.[].Instances|.[].InstanceId")
+  aws ssm start-session --target "$instance" --profile "$2"
+}
+/*}}}*/
+x freet manager からインスタンスID を確認する。 aws cli
+x DB 設定方法をドキュメントした
+x _r _w user の権限確認 SHOW GRANTS FOR '_w'@'%'
 
 2021-11-15
 
-o 二段階認証 AWSアカウント 2
-o プロフィール登録
-o 構成図 cb
-o 返信 4
+x read [【SQL脳から切り替えよう】DynamoDB使ってみた - Qiita](https://qiita.com/a2-tsuchiya/items/fcae664b7ec81d80194c)
+x [なぜReactでもVueでもなくElmを使っているのか - Qiita](https://qiita.com/lambda_funtaro/items/2d4d82412d0bb7179cf3) -> 後回し issues.{{{
+Functional-Static-Strong-Managed： Haskell、Scala
+Functional-Dynamic-Strong-Managed： Clojure、Erlang
+Proc-Static-Strong-Managed： C#、Java、Go
+Script-Dynamic-Strong-Managed： Python、Ruby
+Script-Dynamic-Weak-Managed： Perl、PHP、JavaScript
+Proc-Static-Weak-Unmanaged：C、C++、Objective-C/*}}}*/
+x vpc endpoint に関して調べる。 [[Terraform] Fargate v1.4で必要なVPC endpoint設定](https://zenn.dev/samuraikun/articles/0d22699a9878cd){{{
+CodeBuildはVPC内のリソースにしたほうが良い
+VPC内にあるCoudeBuildからECRへpushするにはecr.api, ecr.dkr, s3, logs のエンドポイントが必要
+CodeBuildをVPC内においた状態でCCodeBuildのソースをCodePipelineにする場合はS3へのエンドポイントが必要
+CodeCommitやECRはIAMベースの認証があるので、外部からのアクセスをコントロールできる
+Deployはあまり触れてないけど、EC2は２つのエンドポイント(片方はDeployのエージェント通信用)。LambdaとかContainerは一つのエンドポイントでOK。
+SLO で対応 / 運用 /
+/*}}}*/
+x [ECSでコンテナをALB配下に置く](https://blog.adachin.me/archives/11211)
+x #SRE [AWS ECSにおけるBlueGreenデプロイメントの使いどころ](https://yoshinori-satoh.com/blog/2020-10-26-ecs_blue_green_deployment/)
+x #SRE [Amazon ECS+Fargate まとめ  (terraformを使ったクラスタ構築とオートスケール、ブルーグリーンデプロイ) - Qiita](https://qiita.com/marnie_ms4/items/202deb8f587233a17cca)
+x fix ig.kis9a.com style
+x advent calendar schedule scheme. [2021年は一人アドベントカレンダーを目論んでみる](https://zenn.dev/megane_otoko/scraps/a0ecf0164ae9d2) -> すごい 自分も仕込んどくか
+x 二段階認証 AWSアカウント 2
+~ プロフィール登録 -> 準備だけ プラットフォームが気に食わない
+x 構成図 cb architecture zu -> x draw.io layer 機能の使い方
+x stag用のAPI-tokenをもらう。
+x 外形メモ -> 構成図をサクッと。コストかかるリソース中心。
+x 返信 4
+x MTG: 14:
+x 893 domain
 
 o career/*{{{*/
 1.大量アクセスを捌く業務経験
@@ -76,7 +169,6 @@ o career/*{{{*/
 
 2022-11-14
 
-x advent calendar schedule scheme.
 x owned media の構築 scheme.
 x What is DI container?
 x 収支計画 -> DONE report for private repository pkis9a/balance
