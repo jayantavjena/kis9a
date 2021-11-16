@@ -8,3 +8,6 @@ https://shanabrian.com/web/unicode-encode-decode/
 👍 U+1F44D
 ⭐U+2B50
 ♥ U+2B50
+💩 U+1F4A9
+
+echo -e "\U0001F4A9"

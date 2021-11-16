@@ -33,4 +33,6 @@ aws lambda list-functions \
     | jq -r ".[] \
     | [.FunctionName, .Description, .PackageType, .Runtime, .CodeSize, .MemorySize, .Timeout, .LastModified] \
     | @csv"
+
+aws ec2 describe-instances --filters "Name=tag:Name,Values=$1" --profile profile --output json | jq -r '.Reservations|.[].Instances|.[].InstanceId'
 ```
