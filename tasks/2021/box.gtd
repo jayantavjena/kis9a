@@ -1,0 +1,49 @@
+#TASKS
+
+i dynamodb のローカル環境の構築とデプロイまでのフロー。
+i vue.js / typescript project 構成の確認
+i JWT 認証のDEMO書く
+i vim 選択範囲の空白文字の削除 referenced camelsnek.
+i rust の環境構築
+i Rust の機能の把握, Webサーバー開発での応用とか見てみる。
+i static site https://github.com/mozamimy/salmon
+i chatops [GitHub - mozamimy/telescreen: A slack bot to forward messages by simple routing definition](https://github.com/mozamimy/telescreen)
+i [GitHub - mozamimy/github-issue-opener: A serverless application to open a GitHub issue by SNS notification.](https://github.com/mozamimy/github-issue-opener)
+i https://github.com/waveaccounting/terraform-aws-chatbot-slack-configuration 使ってみた -> scraps
+
+#BLOCKCHAIN
+
+i 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
+i eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
+i code reading https://github.com/crisadamo/gochain
+i code reading https://github.com/izqui/blockchain
+i [GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
+i [web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
+i 業務知識ま割りの補強,調べる。block-chain ことはじめ。 -> 詳解 block-chain を読む。
+i [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
+i AMB init with terraform
+
+#DEVOPS
+
+i read [2019年のDevOps/MLOpsエンジニアの標準的スキルセット - Qiita](https://qiita.com/poly_soft/items/8dd105341869f93b129c)
+i read [moffersで年収1200万円のオファーをゲットしたエンジニアの業務経歴を公開します - Qiita](https://qiita.com/poly_soft/items/f08460f559ed5e9304b5)
+i read [これまで書いてきた記事を整理した - Qiita](https://qiita.com/neruneruo/items/1da0dec96d0bf918dbb7)
+
+#SRE
+
+i ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
+i  code-build, code-deploy, code-pipeline と GitHub の連携 関連の調査
+i set fargate scheduling. -> [AWS節約術 : 自動で任意の時間にFargateを起動・停止する｜psyashes｜note](https://note.com/psyashes/n/n06b6bdf10881)
+i fargateのusecaseの整理.
+
+#APP
+
+i ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。-> snippets に整理したい。
+i [GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
+i Goの基礎とアルゴリズム的な課題解決。 -> 標準パッケージのコードリーディング  -> zenn scraps
+i C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
+
+#BIZ
+
+i クレジットカード·簿記に関して学ぶ。
+

@@ -1,61 +1,52 @@
 2021-11
 
 /* MEMO{{{
-x Goの基礎とアルゴリズム的な課題解決。 -> 標準パッケージのコードリーディング  -> zenn scraps
-間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
-業務知識ま割りの補強,調べる。block-chain ことはじめ。 -> 詳解 block-chain を読む。
-ORMに頼りきりだったのでSQL 部分の復習 http://sqlbolt.com。
-refs: [とりあえずド素人が読むべきブロックチェーン入門論文・書籍・サイト - Qiita](https://qiita.com/onokatio/items/7db58947b05c17d1f44e)
-社内アウトプットの導線。 -> インフラ関連のzenn-scraps -> 4記事投稿した。
-基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
-IaC周りの理解の強化。特にterraform のスニペットを増やしたりAWSのサービスも細かく見る。特にコンテナ周り。
-[GitHub - bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
-[web3.js - Ethereum JavaScript API &mdash; web3.js 1.0.0 documentation](https://web3js.readthedocs.io/en/v1.5.2/index.html)
-https://docs.aws.amazon.com/managed-blockchain/latest/hyperledger-fabric-dev/what-is-managed-blockchain.html
-経費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
-[GitHub - IzumiSy/go-cleanarchitecture](https://github.com/IzumiSy/go-cleanarchitecture)
-[2019年のDevOps/MLOpsエンジニアの標準的スキルセット - Qiita](https://qiita.com/poly_soft/items/8dd105341869f93b129c)
-[moffersで年収1200万円のオファーをゲットしたエンジニアの業務経歴を公開します - Qiita](https://qiita.com/poly_soft/items/f08460f559ed5e9304b5)
-[これまで書いてきた記事を整理した - Qiita](https://qiita.com/neruneruo/items/1da0dec96d0bf918dbb7)
-[APIを利用したPLTの取引について &#8211; Coincheck blog](https://coincheck.blog/12771)
-amazon magic mouse 買う
-C 言語での実装、メモリやGCを含むアルゴリズムやデータ構造への理解。
-Rust の機能の把握, Webサーバー開発での応用とか見てみる。
-get: iPad air, pen, cover, shouse, hair cut 10 man-yen
-クレジットカード·簿記に関して学ぶ。
-15 以降に予定を設定する。
-会食: 後半 10h
-マインドセット再 目標設定
-o AMB init with terraform
-o code reading https://github.com/crisadamo/gochain
-o code reading https://github.com/izqui/blockchain
-o set fargate scheduling. -> [AWS節約術 : 自動で任意の時間にFargateを起動・停止する｜psyashes｜note](https://note.com/psyashes/n/n06b6bdf10881)
-o fargateのusecaseの整理.
-o (1) code-build, code-deploy, code-pipeline と GitHub の連携 関連の調査
-o terraform の運用方針を決める。
-o ECS 構成 -> [ECS の構成と Terraform コード化する際の構造化について](https://jedipunkz.github.io/blog/2019/10/17/ecs/)
-[Terraform で AWS Load Balancer Controller を宣言的にデプロイする](https://zenn.dev/yukin01/articles/6dd6542993ab166d51c2)
-[TerratestによるTerraformコードの単体テスト](https://zenn.dev/aquamarinearia/articles/terratest_testing_terrafom_code)
-o 読む [Bitcoinトランザクションをバイナリから理解していく](https://tech.fressets.com/1103/)
-o eth, dapps tutorial <https://www.youtube.com/playlist?list=PLuCS8p0T7ozKYkr15ZjtjSNmVIwMVZebu>
-o dynamodb のローカル環境の構築とデプロイまでのフロー。
-o vue.js / typescript project 構成の確認
-o JWT 認証のDEMO書く
-o vim 選択範囲の空白文字の削除 referenced camelsnek.
-o static site https://github.com/mozamimy/salmon
 //*}}}*/
+
+2021-11-18
+
+o api 側の環境構築
+o redis 接続方法 ドキュメント
+o github.com/kis9a/bin の作成
+o sns-topic のサービス毎の作成とchatbot リソースのチャンネル毎の作成
+o cloudwatch alert fargate の値の設定 メトリクスの確認する必要性
+o aws kms decrypt --ciphertext-blob fileb://<(cat $file | base64 -D) --output json --profile $profile | jq .Plaintext --raw-output | base64 -D
+o [AWS Fargate 使用状況メトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/userguide/monitoring-fargate-usage.html)
+o [bash: 標準出力、標準エラー出力をファイル、画面それぞれに出力する方法 - Qiita](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
+o [Amazon ECS CloudWatch のメトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/cloudwatch-metrics.html)
+o データ構造 https://blog.junkata.com/categories/go
+o ECSへのデプロイ部分を読む
+o ifconfig.io を読む -> [GitHub - georgyo/ifconfig.io](https://github.com/georgyo/ifconfig.io)
+o aws cli warapper
+o CLIを使う時も、MFA認証してロールを切り替える -> 実践 zenn scraps.{{{
+[AWSアカウントを作ったときこれだけはやっとけって言うIAMの設定](https://zenn.dev/machamp/articles/2f9ffcd9f38614)
+GetSessionToken APIで一時的な認証情報を取得します
+$ aws sts get-session-token --serial-number arn:aws:iam::xxxxxxxxxxxx:mfa/xxxxx --token-code 123456
+```
+#!/bin/sh
+MFA_TOKEN=$1
+JSON=`aws sts get-session-token --serial-number arn:aws:iam::792438568712:mfa/machamp --token-code $MFA_TOKEN --profile machamp`
+AWS_ACCESS_KEY_ID=`echo $JSON | jq -r -c '.Credentials | .AccessKeyId'`
+AWS_SECRET_ACCESS_KEY=`echo $JSON | jq -r -c '.Credentials | .SecretAccessKey'`
+AWS_SESSION_TOKEN=`echo $JSON | jq -r -c '.Credentials | .SessionToken'`
+aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile sample-mfa
+aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile sample-mfa
+aws configure set aws_session_token $AWS_SESSION_TOKEN --profile sample-mfa
+```
+/*}}}*/
 
 2021-11-17
 
 ~ [Amazon ECRのイメージスキャン結果をSlackに通知する](https://qiita.com/hayao_k/items/116e5540b2bf0c2a2c9d) -> リクエストの投げ方が参考-> 
-o sns-topic のサービス毎の作成とchatbot リソースのチャンネル毎の作成
-o cloudwatch alert fargate の値の設定 メトリクスの確認する必要性
-o [AWS Fargate 使用状況メトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/userguide/monitoring-fargate-usage.html)
-o [Amazon ECS CloudWatch のメトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/cloudwatch-metrics.html)
-o データ構造 https://blog.junkata.com/categories/go
-o chatops [GitHub - mozamimy/telescreen: A slack bot to forward messages by simple routing definition](https://github.com/mozamimy/telescreen)
-o [GitHub - mozamimy/github-issue-opener: A serverless application to open a GitHub issue by SNS notification.](https://github.com/mozamimy/github-issue-opener)
-o https://github.com/waveaccounting/terraform-aws-chatbot-slack-configuration 使ってみた -> scraps
+x 費申請項目: 交通費、NFTの教科書、詳解Bitcoin, LPIC_1.
+~ amazon magic mouse 買う -> PC 変更した。
+x ecs task role iam 権限追加
+x npx gitignore の curl でする。 gitignore function curl gitignore.io/api
+x 構成図の粒度を決める -> 大きめのレイヤーに細かいのを重ねていく -> 構成図
+x terraform の運用方針を決める。 -> https://qiita.com/chroju/items/13d8f5c6719e2f4711f3
+x 間近に勉強したい事は、アサインされたタスクに対しての知識の補充。勤務先の課題の把握とそれに対しての解決策の準備。
+x 社内アウトプットの導線。 -> インフラ関連のzenn-scraps -> 4記事投稿した。
+x 基本的なスケージュールの確認 9 - 10 タスクの確認、メール確認, 13 - 13.5 飯, 13.5 - 14 メール確認, 14 - 18 タスク。
 
 2021-11-16
 
