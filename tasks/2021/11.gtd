@@ -3,22 +3,55 @@
 /* MEMO{{{
 //*}}}*/
 
+2021-11-21
+
+o ifconfig.io を読む -> [GitHub - georgyo/ifconfig.io](https://github.com/georgyo/ifconfig.io)
+o ECR deployment workflow. GitHub Actions. Codes.
+o SSO serverless 認証基盤
+o cloudwatch alrt -> lambda -> slack 通知する zenn-scraps 
+  o kms resource
+  o get slack access token
+  o create test function -> proxy but don't local execution.
+  o [【Go】slack-go を使用して Slack にメッセージを投稿する](https://zenn.dev/kou_pg_0131/articles/go-slack-go-usage)
+
+2021-11-20
+
+x rust programing book ~ 第二章
+x access metric architecture diagrams.
+x cleanup notifiers(1, 2) destroy.
+x ipad setup applications. accounts.
+x read documents for rustbook.
+
+2021-11-19
+
+x aws_cloudwatch_log_subscription_filter を使用する
+x ECSへのデプロイ部分を読む -> どのように活用するか
+x kakuninn suru yooo
+x インフラ側からの確認事項の整理
+x 既存環境の消していいリソースの削除リスト
+x jq ".resources | map({ type: .type, name: .name }) | .[]" | grep "^\s" | awk '{ print $NF }' | tr -d "\"," | xargs -n2 | tr " " "."
+x bash string について -> [18.1. Here Strings](https://linux.die.net/abs-guide/x15683.html)
+/*aws parameter sheet cli {{{*/
+x ec2 instance list -> aws ec2 describe-instances --filters 'Name=tag:Name,Values=${1:=*}' --profile ${2:=default} --output json | jq -r '.Reservations|.[].Instances|.[] |{InstanceId,InstanceName: (.Tags[] | select(.Key=="Name").Value)}'
+x rds instance list/
+
+x aws logs describe-log-groups --profile kis9a --output json --query "logGroups[].{logGroupName:logGroupName, retentionInDays:retentionInDays, metricFilterCount:metricFilterCount, storedBytes:storedBytes, arn:arn, creationTime:creationTime}" | jq
+
+x aws cloudwatch describe-alarms --profile kis9a --output json --query "MetricAlarms[].{AlarmName:AlarmName, StateValue:StateValue, AlarmConfigurationUpdatedTimestamp:AlarmConfigurationUpdatedTimestamp, Namespace:Namespace, MetricName:MetricName, Statistic:Statistic, Period:Period, EvaluationPeriods:EvaluationPeriods, AlarmArn:AlarmArn}" | jq
+
+x aws iam list-roles --profile kis9a --output json --query "Roles[].{RoleName:RoleName, Arn:Arn, Description:Description, Path:Path, CreateDate:CreateDate}" | jq
+
+x aws lambda list-functions --profile kis9a --output json --query "Functions[].{FunctionName:FunctionName, Description:Description, PackageType:PackageType, Runtime:Runtime, CodeSize:CodeSize, MemorySize:MemorySize, Role:Role, Timeout:Timeout, LastModified:LastModified}" | jq
+
+x aws iam list-policies --profile kis9a --output json --query "Policies[].{PolicyName:PolicyName, Path:Path, AttachmentCount:AttachmentCount, CreateDate:CreateDate, UpdateDate:UpdateDate}" | jq
+
+x aws ec2 describe-instances --profile kis9a --region=ap-northeast-1 --filter "Name=instance-state-name,Values=running" | jq -r '.Reservations[].Instances[]|{PrivateIpAddress, InstanceType, Zone: .Placement.AvailabilityZone, State: .State.Name, KeyName, TagName: .Tags|map(select(.Key == "Name"))[0]|.Value}'
+/*}}}*/
+
 2021-11-18
 
-o api 側の環境構築
-o redis 接続方法 ドキュメント
-o github.com/kis9a/bin の作成
-o sns-topic のサービス毎の作成とchatbot リソースのチャンネル毎の作成
-o cloudwatch alert fargate の値の設定 メトリクスの確認する必要性
-o aws kms decrypt --ciphertext-blob fileb://<(cat $file | base64 -D) --output json --profile $profile | jq .Plaintext --raw-output | base64 -D
-o [AWS Fargate 使用状況メトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/userguide/monitoring-fargate-usage.html)
-o [bash: 標準出力、標準エラー出力をファイル、画面それぞれに出力する方法 - Qiita](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
-o [Amazon ECS CloudWatch のメトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/cloudwatch-metrics.html)
-o データ構造 https://blog.junkata.com/categories/go
-o ECSへのデプロイ部分を読む
-o ifconfig.io を読む -> [GitHub - georgyo/ifconfig.io](https://github.com/georgyo/ifconfig.io)
-o aws cli warapper
-o CLIを使う時も、MFA認証してロールを切り替える -> 実践 zenn scraps.{{{
+x CLIを使う時も、MFA認証してロールを切り替える -> 実践 zenn scraps.{{{
+x [manをもっと便利に使おう！(ビルトインコマンドに対応 + 色付きで表示) - Qiita](https://qiita.com/ssh0/items/f148f0125faad5217160)
 [AWSアカウントを作ったときこれだけはやっとけって言うIAMの設定](https://zenn.dev/machamp/articles/2f9ffcd9f38614)
 GetSessionToken APIで一時的な認証情報を取得します
 $ aws sts get-session-token --serial-number arn:aws:iam::xxxxxxxxxxxx:mfa/xxxxx --token-code 123456
@@ -34,6 +67,33 @@ aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile sample-
 aws configure set aws_session_token $AWS_SESSION_TOKEN --profile sample-mfa
 ```
 /*}}}*/
+x Error: error configuring Terraform AWS Provider: Error creating AWS session: AssumeRoleTokenProviderNotSetError: assume role with MFA enabled, but AssumeRoleTokenProvider session option not set. -> Access Keysの認証  ---->  MFAの認証  ---->  Assume Role
+x terraform redirector の module 化 -> zenn.kis9a.com の作成
+x aws cli warapper 
+  x kms-encrypt
+  x kms-decrypt
+  x ssm-start-session
+  x s3 policy -> terraform state show
+  x cloudfront invalidate
+  x alb domain
+x zfuncs command
+x sns-topic のサービス毎の作成とchatbot リソースのチャンネル毎の作成
+x role name prefix service name -> commit
+x cloudwatch alert fargate の値の設定 メトリクスの確認する必要性
+x [AWS Fargate 使用状況メトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/userguide/monitoring-fargate-usage.html)
+x [bash: 標準出力、標準エラー出力をファイル、画面それぞれに出力する方法 - Qiita](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
+x [Amazon ECS CloudWatch のメトリクス](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/cloudwatch-metrics.html)
+x git secrets --register-aws && git secrets --install
+x git-secrets と git-secret の違い [Gitリポジトリ暗号化のススメ - git-secret - - Qiita](https://qiita.com/jqtype/items/9b0524baa4b7fe6dbde0)
+x aws kms decrypt --ciphertext-blob fileb://<(cat $file | base64 -D) --output json --profile $profile | jq .Plaintext --raw-output | base64 -D
+x crashed vim pipe/*{{{*/
+# zmodload zsh/terminfo zsh/system
+# color_stderr() {
+#   while sysread std_err_color; do
+#     syswrite -o 2 "${fg_bold[red]}${std_err_color}${terminfo[sgr0]}"
+#   done
+# }
+# exec 2> >(color_stderr)}}}
 
 2021-11-17
 
