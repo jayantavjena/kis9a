@@ -1,6 +1,13 @@
 import { app, h, text } from "hyperapp";
 import "./index.css";
+import luxy from "luxy.js";
 import { register } from "register-service-worker";
+
+luxy.init({
+  wrapper: "#app",
+  targets: ".imgc",
+  wrapperSpeed: 0.25,
+});
 
 register("/service-worker.js", {
   registrationOptions: { scope: "./" },
@@ -21,7 +28,7 @@ const svg_light =
 const external_link =
   "<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 22 22' width='48px' height='48px'><path d='M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z'/></svg>";
 
-const image_format = "png";
+const image_format = "webp";
 const video_format = "mp4";
 const getExtension = (file) => file.split(".").pop();
 const isImageFormat = (name) => image_format == getExtension(name);
@@ -37,6 +44,7 @@ const getRandomAlign = () => {
       return "end";
   }
 };
+
 const http = (props) => [
   (dispatch, props) => {
     fetch(props.url, props.options)
@@ -68,7 +76,7 @@ const http = (props) => [
 
 app({
   init: [
-    { images: [], mode: true },
+    { images: [], mode: false },
     http({
       url: "/data/images.json",
       response: "json",
@@ -83,6 +91,18 @@ app({
         })(indexes),
       }),
     }),
+    [
+      (dispatch) => {
+        const action = (state) => {
+          if (!state.mode) {
+            document.body.style.background = "black";
+            document.body.style.color = "#f8f8f8";
+            return state;
+          }
+        };
+        dispatch(action);
+      },
+    ],
   ],
   view: ({ images, mode }) =>
     h("div", { class: "container" }, [
