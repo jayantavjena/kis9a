@@ -486,11 +486,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/data/images/yumihari/yumihari.webp"
   },
   {
-    "revision": "b9a4931d589e4d6d15b7c928e08f51117ad533416c1cb24d91defd562a2a6193",
+    "revision": "6b67cadd91971203e1c3ee24a46e516a84d5a6e31263c90bc2777e7bfe155a67",
     "url": "/data/images.json"
   },
   {
-    "revision": "f773de191fe9f64ef1b759d19ea19639d91b815d89f9c4f02d9fcf6ff6949bb8",
+    "revision": "32865df707d61e0ba41819fd769b18aa17f9a6e911f8eef3120fb8fbcd256e47",
     "url": "/index.css"
   },
   {
@@ -498,7 +498,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/index.html"
   },
   {
-    "revision": "27751901b4f1ee958f9daf0db223e1d0731de5e4c073d0a0bc92023cf8a47f9d",
+    "revision": "092b84385035eff50a660c870f2403f91a78bab99a111d6fec18fb250ec00f8e",
     "url": "/index.js"
   }
 ]);
