@@ -109,30 +109,20 @@ app({
       h("main", {}, [
         h("div", { class: "header" }, [
           h("h1", {}, text("ig.kis9a".toUpperCase())),
-          h("div", { class: "right" }, [
-            h("div", {
-              class: "svgc",
-              innerHTML: mode ? svg_moon : svg_light,
-              onclick: (state) => {
-                if (mode) {
-                  document.body.style.background = "black";
-                  document.body.style.color = "#f8f8f8";
-                } else {
-                  document.body.style.background = "#f8f8f8";
-                  document.body.style.color = "#444";
-                }
-                return { ...state, ...{ mode: !mode } };
-              },
-            }),
-            h("div", {
-              class: "svgc",
-              innerHTML: external_link,
-              onclick: (state) => {
-                window.open("https://nav.kis9a.com", "_blank");
-                return state;
-              },
-            }),
-          ]),
+          h("div", {
+            class: "svgc",
+            innerHTML: mode ? svg_moon : svg_light,
+            onclick: (state) => {
+              if (mode) {
+                document.body.style.background = "black";
+                document.body.style.color = "#f8f8f8";
+              } else {
+                document.body.style.background = "#f8f8f8";
+                document.body.style.color = "#444";
+              }
+              return { ...state, ...{ mode: !mode } };
+            },
+          }),
         ]),
         h(
           "div",
@@ -184,6 +174,17 @@ app({
               })(s.name)
             )
         ),
+        h("div", { class: "footer" }, [
+          h("div", { class: "copyright" }, text("Copyright@kis9a")),
+          h("div", {
+            class: "external_link",
+            innerHTML: external_link,
+            onclick: (state) => {
+              window.open("https://nav.kis9a.com", "_blank");
+              return state;
+            },
+          }),
+        ]),
       ]),
     ]),
   node: document.getElementById("app"),
