@@ -3,16 +3,73 @@
 /* MEMO{{{
 //*}}}*/
 
-2021-11-21
+2021-11-25
 
-o ifconfig.io を読む -> [GitHub - georgyo/ifconfig.io](https://github.com/georgyo/ifconfig.io)
-o ECR deployment workflow. GitHub Actions. Codes.
-o SSO serverless 認証基盤
-o cloudwatch alrt -> lambda -> slack 通知する zenn-scraps 
+x rust trait 機能について調べる
+x [GitHub - tlboright/golang-interview: A repo full of interview question implementations in golang.](https://github.com/tlboright/golang-interview)
+x [RustでOption値やResult値を上手に扱う - Qiita](https://qiita.com/tatsuya6502/items/cd41599291e2e5f38a4a)
+x [AWS Copilotとecspressoの違いを調べてみた - Qiita](https://qiita.com/yastani/items/313c5ac3bc019b264038)
+o cloudwatch alrt -> lambda -> slack 通知する zenn-scraps {{{
   o kms resource
   o get slack access token
   o create test function -> proxy but don't local execution.
   o [【Go】slack-go を使用して Slack にメッセージを投稿する](https://zenn.dev/kou_pg_0131/articles/go-slack-go-usage)
+/*}}}*/
+x ECR deployment workflow. GitHub Actions. Codes.
+x datadog/*{{{*/
+  x fargate まわりの監視
+  x ses まわりの監視 ses bounce rate.
+  x cloudfront まわりの監視 cloudfront 400
+  x datadog の モニタリング の terraform
+  x datadog ダッシュボード作成
+  x server で動いているdatadog ユーザの権限調整
+/*}}}*/
+x dynamodb local 環境の構築
+
+2021-11-24
+
+x cloudwatch logs put log events/*{{{*/
+aws logs put-log-events --log-group-name /ecs/service-api-prod/app --log-stream-name ecs/service-api-prod-app/XXXXXXXXXXXXXX --log-events file://events.json --profile service --sequence-token XXXXXXXXXXXXXXX
+events.json
+timestamp:  echo $(($(date +%s)*1000))
+[
+  {
+    "timestamp": 1637715990000,
+    "message": "{\"time\":\"test\",\"id\":\"test\",\"remote_ip\":\"test\",\"host\":\"localhost:8080\",\"method\":\"GET\",\"uri\":\"/api/v1/time\",\"user_agent\":\"\",\"status\":500,\"error\":\"code=404, message=Not Found\",\"latency\":88483,\"latency_human\":\"88.483µs\",\"bytes_in\":0,\"bytes_out\":35}"
+  }
+]
+/*}}}*/
+x test data の clear;
+x waht is blue green. ecspresso.  // A blue/green deployment is a deployment strategy in which you create two separate, but identical environments. One environment (blue) is running the current application version and one environment (green) is running the new application version.
+x aws logs tail --follow /ecs/service-api-prod/app
+x aws logs put-log-events --log-group-name /ecs/service-api-prod/app \ --log-stream-name ecs/service-api-prod-app/XXXXXXXXXXXXXX  \ --log-events file://events.json --profile service --sequence-token XXXXXXXXXXXXXXX
+x aws elasticache describe-cache-clusters --show-cache-node-info --profile $profile | jq .
+
+2021-11-23
+
+x install ecspresso
+x billing alarm
+x ig.kis9a.com smooth scroll with luxy.js
+x fix styles and copyright
+x cost explorer alert.
+x ifconfig.io を読む -> [GitHub - georgyo/ifconfig.io](https://github.com/georgyo/ifconfig.io)
+
+2021-11-22
+
+x [S3の料金体系が分かりにくいと聞かれたので纏めた - Qiita](https://qiita.com/kawaz/items/07d67a851fd49c1c183e)
+x document create-ami
+x attache prevent destroy for production resources.
+x task 作成 jira.
+x GitHub Acions error cache events.
+x master terraform validateで失敗した場合にエラー通知する
+x ami create awscli
+x s3 delete cost is free
+x cat cbs | jq ".resources | map({ type: .type, name: .name, arn: .instances[0].attributes.arn })"
+
+2021-11-21
+
+x rust iterator methods の整理
+x rust enum, struct 情報追加
 
 2021-11-20
 
