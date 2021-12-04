@@ -4,7 +4,7 @@ slug: "aws-services-2021/11/29"
 emoji: "📆"
 type: "tech"
 topics: ["aws", "githubactions"]
-published: true
+published: false
 ---
 
 ## AWS サービス一覧
