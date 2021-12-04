@@ -4,7 +4,7 @@ slug: "vim-expand-link-to-text-link"
 emoji: "🛠"
 type: "tech"
 topics: ["vim", "markdown"]
-published: true
+published: false
 ---
 
 ## 初めに
