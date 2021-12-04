@@ -258,3 +258,37 @@ string comparison
 | `255`     | 範囲外の exit status                                        | `$ exit -1`             | `exit`                                                 |
 
 "${base%/}/${rel}"
+
+[シェルスクリプトでパイプを判断する - Qiita](https://qiita.com/b4b4r07/items/77c589f21a99db8bb682)
+
+| input                  | output                 |
+| ---------------------- | ---------------------- |
+| [ -p /dev/stdin ]      | [ -p /dev/stdout ]     |
+| [ -p /dev/fd/0 ]       | [ -p /dev/fd/1 ]       |
+| [ -p /proc/self/fd/0 ] | [ -p /proc/self/fd/1 ] |
+| [ -t 0 ]               | [ -t 1 ]               |
+
+```
+三項演算子の変わりの原始的手法
+[[  $var == abc ]] && echo OK || echo NG
+
+## 変数
+a=1
+
+echo TRUE になる場合
+[[ $a == 1 ]] && echo TRUE || echo FALSE
+
+echo FALSE が実行される場合
+[[ $a == 0 ]] && echo TRUE || echo FALSE
+
+bash の機能要件
+a=1
+b=$(( a !=0 ? -1 : 0  ))
+
+# &&、||は直前のコマンドが成功したかどうかで判定
+command1 && $(command2 ; true) || command3
+または
+command1 && $(command2;:) || command3
+
+true && false || echo "failed" # failed
+```

@@ -281,3 +281,10 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[201~ <nop>
 endif
 ```
+
+```
+%s/snippet/\rendsnippet\rsnippet/g
+置換の際に改行を入れるのは \r
+
+%s/\nendsnippet/endsnippet\r/g
+```

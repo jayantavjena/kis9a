@@ -66,3 +66,27 @@ SELECT * FROM information_schema.column_privileges;
 # ユーザ別の権限一覧
 SHOW GRANTS FOR '<user>'@'<db>';
 ```
+
+```
+mysql> show grants for datadog;
++-----------------------------------------------------------+
+| Grants for datadog@%                                      |
++-----------------------------------------------------------+
+| GRANT PROCESS, REPLICATION CLIENT ON *.* TO 'datadog'@'%' |
+| GRANT SELECT ON `performance_schema`.* TO 'datadog'@'%'   |
++-----------------------------------------------------------+
+
+CREATE USER 'datadog'@'%' IDENTIFIED BY '';
+GRANT REPLICATION CLIENT ON _._ TO 'datadog'@'%' WITH MAX_USER_CONNECTIONS 5;
+GRANT PROCESS ON _._ TO 'datadog'@'%';
+show databases like 'performance_schema';
+GRANT SELECT ON performance_schema.\* TO 'datadog'@'%';
+```
+
+```
+REVOKE (権限) ON (対象)FROM (ユーザー)@(ホスト);
+REVOKE REPLICATION CLIENT ON _._ FROM 'datadog'@'%';
+REVOKE ALL ON *.* FROM datadog@'%';
+REVOKE ALL PRIVILEGES ON *.* FROM datadog@'%';
+REVOKE REPLICATION CLIENT ON *.* FROM 'datadog'@'%'
+```
